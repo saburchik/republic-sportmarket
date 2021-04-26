@@ -1,0 +1,43 @@
+.sidedrawer {
+    width: 75%;
+    height: 100vh;
+    background: #fff;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 199;
+    transform: translateX(-100%);
+    transition: all 0.3s ease-out;
+}
+
+.sidedrawer.show {
+    transform: translateX(0);
+}
+
+.sidedrawer__links {
+    height: 90px;
+    display: flex;
+    justify-content: space-between;
+    padding: 0.5rem 1rem;
+}
+
+@media (max-width: 660px) {
+    .sidedrawer__links {
+        flex-direction: column;
+        height: 100%;
+        max-height: 250px;
+    }
+
+    .cart__link {
+        width: 100%;
+    }
+
+    .cart__link.word::before {
+        content: "Корзина";
+    }
+}
+
+.navbar__logo {
+    display: inline-flex;
+    justify-content: flex-start;
+}

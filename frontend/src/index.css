@@ -9,8 +9,10 @@ body {
     background: #f1f1f1;
 }
 
-li>a {
+li,
+a {
     display: flex;
+    justify-content: center;
     align-items: center;
     font-size: 1.2rem;
     font-weight: 700;
@@ -23,7 +25,7 @@ li>a {
     width: 100%;
     max-width: 1400px;
     margin: 0 auto;
-    padding: 0 15px;
+    padding: 0 1rem;
 }
 
 .logo {

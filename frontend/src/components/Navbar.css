@@ -45,7 +45,7 @@
     border-radius: 10px;
     padding: 8px 40px 8px 10px;
     max-width: 100%;
-    width: 400px;
+    /* width: 400px; */
 }
 
 .search__btn {
@@ -63,17 +63,18 @@
 }
 
 .cartlogo__badge {
-    position: absolute;
+    /* position: absolute;
     top: -5px;
-    left: 30px;
-    background-color: #E87E7E;
+    left: 30px; */
+    background-color: #fff;
     border-radius: 30px;
-    height: 25px;
-    width: 25px;
+    height: 30px;
+    width: 30px;
     display: flex;
     align-items: center;
     justify-content: center;
     border: 2px solid #302B42;
+    margin-left: 5px;
 }
 
 .fa-shopping-cart {
@@ -82,6 +83,7 @@
 
 .cart__link {
     background-color: #ccc;
+    height: 45px;
     border-radius: 8px;
     padding: 5px 15px;
     transition: .5s;
