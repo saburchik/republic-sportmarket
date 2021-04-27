@@ -1,4 +1,6 @@
 .sidedrawer {
+    display: flex;
+    flex-direction: column;
     width: 75%;
     height: 100vh;
     background: #fff;
@@ -15,20 +17,20 @@
 }
 
 .sidedrawer__links {
-    height: 90px;
     display: flex;
     justify-content: space-between;
-    padding: 0.5rem 1rem;
+    padding: 0 1rem;
+    margin: 0.5rem 0 2rem;
 }
 
 @media (max-width: 660px) {
     .sidedrawer__links {
         flex-direction: column;
-        height: 100%;
-        max-height: 250px;
+        /* height: 100%;
+max-height: 250px; */
     }
 
-    .cart__link {
+    .cart__link.word {
         width: 100%;
     }
 
@@ -40,4 +42,13 @@
 .navbar__logo {
     display: inline-flex;
     justify-content: flex-start;
+}
+
+.search--mobile {
+    height: 200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 0 1rem 3rem;
+    border-bottom: 3px solid #302B42;
 }

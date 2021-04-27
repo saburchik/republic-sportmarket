@@ -45,7 +45,14 @@
     border-radius: 10px;
     padding: 8px 40px 8px 10px;
     max-width: 100%;
-    /* width: 400px; */
+    width: 400px;
+    height: 40px;
+}
+
+@media (max-width:990px) {
+    .search__input {
+        width: 350px;
+    }
 }
 
 .search__btn {
@@ -85,7 +92,7 @@
     background-color: #ccc;
     height: 45px;
     border-radius: 8px;
-    padding: 5px 15px;
+    padding: 0 1rem;
     transition: .5s;
 }
 

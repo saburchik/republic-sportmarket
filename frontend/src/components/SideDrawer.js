@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import logo from './republic.png';
 
 const SideDrawer = ({ show, click }) => {
+
     const sideDrawerClass = ["sidedrawer"];
 
     if (show) {
@@ -22,14 +23,14 @@ const SideDrawer = ({ show, click }) => {
                     <span className="cartlogo__badge">0</span>
                 </Link>
             </li>
+        </ul>
+
+        <ul className="search--mobile">
             <li>
                 <Link className="cart__link" to="/" onClick={click}>
                     Вход
                     </Link>
             </li>
-        </ul>
-
-        <ul className="search">
             <li>
                 <form>
                     <input className="search__input" placeholder="Поиск" />
