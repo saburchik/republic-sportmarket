@@ -1,4 +1,7 @@
 import './HomeScreen.css';
+
+// Components
+import Product from '../components/Product';
 // import background from './background.jpg';
 
 
@@ -33,7 +36,25 @@ const HomeScreen = () => {
             </div>
         </div>
         <div className="catalog">
-            <h2 className="catalog__title">Ассортимент</h2>
+            <div className="container">
+                <h2 className="catalog__title">Ассортимент</h2>
+                <div className="catalog__info">
+                    <div className="sidebar">
+                        <h3 className="sidebar__title">Категории</h3>
+                        <ul className="sidebar__info">
+                            <li className="sidebar__item">Скейтбординг</li>
+                            <li className="sidebar__item">Сноубординг</li>
+                            <li className="sidebar__item">Армотизаторы для сноуборда</li>
+                        </ul>
+                    </div>
+                    <div className="catalog__products">
+                        <Product />
+                        <Product />
+                        <Product />
+                        <Product />
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 };
