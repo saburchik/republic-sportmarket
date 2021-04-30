@@ -2,6 +2,7 @@ import './HomeScreen.css';
 
 // Components
 import Product from '../components/Product';
+// import nike from './nike.jpg';
 // import background from './background.jpg';
 
 
@@ -42,9 +43,18 @@ const HomeScreen = () => {
                     <div className="sidebar">
                         <h3 className="sidebar__title">Категории</h3>
                         <ul className="sidebar__info">
-                            <li className="sidebar__item">Скейтбординг</li>
-                            <li className="sidebar__item">Сноубординг</li>
-                            <li className="sidebar__item">Армотизаторы для сноуборда</li>
+                            <li className="sidebar__item">
+                                Скейтбординг
+                                    <i class="fas fa-chevron-down" />
+                            </li>
+                            <li className="sidebar__item">
+                                Сноубординг
+                                    <i class="fas fa-chevron-down" />
+                            </li>
+                            <li className="sidebar__item">
+                                <p>Армотизаторы для сноуборда</p>
+                                <i class="fas fa-chevron-down" />
+                            </li>
                         </ul>
                     </div>
                     <div className="catalog__products">
@@ -55,6 +65,9 @@ const HomeScreen = () => {
                     </div>
                 </div>
             </div>
+        </div>
+        <div>
+            <h3 className="sidebar__title">Отзывы покупателей</h3>
         </div>
     </div>
 };

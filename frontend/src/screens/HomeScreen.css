@@ -13,7 +13,10 @@
 
 .homescreen__title {
     color: #302B42;
-    font-size: 5rem;
+    text-shadow: #fff 1px 0 0px, #fff 0 1px 0px, #fff -1px 0 0px, #fff 0 -1px 0px;
+    /* font-size: 5rem; */
+    font-size: clamp(2.5rem, 10vw, 5rem);
+    font-weight: 800;
     text-transform: uppercase;
 }
 
@@ -29,8 +32,9 @@
 .advantages__inner {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-around;
+    justify-content: center;
     align-items: center;
+
 }
 
 @media (max-width: 1090px) {
@@ -40,9 +44,11 @@
 }
 
 .advantages__inner>li {
-    width: 350px;
-    flex: 1 1 0;
-    padding: 0.5rem;
+    margin-left: 1.5rem;
+}
+
+.advantages__inner>li:first-child {
+    margin: 0;
 }
 
 .advantages__inner>li>i {
@@ -68,17 +74,18 @@
     font-weight: 700;
     text-align: center;
     text-transform: uppercase;
-    margin-bottom: 3rem;
 }
 
 .catalog__info {
     display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    padding: 3rem 0 6rem;
 }
 
 .sidebar {
     width: 230px;
     max-width: 100%;
-    margin-right: 2rem;
 }
 
 .sidebar__title {
@@ -86,6 +93,7 @@
     font-size: 2rem;
     font-weight: 700;
     text-transform: uppercase;
+    text-align: center;
     margin-bottom: 5rem;
 }
 
@@ -96,12 +104,53 @@
 }
 
 .sidebar__item {
+    display: flex;
+    justify-content: space-between;
     margin-bottom: 1rem;
+    border-bottom: 3px solid #CECECE;
+    width: 100%;
+    cursor: pointer;
+    padding-bottom: 1rem;
+}
+
+.sidebar__item>i {
+    color: #939292;
+    font-size: 2rem;
 }
 
 .catalog__products {
     width: 100%;
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    justify-items: center;
+    max-width: 1000px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+@media (max-width: 1090px) {
+    .advantages__inner>li>i {
+        font-size: 1rem;
+    }
+
+    .advantages__text {
+        font-size: 0.7rem;
+    }
+}
+
+@media (max-width: 775px) {
+
+    .homescreen__intro {
+        height: 77vh;
+    }
+
+    .homescreen__title {
+        text-align: center;
+    }
+
+    .advantages__inner {
+        justify-content: space-around;
+    }
+
+    .advantages__text {
+        font-size: 0;
+    }
 }
