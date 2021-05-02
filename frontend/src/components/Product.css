@@ -22,20 +22,6 @@
     height: 70px;
 }
 
-.product__title {
-    color: #302B42;
-    font-size: 1rem;
-    font-weight: 700;
-    text-transform: uppercase;
-}
-
-.product__price {
-    color: #E87E7E;
-    font-size: 1.3rem;
-    font-weight: 700;
-    text-transform: uppercase;
-}
-
 .product__info {
     height: auto;
     padding: 0.5rem;

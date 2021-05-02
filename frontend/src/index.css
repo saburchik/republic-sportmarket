@@ -5,12 +5,14 @@
 }
 
 body {
+    font-size: 1rem;
+    color: #302B42;
+    ;
     font-family: Arial, Helvetica, sans-serif;
     background: #f1f1f1;
 }
 
-li,
-a {
+li>a {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -35,4 +37,42 @@ form {
 
 .logo {
     cursor: pointer;
+}
+
+.btn {
+    height: 50px;
+    font-size: 1.5rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    border: none;
+    cursor: pointer;
+    width: Min(288px, 300px);
+}
+
+.title {
+    font-size: 1rem;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.title__size_m {
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+.price {
+    font-size: 1.3rem;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.price__size_m {
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+}
+
+.description {
+    font-size: 1rem;
+    margin-bottom: 1rem;
 }

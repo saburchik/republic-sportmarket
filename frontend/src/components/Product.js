@@ -10,8 +10,8 @@ const Product = () => {
 
             <div className="product__info">
                 <div className="product__text">
-                    <p className="product__title">Скейтборд RIDEX Octopus</p>
-                    <p className="product__price">3 890 ₽</p>
+                    <p className="title">Скейтборд RIDEX Octopus</p>
+                    <p className="price">3 890 ₽</p>
                 </div>
                 <Link to={`/product/${1111}`} className="info__item">
                     <i class="fas fa-play"></i>

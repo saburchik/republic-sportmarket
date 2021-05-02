@@ -38,10 +38,10 @@ const HomeScreen = () => {
         </div>
         <div className="catalog">
             <div className="container">
-                <h2 className="catalog__title">Ассортимент</h2>
+                <h2 className="title title__size_m">Ассортимент</h2>
                 <div className="catalog__info">
                     <div className="sidebar">
-                        <h3 className="sidebar__title">Категории</h3>
+                        <h3 className="title title__size_m">Категории</h3>
                         <ul className="sidebar__info">
                             <li className="sidebar__item">
                                 Скейтбординг
@@ -67,7 +67,7 @@ const HomeScreen = () => {
             </div>
         </div>
         <div>
-            <h3 className="sidebar__title">Отзывы покупателей</h3>
+            <h3 className="title title__size_m">Отзывы покупателей</h3>
         </div>
     </div>
 };
