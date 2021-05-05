@@ -1,29 +1,9 @@
+import Advantages from '../components/Advantages';
 import './ProductScreen.css';
 
 const ProductScreen = () => {
     return <div className="productscreen">
-        <div className="advantages">
-            <div className="container">
-                <ul className="advantages__inner">
-                    <li>
-                        <i className="fas fa-tags"></i>
-                        <span className="advantages__text">Скидки при онлайн оплате</span>
-                    </li>
-                    <li>
-                        <i className="fas fa-truck"></i>
-                        <span className="advantages__text">Быстрая Доставка</span>
-                    </li>
-                    <li>
-                        <i className="fas fa-box-open"></i>
-                        <span className="advantages__text">Удобный возврат</span>
-                    </li>
-                    <li>
-                        <i className="fas fa-balance-scale" />
-                        <span className="advantages__text">Гарантия полгода</span>
-                    </li>
-                </ul>
-            </div>
-        </div>
+        <Advantages />
         <div className="productscreen__card">
             <div className="container">
                 <div className="productscreen__inner">
@@ -31,7 +11,7 @@ const ProductScreen = () => {
                     <div className="productscreen__right">
                         <div className="productscreen__info">
                             <p className="prod-article">артикул: <strong>848473</strong></p>
-                            <p className="title title__size_m">Скейтборд RIDEX Octopus</p>
+                            <p className="title title__size_c">Скейтборд RIDEX Octopus</p>
                             <p className="sale">-20%</p>
                             <p className="price price__size_m">3 890 ₽
                                 <strike className="old-price">4 890 ₽</strike>
@@ -75,7 +55,7 @@ const ProductScreen = () => {
                 </div>
                 <p className="alert">
                     Отзывы могут оставлять только <a className="alert__link">зарегистрированные</a> пользователи. <br />
-                    <a className="alert__link">Авторизоваться и оставить отзыв</a>
+                    <a className="alert__link" >Авторизоваться и оставить отзыв</a>
                 </p>
             </div>
         </div>
