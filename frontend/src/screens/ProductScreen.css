@@ -1,30 +1,20 @@
-.productscreen__card {}
-
-.productscreen__inner {
+.description__inner {
     display: flex;
     flex-direction: row;
+    justify-content: space-around;
     padding: 1rem 0 4rem;
 }
 
-.productscreen__img {
-    box-shadow: 0 1px 4px rgb(0 0 0 / 40%);
-    width: Min(40%, 500px);
-    height: Min(auto, 550px);
-}
-
-.productscreen__right {
-    width: 100%;
+.product__information {
     padding: 1rem;
 }
 
-.productscreen__info {}
-
-.prod-article {
+.product__article {
     color: #302B42;
     margin-bottom: 1rem;
 }
 
-.prod-article>strong {
+.product__article>strong {
     letter-spacing: 0.3rem;
 }
 
@@ -57,13 +47,9 @@
     margin-bottom: 0.4rem;
 }
 
-.quantity>strong {
-    display: inline-block;
-    margin-bottom: 0.4rem;
-}
-
-.quantity__btns {
+.quantity {
     display: flex;
+    justify-content: space-between;
     margin-bottom: 2rem;
 }
 
@@ -99,28 +85,6 @@
     border: 3px solid #302B42;
 }
 
-.btn__size_g {
-    color: #302B42;
-    background-color: #C4C4C4;
-    margin-left: 3rem;
-    transition: .5s;
-}
-
-.btn__size_g:hover {
-    color: #C4C4C4;
-    background-color: #302B42;
-}
-
-.btn__in-cart {
-    background-color: #A0E87E;
-    transition: .5s;
-}
-
-.btn__in-cart:hover {
-    color: #A0E87E;
-    background-color: #302B42;
-}
-
 .unavailable {
     display: flex;
     flex-direction: column;
@@ -136,7 +100,7 @@
 }
 
 /* Reviews */
-.reviews__client {
+.review__client {
     border-top: 3px solid #302B42;
     border-bottom: 3px solid #302B42;
     padding: 2rem 3rem;
@@ -172,31 +136,18 @@
 
 /* Media query */
 @media (max-width: 890px) {
-    .productscreen__inner {
+    .description__inner {
         flex-direction: column;
         align-items: center;
     }
 
-    .productscreen__img {
+    .description__inner .product__img_size-b {
         width: Min(100%, 500px);
     }
 }
 
 @media (max-width:550px) {
-    .productscreen__right {
-        padding: 1rem 0;
-    }
-
-    .quantity__btns {
+    .quantity {
         flex-direction: column;
-    }
-
-    .btn__size_g {
-        margin: 0;
-    }
-
-    .in-cart {
-        display: flex;
-        justify-content: center;
     }
 }

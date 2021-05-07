@@ -5,7 +5,7 @@ const Product = () => {
     return (
         <div className="product">
             <Link to={`/product/${1111}`}>
-                <img className="product__img" src="https://i.imgur.com/HnuqR0w.jpg" alt="Playstation" />
+                <img className="product__img_size-m" src="https://i.imgur.com/HnuqR0w.jpg" alt="Playstation" />
             </Link>
 
             <div className="product__info">

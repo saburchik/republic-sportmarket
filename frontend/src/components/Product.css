@@ -8,11 +8,6 @@
     margin: 0 1rem 1rem;
 }
 
-.product__img {
-    width: 100%;
-    object-fit: contain;
-}
-
 .product__text {
     width: 85%;
     display: flex;

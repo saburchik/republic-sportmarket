@@ -13,7 +13,6 @@ const HomeScreen = () => {
             <div className="container">
                 <h1 className="homescreen__title">Отдыхай в <br /> движении</h1>
             </div>
-            {/* <img src={background} alt="background-intro" /> */}
         </div>
         <Advantages />
         <div className="catalog">

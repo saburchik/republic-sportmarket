@@ -30,8 +30,6 @@ li>a {
     text-transform: uppercase;
 }
 
-
-
 form {
     width: 100%;
     flex: 0 0 0;
@@ -48,6 +46,7 @@ form {
     cursor: pointer;
 }
 
+/* Default size a Button */
 .btn {
     height: 50px;
     font-size: 1.5rem;
@@ -58,6 +57,32 @@ form {
     width: Min(288px, 300px);
 }
 
+.btn__size_g {
+    color: #302B42;
+    background-color: #C4C4C4;
+    margin-bottom: 1rem;
+    transition: .5s;
+}
+
+.btn__size_g:hover {
+    color: #C4C4C4;
+    background-color: #302B42;
+}
+
+.btn__in-cart {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #A0E87E;
+    transition: .5s;
+}
+
+.btn__in-cart:hover {
+    color: #A0E87E;
+    background-color: #302B42;
+}
+
+/* The Size Title */
 .title {
     font-size: 1rem;
     font-weight: 700;
@@ -76,6 +101,7 @@ form {
     margin-bottom: 1rem;
 }
 
+/* The Size Price */
 .price {
     font-size: 1.3rem;
     font-weight: 700;
@@ -87,7 +113,35 @@ form {
     margin-bottom: 1.5rem;
 }
 
+/* The Size Description */
+
 .description {
     font-size: 1rem;
     margin-bottom: 1rem;
+}
+
+
+/* The Size Images */
+.product__img_size-s {
+    width: 150px;
+    height: 180px;
+}
+
+.product__img_size-m {
+    width: 100%;
+    object-fit: contain;
+}
+
+.product__img_size-b {
+    box-shadow: 0 1px 4px rgb(0 0 0 / 40%);
+    width: Min(40%, 500px);
+    height: Min(auto, 550px);
+}
+
+
+/* Media query */
+@media (max-width: 890px) {
+    .btn__in-cart {
+        margin: 0 auto;
+    }
 }
