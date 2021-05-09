@@ -54,7 +54,7 @@ form {
     text-transform: uppercase;
     border: none;
     cursor: pointer;
-    width: Min(288px, 300px);
+    width: Min(270px, 300px);
 }
 
 .btn__size_g {

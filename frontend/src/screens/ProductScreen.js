@@ -19,12 +19,12 @@ const ProductScreen = () => {
                             <strong>Описание</strong> <br />
                                 Tracer Classic в цвете Black / Bar - классический круизер GLOBE с мягкими коническими колесами. Он доступен в размере 31,125 "x 8,25" x 16,5 "WB. Изготовлен из твердого клена Resin-7.
                             </p>
-                        <div className="quantity">
+                        <div className="product__count">
                             <button className="btn btn__size_g">Размераня сетка</button>
-                            <div className="quantity__inner">
-                                <button className="btn btn__quantity">-</button>
-                                <span className="quantity__value">1</span>
-                                <button className="btn btn__quantity">+</button>
+                            <div className="count__inner">
+                                <button className="btn btn__count">-</button>
+                                <span className="count__value">1</span>
+                                <button className="btn btn__count">+</button>
                             </div>
                         </div>
                         <button className="btn btn__in-cart">В корзину</button>
@@ -44,9 +44,9 @@ const ProductScreen = () => {
                     <p className="description client__text">Отличный магазин, доставка до Красноярска как и заявлена 4 дня, постоянно есть обратная связь. Доска без косяков, что хотел, то и получил, приятно когда работают профессионалы.</p>
                     <strong className="client__data">02.03.2021 | 19:42</strong>
                 </div>
-                <p className="alert">
-                    Отзывы могут оставлять только <a className="alert__link">зарегистрированные</a> пользователи. <br />
-                    <a className="alert__link" >Авторизоваться и оставить отзыв</a>
+                <p className="review__alert">
+                    Отзывы могут оставлять только <a className="registration__link">зарегистрированные</a> пользователи. <br />
+                    <a className="registration__link" >Авторизоваться и оставить отзыв</a>
                 </p>
             </div>
         </div>
