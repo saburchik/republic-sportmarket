@@ -12,10 +12,10 @@ const CartItem = () => {
                 <p className="title title__size_c">Скейтборд RIDEX Octopus</p>
             </div>
             <div>
-                <div className="quantity__inner">
-                    <button className="btn btn__quantity">-</button>
-                    <span className="quantity__value">1</span>
-                    <button className="btn btn__quantity">+</button>
+                <div className="count__inner">
+                    <button className="btn btn__count">-</button>
+                    <span className="count__value">1</span>
+                    <button className="btn btn__count">+</button>
                 </div>
             </div>
             <div>
