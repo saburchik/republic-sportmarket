@@ -5,20 +5,20 @@ export const getProductsReducer = (state = { products: [] }, action) => {
         case actionTypes.GET_PRODUCTS_REQUEST:
             return {
                 loading: true,
-                products: []
-            }
+                products: [],
+            };
         case actionTypes.GET_PRODUCTS_SUCCESS:
             return {
                 loading: false,
-                products: action.payload
-            }
+                products: action.payload,
+            };
         case actionTypes.GET_PRODUCTS_FAIL:
             return {
                 loading: false,
-                error: action.payload
-            }
+                error: action.payload,
+            };
         default:
-            return state
+            return state;
     }
 };
 

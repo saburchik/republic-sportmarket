@@ -14,7 +14,7 @@ const Product = () => {
                     <p className="price">3 890 ₽</p>
                 </div>
                 <Link to={`/product/${1111}`} className="info__item">
-                    <i class="fas fa-play"></i>
+                    <i className="fas fa-play"></i>
                 </Link>
             </div>
         </div>

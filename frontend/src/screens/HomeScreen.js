@@ -1,4 +1,6 @@
 import './HomeScreen.css';
+import { useEffect } from 'react';
+import { useSelector, useDispatch } from 'react-redux';
 
 // Components
 import Product from '../components/Product';
@@ -6,8 +8,19 @@ import Advantages from '../components/Advantages';
 // import nike from './nike.jpg';
 // import background from './background.jpg';
 
+// Actions
+import { getProducts as listProducts } from '../redux/actions/productActions';
 
 const HomeScreen = () => {
+    const dispatch = useDispatch();
+
+    const getProducts = useSelector((state) => state.getProducts);
+    const { products, loading, error } = getProducts;
+
+    useEffect(() => {
+        dispatch(listProducts());
+    }, [dispatch]);
+
     return <div className="homescreen">
         <div className="homescreen__intro">
             <div className="container">
@@ -24,15 +37,15 @@ const HomeScreen = () => {
                         <ul className="sidebar__info">
                             <li className="sidebar__item">
                                 Скейтбординг
-                                    <i class="fas fa-chevron-down" />
+                                    <i className="fas fa-chevron-down" />
                             </li>
                             <li className="sidebar__item">
                                 Сноубординг
-                                    <i class="fas fa-chevron-down" />
+                                    <i className="fas fa-chevron-down" />
                             </li>
                             <li className="sidebar__item">
                                 Армотизаторы для сноуборда
-                                <i class="fas fa-chevron-down" />
+                                <i className="fas fa-chevron-down" />
                             </li>
                         </ul>
                     </div>
