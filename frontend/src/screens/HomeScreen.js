@@ -1,15 +1,13 @@
 import './HomeScreen.css';
-import { useEffect } from 'react';
-import { useSelector, useDispatch } from 'react-redux';
+import { useEffect } from "react";
+import { useSelector, useDispatch } from "react-redux";
 
 // Components
 import Product from '../components/Product';
 import Advantages from '../components/Advantages';
-// import nike from './nike.jpg';
-// import background from './background.jpg';
 
 // Actions
-import { getProducts as listProducts } from '../redux/actions/productActions';
+import { getProducts as listProducts } from "../redux/actions/productActions";
 
 const HomeScreen = () => {
     const dispatch = useDispatch();
@@ -21,7 +19,7 @@ const HomeScreen = () => {
         dispatch(listProducts());
     }, [dispatch]);
 
-    return <div className="homescreen">
+    return (<div className="homescreen">
         <div className="homescreen__intro">
             <div className="container">
                 <h1 className="homescreen__title">Отдыхай в <br /> движении</h1>
@@ -50,10 +48,9 @@ const HomeScreen = () => {
                         </ul>
                     </div>
                     <div className="catalog__products">
-                        <Product />
-                        <Product />
-                        <Product />
-                        <Product />
+                        {loading ? <h2>Loading...</h2> : error ? <h2>{error}</h2> : products.map(product => (
+                            <Product />
+                        ))}
                     </div>
                 </div>
             </div>
@@ -62,6 +59,7 @@ const HomeScreen = () => {
             <h3 className="title title__size_m">Отзывы покупателей</h3>
         </div>
     </div>
+    )
 };
 
 export default HomeScreen
