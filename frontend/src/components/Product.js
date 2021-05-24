@@ -1,7 +1,7 @@
 import './Product.css';
 import { Link } from 'react-router-dom';
 
-const Product = ({ imageUrl, name, price, description, productId }) => {
+const Product = ({ imageUrl, name, price, description, productId, article }) => {
     return (
         <div className="product">
             <Link to={`/product/${productId}`}>

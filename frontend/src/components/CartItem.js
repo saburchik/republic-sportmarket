@@ -1,11 +1,14 @@
 import './CartItem.css';
 import { Link } from 'react-router-dom';
 
-const CartItem = () => {
+const CartItem = ({ item }) => {
     return (
         <div className="cart">
             <Link to={`/product/${1111}`} >
-                <img className="product__img_size-s" src="https://i.imgur.com/HnuqR0w.jpg" alt="Playstation" />
+                <img className="product__img_size-s"
+                    src={item.imageUrl}
+                    alt={item.name}
+                />
             </Link>
             <div>
                 <p className="product__article">артикул: <strong>848473</strong></p>

@@ -23,6 +23,11 @@ const ProductScreen = ({ match, history }) => {
         }
     }, [dispatch, product, match]);
 
+    const addToCartHandler = () => {
+        dispatch(addToCart(product._id, qty));
+        history.push("/cart");
+    }
+
     return (
         <div className="productscreen">
             {loading ? <h2>Loading...</h2> : error ? <h2>{error}</h2> : (
@@ -39,7 +44,7 @@ const ProductScreen = ({ match, history }) => {
                                 />
 
                                 <div className="product__information">
-                                    <p className="product__article">артикул: <strong>848473</strong></p>
+                                    <p className="product__article">артикул: <strong>{product.article}</strong></p>
                                     <p className="title title__size_c">{product.name}</p>
                                     <p className="sale">-20%</p>
                                     <p className="price price__size_m">
@@ -54,15 +59,18 @@ const ProductScreen = ({ match, history }) => {
                                         <button className="btn btn__size_g">Размераня сетка</button>
                                         <div className="count__inner">
                                             <button className="btn btn__count">-</button>
-                                            <span className="count__value">1</span>
+                                            <span className="count__value">
+                                                <select></select>
+                                            </span>
                                             <button className="btn btn__count">+</button>
                                         </div>
                                     </div>
-                                    <button className="btn btn__in-cart">В корзину</button>
-                                    {/* <div className="unavailable">
-                                <strong>Товара нет в наличии</strong>
-                                <button className="btn">Уведомить</button>
-                            </div> */}
+                                    <p>Статус: <span>{product.countInStock > 0 ? "В наличии" : "Нет в наличии"}</span></p>
+                                    <button
+                                        className="btn btn__in-cart"
+                                        type="button"
+                                        onClick={addToCartHandler}
+                                    >В корзину</button>
                                 </div>
                             </div>
                         </div>

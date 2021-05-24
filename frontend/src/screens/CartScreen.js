@@ -1,10 +1,17 @@
 import './CartScreen.css';
+import { useDispatch, useSelector } from 'react-redux';
+import { Link } from 'react-router-dom';
 
 // Components
 import Advantages from '../components/Advantages';
 import CartItem from '../components/CartItem';
 
 const CartScreen = () => {
+    const dispatch = useDispatch();
+
+    const cart = useSelector(state => state.cart);
+    const { cartItems } = cart;
+
     return (
         <div className="cartscreen">
             <div className="container">
@@ -12,7 +19,13 @@ const CartScreen = () => {
                 <div className="cartscreen__inner">
                     <h3 className="title title__size_m">В вашей корзине:</h3>
                     <div className="order">
-                        <CartItem />
+                        {cartItems.length === 0 ? (
+                            <div>
+                                Ваша корзина пуста <Link to="/">Вернутся обратно</Link>
+                            </div>
+                        ) : cartItems.map(item => (
+                            <CartItem />
+                        ))}
 
                         <div className="order__right">
                             <p className="title">Стоимость заказа</p>
