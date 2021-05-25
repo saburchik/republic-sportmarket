@@ -59,9 +59,7 @@ const ProductScreen = ({ match, history }) => {
                                         <button className="btn btn__size_g">Размераня сетка</button>
                                         <div className="count__inner">
                                             <button className="btn btn__count">-</button>
-                                            <span className="count__value">
-                                                <select></select>
-                                            </span>
+                                            <span className="count__value">1</span>
                                             <button className="btn btn__count">+</button>
                                         </div>
                                     </div>

@@ -6,11 +6,18 @@ import { Link } from 'react-router-dom';
 import Advantages from '../components/Advantages';
 import CartItem from '../components/CartItem';
 
+// Actions
+import { removeFromCart, addToCart } from '../redux/actions/cartActions';
+
 const CartScreen = () => {
     const dispatch = useDispatch();
 
     const cart = useSelector(state => state.cart);
     const { cartItems } = cart;
+
+    const removeHandler = (id) => {
+        dispatch(removeFromCart(id));
+    }
 
     return (
         <div className="cartscreen">
@@ -24,7 +31,10 @@ const CartScreen = () => {
                                 Ваша корзина пуста <Link to="/">Вернутся обратно</Link>
                             </div>
                         ) : cartItems.map(item => (
-                            <CartItem />
+                            <CartItem
+                                item={item}
+                                removeHandler={removeHandler}
+                            />
                         ))}
 
                         <div className="order__right">
