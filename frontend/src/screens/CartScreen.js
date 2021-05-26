@@ -7,7 +7,7 @@ import Advantages from '../components/Advantages';
 import CartItem from '../components/CartItem';
 
 // Actions
-import { removeFromCart, addToCart } from '../redux/actions/cartActions';
+import { addToCart, removeFromCart } from '../redux/actions/cartActions';
 
 const CartScreen = () => {
     const dispatch = useDispatch();
@@ -15,9 +15,17 @@ const CartScreen = () => {
     const cart = useSelector(state => state.cart);
     const { cartItems } = cart;
 
+    const qtyChangeHandler = (id, qty) => {
+        dispatch(addToCart(id, qty));
+    };
+
     const removeHandler = (id) => {
         dispatch(removeFromCart(id));
-    }
+    };
+
+    const getCartCount = () => {
+        return cartItems.reduce((qty, item) => Number(item.qty) + qty, 0);
+    };
 
     return (
         <div className="cartscreen">
@@ -33,6 +41,7 @@ const CartScreen = () => {
                         ) : cartItems.map(item => (
                             <CartItem
                                 item={item}
+                                qtyChangeHandler={qtyChangeHandler}
                                 removeHandler={removeHandler}
                             />
                         ))}
@@ -42,7 +51,7 @@ const CartScreen = () => {
                             <p className="title__text">Цена за 1 товар:<span>3890 Р</span></p>
                             <p className="title__text">Скидка общая:<span>-990 Р</span></p>
                             <strong className="title__text">
-                                Итого <span>2 890 Р</span>
+                                Итого (Кол-во: {getCartCount()}) <span>2 890 Р</span>
                             </strong>
                             <button className="btn order__btn">Оформить заказ</button>
                         </div>

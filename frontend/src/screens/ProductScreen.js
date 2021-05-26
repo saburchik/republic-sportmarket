@@ -1,6 +1,7 @@
 import './ProductScreen.css';
 import { useState, useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
+import { Link } from 'react-router-dom';
 
 // Actions
 import { getProductDetails } from "../redux/actions/productActions";
@@ -57,18 +58,26 @@ const ProductScreen = ({ match, history }) => {
                                     </p>
                                     <div className="product__count">
                                         <button className="btn btn__size_g">Размераня сетка</button>
-                                        <div className="count__inner">
+                                        {/* <div className="count__inner">
                                             <button className="btn btn__count">-</button>
                                             <span className="count__value">1</span>
                                             <button className="btn btn__count">+</button>
-                                        </div>
+                                        </div> */}
+                                        Qty
+                                        <select value={qty} onChange={(e) => setQty(e.target.value)}>
+                                            {[...Array(product.countInStock).keys()].map((x) => (
+                                                <option key={x + 1} value={x + 1}>{x + 1}</option>
+                                            ))}
+                                        </select>
                                     </div>
                                     <p>Статус: <span>{product.countInStock > 0 ? "В наличии" : "Нет в наличии"}</span></p>
+                                    {/* <Link to="/"> */}
                                     <button
                                         className="btn btn__in-cart"
                                         type="button"
                                         onClick={addToCartHandler}
                                     >В корзину</button>
+                                    {/* </Link> */}
                                 </div>
                             </div>
                         </div>
@@ -88,8 +97,9 @@ const ProductScreen = ({ match, history }) => {
                         </div>
                     </div>
                 </>
-            )}
-        </div>
+            )
+            }
+        </div >
     );
 };
 
