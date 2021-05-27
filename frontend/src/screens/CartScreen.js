@@ -27,6 +27,10 @@ const CartScreen = () => {
         return cartItems.reduce((qty, item) => Number(item.qty) + qty, 0);
     };
 
+    const getCartSubTotal = () => {
+        return cartItems.reduce((price, item) => item.price * item.qty + price, 0);
+    };
+
     return (
         <div className="cartscreen">
             <div className="container">
@@ -51,7 +55,7 @@ const CartScreen = () => {
                             <p className="title__text">Цена за 1 товар:<span>3890 Р</span></p>
                             <p className="title__text">Скидка общая:<span>-990 Р</span></p>
                             <strong className="title__text">
-                                Итого (Кол-во: {getCartCount()}) <span>2 890 Р</span>
+                                Итого (Кол-во: {getCartCount()}) <span>{getCartSubTotal().toFixed(2)} Р</span>
                             </strong>
                             <button className="btn order__btn">Оформить заказ</button>
                         </div>
