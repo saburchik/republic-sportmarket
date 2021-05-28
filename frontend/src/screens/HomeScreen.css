@@ -69,6 +69,88 @@
     justify-content: space-around;
 }
 
+/* Feedback */
+
+.feedback-in {
+    display: flex;
+    align-items: center;
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 2rem 0;
+}
+
+.feedback__wrapper {
+    display: flex;
+    align-items: center;
+    padding: 0 3rem;
+}
+
+.arrow {
+    color: #4F4F4F;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50px;
+    height: 80px;
+    font-size: 5rem;
+    cursor: pointer;
+    border: none;
+    transition: .3s;
+}
+
+.arrow:hover {
+    color: #302B42;
+}
+
+.feedback__img {
+    width: 200px;
+    height: 200px;
+}
+
+.feedback__review {
+    font-size: 1rem;
+    font-weight: 400;
+    font-style: italic;
+    padding: 1rem;
+}
+
+.feedback__review span::before {
+    content: '';
+    display: block;
+    width: 30px;
+    border-top: 2px solid black;
+    font-weight: 700;
+}
+
+/* Digest */
+
+.digest {
+    display: flex;
+    align-items: center;
+    background: url("digest-fon.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: 400px;
+}
+
+.digest__wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.digest__description {
+    text-align: center;
+    color: #fff;
+    max-width: 750px;
+}
+
+.digest__input {
+    background-color: #fff;
+}
+
 @media (max-width: 775px) {
     .homescreen__intro {
         height: 77vh;

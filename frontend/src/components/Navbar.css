@@ -36,34 +36,6 @@
     padding-left: 0;
 }
 
-.search__input {
-    color: #000;
-    font-size: 1rem;
-    background-color: #CECECE;
-    outline: none;
-    border: none;
-    border-radius: 10px;
-    padding: 8px 40px 8px 10px;
-    max-width: 100%;
-    width: 400px;
-    height: 40px;
-}
-
-@media (max-width:990px) {
-    .search__input {
-        width: 350px;
-    }
-}
-
-.search__btn {
-    color: #939292;
-    font-size: 1.1rem;
-    background-color: #CECECE;
-    border: none;
-    cursor: pointer;
-    margin-left: -30px;
-}
-
 .navbar__helped {
     color: #939292;
     font-weight: 500;

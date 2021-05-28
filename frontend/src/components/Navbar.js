@@ -25,8 +25,8 @@ const Navbar = ({ click }) => {
                     <ul className="search">
                         <li>
                             <form>
-                                <input className="search__input" placeholder="Поиск" />
-                                <button className="search__btn"><i className="fas fa-search"></i></button>
+                                <input className="input" placeholder="Поиск" />
+                                <button className="input__btn search__btn"><i className="fas fa-search"></i></button>
                             </form>
                         </li>
                         <li>
