@@ -114,12 +114,10 @@
     padding: 1rem;
 }
 
-.feedback__review span::before {
-    content: '';
-    display: block;
-    width: 30px;
-    border-top: 2px solid black;
+.feedback__review span {
+    display: inline-block;
     font-weight: 700;
+    margin-top: 1rem;
 }
 
 /* Digest */
@@ -145,6 +143,9 @@
     text-align: center;
     color: #fff;
     max-width: 750px;
+    font-weight: 700;
+    margin-bottom: 5rem;
+    text-shadow: #000 1px 0 0px, #000 0 1px 0px, #000 -1px 0 0px, #000 0 -1px 0px;
 }
 
 .digest__input {

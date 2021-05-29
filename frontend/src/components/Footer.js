@@ -5,18 +5,14 @@ import logo from './footer-logo.png';
 const Footer = () => {
 
     return (
-        <div className="footer">
+        <section className="footer">
             <div className="container">
                 <div className="footer__wrapper">
                     <div className="footer__item">
-                        <div className="footer__over">
-                            <div className="icon__logo">
-                                <Link to="/">
-                                    <img className="footer__logo" src={logo} alt="Republic-logo" />
-                                </Link>
-                            </div>
-                            <div className="icon__social">
-                            </div>
+                        <div className="footer__header">
+                            <Link to="/">
+                                <img className="footer__logo" src={logo} alt="Republic-logo" />
+                            </Link>
                         </div>
                         <div className="footer__contacts">
                             <p className="footer__text">
@@ -34,33 +30,47 @@ const Footer = () => {
                                 <br />
                                 <span>republic-store@gmail.com</span>
                             </p>
-                            <a href="/" className="footer__link">Обратная связь</a>
+                            <Link href="/" className="footer__link">Обратная связь</Link>
                         </div>
                     </div>
                     <div className="footer__item">
-                        <div className="footer__over">
-                            <h5 className="footer__title">Информация</h5>
+                        <div className="footer__header">
+                            <h5 className="footer__title">Информация:</h5>
                         </div>
-                        <a href="/" className="footer__link">О компании</a>
-                        <a href="/" className="footer__link">Частые вопросы [FAQ]</a>
-                        <a href="/" className="footer__link">Работа у нас</a>
-                        <a href="/" className="footer__link">Правовая информация</a>
-                        <a href="/" className="footer__link">Сотрудничество</a>
+                        <div className="links__wrapper">
+                            <Link href="/" className="footer__link">О компании</Link>
+                            <Link href="/" className="footer__link">Частые вопросы [FAQ]</Link>
+                            <Link href="/" className="footer__link">Работа у нас</Link>
+                            <Link href="/" className="footer__link">Правовая информация</Link>
+                            <Link href="/" className="footer__link">Сотрудничество</Link>
+                        </div>
                     </div>
                     <div className="footer__item">
-                        <div className="footer__over">
-                            <h5 className="footer__title">Покупателем</h5>
+                        <div className="footer__header">
+                            <h5 className="footer__title">Покупателем:</h5>
                         </div>
-                        <a href="/" className="footer__link">Условия продаж</a>
-                        <a href="/" className="footer__link">Оплата и доставка</a>
-                        <a href="/" className="footer__link">Гарантия и возврат</a>
+                        <div className="links__adaptive">
+                            <div className="links__wrapper">
+                                <Link className="footer__link" href="/">Условия продаж</Link>
+                                <Link className="footer__link" href="/">Оплата и доставка</Link>
+                                <Link className="footer__link" href="/">Гарантия и возврат</Link>
+                            </div>
+                            <div className="social__media">
+                                <Link className="footer__icon" href="/"><i className="fab fa-vk" /></Link>
+                                <Link className="footer__icon" href="/"><i className="fab fa-youtube" /></Link>
+                                <Link className="footer__icon" href="/"><i className="fab fa-telegram" /></Link>
+                                <Link className="footer__icon" href="/"><i class="fab fa-instagram" /></Link>
+                            </div>
+                        </div>
                     </div>
                 </div>
-                <p className="footer__privacy">2020 – 2021, © ИМ Республика.
-                Все права защищены. Информация, размещенная на данной странице, не является публичной офертой.
-                    </p>
+                <p className="footer__privacy">
+                    2020 – 2021, © ИМ Республика.
+                    Все права защищены. Информация, размещенная на данной странице,
+                    не является публичной офертой.
+                </p>
             </div>
-        </div>
+        </section>
     )
 }
 
