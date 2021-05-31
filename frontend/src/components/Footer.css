@@ -120,23 +120,25 @@
     font-weight: 500;
     color: #C2C2C2;
     text-align: center;
-    padding-bottom: .5rem;
+    padding-bottom: 1rem;
 
 }
 
-@media (max-width: 990px) {
-    .links__adaptive {
-        flex-direction: row;
-        justify-content: space-around;
-    }
+@media (max-width: 890px) {
 
-    .footer__header {
-        justify-content: center;
-    }
-
-    .footer__item:last-child {
+    .links__wrapper,
+    .footer__item {
         align-items: center;
-        width: 100%;
-        margin: 0;
+    }
+}
+
+@media (max-width: 630px) {
+    .footer__contacts {
+        align-items: center;
+        text-align: center;
+    }
+
+    .footer__privacy {
+        font-size: 0.7rem;
     }
 }

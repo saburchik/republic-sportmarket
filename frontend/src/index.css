@@ -189,13 +189,6 @@ form {
     max-height: 570px;
 }
 
-.white {
-    color: #fff;
-    margin-bottom: 2rem;
-    text-shadow: #000 1px 0 0px, #000 0 1px 0px, #000 -1px 0 0px, #000 0 -1px 0px;
-}
-
-
 /* Media query */
 @media (max-width: 890px) {
     .btn__in-cart {

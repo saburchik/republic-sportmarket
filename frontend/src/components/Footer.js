@@ -49,17 +49,16 @@ const Footer = () => {
                         <div className="footer__header">
                             <h5 className="footer__title">Покупателем:</h5>
                         </div>
-                        <div className="links__adaptive">
-                            <div className="links__wrapper">
-                                <Link className="footer__link" href="/">Условия продаж</Link>
-                                <Link className="footer__link" href="/">Оплата и доставка</Link>
-                                <Link className="footer__link" href="/">Гарантия и возврат</Link>
-                            </div>
+                        <div className="links__wrapper">
+                            <Link className="footer__link" href="/">Условия продаж</Link>
+                            <Link className="footer__link" href="/">Оплата и доставка</Link>
+                            <Link className="footer__link" href="/">Гарантия и возврат</Link>
+
                             <div className="social__media">
                                 <Link className="footer__icon" href="/"><i className="fab fa-vk" /></Link>
                                 <Link className="footer__icon" href="/"><i className="fab fa-youtube" /></Link>
                                 <Link className="footer__icon" href="/"><i className="fab fa-telegram" /></Link>
-                                <Link className="footer__icon" href="/"><i class="fab fa-instagram" /></Link>
+                                <Link className="footer__icon" href="/"><i className="fab fa-instagram" /></Link>
                             </div>
                         </div>
                     </div>

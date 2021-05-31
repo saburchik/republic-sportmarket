@@ -120,38 +120,6 @@
     margin-top: 1rem;
 }
 
-/* Digest */
-
-.digest {
-    display: flex;
-    align-items: center;
-    background: url("digest-fon.jpg");
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    width: 100%;
-    height: 400px;
-}
-
-.digest__wrapper {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-.digest__description {
-    text-align: center;
-    color: #fff;
-    max-width: 750px;
-    font-weight: 700;
-    margin-bottom: 5rem;
-    text-shadow: #000 1px 0 0px, #000 0 1px 0px, #000 -1px 0 0px, #000 0 -1px 0px;
-}
-
-.digest__input {
-    background-color: #fff;
-}
-
 @media (max-width: 775px) {
     .homescreen__intro {
         height: 77vh;
@@ -159,5 +127,42 @@
 
     .homescreen__title {
         text-align: center;
+    }
+
+    /* Feedback */
+    .feedback__wrapper {
+        padding: 0 1rem;
+    }
+
+    .arrow {
+        font-size: 3rem;
+    }
+
+    .feedback__img {
+        width: 150px;
+        height: 150px;
+    }
+
+    /* Digest */
+    .digest__description {
+        margin-bottom: 3rem;
+    }
+}
+
+@media (max-width: 550px) {
+
+    /* Digest */
+    .feedback__wrapper {
+        flex-direction: column;
+        padding: 0;
+    }
+
+    .arrow {
+        font-size: 2rem;
+    }
+
+    .feedback__img {
+        width: 100px;
+        height: 100px;
     }
 }

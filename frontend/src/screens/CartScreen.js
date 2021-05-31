@@ -5,6 +5,7 @@ import { Link } from 'react-router-dom';
 // Components
 import Advantages from '../components/Advantages';
 import CartItem from '../components/CartItem';
+import Footer from '../components/Footer';
 
 // Actions
 import { addToCart, removeFromCart } from '../redux/actions/cartActions';
@@ -33,8 +34,8 @@ const CartScreen = () => {
 
     return (
         <div className="cartscreen">
+            <Advantages />
             <div className="container">
-                <Advantages />
                 <div className="cartscreen__inner">
                     <h3 className="title title__size_m">В вашей корзине:</h3>
                     <div className="order">
@@ -63,6 +64,7 @@ const CartScreen = () => {
                     </div>
                 </div>
             </div>
+            <Footer />
         </div>
     )
 };

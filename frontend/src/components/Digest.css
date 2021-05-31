@@ -1,0 +1,40 @@
+.digest {
+    display: flex;
+    align-items: center;
+    background: url("digest-fon.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: 400px;
+}
+
+.digest__wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.digest__title {
+    color: #fff;
+    text-shadow: #000 1px 0 0px, #000 0 1px 0px, #000 -1px 0 0px, #000 0 -1px 0px;
+}
+
+.digest__description {
+    text-align: center;
+    color: #fff;
+    max-width: 750px;
+    font-weight: 700;
+    margin-bottom: 5rem;
+    text-shadow: #000 1px 0 0px, #000 0 1px 0px, #000 -1px 0 0px, #000 0 -1px 0px;
+}
+
+.digest__input {
+    background-color: #fff;
+}
+
+@media (max-width: 775px) {
+    .digest__description {
+        margin-bottom: 3rem;
+    }
+}

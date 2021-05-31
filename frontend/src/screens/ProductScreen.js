@@ -9,6 +9,8 @@ import { addToCart } from "../redux/actions/cartActions";
 
 // Components
 import Advantages from '../components/Advantages';
+import Digest from '../components/Digest';
+import Footer from '../components/Footer';
 
 const ProductScreen = ({ match, history }) => {
 
@@ -96,6 +98,8 @@ const ProductScreen = ({ match, history }) => {
                             </p>
                         </div>
                     </div>
+                    <Digest />
+                    <Footer />
                 </>
             )
             }
