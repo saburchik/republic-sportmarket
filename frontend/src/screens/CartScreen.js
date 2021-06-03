@@ -36,28 +36,28 @@ const CartScreen = () => {
         <div className="cartscreen">
             <Advantages />
             <div className="container">
+                <h3 className="title title__size_m cartscreen__title">В вашей корзине:</h3>
                 <div className="cartscreen__inner">
-                    <h3 className="title title__size_m">В вашей корзине:</h3>
                     <div className="order">
-                        {cartItems.length === 0 ? (
-                            <div>
-                                Ваша корзина пуста <Link to="/">Вернутся обратно</Link>
-                            </div>
-                        ) : cartItems.map(item => (
-                            <CartItem
-                                key={item.product}
-                                item={item}
-                                qtyChangeHandler={qtyChangeHandler}
-                                removeHandler={removeHandler}
-                            />
-                        ))}
-
+                        <div className="order__left">
+                            {cartItems.length === 0 ? (
+                                <div>
+                                    Ваша корзина пуста <Link to="/">Вернутся обратно</Link>
+                                </div>
+                            ) : cartItems.map(item => (
+                                <CartItem
+                                    key={item.product}
+                                    item={item}
+                                    qtyChangeHandler={qtyChangeHandler}
+                                    removeHandler={removeHandler}
+                                />
+                            ))}
+                        </div>
                         <div className="order__right">
-                            <p className="title">Стоимость заказа</p>
-                            <p className="title__text">Цена за 1 товар:<span>3890 Р</span></p>
-                            <p className="title__text">Скидка общая:<span>-990 Р</span></p>
-                            <strong className="title__text">
-                                Итого (Кол-во: {getCartCount()}) <span>{getCartSubTotal().toFixed(2)} Р</span>
+                            <p className="title__order">Ваш заказ</p>
+                            <p className="title__qty">Цена за {getCartCount()} товар(-а):<span>{getCartSubTotal().toFixed(2)} ₽</span></p>
+                            <strong className="title__total">
+                                Итого: <span>{getCartSubTotal().toFixed(2)} ₽</span>
                             </strong>
                             <button className="btn order__btn">Оформить заказ</button>
                         </div>

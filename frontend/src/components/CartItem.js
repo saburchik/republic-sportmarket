@@ -3,21 +3,22 @@ import { Link } from 'react-router-dom';
 
 const CartItem = ({ item, qtyChangeHandler, removeHandler }) => {
     return (
-        <div className="cart">
-            <Link to={`/product/${item.product}`} >
+        <div className="product__item">
+            <Link className="top" to={`/product/${item.product}`} >
                 <img className="product__img_size-s"
                     src={item.imageUrl}
                     alt={item.name}
                 />
             </Link>
-            <div>
-                <p className="product__article">артикул: <strong>848473</strong></p>
-                <p className="title title__size_c">{item.name}</p>
+            <div className="top">
+                <p className="product__article count__qty">артикул: <strong>848473</strong></p>
+                <p className="title product__name">{item.name}</p>
             </div>
-            <div>
-                <div className="count__inner">
-                    qty
+            <div className="top border">
+                <div>
+                    <p className="count__qty">Количество:</p>
                     <select
+                        className="count__select"
                         value={item.qty}
                         onChange={(e) => qtyChangeHandler(item.product, e.target.value)}
                     >
@@ -29,9 +30,10 @@ const CartItem = ({ item, qtyChangeHandler, removeHandler }) => {
                     </select>
                 </div>
             </div>
-            <div>
-                <p className="price price__size_m">{item.price}₽
-                                <strike className="old-price">4 890 ₽</strike>
+            <div className="top">
+                <p className="count__qty">Стоимость со скидкой:</p>
+                <p className="price price__size_m product__name">{item.price}₽
+                                <strike className="old-price old-price__s">4 890 ₽</strike>
                 </p>
             </div>
             <div className="close" onClick={() => removeHandler(item.product)}>
