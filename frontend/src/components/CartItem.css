@@ -12,18 +12,21 @@
 }
 
 .top {
-    align-items: center;
+    align-items: flex-start;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    ;
     height: 100%;
     width: 100%;
     padding: 1rem;
 }
 
 .top:nth-child(1) {
-    padding: 0.5rem;
+    padding: 0;
+}
+
+.cent {
+    height: 56px;
 }
 
 .border {
@@ -58,8 +61,8 @@
 
 .count__qty {
     font-size: 1rem;
-    font-weight: 700;
-    margin-bottom: 1rem;
+    font-weight: 500;
+    margin-bottom: 0.5rem;
 }
 
 .count__select {
@@ -71,7 +74,6 @@
     font-size: 1rem;
     border: 2px solid #CECECE;
     outline: none;
-    margin: 0 auto;
 }
 
 

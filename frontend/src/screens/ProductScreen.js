@@ -52,7 +52,7 @@ const ProductScreen = ({ match, history }) => {
                                     <p className="sale">-20%</p>
                                     <p className="price price__size_m">
                                         {product.price}
-                                        <strike className="old-price">4 890 ₽</strike>
+                                        <strike className="old-price">{product.oldPrice} ₽</strike>
                                     </p>
                                     <p className="description description__product">
                                         <strong>Описание</strong> <br />
@@ -60,12 +60,7 @@ const ProductScreen = ({ match, history }) => {
                                     </p>
                                     <div className="product__count">
                                         <button className="btn btn__size_g">Размераня сетка</button>
-                                        {/* <div className="count__inner">
-                                            <button className="btn btn__count">-</button>
-                                            <span className="count__value">1</span>
-                                            <button className="btn btn__count">+</button>
-                                        </div> */}
-                                        Qty
+                                        Количество:
                                         <select value={qty} onChange={(e) => setQty(e.target.value)}>
                                             {[...Array(product.countInStock).keys()].map((x) => (
                                                 <option key={x + 1} value={x + 1}>{x + 1}</option>
@@ -93,8 +88,8 @@ const ProductScreen = ({ match, history }) => {
                                 <strong className="client__data">02.03.2021 | 19:42</strong>
                             </div>
                             <p className="review__alert">
-                                Отзывы могут оставлять только <a className="registration__link">зарегистрированные</a> пользователи. <br />
-                                <a className="registration__link" >Авторизоваться и оставить отзыв</a>
+                                Отзывы могут оставлять только <Link className="registration__link">зарегистрированные</Link> пользователи. <br />
+                                <Link className="registration__link" >Авторизоваться и оставить отзыв</Link>
                             </p>
                         </div>
                     </div>

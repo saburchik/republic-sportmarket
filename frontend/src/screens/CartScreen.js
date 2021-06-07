@@ -32,35 +32,44 @@ const CartScreen = () => {
         return cartItems.reduce((price, item) => item.price * item.qty + price, 0);
     };
 
+    const getCartSales = () => {
+        return cartItems.reduce((oldPrice, item) => item.oldPrice * item.qty + oldPrice, 0);
+    };
+
+    const getSales = () => {
+        return cartItems.reduce(() => getCartSales() - getCartSubTotal(), 0);
+    };
+
     return (
         <div className="cartscreen">
             <Advantages />
             <div className="container">
                 <h3 className="title title__size_m cartscreen__title">В вашей корзине:</h3>
-                <div className="cartscreen__inner">
-                    <div className="order">
-                        <div className="order__left">
-                            {cartItems.length === 0 ? (
-                                <div>
-                                    Ваша корзина пуста <Link to="/">Вернутся обратно</Link>
-                                </div>
-                            ) : cartItems.map(item => (
-                                <CartItem
-                                    key={item.product}
-                                    item={item}
-                                    qtyChangeHandler={qtyChangeHandler}
-                                    removeHandler={removeHandler}
-                                />
-                            ))}
-                        </div>
-                        <div className="order__right">
-                            <p className="title__order">Ваш заказ</p>
-                            <p className="title__qty">Цена за {getCartCount()} товар(-а):<span>{getCartSubTotal().toFixed(2)} ₽</span></p>
-                            <strong className="title__total">
-                                Итого: <span>{getCartSubTotal().toFixed(2)} ₽</span>
-                            </strong>
-                            <button className="btn order__btn">Оформить заказ</button>
-                        </div>
+                <div className="order">
+                    <div className="order__left">
+                        {cartItems.length === 0 ? (
+                            <div className="cart__empty">
+                                <p>Ваша корзина - пуста</p>
+                                <p>Здесь хранятся товары, которые вы добавили в корзину. Сейчас ваша корзина пуста</p>
+                                <Link className="link__assortment" to="/">Перейти к ассортименту</Link>
+                            </div>
+                        ) : cartItems.map(item => (
+                            <CartItem
+                                key={item.product}
+                                item={item}
+                                qtyChangeHandler={qtyChangeHandler}
+                                removeHandler={removeHandler}
+                            />
+                        ))}
+                    </div>
+                    <div className="order__right">
+                        <p className="title__order">Ваш заказ</p>
+                        <p className="title__qty">Цена за {getCartCount()} товар(а):<span>{getCartSales().toFixed(2)} ₽</span></p>
+                        <p className="title__sales">Скидка на товар(ы): <span>-{getSales()} ₽</span></p>
+                        <strong className="title__total">
+                            Итого: <span>{getCartSubTotal().toFixed(2)} ₽</span>
+                        </strong>
+                        <button className="btn order__btn">Оформить заказ</button>
                     </div>
                 </div>
             </div>

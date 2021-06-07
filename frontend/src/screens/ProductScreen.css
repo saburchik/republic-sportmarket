@@ -10,12 +10,13 @@
 }
 
 .product__article {
+    font-size: 0.8rem;
     color: #302B42;
-    margin-bottom: 1rem;
+    margin-bottom: 0.5rem;
 }
 
 .product__article>strong {
-    letter-spacing: 0.3rem;
+    letter-spacing: 0.2rem;
 }
 
 .sale {
@@ -125,13 +126,16 @@
 }
 
 .registration__link {
+    display: inline-block;
     color: #E87E7E;
     cursor: pointer;
+    text-decoration: none;
     transition: .5s;
 }
 
 .registration__link:hover {
     color: purple;
+    text-decoration: underline;
 }
 
 /* Media query */
