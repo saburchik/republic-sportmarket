@@ -7,6 +7,8 @@ import Product from '../components/Product';
 import Advantages from '../components/Advantages';
 import Footer from '../components/Footer';
 import Digest from '../components/Digest';
+import ImageSlider from '../components/Slider';
+
 
 // Actions
 import { getProducts as listProducts } from "../redux/actions/productActions";
@@ -68,32 +70,12 @@ const HomeScreen = () => {
                 </div>
             </div>
         </div>
-        <div className="feedback">
-            <div className="container">
-                <h3 className="title title__size_m">Отзывы покупателей</h3>
-                <div className="feedback-in">
-                    <button className="arrow arrow__left"><i className="fas fa-chevron-left"></i></button>
-                    <div className="feedback__wrapper">
-                        <img className="feedback__img" src="https://i.imgur.com/2yirlfS.png" alt="reviews" />
-                        <div className="feedback__text">
-                            <p className="feedback__review">
-                                Отличный интернет магазин, с продукцией высокого качества.
-                                Имеется вся подробная информация о товаре.
-                                И даже, если возникут дополнительные вопросы,
-                                специалисты поддержки в кротчайшее время отвечают, и подсказывают.
-                            <br />
-                                <span>– Сын Тони Хоука</span>
-                            </p>
-                        </div>
-                    </div>
-                    <button className="arrow arrow__right"><i className="fas fa-chevron-right"></i></button>
-                </div>
-            </div>
-        </div>
+
+        <ImageSlider />
         <Digest />
         <Footer />
     </div>
     )
 };
 
-export default HomeScreen
+export default HomeScreen;
