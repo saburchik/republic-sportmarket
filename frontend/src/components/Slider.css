@@ -1,9 +1,6 @@
 /* Feedback */
-
 .feedback-in {
-    display: flex;
-    align-items: center;
-    max-width: 1000px;
+    width: Min(70%,1000px);
     margin: 0 auto;
     padding: 2rem 0;
 }
@@ -12,23 +9,6 @@
     display: flex;
     align-items: center;
     padding: 0 3rem;
-}
-
-.arrow {
-    color: #4F4F4F;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 50px;
-    height: 80px;
-    font-size: 5rem;
-    cursor: pointer;
-    border: none;
-    transition: .3s;
-}
-
-.arrow:hover {
-    color: #302B42;
 }
 
 .feedback__img {
@@ -49,30 +29,68 @@
     margin-top: 1rem;
 }
 
-@media (max-width: 775px) {
+/* Arrows */
+.slick-prev,
+.slick-next
+{
+    mask-repeat: no-repeat;
+    mask-position: center;
 
+    position: absolute;
+    top: 50%;
+
+    width: 45px;
+    height: clamp(30px,10vw,75px);
+    -webkit-transform: translate(0, -50%);
+    -ms-transform: translate(0, -50%);
+    transform: translate(0, -50%);
+
+    cursor: pointer;
+
+    color: transparent;
+    background-color: #302B42;
+}
+
+.slick-prev
+{
+    left: -45px;
+    mask-image: url("assets/chevron-left-solid.svg");
+}
+
+.slick-next
+{
+    right: -45px;
+    mask-image: url("assets/chevron-right-solid.svg");
+}
+
+.slick-prev:hover,
+.slick-next:hover
+{
+    background-color:#939292;
+}
+
+/* Media Query */
+@media (max-width: 990px) {
     .feedback__wrapper {
         padding: 0 1rem;
     }
+}
 
-    .arrow {
-        font-size: 3rem;
-    }
-
+@media (max-width: 775px) {
     .feedback__img {
         width: 150px;
         height: 150px;
     }
 }
 
-@media (max-width: 550px) {
+@media (max-width: 660px) {
     .feedback__wrapper {
         flex-direction: column;
         padding: 0;
     }
 
-    .arrow {
-        font-size: 2rem;
+    .feedback__review {
+        padding: 1rem 0.5rem;
     }
 
     .feedback__img {

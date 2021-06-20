@@ -12,6 +12,11 @@
     padding: 0.5rem 0;
 }
 
+.logotype {
+    box-shadow: 0 1px 4px rgb(0 0 0 / 40%);
+    border-radius: 10%;
+}
+
 .navbar__links,
 .search {
     display: flex;
@@ -41,6 +46,10 @@
     font-weight: 500;
 }
 
+.navbar__helped:hover {
+    color: #302B42;
+}
+
 .cart__link {
     color: #302B42;
     background-color: #ccc;
@@ -51,7 +60,7 @@
 }
 
 .cart__link:hover {
-    border: 1px solid #939292;
+    background-color: #939292;
 }
 
 .cartlogo__badge {
@@ -59,14 +68,14 @@
 top: -5px;
 left: 30px; */
     color: #302B42;
-    background-color: #fff;
+    background-color: #ccc;
     border-radius: 30px;
     height: 30px;
     width: 30px;
     display: flex;
     align-items: center;
     justify-content: center;
-    border: 2px solid #fff;
+    border: 2px solid #302B42;
     margin-left: 5px;
 }
 

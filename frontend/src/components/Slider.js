@@ -2,64 +2,60 @@ import "./Slider.css";
 import React from 'react';
 import Slider from 'react-slick';
 import "slick-carousel/slick/slick.css";
-import "slick-carousel/slick/slick-theme.css";
 
 const ImageSlider = () => {
     let settings = {
         dot: true,
         infinite: true,
+        autoplay: true,
+        autoplaySpeed: 50000,
         speed: 500,
         slidesToShow: 1,
         slidesToScroll: 1,
-        cssEase: "linear"
+        cssEase: "linear",
     }
+
     return (
         <Slider className="feedback-in" {...settings}>
-            <div >
+            <div>
                 <div className="feedback__wrapper">
                     <img className="feedback__img" src="https://i.imgur.com/2yirlfS.png" alt="reviews" />
-                    <div className="feedback__text">
-                        <p className="feedback__review">
-                            Отличный интернет магазин, с продукцией высокого качества.
-                            Имеется вся подробная информация о товаре.
-                            И даже, если возникут дополнительные вопросы,
-                            специалисты поддержки в кротчайшее время отвечают, и подсказывают.
-                <br />
-                            <span>– Сын Тони Хоука</span>
-                        </p>
-                    </div>
+                    <p className="feedback__review">
+                        Отличный интернет магазин, с продукцией высокого качества.
+                        Имеется вся подробная информация о товаре.
+                        И даже, если возникут дополнительные вопросы,
+                        специалисты поддержки в кротчайшее время отвечают, и подсказывают.
+                        <br />
+                        <span>– Сын Тони Хоука</span>
+                    </p>
                 </div>
             </div>
 
             <div>
                 <div className="feedback__wrapper">
                     <img className="feedback__img" src="https://i.imgur.com/XN1DR0U.png" alt="reviews" />
-                    <div className="feedback__text">
-                        <p className="feedback__review">
-                            Максимально индивидуальный подход к выбору товаров.
-                            В Республике. Дружелюбный коллектив, приятная атмосфера.
-                            Очень доволен. Заказали лонгборд в четверг, привезли в пятницу.
-                            Молодцы ребята.
-                <br />
-                            <span>– Андрей Андреевич Замай</span>
-                        </p>
-                    </div>
+                    <p className="feedback__review">
+                        Максимально индивидуальный подход к выбору товаров.
+                        В Республике. Дружелюбный коллектив, приятная атмосфера.
+                        Очень доволен. Заказали лонгборд в четверг, привезли в пятницу.
+                        Молодцы ребята.
+                        <br />
+                        <span>– Андрей Андреевич Замай</span>
+                    </p>
                 </div>
             </div>
 
             <div>
                 <div className="feedback__wrapper">
                     <img className="feedback__img" src="https://i.imgur.com/HMp3Min.png" alt="reviews" />
-                    <div className="feedback__text">
-                        <p className="feedback__review">
-                            Не большой ИМ. Выставочных мест не много.
-                            Конечно, до Сквота далеко, но заказать скейтборд или получить заказ то,
-                            что нужно и не нужно ехать на другой конец города.
-                            И очень приветливый персонал, молодцы ребятки.
-                <br />
-                            <span>– Овсянкин</span>
-                        </p>
-                    </div>
+                    <p className="feedback__review">
+                        Не большой ИМ. Выставочных мест не много.
+                        Конечно, до Сквота далеко, но заказать скейтборд или получить заказ то,
+                        что нужно и не нужно ехать на другой конец города.
+                        И очень приветливый персонал, молодцы ребятки.
+                        <br />
+                        <span>– Овсянкин</span>
+                    </p>
                 </div>
             </div>
         </Slider>
