@@ -48,33 +48,41 @@ const ProductScreen = ({ match, history }) => {
 
                                 <div className="product__information">
                                     <p className="product__article">артикул: <strong>{product.article}</strong></p>
-                                    <p className="title title__size_c">{product.name}</p>
-                                    <p className="sale">-20%</p>
+                                    <p className="title title__size_c boxies">
+                                        <span className="sale">-20%</span>
+                                        {product.name}</p>
                                     <p className="price price__size_m">
-                                        {product.price}
+                                        {product.price} ₽
                                         <strike className="old-price">{product.oldPrice} ₽</strike>
                                     </p>
                                     <p className="description description__product">
-                                        <strong>Описание</strong> <br />
+                                        <strong>Описание:</strong> <br />
                                         {product.description}
                                     </p>
+                                    <button className="btn btn__size_g">Размераня сетка</button>
                                     <div className="product__count">
-                                        <button className="btn btn__size_g">Размераня сетка</button>
-                                        Количество:
-                                        <select value={qty} onChange={(e) => setQty(e.target.value)}>
-                                            {[...Array(product.countInStock).keys()].map((x) => (
-                                                <option key={x + 1} value={x + 1}>{x + 1}</option>
-                                            ))}
-                                        </select>
+                                        <div>
+                                            <p className="count__qty">Количество:</p>
+                                            <select className="count__select" value={qty} onChange={(e) => setQty(e.target.value)}>
+                                                {[...Array(product.countInStock).keys()].map((x) => (
+                                                    <option key={x + 1} value={x + 1}>{x + 1}</option>
+                                                ))}
+                                            </select>
+                                        </div>
+
+                                        <div>
+                                            <p className="product__status">Статус:
+                                                <span className="title"> {product.countInStock > 0 ? "В наличии" : "Нет в наличии"}</span>
+                                            </p>
+                                            {/* <Link to="/"> */}
+                                            <button
+                                                className="btn btn__in-cart"
+                                                type="button"
+                                                onClick={addToCartHandler}
+                                            >В корзину</button>
+                                            {/* </Link> */}
+                                        </div>
                                     </div>
-                                    <p>Статус: <span>{product.countInStock > 0 ? "В наличии" : "Нет в наличии"}</span></p>
-                                    {/* <Link to="/"> */}
-                                    <button
-                                        className="btn btn__in-cart"
-                                        type="button"
-                                        onClick={addToCartHandler}
-                                    >В корзину</button>
-                                    {/* </Link> */}
                                 </div>
                             </div>
                         </div>

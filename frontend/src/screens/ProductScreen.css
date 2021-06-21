@@ -26,7 +26,12 @@
     color: #302B42;
     background-color: #E87E7E;
     padding: 5px 10px;
-    margin-bottom: 1rem;
+    margin-right: 1.5rem;
+}
+
+.boxies {
+    display: flex;
+    align-items: center;
 }
 
 .old-price {
@@ -136,6 +141,10 @@
 .registration__link:hover {
     color: purple;
     text-decoration: underline;
+}
+
+.product__status {
+    margin-bottom: 0.5rem;
 }
 
 /* Media query */

@@ -1,14 +1,14 @@
 const products = [
     {
         article: 848501,
-        name: "PlayStation 5",
+        name: "Сноуборд",
         imageUrl:
-            "https://imgur.com/HnuqR0w",
+            "https://i.imgur.com/HnuqR0w_d.webp?maxwidth=760&fidelity=grand",
         description:
             "PlayStation 5 (PS5) is a home video game console developed by Sony Interactive Entertainment. Announced in 2019 as the successor to the PlayStation 4, the PS5 was released on November 12, 2020 in Australia, Japan, New Zealand, North America, Singapore, and South Korea, and November 19, 2020 onwards in other major markets except China and India.",
         price: 499,
         oldPrice: 899,
-        countInStock: 0,
+        countInStock: 4,
     },
     {
         article: 848502,
