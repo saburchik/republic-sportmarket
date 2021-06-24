@@ -5,6 +5,7 @@ import { useSelector, useDispatch } from "react-redux";
 // Components
 import Product from '../components/Product';
 import Advantages from '../components/Advantages';
+import Accordion from '../components/Accordion';
 import Footer from '../components/Footer';
 import Digest from '../components/Digest';
 import ImageSlider from '../components/Slider';
@@ -34,23 +35,7 @@ const HomeScreen = () => {
             <div className="container">
                 <h2 className="title title__size_m">Ассортимент</h2>
                 <div className="catalog__info">
-                    <div className="sidebar">
-                        <h3 className="title title__size_m">Категории</h3>
-                        <ul className="sidebar__info">
-                            <li className="sidebar__item">
-                                Скейтбординг
-                                    <i className="fas fa-chevron-down" />
-                            </li>
-                            <li className="sidebar__item">
-                                Сноубординг
-                                    <i className="fas fa-chevron-down" />
-                            </li>
-                            <li className="sidebar__item">
-                                Армотизаторы для сноуборда
-                                <i className="fas fa-chevron-down" />
-                            </li>
-                        </ul>
-                    </div>
+                    <Accordion content="Велосипед" />
                     <div className="catalog__products">
                         {loading ? (
                             <h2>Loading...</h2>

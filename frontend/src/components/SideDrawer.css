@@ -12,12 +12,6 @@
     transition: all 0.3s ease-out;
 }
 
-@media (min-width: 890px) {
-    .sidedrawer {
-        display: none;
-    }
-}
-
 .sidedrawer.show {
     transform: translateX(0);
 }
@@ -25,15 +19,36 @@
 .sidedrawer__links {
     display: flex;
     justify-content: space-between;
-    padding: 0 1rem;
-    margin: 0.5rem 0 2rem;
+    align-items: center;
+    padding: 0 2rem 0 1rem;
+    margin: 0.5rem 0;
 }
 
-@media (max-width: 660px) {
+.navbar__logo {
+    display: inline-flex;
+    justify-content: flex-start;
+}
+
+.search--mobile {
+    height: 250px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: baseline;
+    padding: 3rem 1rem;
+    border-top: 3px solid #302B42;
+    border-bottom: 3px solid #302B42;
+}
+
+@media (min-width: 890px) {
+    .sidedrawer {
+        display: none;
+    }
+}
+
+/* @media (max-width: 560px) {
     .sidedrawer__links {
-        flex-direction: column;
-        /* height: 100%;
-max-height: 250px; */
+       flex-direction: column;
     }
 
     .cart__link.word {
@@ -43,18 +58,4 @@ max-height: 250px; */
     .cart__link.word::before {
         content: "Корзина";
     }
-}
-
-.navbar__logo {
-    display: inline-flex;
-    justify-content: flex-start;
-}
-
-.search--mobile {
-    height: 200px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    padding: 0 1rem 3rem;
-    border-bottom: 3px solid #302B42;
-}
+} */

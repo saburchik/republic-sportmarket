@@ -31,36 +31,6 @@
     padding: 3rem 0 6rem;
 }
 
-.sidebar {
-    width: 230px;
-    max-width: 100%;
-}
-
-.sidebar__info {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    padding-top: 3rem;
-}
-
-.sidebar__item {
-    display: flex;
-    justify-content: space-between;
-    font-size: 1rem;
-    font-weight: 700;
-    text-transform: uppercase;
-    margin-bottom: 1rem;
-    border-bottom: 3px solid #CECECE;
-    width: 100%;
-    cursor: pointer;
-    padding-bottom: 1rem;
-}
-
-.sidebar__item>i {
-    color: #939292;
-    font-size: 2rem;
-}
-
 .catalog__products {
     width: 100%;
     max-width: 1000px;

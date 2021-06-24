@@ -21,8 +21,11 @@ const SideDrawer = ({ show, click }) => {
     return <div className={sideDrawerClass.join(" ")}>
         <ul className="sidedrawer__links">
             <li className="navbar__logo">
-                <Link to="/" onClick={click}>
-                    <img src={logo} alt="Republic-logo" />
+                {/* <Link to="/" onClick={click}>
+                    <img className="logotype" src={logo} alt="Republic-logo" />
+                </Link> */}
+                <Link to="/">
+                    <img className="navbar__logo logotype" src={logo} alt="Republic-logo" />
                 </Link>
             </li>
             <li>
@@ -37,18 +40,18 @@ const SideDrawer = ({ show, click }) => {
             <li>
                 <Link className="cart__link" to="/" onClick={click}>
                     Вход
-                    </Link>
-            </li>
-            <li>
-                <form>
-                    <input className="search__input" placeholder="Поиск" />
-                    <button className="search__btn"><i className="fas fa-search"></i></button>
-                </form>
+                </Link>
             </li>
             <li>
                 <Link className="navbar__helped" to="/">
                     Помощь
-                    </Link>
+                </Link>
+            </li>
+            <li>
+                <form>
+                    <input className="input" placeholder="Поиск" />
+                    <button className="input__btn search__btn"><i className="fas fa-search"></i></button>
+                </form>
             </li>
         </ul>
     </div>;

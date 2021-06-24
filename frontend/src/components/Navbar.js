@@ -18,7 +18,7 @@ const Navbar = ({ click }) => {
                 <nav className="navbar">
                     <div className="logo">
                         <Link to="/">
-                            <img className="navbar__logo logotype" src={logo} alt="Republic-logo" />
+                            <img className="navbar__logo" src={logo} alt="Republic-logo" />
                         </Link>
                     </div>
 
@@ -32,7 +32,7 @@ const Navbar = ({ click }) => {
                         <li>
                             <Link className="navbar__helped" to="/">
                                 Помощь
-                    </Link>
+                            </Link>
                         </li>
                     </ul>
 
@@ -46,7 +46,7 @@ const Navbar = ({ click }) => {
                         <li>
                             <Link className="cart__link" to="/">
                                 Вход
-                    </Link>
+                            </Link>
                         </li>
                     </ul>
 
