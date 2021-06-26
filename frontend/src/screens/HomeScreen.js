@@ -35,7 +35,10 @@ const HomeScreen = () => {
             <div className="container">
                 <h2 className="title title__size_m">Ассортимент</h2>
                 <div className="catalog__info">
-                    <Accordion content="Велосипед" />
+                    <div className="sidebar">
+                        <h3 className="title title__size_m">Категории</h3>
+                        <Accordion />
+                    </div>
                     <div className="catalog__products">
                         {loading ? (
                             <h2>Loading...</h2>
