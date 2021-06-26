@@ -1,11 +1,11 @@
 import './HomeScreen.css';
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import { useSelector, useDispatch } from "react-redux";
 
 // Components
 import Product from '../components/Product';
 import Advantages from '../components/Advantages';
-import Accordion from '../components/Accordion';
+import Categories from '../components/Categories';
 import Footer from '../components/Footer';
 import Digest from '../components/Digest';
 import ImageSlider from '../components/Slider';
@@ -19,6 +19,14 @@ const HomeScreen = () => {
 
     const getProducts = useSelector((state) => state.getProducts);
     const { products, loading, error } = getProducts;
+
+    // try
+    const [product, setProduct] = useState(products);
+    const [categories, setCategories] = useState([]);
+    const filterItems = (category) => {
+        const newItems = products.filter((item) => item.category === category);
+        setProduct(newItems);
+    };
 
     useEffect(() => {
         dispatch(listProducts());
@@ -37,7 +45,7 @@ const HomeScreen = () => {
                 <div className="catalog__info">
                     <div className="sidebar">
                         <h3 className="title title__size_m">Категории</h3>
-                        <Accordion />
+                        <Categories filter={filterItems} />
                     </div>
                     <div className="catalog__products">
                         {loading ? (
@@ -46,8 +54,10 @@ const HomeScreen = () => {
                             <h2>{error}</h2>
                         ) : (
                             products.map((product) => <Product
+                                items={product}
                                 key={product._id}
                                 productId={product._id}
+                                category={product.category}
                                 name={product.name}
                                 price={product.price}
                                 description={product.description}

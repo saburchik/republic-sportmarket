@@ -11,7 +11,6 @@ import CartScreen from "./screens/CartScreen";
 import Navbar from './components/Navbar';
 import Backdrop from './components/Backdrop';
 import SideDrawer from './components/SideDrawer';
-// import Advantages from './components/Advantages';
 
 function App() {
 
