@@ -44,7 +44,7 @@ const Navbar = ({ click }) => {
                             </Link>
                         </li>
                         <li>
-                            <Link className="cart__link" to="/">
+                            <Link className="cart__link" to="/login">
                                 Вход
                             </Link>
                         </li>

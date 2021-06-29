@@ -1,11 +1,10 @@
 import './HomeScreen.css';
-import { useEffect, useState } from "react";
+import { useEffect } from "react";
 import { useSelector, useDispatch } from "react-redux";
 
 // Components
 import Product from '../components/Product';
 import Advantages from '../components/Advantages';
-import Categories from '../components/Categories';
 import Footer from '../components/Footer';
 import Digest from '../components/Digest';
 import ImageSlider from '../components/Slider';
@@ -20,59 +19,51 @@ const HomeScreen = () => {
     const getProducts = useSelector((state) => state.getProducts);
     const { products, loading, error } = getProducts;
 
-    // try
-    const [product, setProduct] = useState(products);
-    const [categories, setCategories] = useState([]);
-    const filterItems = (category) => {
-        const newItems = products.filter((item) => item.category === category);
-        setProduct(newItems);
-    };
-
     useEffect(() => {
         dispatch(listProducts());
     }, [dispatch]);
 
-    return (<div className="homescreen">
-        <div className="homescreen__intro">
-            <div className="container">
-                <h1 className="homescreen__title">Отдыхай в <br /> движении</h1>
+    return (
+        <div className="homescreen">
+            <div className="homescreen__intro">
+                <div className="container">
+                    <h1 className="homescreen__title">Отдыхай в <br /> движении</h1>
+                </div>
             </div>
-        </div>
-        <Advantages />
-        <div className="catalog">
-            <div className="container">
-                <h2 className="title title__size_m">Ассортимент</h2>
-                <div className="catalog__info">
-                    <div className="sidebar">
-                        <h3 className="title title__size_m">Категории</h3>
-                        <Categories filter={filterItems} />
-                    </div>
-                    <div className="catalog__products">
-                        {loading ? (
-                            <h2>Loading...</h2>
-                        ) : error ? (
-                            <h2>{error}</h2>
-                        ) : (
-                            products.map((product) => <Product
-                                items={product}
-                                key={product._id}
-                                productId={product._id}
-                                category={product.category}
-                                name={product.name}
-                                price={product.price}
-                                description={product.description}
-                                imageUrl={product.imageUrl}
-                            />)
-                        )}
+            <Advantages />
+            <div className="catalog">
+                <div className="container">
+                    <h2 className="title title__size_m">Ассортимент</h2>
+                    <div className="catalog__info">
+                        <div className="sidebar">
+                            <h3 className="title title__size_m">Категории</h3>
+
+                        </div>
+                        <div className="catalog__products">
+                            {loading ? (
+                                <h2>Loading...</h2>
+                            ) : error ? (
+                                <h2>{error}</h2>
+                            ) : (
+                                products.map((product) => <Product
+                                    key={product._id}
+                                    productId={product._id}
+                                    category={product.category}
+                                    name={product.name}
+                                    price={product.price}
+                                    description={product.description}
+                                    imageUrl={product.imageUrl}
+                                />)
+                            )}
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
 
-        <ImageSlider />
-        <Digest />
-        <Footer />
-    </div>
+            <ImageSlider />
+            <Digest />
+            <Footer />
+        </div>
     )
 };
 

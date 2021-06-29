@@ -22,7 +22,7 @@ const Product = ({ imageUrl, category, name, price, description, productId, arti
                 </Link>
             </div>
         </div >
-    );
+    )
 };
 
 export default Product;
