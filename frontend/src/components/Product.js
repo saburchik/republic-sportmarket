@@ -15,7 +15,7 @@ const Product = ({ imageUrl, category, name, price, description, productId, arti
             <div className="product__info">
                 <div className="product__text">
                     <p className="title">{name}</p>
-                    <p className="price">{price}₽</p>
+                    <p className="product__price">{price} ₽</p>
                 </div>
                 <Link to={`/product/${productId}`} className="info__item">
                     <i className="fas fa-play"></i>

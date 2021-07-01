@@ -4,23 +4,23 @@ import { Link } from 'react-router-dom';
 const CartItem = ({ item, qtyChangeHandler, removeHandler }) => {
     return (
         <div className="product__item">
-            <Link className="top" to={`/product/${item.product}`} >
+            <Link className="product__inner" to={`/product/${item.product}`} >
                 <img className="product__img_size-s"
                     src={item.imageUrl}
                     alt={item.name}
                 />
             </Link>
-            <div className="top">
-                <div className="cent">
+            <div className="product__inner">
+                <div className="product__height">
                     <p className="product__article">артикул: <strong>{item.article}</strong></p>
                     <p className="title product__name">{item.name}</p>
                 </div>
             </div>
-            <div className="top border">
-                <div className="cent">
-                    <p className="count__qty">Количество:</p>
+            <div className="product__inner product__border">
+                <div className="product__height">
+                    <p className="qty__text">Количество:</p>
                     <select
-                        className="count__select"
+                        className="qty__select"
                         value={item.qty}
                         onChange={(e) => qtyChangeHandler(item.product, e.target.value)}
                     >
@@ -32,15 +32,15 @@ const CartItem = ({ item, qtyChangeHandler, removeHandler }) => {
                     </select>
                 </div>
             </div>
-            <div className="top">
-                <div className="cent">
-                    <p className="count__qty">Цена:</p>
-                    <p className="price price__size_m product__name">{item.price}₽
-                                <strike className="old-price old-price__s">{item.oldPrice}₽</strike>
+            <div className="product__inner">
+                <div className="product__height">
+                    <p className="qty__text">Цена:</p>
+                    <p className="product__price">{item.price}₽
+                        <strike className="old-price old-price__s">{item.oldPrice}₽</strike>
                     </p>
                 </div>
             </div>
-            <div className="close" onClick={() => removeHandler(item.product)}>
+            <div className="product__remove" onClick={() => removeHandler(item.product)}>
                 <button>&times;</button>
             </div>
         </div>

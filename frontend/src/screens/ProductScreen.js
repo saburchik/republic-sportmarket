@@ -51,7 +51,7 @@ const ProductScreen = ({ match, history }) => {
                                     <p className="title title__size_c boxies">
                                         <span className="sale">-20%</span>
                                         {product.name}</p>
-                                    <p className="price price__size_m">
+                                    <p className="product__price price__size_m">
                                         {product.price} ₽
                                         <strike className="old-price">{product.oldPrice} ₽</strike>
                                     </p>

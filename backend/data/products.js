@@ -1,75 +1,70 @@
 const products = [
     {
         article: 848501,
-        category: "Skate",
-        name: "Сноуборд",
+        category: "skate",
+        name: "BLIND OG Grundge Logo FP Black 8",
         imageUrl:
-            "https://i.imgur.com/HnuqR0w_d.webp?maxwidth=760&fidelity=grand",
-        description:
-            "PlayStation 5 (PS5) is a home video game console developed by Sony Interactive Entertainment. Announced in 2019 as the successor to the PlayStation 4, the PS5 was released on November 12, 2020 in Australia, Japan, New Zealand, North America, Singapore, and South Korea, and November 19, 2020 onwards in other major markets except China and India.",
-        price: 499,
-        oldPrice: 899,
+            "https://i.imgur.com/6h1WQtq.jpg",
+        description: "Классика от Blind. Скейтборд из 7-слойного канадского клёна. Подойдет для начинающих и прогрессирующих райдеров и любого места катания, будь то улица или скейт-парк.",
+        price: 7700,
+        oldPrice: 8700,
         countInStock: 4,
     },
     {
         article: 848502,
-        name: "Iphone 12",
-        category: "Mobile",
+        category: "skate",
+        name: "DARKSTAR Timeworks Yth FP Soft Top Mint 6.5",
         imageUrl:
-            "https://images.unsplash.com/photo-1605787020600-b9ebd5df1d07?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1463&q=80",
+            "https://i.imgur.com/VOVWVYe.jpg",
         description:
-            "Welcome to a new era of iPhone. Beautifully bright 6.1-inch Super Retina XDR display.1 Ceramic Shield with 4x better drop performance.2 Incredible low-light photography with Night mode on all cameras. Cinema-grade Dolby Vision video recording, editing, and playback. Powerful A14 Bionic chip. And new MagSafe accessories for easy attach and faster wireless charging.3 Let the fun begin.",
-        price: 1099,
-        oldPrice: 2099,
+            "Классика от Darkstar. Скейтборд из 7-слойного канадского клёна. Подойдет для начинающих и прогрессирующих райдеров и любого места катания, будь то улица или скейт-парк.",
+        price: 7900,
+        oldPrice: 9900,
         countInStock: 10,
     },
     {
         article: 848503,
-        category: "Tech",
-        name: "Cannon EOS-1D",
+        category: "scooter",
+        name: "TILT Theorem Complete - Asphalt Medium",
         imageUrl:
-            "https://images.unsplash.com/photo-1519183071298-a2962feb14f4?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80",
+            "https://i.imgur.com/0swuwDF.png",
         description:
-            "The EOS-1D X combines speed with image quality, to create the next generation camera for professionals. Full frame 18 megapixel sensor with Dual “DIGIC 5+” processors sets the standard, and up to 12 frames per second shooting takes it beyond.",
-        price: 1300,
-        oldPrice: 2599,
+            "Совершенно новый продукт от компании Tilt - самокат комплит The Theorem разработан специально для райдеров, преданных этому бренду. Самокат построен на основе немного упрощённой доски Theory, и представлен в трёх размерах: Small, Medium и Large, поэтому подобрать подходящий именно вам не составит никаких проблем. Из особенностей можно выделить мягкие грипсы Metra, шкурку средней зернистости, алюминиевый Т-образный руль, мягкий тормоз и нестандартную фурнитуру Tilt. Комплит абсолютно совместим со всеми продуктами коллекции Tilt Stage III, и вы не столкнётесь с проблемами в дальнейшей настройке самоката под свой индивидуальный стиль езды.",
+        price: 27900,
+        oldPrice: 29000,
         countInStock: 5,
     },
     {
         article: 848504,
-        category: "Tech",
-        name: "Amazon Alexa",
+        category: "scooter",
+        name: "NITRO CIRCUS RW 540",
         imageUrl:
-            "https://images.unsplash.com/photo-1518444065439-e933c06ce9cd?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1267&q=80",
+            "https://i.imgur.com/eLntBaX.jpg",
         description:
-            "It is capable of voice interaction, music playback, making to-do lists, setting alarms, streaming podcasts, playing audiobooks, and providing weather, traffic, sports, and other real-time information, such as news. Alexa can also control several smart devices using itself as a home automation system.",
-        price: 50,
-        oldPrice: 99,
+            "Комплит Nitro Circus Ryan 'R-Willy' Williams 540 Signature снова возвращается, и становится лучше чем когда-либо ранее. И без того стильный дизайн улучшен и дополнен облегченными компонентами, для обеспечения надежности и внешнего вида. Новая модель самоката имеет широкую доску квадратными дропаутами, и новым перешейком, а так же усовершенствованный алюминиевый руль с шестигранной конструкцией для дополнительной прочности. Дополненный системой сжатия SCS и новыми 120 мм колёсами — этот комплит будет способствовать вашему прогрессу очень долгое время.",
+        price: 25800,
+        oldPrice: 27800,
         countInStock: 25,
     },
     {
         article: 848505,
-        category: "Tech",
-        name: "Audio Technica Headphones",
-        imageUrl:
-            "https://images.unsplash.com/photo-1558756520-22cfe5d382ca?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80",
-        description:
-            "Outfitted with 45mm large-aperture dynamic drivers and an over-ear, closed-back design, the ATH-M50x headphones deliver clarity, deep bass, and extended bandwidth (15 Hz to 28 kHz) while isolating you from outside sounds.",
-        price: 233,
-        oldPrice: 499,
+        category: "accessories",
+        name: "SPEKTRUM BLANK BLACK INFRARED LENS",
+        imageUrl: "https://i.imgur.com/nXkidFv.jpg",
+        description: "Модель обеспечивает высочайший уровень защиты и комфорта благодаря оптимизированной форме линз, предотвращающей повреждение лучей до того, как они достигнут сетчатки. Бланк, плотно прилегающий к вашей голове, создан для скорости. Серая базовая линза Zeiss с многослойным инфракрасным зеркальным покрытием идеально подходит для длительного использования в яркие и солнечные дни. Этот объектив обеспечивает визуальную защиту от сильных отражений, обеспечивает максимальный визуальный комфорт и естественное восприятие без искажения цвета. Серая базовая линза Zeiss с инфракрасным зеркальным покрытием идеально подходит для длительного использования в яркие и солнечные дни. Эти линзы обеспечивают визуальную защиту от сильных отражений, обеспечивают максимальный визуальный комфорт и естественное восприятие без искажения цвета.",
+        price: 14900,
+        oldPrice: 15900,
         countInStock: 4,
     },
     {
         article: 848506,
-        category: "Tech",
-        name: "JBL FLIP 4",
-        imageUrl:
-            "https://images.unsplash.com/photo-1564424224827-cd24b8915874?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1489&q=80",
-        description:
-            "JBL Flip 4 is the next generation in the award-winning Flip series; it is a portable Bluetooth speaker that delivers surprisingly powerful stereo sound. This compact speaker is powered by a 3000mAh rechargeable Li-ion battery that offers up to 12 hours of continuous, high-quality audio playtime.",
-        price: 140,
-        oldPrice: 399,
-        countInStock: 10,
+        category: "accessories",
+        name: "Бандана BUFF Polar New Cashmere Red",
+        imageUrl: "https://i.imgur.com/BPua9Ap.jpg",
+        description: "Бандана Buff Polar - это настоящая находка для тех, кто занимается зимними видами спорта или просто любит активные прогулки на природе в холодную пору. Многофункциональный аксессуар состоит из двух компонентов: нижний теплый флисовый шарф и вшитый в него гейтер из легкой микрофибры. Ткань отлично греет, хорошо дышит и испаряет влагу. Благодаря высокой эластичности и продуманному крою, Buff Polar можно носить во множестве различных вариантов: как шарф, бандану, балаклаву, шапочку и многих других.",
+        price: 2390,
+        oldPrice: 3190,
+        countInStock: 0,
     },
 ];
 
