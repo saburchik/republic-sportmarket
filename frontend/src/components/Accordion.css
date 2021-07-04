@@ -11,6 +11,7 @@
 }
 
 .titled {
+    text-transform: uppercase;
     font-size: 1rem;
     font-weight: 700;
     cursor: pointer;
@@ -93,7 +94,7 @@
     transform: rotate(90deg);
 }
 
-/* .accordion {
+.accordion {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -116,5 +117,3 @@
     font-size: 0.8rem;
     font-weight: 500;
 }
-
-} */

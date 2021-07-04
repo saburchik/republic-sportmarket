@@ -5,6 +5,7 @@ import { useSelector, useDispatch } from "react-redux";
 // Components
 import Product from '../components/Product';
 import Advantages from '../components/Advantages';
+import Accordion from '../components/Accordion';
 import Footer from '../components/Footer';
 import Digest from '../components/Digest';
 import ImageSlider from '../components/Slider';
@@ -37,6 +38,10 @@ const HomeScreen = () => {
                     <div className="catalog__info">
                         <div className="sidebar">
                             <h3 className="title title__size_m">Категории</h3>
+
+                            <Accordion title="Скейтборды" />
+                            <Accordion title="Самокаты" />
+                            <Accordion title="Аксессуары" />
 
                         </div>
                         <div className="catalog__products">

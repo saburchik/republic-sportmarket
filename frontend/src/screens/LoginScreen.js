@@ -13,8 +13,8 @@ const LoginScreen = () => {
                     <div className="dashboard">
                         <div className="login">
                             <h2 className="title title__size_m">Вход</h2>
-                            <div>
-                                <form className="login__wrapper">
+                            <div className="login__wrapper">
+                                <form className="login__form">
                                     <p className="login__text">Ваша почта
                                         <span>*</span></p>
                                     <input className="input input__loginscreen" placeholder="Введите e-mail" />
@@ -30,8 +30,8 @@ const LoginScreen = () => {
                         </div>
                         <div className="registration">
                             <h2 className="title title__size_m">Регистрация</h2>
-                            <div>
-                                <form className="login__wrapper">
+                            <div className="login__wrapper">
+                                <form className="login__form">
                                     <p className="login__text">Ваше имя
                                         <span>*</span></p>
                                     <input className="input input__loginscreen" placeholder="Введите имя" />
