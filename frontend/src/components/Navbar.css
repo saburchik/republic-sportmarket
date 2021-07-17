@@ -1,46 +1,63 @@
-.header {
-    width: 100%;
-    background-color: #fff;
-    z-index: 99;
-}
-
-.navbar {
+.navbar__inner {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 0.5rem 0;
+    width: 100%;
+    background-color: #fff;
+    padding: 0.5rem 2rem;
+    position: relative;
+    z-index: 99;
 }
 
 .navbar__links,
-.search {
+.search__form {
     display: flex;
     align-items: center;
     list-style: none;
     position: relative;
 }
 
-.navbar__links>li {
-    margin-left: 2.5rem;
+.navbar__links li:last-child {
+    margin-left: 3rem;
 }
 
-.search>li {
-    padding-left: 1.5rem;
-}
-
-.navbar__links>li:first-child {
-    margin-left: 0;
-}
-
-.search>li:first-child {
+.search__form>li:first-child {
     padding-left: 0;
 }
 
-.navbar__helped {
-    color: #939292;
-    font-weight: 500;
+.search__input {
+    font-family: inherit;
+    font-size: clamp(1rem, 1vw, 1.5rem);
+    max-width: Min(100%, 400px);
+    width: 400px;
+    color: #302B42;
+    background-color: #CECECE;
+    outline: none;
+    border: none;
+    border-radius: 10px;
+    padding: 10px 30px 10px 10px;
 }
 
-.navbar__helped:hover {
+/* @media (max-width:600px) {
+    .input {
+        width: 100%;
+    }
+}
+
+@media (max-width:990px) {
+    .search__input {
+        width: 350px;
+    }
+} */
+/* ___ */
+
+.navbar__help {
+    color: #939292;
+    font-weight: 500;
+    margin-left: 1.5rem;
+}
+
+.navbar__help:hover {
     color: #302B42;
 }
 
@@ -57,11 +74,30 @@
     color: #939292;
 }
 
+.badge {
+    color: #302B42;
+
+}
+
+.badge:hover {
+    color: #939292;
+    transition: all .2s ease-in;
+
+}
+
+.badge:hover .cartlogo__badge {
+    background-color: #302B42;
+}
+
+.fa-shopping-cart {
+    font-size: 2rem;
+}
+
 .cartlogo__badge {
     position: absolute;
     top: -10px;
     left: 15px;
-    color: #fff;
+    /* color: #fff; */
     background-color: #E87E7E;
     border-radius: 30px;
     height: 30px;
@@ -70,17 +106,12 @@
     align-items: center;
     justify-content: center;
     border: 2px solid #302B42;
-    font-size: 1rem;
+    font-size: 1.2rem;
+    font-weight: 700;
     margin-left: 5px;
+    transition: all .2s ease-in;
+
 }
-
-.fa-shopping-cart {
-    font-size: 2rem;
-}
-
-
-
-
 
 
 /* ham menu */

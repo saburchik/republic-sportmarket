@@ -3,28 +3,26 @@ import "./Advantages.css";
 const Advantages = () => {
     return (
         <div className="advantages">
-            <div className="container">
-                <ul className="advantages__inner">
-                    <li>
-                        <i className="fas fa-tags"></i>
-                        <span className="advantages__text">Скидки при онлайн оплате</span>
-                    </li>
-                    <li>
-                        <i className="fas fa-truck"></i>
-                        <span className="advantages__text">Быстрая Доставка</span>
-                    </li>
-                    <li>
-                        <i className="fas fa-box-open"></i>
-                        <span className="advantages__text">Удобный возврат</span>
-                    </li>
-                    <li>
-                        <i className="fas fa-balance-scale" />
-                        <span className="advantages__text">Гарантия полгода</span>
-                    </li>
-                </ul>
-            </div>
+            <ul className="advantages__inner">
+                <li className="advantage__item">
+                    <i className="fas fa-tags"></i>
+                    <p className="advantages__text">Скидки при онлайн оплате</p>
+                </li>
+                <li className="advantage__item">
+                    <i className="fas fa-truck"></i>
+                    <p className="advantages__text">Быстрая Доставка</p>
+                </li>
+                <li className="advantage__item">
+                    <i className="fas fa-box-open"></i>
+                    <p className="advantages__text">Удобный возврат</p>
+                </li>
+                <li className="advantage__item">
+                    <i className="fas fa-balance-scale" />
+                    <p className="advantages__text">Гарантия полгода</p>
+                </li>
+            </ul>
         </div>
     )
-};
+}
 
-export default Advantages;
+export default Advantages

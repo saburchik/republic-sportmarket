@@ -87,45 +87,18 @@ form {
     display: flex;
     justify-content: center;
     width: 100%;
-    height: 40px;
     flex: 0 0 0;
 }
 
 .container {
     width: 100%;
-    max-width: 1400px;
+    max-width: 2500px;
     margin: 0 auto;
     padding: 0 1rem;
 }
 
 .logo {
     cursor: pointer;
-}
-
-
-/* Input */
-.input {
-    color: #000;
-    font-size: 1rem;
-    background-color: #CECECE;
-    outline: none;
-    border: none;
-    border-radius: 10px;
-    padding: 8px 30px 8px 10px;
-    width: 400px;
-    height: 40px;
-}
-
-@media (max-width:600px) {
-    .input {
-        width: 100%;
-    }
-}
-
-@media (max-width:990px) {
-    .search__input {
-        width: 350px;
-    }
 }
 
 /* Default size a Button */
@@ -165,7 +138,7 @@ form {
 }
 
 .input__btn {
-    font-size: 1.3rem;
+    font-size: clamp(1.3rem, 1vw, 2.3rem);
     border: none;
     cursor: pointer;
     margin-left: -30px;
@@ -178,15 +151,10 @@ form {
     background-color: #CECECE;
 }
 
-.digest__btn {
-    color: #939292;
-    background-color: #fff;
-}
-
-.search__btn:hover,
-.digest__btn:hover {
+.search__btn:hover {
     color: #302B42;
     transition: all .2s ease-in;
+
 }
 
 /* The Size Title */
