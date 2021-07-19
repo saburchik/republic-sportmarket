@@ -3,7 +3,7 @@
     align-items: center;
     height: 70vh;
     max-height: 700px;
-    min-height: 400px;
+    min-height: 500px;
 
     background: url("./assets/background.jpg") no-repeat right;
     background-size: cover;
@@ -46,8 +46,9 @@
 
 .catalog__products {
     display: grid;
-gap: 10px;
-grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 10px;
+    grid-template-columns: 300px 300px 300px;
+    grid-template-rows: 2fr;
 }
 
 @media (max-width: 1250px) {

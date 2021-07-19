@@ -4,7 +4,6 @@ import { useSelector } from 'react-redux';
 import logo from './republic.png';
 
 const Navbar = ({ click }) => {
-
     const cart = useSelector(state => state.cart)
     const { cartItems } = cart
 
@@ -20,7 +19,6 @@ const Navbar = ({ click }) => {
                         <img className="navbar__logo" src={logo} alt="Republic-logo" />
                     </Link>
                 </div>
-
                 <ul className="search__form">
                     <li>
                         <form>
@@ -50,10 +48,11 @@ const Navbar = ({ click }) => {
                     </li>
                 </ul>
 
-                <div className="hamburger__menu" onClick={click}>
-                    <div></div>
-                    <div></div>
-                    <div></div>
+                <div className="hamburger__menu" onClick={click} id="menuToggle">
+                    <input type="checkbox" />
+                    <span id="span1"></span>
+                    <span id="span2"></span>
+                    <span id="span3"></span>
                 </div>
             </div>
         </nav>

@@ -46,6 +46,12 @@
     }
 }
 
+@media (max-width: 515px) {
+    .search__input {
+        width: 100%;
+    }
+}
+
 /* @media (max-width: 560px) {
     .sidedrawer__links {
        flex-direction: column;

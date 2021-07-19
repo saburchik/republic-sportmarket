@@ -5,18 +5,18 @@ import logo from './republic.png';
 
 const SideDrawer = ({ show, click }) => {
 
-    const sideDrawerClass = ["sidedrawer"];
+    const sideDrawerClass = ["sidedrawer"]
 
     if (show) {
-        sideDrawerClass.push("show");
+        sideDrawerClass.push("show")
     }
 
-    const cart = useSelector(state => state.cart);
-    const { cartItems } = cart;
+    const cart = useSelector(state => state.cart)
+    const { cartItems } = cart
 
     const getCartCount = () => {
-        return cartItems.reduce((qty, item) => qty + Number(item.qty), 0);
-    };
+        return cartItems.reduce((qty, item) => qty + Number(item.qty), 0)
+    }
 
     return <div className={sideDrawerClass.join(" ")}>
         <ul className="sidedrawer__links">
@@ -49,12 +49,12 @@ const SideDrawer = ({ show, click }) => {
             </li>
             <li>
                 <form>
-                    <input className="input" placeholder="Поиск" />
+                    <input className="input search__input" placeholder="Поиск" />
                     <button className="input__btn search__btn"><i className="fas fa-search"></i></button>
                 </form>
             </li>
         </ul>
-    </div>;
-};
+    </div>
+}
 
-export default SideDrawer;
+export default SideDrawer
