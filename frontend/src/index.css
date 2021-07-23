@@ -85,6 +85,7 @@ li>a {
 
 form {
     display: flex;
+    position: relative;
 }
 
 .container {
@@ -138,9 +139,11 @@ form {
     font-size: clamp(1.3rem, 1vw, 2.3rem);
     border: none;
     cursor: pointer;
-    margin-left: -30px;
     padding: 0 0.8rem;
     border-radius: 10px;
+    position: absolute;
+    right: 0;
+    height: 100%;
 }
 
 .search__btn {
@@ -201,8 +204,11 @@ form {
 
 .product__img_size-m {
     width: 100%;
-    height: 360px;
-    object-fit: cover;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    object-fit: contain;
 }
 
 .product__img_size-b {

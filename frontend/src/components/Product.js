@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 const Product = ({ imageUrl, category, name, price, description, productId, article, oldPrice }) => {
     return (
         <div className="product">
-            <Link to={`/product/${productId}`}>
+            <Link className="adaptive__img" to={`/product/${productId}`}>
                 <img
                     className="product__img_size-m"
                     src={imageUrl}
@@ -14,7 +14,7 @@ const Product = ({ imageUrl, category, name, price, description, productId, arti
 
             <div className="product__info">
                 <div className="product__text">
-                    <p className="title">{name}</p>
+                    <p className="title text">{name}</p>
                     <p className="product__price">{price} ₽</p>
                 </div>
                 <Link to={`/product/${productId}`} className="info__item">

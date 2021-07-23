@@ -39,7 +39,7 @@
     outline: none;
     border: none;
     border-radius: 10px;
-    padding: 10px 30px 10px 10px;
+    padding: 10px 45px 10px 10px;
 }
 
 .digest__btn {
@@ -50,8 +50,10 @@
     border-radius: 10px;
     cursor: pointer;
     padding: 0 0.8rem;
-    margin-left: -30px;
     transition: all .2s ease-in;
+    position: absolute;
+    right: 0;
+    height: 100%;
 }
 
 .digest__btn:hover {

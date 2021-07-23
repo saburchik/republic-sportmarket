@@ -11,7 +11,7 @@ const Digest = () => {
                 </p>
                 <form>
                     <input className="digest__input" placeholder="Введите ваш Email" />
-                    <button className="digest__btn">
+                    <button className=" digest__btn">
                         <i className="fas fa-envelope"></i>
                     </button>
                 </form>
