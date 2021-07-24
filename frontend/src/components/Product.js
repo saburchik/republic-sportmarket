@@ -1,10 +1,12 @@
 import './Product.css';
 import { Link } from 'react-router-dom';
 
-const Product = ({ imageUrl, category, name, price, description, productId, article, oldPrice }) => {
+
+const Product = ({ imageUrl, category, name, price, description, productId, article, oldPrice, status }) => {
     return (
         <div className="product">
             <Link className="adaptive__img" to={`/product/${productId}`}>
+                <span className="icon">{status}</span>
                 <img
                     className="product__img_size-m"
                     src={imageUrl}
@@ -13,16 +15,14 @@ const Product = ({ imageUrl, category, name, price, description, productId, arti
             </Link>
 
             <div className="product__info">
-                <div className="product__text">
-                    <p className="title text">{name}</p>
-                    <p className="product__price">{price} ₽</p>
-                </div>
+                <p className="title text">{name}</p>
+                <p className="product__price">{price} ₽</p>
                 <Link to={`/product/${productId}`} className="info__item">
                     <i className="fas fa-play"></i>
                 </Link>
             </div>
         </div >
     )
-};
+}
 
-export default Product;
+export default Product

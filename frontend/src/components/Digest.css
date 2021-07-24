@@ -32,8 +32,7 @@
 .digest__input {
     font-family: inherit;
     font-size: clamp(1rem, 1vw, 1.5rem);
-    max-width: Min(100%, 400px);
-    width: 550px;
+    width: clamp(300px, 25vw, 550px);
     color: #302B42;
     background-color: #fff;
     outline: none;
@@ -65,7 +64,7 @@
         width: auto;
     }
 
-    .digest__input {
+    /* .digest__input {
         max-width: none;
-    }
+    } */
 }

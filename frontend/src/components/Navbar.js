@@ -48,14 +48,13 @@ const Navbar = ({ click }) => {
                     </li>
                 </ul>
 
-                <div className="hamburger__menu" onClick={click} id="menuToggle">
-                    <input type="checkbox" />
-                    <span id="span1"></span>
-                    <span id="span2"></span>
-                    <span id="span3"></span>
+                <div className="hamburger__menu" onClick={click} >
+                    <span className="line line__top"></span>
+                    <span className="line line__middle"></span>
+                    <span className="line line__bottom"></span>
                 </div>
             </div>
-        </nav>
+        </nav >
     )
 }
 

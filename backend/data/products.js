@@ -3,6 +3,7 @@ const products = [
         article: 848501,
         category: "skate",
         name: "BLIND OG Grundge Logo FP Black 8",
+        status: "NEW",
         imageUrl:
             "https://i.imgur.com/6h1WQtq.jpg",
         description: "Классика от Blind. Скейтборд из 7-слойного канадского клёна. Подойдет для начинающих и прогрессирующих райдеров и любого места катания, будь то улица или скейт-парк.",
@@ -14,6 +15,7 @@ const products = [
         article: 848502,
         category: "skate",
         name: "DARKSTAR Timeworks Yth FP Soft Top Mint 6.5",
+        status: "NEW",
         imageUrl:
             "https://i.imgur.com/VOVWVYe.jpg",
         description:
@@ -26,6 +28,7 @@ const products = [
         article: 848503,
         category: "scooter",
         name: "TILT Theorem Complete - Asphalt Medium",
+        status: "20%",
         imageUrl:
             "https://i.imgur.com/0swuwDF.png",
         description:
@@ -38,6 +41,7 @@ const products = [
         article: 848504,
         category: "scooter",
         name: "NITRO CIRCUS RW 540",
+        status: "20%",
         imageUrl:
             "https://i.imgur.com/eLntBaX.jpg",
         description:
@@ -50,6 +54,7 @@ const products = [
         article: 848505,
         category: "accessories",
         name: "SPEKTRUM BLANK BLACK INFRARED LENS",
+        status: null,
         imageUrl: "https://i.imgur.com/nXkidFv.jpg",
         description: "Модель обеспечивает высочайший уровень защиты и комфорта благодаря оптимизированной форме линз, предотвращающей повреждение лучей до того, как они достигнут сетчатки. Бланк, плотно прилегающий к вашей голове, создан для скорости. Серая базовая линза Zeiss с многослойным инфракрасным зеркальным покрытием идеально подходит для длительного использования в яркие и солнечные дни. Этот объектив обеспечивает визуальную защиту от сильных отражений, обеспечивает максимальный визуальный комфорт и естественное восприятие без искажения цвета. Серая базовая линза Zeiss с инфракрасным зеркальным покрытием идеально подходит для длительного использования в яркие и солнечные дни. Эти линзы обеспечивают визуальную защиту от сильных отражений, обеспечивают максимальный визуальный комфорт и естественное восприятие без искажения цвета.",
         price: 14900,
@@ -60,12 +65,13 @@ const products = [
         article: 848506,
         category: "accessories",
         name: "Бандана BUFF Polar New Cashmere Red",
+        status: null,
         imageUrl: "https://i.imgur.com/BPua9Ap.jpg",
         description: "Бандана Buff Polar - это настоящая находка для тех, кто занимается зимними видами спорта или просто любит активные прогулки на природе в холодную пору. Многофункциональный аксессуар состоит из двух компонентов: нижний теплый флисовый шарф и вшитый в него гейтер из легкой микрофибры. Ткань отлично греет, хорошо дышит и испаряет влагу. Благодаря высокой эластичности и продуманному крою, Buff Polar можно носить во множестве различных вариантов: как шарф, бандану, балаклаву, шапочку и многих других.",
         price: 2390,
         oldPrice: 3190,
         countInStock: 0,
     },
-];
+]
 
-module.exports = products;
+module.exports = products

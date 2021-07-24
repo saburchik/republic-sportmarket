@@ -177,11 +177,6 @@ form {
 }
 
 /* The Size Price */
-.product__price {
-    font-size: 1.3rem;
-    font-weight: 700;
-    text-transform: uppercase;
-}
 
 .price__size_m {
     font-size: 2rem;
