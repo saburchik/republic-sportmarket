@@ -1,8 +1,11 @@
-import './Product.css';
+import './style/Product.css';
 import { Link } from 'react-router-dom';
 
 
 const Product = ({ imageUrl, category, name, price, description, productId, article, oldPrice, status }) => {
+    console.log(status);
+
+
     return (
         <div className="product">
             <Link className="adaptive__img" to={`/product/${productId}`}>

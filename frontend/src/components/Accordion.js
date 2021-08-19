@@ -1,8 +1,7 @@
-import "./Accordion.css";
+import "./style/Accordion.css";
 import { useState, useRef } from "react";
-import { Link } from 'react-router-dom';
 
-function Accordion(props) {
+function Accordion({ posts, title }) {
     const [setActive, setActiveState] = useState("");
     const [setHeight, setHeightState] = useState("0px");
     const [setRotate, setRotateState] = useState("fa-chevron-down");
@@ -24,7 +23,7 @@ function Accordion(props) {
         <div className="accordion">
             <div className="item">
                 < div className={`titled ${setActive}`} onClick={toggleAccordion}>
-                    {props.title}
+                    {title}
                     < i className={`fas fa-chevron-down ${setRotate}`} />
                 </div >
                 <div
@@ -32,10 +31,13 @@ function Accordion(props) {
                     className="sidebar__content"
                     style={{ maxHeight: `${setHeight}` }}
                 >
-                    <div className="accordion__show">
-                        <Link className="accordion__select">СКЕЙТБОРДЫ В СБОРЕ</Link>
-                        <Link className="accordion__select">ЛОНГБОРДЫ И КРУИЗЕРЫ</Link>
-                    </div>
+                    <ul className="accordion__show">
+                        {posts.map((post) =>
+                            <li className="item__subtitle" key={post.id}>
+                                {post.subtitle}
+                            </li>
+                        )}
+                    </ul>
                 </div>
             </div>
         </div>

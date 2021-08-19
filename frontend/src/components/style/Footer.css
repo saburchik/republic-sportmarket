@@ -5,9 +5,9 @@
     width: 100%;
     height: auto;
 
-    background: url("footer-bg.jpg") no-repeat center;
+    background: url("../assets/footer-bg.jpg") no-repeat center;
     background-size: cover;
-    padding: 3rem 1rem 0;
+    padding: 3rem 2rem 0;
 }
 
 .footer__item {

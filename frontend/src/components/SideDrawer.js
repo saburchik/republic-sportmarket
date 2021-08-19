@@ -1,7 +1,7 @@
-import "./SideDrawer.css";
+import "./style/SideDrawer.css";
 import { Link } from 'react-router-dom';
 import { useSelector } from 'react-redux';
-import logo from './republic.png';
+import logo from './assets/republic.png';
 
 const SideDrawer = ({ show, click }) => {
 

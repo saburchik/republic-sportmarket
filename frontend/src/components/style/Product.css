@@ -15,6 +15,23 @@
     position: relative;
 }
 
+.icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 70px;
+    height: 30px;
+    background-color: #A0E87E;
+    position: absolute;
+    top: -1px;
+    left: 0;
+    z-index: 99;
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 1rem;
+}
+
+/* 
 .icon::before {
     content: 'new';
     display: flex;
@@ -30,7 +47,7 @@
     text-transform: uppercase;
     font-weight: 700;
     font-size: 1rem;
-}
+} */
 
 /* .icon::after {
     content: '20%';

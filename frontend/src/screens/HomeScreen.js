@@ -1,5 +1,5 @@
-import './HomeScreen.css';
-import { useEffect } from "react";
+import './style/HomeScreen.css';
+import { useEffect, useState } from "react";
 import { useSelector, useDispatch } from "react-redux";
 
 // Components
@@ -24,6 +24,25 @@ const HomeScreen = () => {
         dispatch(listProducts())
     }, [dispatch])
 
+    const [skate, setSkate] = useState([
+        { subtitle: 'Лонгборды и круизеры' },
+        { subtitle: 'Скейтборды в сборе' },
+        { subtitle: 'Подшипники для скейта' }
+    ])
+    const [scooter, setScooter] = useState([
+        { subtitle: 'Самокаты в сборе' },
+        { subtitle: 'Вилки для кикскутеров и самокатов' },
+        { subtitle: 'Рули для самокатов' },
+        { subtitle: 'Деки для самокатов' },
+        { subtitle: 'Подшипники' }
+    ])
+    const [outfit, setOutfit] = useState([
+        { subtitle: 'Очки' },
+        { subtitle: 'Банданы' },
+        { subtitle: 'Часы' },
+    ])
+
+
     return (
         <main className="homescreen">
             <header className="homescreen__header">
@@ -41,10 +60,9 @@ const HomeScreen = () => {
                         <div className="categories">
                             <h3 className="title categories__title">Категории:</h3>
 
-                            <Accordion title="Скейтборды" />
-                            <Accordion title="Самокаты" />
-                            <Accordion title="Аксессуары" />
-
+                            <Accordion posts={skate} title='Скейтборды' />
+                            <Accordion posts={scooter} title='Самокаты' />
+                            <Accordion posts={outfit} title='Аксессуары' />
                         </div>
 
                         <section className="catalog__products">
@@ -58,6 +76,7 @@ const HomeScreen = () => {
                                     productId={product._id}
                                     category={product.category}
                                     name={product.name}
+                                    status={product.status}
                                     price={product.price}
                                     description={product.description}
                                     imageUrl={product.imageUrl}

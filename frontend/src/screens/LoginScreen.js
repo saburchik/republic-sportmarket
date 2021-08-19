@@ -1,4 +1,4 @@
-import './LoginScreen.css';
+import './style/LoginScreen.css';
 import { Link } from 'react-router-dom';
 
 // Components

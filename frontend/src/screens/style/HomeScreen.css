@@ -5,7 +5,7 @@
     max-height: 700px;
     min-height: 500px;
 
-    background: url("./assets/background.jpg") no-repeat right;
+    background: url("../assets/background.jpg") no-repeat right;
     background-size: cover;
 }
 
@@ -34,18 +34,20 @@
     display: flex;
     justify-content: space-around;
     flex-wrap: wrap;
+    align-items: start;
     padding: 3rem 0 6rem;
 }
 
 .categories {
     padding: 1rem;
+    max-width: 300px;
 }
 
 .categories__title {
     font-size: clamp(1.3rem, 1vw, 2rem);
     font-weight: 400;
     text-align: center;
-    margin-bottom: 2rem;
+    margin-bottom: 1rem;
 }
 
 .catalog__products {

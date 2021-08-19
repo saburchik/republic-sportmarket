@@ -1,4 +1,4 @@
-import './CartScreen.css';
+import './style/CartScreen.css';
 import { useDispatch, useSelector } from 'react-redux';
 import { Link } from 'react-router-dom';
 
