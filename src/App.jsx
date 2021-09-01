@@ -1,3 +1,6 @@
+/* eslint-disable no-unused-vars */
+import { hot } from 'react-hot-loader/root';
+import './styles.css'
 import React, { useState } from 'react'
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom'
 
@@ -31,4 +34,4 @@ function App() {
   )
 }
 
-export default App
+export default hot(App);

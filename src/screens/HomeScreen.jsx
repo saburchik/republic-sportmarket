@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 import './style/HomeScreen.scss';
 import React, { useEffect, useState } from "react";
 import { useSelector, useDispatch } from "react-redux";

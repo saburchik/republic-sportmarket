@@ -1,14 +1,17 @@
+/* eslint-disable no-undef */
 const path = require('path')
+const webpack = require("webpack");
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 const CssMinimizerPlugin = require('css-minimizer-webpack-plugin')
 const MiniCssExtractPlugin = require('mini-css-extract-plugin')
 const { CleanWebpackPlugin } = require('clean-webpack-plugin')
 
-// "start": "node backend/server.js",
-// "server": "nodemon backend/server.js",
-// "client": "npm start --prefix frontend",
-// "dev": "concurrently \"npm run server\" \"npm run client\"",
-// "data:import": "node backend/seederScript.js"
+// by Minin
+// "dev": "cross-env NODE_ENV=development webpack --mode development", просто собирает сборку, как обычный webpack
+//     "build": "cross-env NODE_ENV=production webpack --mode production", сборка с сжатием файлов
+//     "watch": "cross-env NODE_ENV=development webpack --mode development --watch",
+//     "start": "cross-env NODE_ENV=development webpack serve --mode development --open", не подходит
+//     "client": "cross-env NODE_ENV=production webpack serve --mode production --open",
 
 const isDev = process.env.NODE_ENV === 'development'
 const filename = ext => isDev ? `main/[name].${ext}` : `main/[name].[hash].${ext}`
@@ -16,7 +19,7 @@ const filename = ext => isDev ? `main/[name].${ext}` : `main/[name].[hash].${ext
 const babelOption = preset => {
     const opts = {
         presets: ['@babel/preset-env'],
-        // plugins: ['something plugins']
+        plugins: ["react-hot-loader/babel"]
     }
     if (preset) {
         opts.presets.push(preset)
@@ -39,7 +42,12 @@ module.exports = {
     context: path.resolve(__dirname, 'src'),
     mode: 'development',
     entry: {
-        main: ['@babel/polyfill', './index.jsx'],
+        main: [
+            'react-hot-loader/patch',
+            'webpack-hot-middleware/client',
+            '@babel/polyfill',
+            './index.jsx'
+        ],
     },
     output: {
         filename: filename('js'),
@@ -56,17 +64,22 @@ module.exports = {
             new CssMinimizerPlugin(),
         ],
     },
+    stats: {
+        children: true
+      },
     devtool: 'inline-source-map',
-    devServer: {
-        port: 4200,
-    },
     plugins: [
+        new webpack.HotModuleReplacementPlugin(),
+        new webpack.NoEmitOnErrorsPlugin(),
+        new webpack.LoaderOptionsPlugin({
+            debug: true,
+        }),
         new HtmlWebpackPlugin({
             template: './index.html'
         }),
         new CleanWebpackPlugin(),
         new MiniCssExtractPlugin({
-            filename: '[name].[contenthash].css'
+            filename: '[name].css'
         }),
     ],
     module: {

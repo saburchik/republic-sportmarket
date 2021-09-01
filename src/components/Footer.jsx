@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 import './style/Footer.css';
 import React from 'react'
 import { Link } from 'react-router-dom';
@@ -26,7 +27,7 @@ const Footer = () => {
                             Email:
                             <i>republic-store@gmail.com</i>
                         </b>
-                        <Link href="/" className="footer__link">Обратная связь</Link>
+                        <Link to="/" className="footer__link">Обратная связь</Link>
                     </div>
                 </div>
                 <div className="footer__item">
