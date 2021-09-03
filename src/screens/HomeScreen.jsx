@@ -1,15 +1,23 @@
 /* eslint-disable no-unused-vars */
-import './style/HomeScreen.scss';
+import './style/HomeScreen';
 import React, { useEffect, useState } from "react";
 import { useSelector, useDispatch } from "react-redux";
 
+import SliderHome from 'react-slick';
+import "slick-carousel/slick/slick.css";
+
 // Components
-import Product from '../components/Product.jsx';
-import Advantages from '../components/Advantages.jsx';
-import Accordion from '../components/Accordion.jsx';
-import Footer from '../components/Footer.jsx';
-import Digest from '../components/Digest.jsx';
-import Feedback from '../components/Feedback.jsx';
+import Product from '../components/Product';
+import Advantages from '../components/Advantages';
+import Accordion from '../components/Accordion';
+import Footer from '../components/Footer';
+import Digest from '../components/Digest';
+import Feedback from '../components/Feedback';
+
+import Slid from '../assets/background';
+import Slid2 from '../assets/background2';
+
+
 
 
 // Actions
@@ -43,14 +51,35 @@ const HomeScreen = () => {
         { subtitle: 'Часы' },
     ])
 
+    let settings = {
+        dots: true,
+        infinite: true,
+        speed: 500,
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        arrows: false,
+        dotsClass: 'slick-dots',
+        useCSS: true,
+    }
+
 
     return (
         <main className="homescreen">
             <header className="homescreen__header">
-                <h1 className="homescreen__title">
-                    Отдыхай в
-                    <span>движении</span>
-                </h1>
+                <SliderHome className="home__contains" {...settings}>
+                    <div className="home__item">
+                        <img className="slider__home" src={Slid} alt="Отзывы" />
+                        <div className="slider-box">
+                            <p className="slider-text">Отдыхай В
+                                <span>Движении</span>
+                            </p>
+                        </div>
+                    </div>
+
+                    <div className="home__item">
+                        <img className="slider__home" src={Slid2} alt="Отзывы" />
+                    </div>
+                </SliderHome>
             </header>
 
             <Advantages />

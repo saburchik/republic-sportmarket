@@ -1,4 +1,5 @@
-import "./style/Feedback.css";
+/* eslint-disable no-unused-vars */
+import "./style/Feedback";
 import React from 'react';
 import Slider from 'react-slick';
 import "slick-carousel/slick/slick.css";

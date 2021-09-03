@@ -1,4 +1,5 @@
-import './style/Product.css';
+/* eslint-disable no-unused-vars */
+import './style/Product';
 import React from 'react'
 import { Link } from 'react-router-dom';
 import { useState } from 'react';

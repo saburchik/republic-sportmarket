@@ -1,4 +1,5 @@
-import "./style/Digest.css";
+/* eslint-disable no-unused-vars */
+import "./style/Digest";
 import React from 'react'
 
 

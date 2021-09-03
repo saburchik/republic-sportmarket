@@ -5,6 +5,7 @@ const HtmlWebpackPlugin = require('html-webpack-plugin')
 const CssMinimizerPlugin = require('css-minimizer-webpack-plugin')
 const MiniCssExtractPlugin = require('mini-css-extract-plugin')
 const { CleanWebpackPlugin } = require('clean-webpack-plugin')
+const CopyPlugin = require("copy-webpack-plugin");
 
 // by Minin
 // "dev": "cross-env NODE_ENV=development webpack --mode development", просто собирает сборку, как обычный webpack
@@ -14,7 +15,7 @@ const { CleanWebpackPlugin } = require('clean-webpack-plugin')
 //     "client": "cross-env NODE_ENV=production webpack serve --mode production --open",
 
 const isDev = process.env.NODE_ENV === 'development'
-const filename = ext => isDev ? `main/[name].${ext}` : `main/[name].[hash].${ext}`
+const filename = ext => isDev ? `js/[name].${ext}` : `js/[name].[hash].${ext}`
 
 const babelOption = preset => {
     const opts = {
@@ -50,10 +51,14 @@ module.exports = {
         ],
     },
     output: {
-        filename: filename('js'),
         path: path.resolve(__dirname, 'dist'),
-        assetModuleFilename: 'images/[hash][ext][query]',
+        filename: filename('js'),
+        assetModuleFilename: 'assets/[hash][ext][query]',
         publicPath: '/',
+    },
+    devServer: {
+        port: 4200,
+        hot: true
     },
     optimization: {
         splitChunks: {
@@ -64,9 +69,15 @@ module.exports = {
             new CssMinimizerPlugin(),
         ],
     },
+    resolve: {
+        extensions: ['.js', '.jsx', '.css', '.scss', '.png', '.jpg', '.jpeg'],
+        alias: {
+            '@assets': path.resolve(__dirname, 'src/assets')
+        }
+    },
     stats: {
         children: true
-      },
+    },
     devtool: 'inline-source-map',
     plugins: [
         new webpack.HotModuleReplacementPlugin(),
@@ -79,8 +90,16 @@ module.exports = {
         }),
         new CleanWebpackPlugin(),
         new MiniCssExtractPlugin({
-            filename: '[name].css'
+            filename: isDev ? `[name].css` : `[name].[hash].css`
         }),
+        new CopyPlugin({
+            patterns: [
+                {
+                    from: path.resolve(__dirname, 'src/favicon.ico'),
+                    to: path.resolve(__dirname, 'dist')
+                }
+            ]
+        })
     ],
     module: {
         rules: [
@@ -98,8 +117,13 @@ module.exports = {
                 }
             },
             {
-                test: /\.(css|scss)$/,
-                use: [MiniCssExtractPlugin.loader, "css-loader", 'postcss-loader', "sass-loader"]
+                test: /\.(sa|sc|c)ss$/,
+                use: [
+                    MiniCssExtractPlugin.loader,
+                    "css-loader",
+                    "postcss-loader",
+                    "sass-loader",
+                ],
             },
             {
                 test: /\.(png|jpg|jpeg|svg)$/,

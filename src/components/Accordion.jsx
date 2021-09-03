@@ -1,20 +1,21 @@
-import "./style/Accordion.css";
+/* eslint-disable no-unused-vars */
+import "./style/Accordion";
 import React from 'react'
 import { useState, useRef } from "react";
 
 function Accordion({ posts, title }) {
-    const [setActive, setActiveState] = useState("");
-    const [setHeight, setHeightState] = useState("0px");
-    const [setRotate, setRotateState] = useState("fa-chevron-down");
+    const [setActive, setActiveState] = useState("")
+    const [setHeight, setHeightState] = useState("0px")
+    const [setRotate, setRotateState] = useState("fa-chevron-down")
 
-    const content = useRef(null);
+    const content = useRef(null)
 
     function toggleAccordion() {
-        setActiveState(setActive === "" ? "active" : "");
+        setActiveState(setActive === "" ? "active" : "")
         setHeightState(
             setActive === "active" ? "0px" : `${content.current.scrollHeight}px`
-        );
-        console.log(content.current.scrollHeight);
+        )
+        console.log(content.current.scrollHeight)
         setRotateState(
             setActive === "active" ? "fa-chevron-down" : "fa-chevron-down rotate"
         )
@@ -42,7 +43,7 @@ function Accordion({ posts, title }) {
                 </div>
             </div>
         </div>
-    );
+    )
 }
 
-export default Accordion;
+export default Accordion

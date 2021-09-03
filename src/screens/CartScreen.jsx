@@ -1,12 +1,13 @@
-import './style/CartScreen.css';
+/* eslint-disable no-unused-vars */
+import './style/CartScreen';
 import React from 'react'
 import { useDispatch, useSelector } from 'react-redux';
 import { Link } from 'react-router-dom';
 
 // Components
-import Advantages from '../components/Advantages.jsx';
-import CartItem from '../components/CartItem.jsx';
-import Footer from '../components/Footer.jsx';
+import Advantages from '../components/Advantages';
+import CartItem from '../components/CartItem';
+import Footer from '../components/Footer';
 
 // Actions
 import { addToCart, removeFromCart } from '../redux/actions/cartActions';

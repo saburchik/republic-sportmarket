@@ -1,19 +1,19 @@
 /* eslint-disable no-unused-vars */
 import { hot } from 'react-hot-loader/root';
-import './styles.css'
+import './styles'
 import React, { useState } from 'react'
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom'
 
 // Screens
-import HomeScreen from "./screens/HomeScreen.jsx"
-import ProductScreen from "./screens/ProductScreen.jsx"
-import CartScreen from "./screens/CartScreen.jsx"
-import LoginScreen from "./screens/LoginScreen.jsx"
+import HomeScreen from "./screens/HomeScreen"
+import ProductScreen from "./screens/ProductScreen"
+import CartScreen from "./screens/CartScreen"
+import LoginScreen from "./screens/LoginScreen"
 
 // Components
-import Navbar from './components/Navbar.jsx'
-import Backdrop from './components/Backdrop.jsx'
-import SideDrawer from './components/SideDrawer.jsx'
+import Navbar from './components/Navbar'
+import Backdrop from './components/Backdrop'
+import SideDrawer from './components/SideDrawer'
 
 function App() {
 

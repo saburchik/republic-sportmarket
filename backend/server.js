@@ -29,7 +29,7 @@ app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
 
 if (module.hot) {
     module.hot.accept('./index.jsx', function () {
-        console.log('Accepting the updated printMe module!');
+        console.log('Updating..');
         printMe();
     })
 }

@@ -1,8 +1,8 @@
 /* eslint-disable no-unused-vars */
-import './style/Footer.css';
+import './style/Footer';
 import React from 'react'
 import { Link } from 'react-router-dom';
-import logo from './../assets/footer-logo.png';
+import logo from '@assets/footer-logo';
 
 const Footer = () => {
     return (

@@ -1,8 +1,9 @@
-import "./style/SideDrawer.css";
+/* eslint-disable no-unused-vars */
+import "./style/SideDrawer";
 import React from 'react'
 import { Link } from 'react-router-dom';
 import { useSelector } from 'react-redux';
-import logo from './../assets/republic.png';
+import logo from '@assets/republic';
 
 const SideDrawer = ({ show, click }) => {
 
@@ -39,7 +40,7 @@ const SideDrawer = ({ show, click }) => {
 
         <ul className="search--mobile">
             <li>
-                <Link className="cart__link" to="/" onClick={click}>
+                <Link className="cart__link" to="/login" onClick={click}>
                     Вход
                 </Link>
             </li>

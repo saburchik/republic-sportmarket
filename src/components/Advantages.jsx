@@ -1,4 +1,5 @@
-import "./style/Advantages.css";
+/* eslint-disable no-unused-vars */
+import "./style/Advantages";
 import React from 'react'
 
 

@@ -1,4 +1,5 @@
-import './style/ProductScreen.css';
+/* eslint-disable no-unused-vars */
+import './style/ProductScreen';
 import React, { useState, useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { Link } from 'react-router-dom';
@@ -8,9 +9,9 @@ import { getProductDetails } from "../redux/actions/productActions";
 import { addToCart } from "../redux/actions/cartActions";
 
 // Components
-import Advantages from '../components/Advantages.jsx';
-import Digest from '../components/Digest.jsx';
-import Footer from '../components/Footer.jsx';
+import Advantages from '../components/Advantages';
+import Digest from '../components/Digest';
+import Footer from '../components/Footer';
 
 const ProductScreen = ({ match, history }) => {
 

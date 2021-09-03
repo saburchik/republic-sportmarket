@@ -1,8 +1,9 @@
-import './style/Navbar.css';
+/* eslint-disable no-unused-vars */
+import './style/Navbar';
 import React from 'react'
 import { Link } from 'react-router-dom';
 import { useSelector } from 'react-redux';
-import logo from './../assets/republic.png';
+import logo from '@assets/republic';
 
 const Navbar = ({ click }) => {
     const cart = useSelector(state => state.cart)

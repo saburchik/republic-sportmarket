@@ -1,0 +1,66 @@
+.sidedrawer {
+    display: flex;
+    flex-direction: column;
+    width: 75%;
+    height: 100vh;
+    background: #fff;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 199;
+    transform: translateX(-100%);
+    transition: all 0.3s ease-out;
+}
+
+.sidedrawer.show {
+    transform: translateX(0);
+}
+
+.sidedrawer__links {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: .5rem 2rem .5rem 1rem;
+}
+
+.navbar__logo {
+    display: inline-flex;
+    justify-content: flex-start;
+}
+
+.search--mobile {
+    height: 250px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: baseline;
+    padding: 3rem 1rem;
+    border-top: 3px solid #302B42;
+    border-bottom: 3px solid #302B42;
+}
+
+@media (min-width: 890px) {
+    .sidedrawer {
+        display: none;
+    }
+}
+
+@media (max-width: 515px) {
+    .search__input {
+        width: 100%;
+    }
+}
+
+/* @media (max-width: 560px) {
+    .sidedrawer__links {
+       flex-direction: column;
+    }
+
+    .cart__link.word {
+        width: 100%;
+    }
+
+    .cart__link.word::before {
+        content: "Корзина";
+    }
+} */

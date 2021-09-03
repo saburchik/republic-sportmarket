@@ -1,9 +1,10 @@
-import './style/LoginScreen.css';
+/* eslint-disable no-unused-vars */
+import './style/LoginScreen';
 import React from 'react'
 import { Link } from 'react-router-dom';
 
 // Components
-import Footer from '../components/Footer.jsx';
+import Footer from '../components/Footer';
 
 const LoginScreen = () => {
     return (
