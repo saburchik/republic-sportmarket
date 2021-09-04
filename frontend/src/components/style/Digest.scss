@@ -1,0 +1,70 @@
+.digest__inner {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    min-height: 400px;
+
+    background: url("../../assets/digest-fon.jpg") no-repeat center;
+    background-size: cover;
+
+    text-align: center;
+    padding: 2rem;
+}
+
+.digest__title {
+    font-size: clamp(1.5rem, 2vw, 3rem);
+    color: #fff;
+    text-shadow: #000 1px 0 0px, #000 0 1px 0px, #000 -1px 0 0px, #000 0 -1px 0px;
+    margin-bottom: 2rem;
+}
+
+.digest__description {
+    font-size: clamp(1.1rem, 1vw, 2.2rem);
+    color: #fff;
+    width: Min(100%, 800px);
+    max-width: 1500px;
+    font-weight: 400;
+    margin-bottom: clamp(2rem, 5vw, 5rem);
+}
+
+.digest__input {
+    font-family: inherit;
+    font-size: clamp(1rem, 1vw, 1.5rem);
+    width: clamp(300px, 25vw, 550px);
+    color: #302B42;
+    background-color: #fff;
+    outline: none;
+    border: none;
+    border-radius: 10px;
+    padding: 10px 45px 10px 10px;
+}
+
+.digest__btn {
+    font-size: clamp(1.3rem, 1vw, 2.3rem);
+    color: #302B42;
+    background-color: #fff;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    padding: 0 0.8rem;
+    transition: all .2s ease-in;
+    position: absolute;
+    right: 0;
+    height: 100%;
+}
+
+.digest__btn:hover {
+    color: #939292;
+}
+
+@media (min-width: 1700px) {
+    .digest__description {
+        width: auto;
+    }
+
+    /* .digest__input {
+        max-width: none;
+    } */
+}
