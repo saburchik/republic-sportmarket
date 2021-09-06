@@ -1,4 +1,4 @@
-import "./style/Advantages.scss";
+import "./styles/Advantages.scss";
 
 const Advantages = () => {
     return (

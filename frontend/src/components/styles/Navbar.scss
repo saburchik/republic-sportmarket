@@ -7,6 +7,10 @@
     padding: 0.5rem 2rem;
     position: relative;
     z-index: 99;
+
+    @media (max-width: 890px) {
+        justify-content: space-between;
+    }
 }
 
 .navbar__links,

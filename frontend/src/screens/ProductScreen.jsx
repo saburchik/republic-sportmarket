@@ -1,4 +1,4 @@
-import './style/ProductScreen.scss';
+import './styles/ProductScreen.scss';
 import { useState, useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { Link } from 'react-router-dom';

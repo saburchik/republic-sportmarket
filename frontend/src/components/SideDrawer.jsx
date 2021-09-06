@@ -1,4 +1,4 @@
-import "./style/SideDrawer.scss";
+import "./styles/SideDrawer.scss";
 import { Link } from 'react-router-dom';
 import { useSelector } from 'react-redux';
 import logo from './../assets/republic.png';

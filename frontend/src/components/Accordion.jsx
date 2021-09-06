@@ -1,4 +1,4 @@
-import "./style/Accordion.scss";
+import "./styles/Accordion.scss";
 import { useState, useRef } from "react";
 
 function Accordion({ posts, title }) {

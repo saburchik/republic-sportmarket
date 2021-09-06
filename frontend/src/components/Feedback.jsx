@@ -1,4 +1,4 @@
-import "./style/Feedback.scss";
+import "./styles/Feedback.scss";
 import React from 'react';
 import Slider from 'react-slick';
 import "slick-carousel/slick/slick.css";

@@ -1,4 +1,4 @@
-import './style/Product.scss';
+import './styles/Product.scss';
 import { Link } from 'react-router-dom';
 import { useState } from 'react';
 

@@ -1,4 +1,4 @@
-import "./style/Digest.scss";
+import "./styles/Digest.scss";
 
 const Digest = () => {
     return (

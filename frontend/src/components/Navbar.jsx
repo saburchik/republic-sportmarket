@@ -1,4 +1,4 @@
-import './style/Navbar.scss';
+import './styles/Navbar.scss';
 import { Link } from 'react-router-dom';
 import { useSelector } from 'react-redux';
 import logo from './../assets/republic.png';
