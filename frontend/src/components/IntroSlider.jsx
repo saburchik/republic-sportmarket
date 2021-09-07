@@ -33,8 +33,8 @@ const IntroSlider = () => {
 
             <div className="intro-item">
                 <img className="intro-img" src={introImgSecond} alt="Фоновое изображение" />
-                <div className="intro-text__second">
-                    <p className="intro-title__second">Сделай свою
+                <div className="intro-text intro-text_position">
+                    <p className="intro-title intro-title_color">Сделай свою
                         <span>жизнь Ярче!</span>
                     </p>
                 </div>

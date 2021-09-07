@@ -18,14 +18,14 @@
 }
 
 .cart__empty {
+    width: 100%;
     background-color: #fff;
-    // box-shadow: 0 1px 4px rgb(0 0 0 / 40%);
+    box-shadow: 0px 0px 5px 1px #939292;
     padding: 1rem;
     margin-bottom: 2rem;
 }
 
 .cart__empty p {
-    font-size: 1rem;
     padding: 1rem 0;
 }
 
@@ -37,9 +37,8 @@
     font-weight: 700;
     width: 100%;
     max-width: 300px;
-    height: 40px;
     background-color: #302B42;
-    line-height: 55px;
+    padding: .5rem 1rem;
     color: #fff;
     transition: .3s;
 }
@@ -57,7 +56,7 @@
     width: 25%;
     max-width: 100%;
     height: min-content;
-    // box-shadow: 0 1px 4px rgb(0 0 0 / 40%);
+    box-shadow: 0px 0px 5px 1px #939292;
     padding: 1rem;
     margin-bottom: 2rem;
 }

@@ -75,6 +75,7 @@ const HomeScreen = () => {
                                     name={product.name}
                                     status={product.status}
                                     price={product.price}
+                                    oldPrice={product.oldPrice}
                                     description={product.description}
                                     imageUrl={product.imageUrl}
                                 />)

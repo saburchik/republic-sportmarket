@@ -51,19 +51,14 @@
     top: 0;
     left: 0;
     width: 100%;
-    max-width: 1200px;
 
     @media (max-width: 690px) {
         justify-content: center !important;
     }
 }
 
-.intro-text__second {
+.intro-text_position {
     justify-content: flex-end !important;
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
 
     @media (max-width: 690px) {
         justify-content: center !important;
@@ -77,16 +72,9 @@
     font-weight: 900;
     color: #302B42;
     text-transform: uppercase;
-    padding: 1rem;
+    padding: clamp(1rem, 5vw, 3rem);
 }
 
-.intro-title__second {
-    display: flex;
-    flex-direction: column;
-    font-size: clamp(2rem, 5vw, 9rem);
-    font-weight: 900;
+.intro-title_color {
     color: #CECECE;
-    text-transform: uppercase;
-    padding: 1rem;
-
 }

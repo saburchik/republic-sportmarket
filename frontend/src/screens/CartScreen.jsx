@@ -50,7 +50,9 @@ const CartScreen = () => {
                     <div className="order__left">
                         {cartItems.length === 0 ? (
                             <div className="cart__empty">
-                                <p>Ваша корзина - пуста</p>
+                                <p>Ваша корзина -
+                                    <b> пуста</b>
+                                </p>
                                 <p>Здесь хранятся товары, которые вы добавили в корзину. Сейчас ваша корзина пуста</p>
                                 <Link className="link__assortment" to="/">Перейти к ассортименту</Link>
                             </div>
