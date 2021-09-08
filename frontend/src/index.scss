@@ -182,6 +182,10 @@ form {
     font-size: 1rem;
     font-weight: 500;
     margin-left: 1rem;
+
+    &.undefined {
+        font-size: 0;
+    }
 }
 
 .price__size_m {

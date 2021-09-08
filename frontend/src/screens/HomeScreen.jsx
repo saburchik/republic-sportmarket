@@ -46,6 +46,8 @@ const HomeScreen = () => {
         { subtitle: 'Часы' },
     ])
 
+    // const outfit = ['Hera should be subtitle']
+
 
     return (
         <main className="homescreen">

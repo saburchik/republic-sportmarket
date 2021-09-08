@@ -6,11 +6,9 @@ import { useState } from 'react';
 const Product = ({ imageUrl, category, name, price, description, productId, article, oldPrice, status }) => {
     console.log(status);
 
-    const [icon, setIcon] = useState('')
+    // const [icon, setIcon] = useState('')
 
-    // const [oldPrice, setOldPrice] = useState('')
-
-
+    const isOldPrice = oldPrice === 0
 
     return (
         <div className="product">
@@ -26,7 +24,7 @@ const Product = ({ imageUrl, category, name, price, description, productId, arti
             <div className="product__info">
                 <p className="title text">{name}</p>
                 <p className="product__price">{price} ₽
-                    <s className="old-price">{oldPrice}</s>
+                    <s className={isOldPrice ? "old-price undefined" : "old-price"}>{oldPrice}</s>
                 </p>
                 <Link to={`/product/${productId}`} className="info__item">
                     <i className="fas fa-play"></i>
