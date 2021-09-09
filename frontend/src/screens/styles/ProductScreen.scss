@@ -1,3 +1,25 @@
+.icon {
+    display: none;
+    justify-content: center;
+    align-items: center;
+    width: 70px;
+    height: 30px;
+    background-color: #E87E7E;
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 1rem;
+
+    &.icon-green {
+        display: flex;
+        background-color: #A0E87E;
+    }
+
+    &.icon-red {
+        display: flex;
+        background-color: #E87E7E;
+    }
+}
+
 .description__inner {
     display: flex;
     flex-direction: row;
@@ -17,16 +39,6 @@
 
 .product__article>strong {
     letter-spacing: 0.2rem;
-}
-
-.sale {
-    font-size: 1rem;
-    font-weight: 700;
-    display: inline-block;
-    color: #302B42;
-    background-color: #E87E7E;
-    padding: 5px 10px;
-    margin-right: 1.5rem;
 }
 
 .boxies {

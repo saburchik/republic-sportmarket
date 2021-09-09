@@ -34,7 +34,18 @@ const CartScreen = () => {
     };
 
     const getCartSales = () => {
-        return cartItems.reduce((oldPrice, item) => item.oldPrice * item.qty + oldPrice, 0);
+
+        if (cartItems.status === " ") {
+            return getCartSubTotal()
+        } else {
+            return cartItems.reduce((oldPrice, item) => item.oldPrice * item.qty + oldPrice, 0);
+        }
+
+        // if (cart.oldPrice === 0) {
+        //     return cartItems.reduce((oldPrice, item) => item.oldPrice * item.qty + oldPrice, 0);
+        // } else {
+        //     return cartItems.reduce((price, item) => item.price * item.qty + price, 0);
+        // }
     };
 
     const getSales = () => {

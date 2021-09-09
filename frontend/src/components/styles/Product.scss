@@ -11,12 +11,12 @@
 }
 
 .icon {
-    display: flex;
+    display: none;
     justify-content: center;
     align-items: center;
     width: 70px;
     height: 30px;
-    background-color: #A0E87E;
+    background-color: #E87E7E;
     position: absolute;
     top: 0;
     left: 0;
@@ -24,6 +24,16 @@
     text-transform: uppercase;
     font-weight: 700;
     font-size: 1rem;
+
+    &.icon-green {
+        display: flex;
+        background-color: #A0E87E;
+    }
+
+    &.icon-red {
+        display: flex;
+        background-color: #E87E7E;
+    }
 }
 
 /* 

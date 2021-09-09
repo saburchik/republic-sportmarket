@@ -1,19 +1,28 @@
 import './styles/Product.scss';
 import { Link } from 'react-router-dom';
-import { useState } from 'react';
+import { useState, useEffect } from "react";
+import { useDispatch, useSelector } from "react-redux";
 
 
 const Product = ({ imageUrl, category, name, price, description, productId, article, oldPrice, status }) => {
-    console.log(status);
-
-    // const [icon, setIcon] = useState('')
 
     const isOldPrice = oldPrice === 0
+
+    const iconClasses = ['icon']
+
+    if (status === "NEW") {
+        iconClasses.push('icon-green')
+    } else if (status === " ") {
+        iconClasses.push('icon')
+    } else {
+        iconClasses.push('icon-red')
+    }
+
 
     return (
         <div className="product">
             <Link className="adaptive__img" to={`/product/${productId}`}>
-                <span className="icon" >{status}</span>
+                <span className={iconClasses.join(' ')}>{status}</span>
                 <img
                     className="product__img_size-m"
                     src={imageUrl}

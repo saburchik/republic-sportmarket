@@ -14,6 +14,7 @@ import Footer from '../components/Footer';
 
 const ProductScreen = ({ match, history }) => {
 
+
     const [qty, setQty] = useState(1);
     const dispatch = useDispatch();
 
@@ -30,6 +31,19 @@ const ProductScreen = ({ match, history }) => {
         dispatch(addToCart(product._id, qty));
         history.push("/cart");
     }
+
+    // const iconClasses = ['icon']
+
+    // if (product.status === "NEW") {
+    //     iconClasses.push('icon-green')
+    // } else if (product.status === " ") {
+    //     iconClasses.push('icon')
+    // } else {
+    //     iconClasses.push('icon-red')
+    // }
+
+    console.log(product.status);
+
 
     return (
         <div className="productscreen">
@@ -49,11 +63,11 @@ const ProductScreen = ({ match, history }) => {
                                 <div className="product__information">
                                     <p className="product__article">артикул: <strong>{product.article}</strong></p>
                                     <p className="title title__size_c boxies">
-                                        <span className="sale">-20%</span>
+                                        <span className="sss">{product.status}</span>
                                         {product.name}</p>
                                     <p className="product__price price__size_m">
                                         {product.price} ₽
-                                        <strike className="old-price">{product.oldPrice} ₽</strike>
+                                        <strike className="old-price">{product.oldPrice}</strike>
                                     </p>
                                     <p className="description description__product">
                                         <strong>Описание:</strong> <br />
