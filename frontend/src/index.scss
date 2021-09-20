@@ -159,21 +159,20 @@ form {
 
 /* The Size Title */
 .title {
-    font-size: 1rem;
-    font-weight: 700;
+    font-size: clamp(0.7rem, 1vw, 1.5rem);
+    font-weight: 500;
     text-transform: uppercase;
-}
-
-.title__size_m {
-    text-align: center;
-    font-size: 2rem;
     margin-bottom: 1rem;
-}
 
-.title__size_c {
-    text-align: left;
-    font-size: 2rem;
-    margin-bottom: 1rem;
+    &.title-size-sm {
+        font-size: 2rem;
+    }
+
+    &.title-size-sl {
+        text-align: center;
+        font-size: clamp(1.8rem, 2vw, 4rem);
+        font-weight: 700;
+    }
 }
 
 /* The Size Price */

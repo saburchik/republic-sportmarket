@@ -1,22 +1,19 @@
 /* eslint-disable no-unused-vars */
-import './styles/HomeScreen.scss';
-import React, { useEffect, useState } from "react";
-import { useSelector, useDispatch } from "react-redux";
+import './styles/HomeScreen.scss'
+import React, { useEffect, useState } from "react"
+import { useSelector, useDispatch } from "react-redux"
 
 // Components
-import IntroSlider from '../components/IntroSlider';
-import Product from '../components/Product';
-import Advantages from '../components/Advantages';
-import Accordion from '../components/Accordion';
-import Footer from '../components/Footer';
-import Digest from '../components/Digest';
-import Feedback from '../components/Feedback';
-
-
-
+import IntroSlider from '../components/IntroSlider'
+import Product from '../components/Product'
+import Advantages from '../components/Advantages'
+import Accordion from '../components/Accordion'
+import Footer from '../components/Footer'
+import Digest from '../components/Digest'
+import Feedback from '../components/Feedback'
 
 // Actions
-import { getProducts as listProducts } from "../redux/actions/productActions";
+import { getProducts as listProducts } from "../redux/actions/productActions"
 
 const HomeScreen = () => {
     const dispatch = useDispatch()
@@ -28,19 +25,19 @@ const HomeScreen = () => {
         dispatch(listProducts())
     }, [dispatch])
 
-    const [skate, setSkate] = useState([
+    const [skate] = useState([
         { subtitle: 'Лонгборды и круизеры' },
         { subtitle: 'Скейтборды в сборе' },
         { subtitle: 'Подшипники для скейта' }
     ])
-    const [scooter, setScooter] = useState([
+    const [scooter] = useState([
         { subtitle: 'Самокаты в сборе' },
         { subtitle: 'Вилки для кикскутеров и самокатов' },
         { subtitle: 'Рули для самокатов' },
         { subtitle: 'Деки для самокатов' },
         { subtitle: 'Подшипники' }
     ])
-    const [outfit, setOutfit] = useState([
+    const [outfit] = useState([
         { subtitle: 'Очки' },
         { subtitle: 'Банданы' },
         { subtitle: 'Часы' },
@@ -53,25 +50,24 @@ const HomeScreen = () => {
         <main className="homescreen">
             <IntroSlider />
             <Advantages />
-
             <article className="catalog">
-                <div className="catalog__inner">
-                    <h2 className="title catalog__title">Ассортимент</h2>
-                    <div className="catalog__main">
-                        <div className="categories">
-                            <h3 className="title categories__title">Категории:</h3>
-                            <Accordion posts={skate} title='Скейтборды' />
-                            <Accordion posts={scooter} title='Самокаты' />
-                            <Accordion posts={outfit} title='Аксессуары' />
+                <div className="catalog-inner">
+                    <h2 className="title title-size-sl">Ассортимент</h2>
+                    <div className="catalog-body">
+                        <div className="catalog-categories">
+                            <h3 className="title title-size-sl">Категории:</h3>
+                            <Accordion category={skate} title='Скейтборды' />
+                            <Accordion category={scooter} title='Самокаты' />
+                            <Accordion category={outfit} title='Аксессуары' />
                         </div>
-                        <section className="catalog__products">
+                        <section className="catalog-products">
                             {loading ? (
-                                <h1 className="title">Loading...</h1>
+                                <h3 className="title title-size-sl">Loading...</h3>
                             ) : error ? (
-                                <h2 className="title">{error}</h2>
+                                <h3 className="title title-size-sl">{error}</h3>
                             ) : (
                                 products.map((product) => <Product
-                                    key={product._id}
+                                    key={product.id}
                                     productId={product._id}
                                     category={product.category}
                                     name={product.name}
@@ -86,7 +82,6 @@ const HomeScreen = () => {
                     </div>
                 </div>
             </article>
-
             <Feedback />
             <Digest />
             <Footer />

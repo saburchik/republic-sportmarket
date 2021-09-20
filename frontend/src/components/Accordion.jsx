@@ -1,7 +1,7 @@
 import "./styles/Accordion.scss";
 import { useState, useRef } from "react";
 
-function Accordion({ posts, title }) {
+function Accordion({ category, title }) {
     const [setActive, setActiveState] = useState("");
     const [setHeight, setHeightState] = useState("0px");
     const [setRotate, setRotateState] = useState("fa-chevron-down");
@@ -32,7 +32,7 @@ function Accordion({ posts, title }) {
                     style={{ maxHeight: `${setHeight}` }}
                 >
                     <ul className="accordion__show">
-                        {posts.map((post) =>
+                        {category.map((post) =>
                             <li className="item__subtitle" key={post.id}>
                                 {post.subtitle}
                             </li>

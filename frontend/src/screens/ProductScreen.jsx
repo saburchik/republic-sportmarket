@@ -32,18 +32,16 @@ const ProductScreen = ({ match, history }) => {
         history.push("/cart");
     }
 
-    // const iconClasses = ['icon']
+    const iconClasses = ['icon']
+    const setStatus = product.status
 
-    // if (product.status === "NEW") {
-    //     iconClasses.push('icon-green')
-    // } else if (product.status === " ") {
-    //     iconClasses.push('icon')
-    // } else {
-    //     iconClasses.push('icon-red')
-    // }
-
-    console.log(product.status);
-
+    if (setStatus === "NEW") {
+        iconClasses.push('icon-green')
+    } else if (setStatus === " ") {
+        iconClasses.push('icon')
+    } else {
+        iconClasses.push('icon-red')
+    }
 
     return (
         <div className="productscreen">
@@ -63,7 +61,7 @@ const ProductScreen = ({ match, history }) => {
                                 <div className="product__information">
                                     <p className="product__article">артикул: <strong>{product.article}</strong></p>
                                     <p className="title title__size_c boxies">
-                                        <span className="sss">{product.status}</span>
+                                        <span className="sss">{setStatus}</span>
                                         {product.name}</p>
                                     <p className="product__price price__size_m">
                                         {product.price} ₽

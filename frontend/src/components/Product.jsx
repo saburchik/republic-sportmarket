@@ -1,8 +1,5 @@
 import './styles/Product.scss';
 import { Link } from 'react-router-dom';
-import { useState, useEffect } from "react";
-import { useDispatch, useSelector } from "react-redux";
-
 
 const Product = ({ imageUrl, category, name, price, description, productId, article, oldPrice, status }) => {
 

@@ -1,13 +1,12 @@
-import "./styles/IntroSlider.scss";
-import "slick-carousel/slick/slick.css";
-import Slider from 'react-slick';
+import "./styles/IntroSlider.scss"
+import "slick-carousel/slick/slick.css"
+import Slider from 'react-slick'
 
 // Background images
-import introImg from '../assets/intro.jpg';
-import introImgSecond from '../assets/intro_second.jpg';
+import introWinter from '../assets/intro_winter.jpg'
+import introSkate from '../assets/intro_skate.jpg'
 
 const IntroSlider = () => {
-    // Settings slick-carousel
     let settings = {
         dots: true,
         infinite: true,
@@ -22,23 +21,23 @@ const IntroSlider = () => {
 
     return (
         <Slider className="intro-slider" {...settings}>
-            <div className="intro-item">
-                <img className="intro-img" src={introImg} alt="Фоновое изображение" />
+            <article className="intro-item">
+                <img className="intro-img" src={introWinter} alt="Фоновое изображение" />
                 <div className="intro-text">
-                    <p className="intro-title">Отдыхай В
+                    <h1 className="title intro-title">Отдыхай В
                         <span>Движении</span>
-                    </p>
+                    </h1>
                 </div>
-            </div>
+            </article>
 
-            <div className="intro-item">
-                <img className="intro-img" src={introImgSecond} alt="Фоновое изображение" />
-                <div className="intro-text intro-text_position">
-                    <p className="intro-title intro-title_color">Сделай свою
+            <article className="intro-item">
+                <img className="intro-img" src={introSkate} alt="Фоновое изображение" />
+                <div className="intro-text intro-position">
+                    <h1 className="title intro-title" style={{ color: "#CECECE" }}>Сделай свою
                         <span>жизнь Ярче!</span>
-                    </p>
+                    </h1>
                 </div>
-            </div>
+            </article>
         </Slider>
     )
 }
