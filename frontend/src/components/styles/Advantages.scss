@@ -14,8 +14,10 @@
     color: #fff;
     margin: 0 .5rem;
 
-    i {
-        font-size: clamp(1.5rem, 1vw, 2rem);
+    .advantages-icon {
+        width: 30px;
+        height: 30px;
+        fill: #fff;
     }
 
     .title {

@@ -1,16 +1,16 @@
 /* eslint-disable no-unused-vars */
-import './styles/HomeScreen.scss'
+import "./styles/HomeScreen.scss"
 import React, { useEffect, useState } from "react"
 import { useSelector, useDispatch } from "react-redux"
 
 // Components
-import IntroSlider from '../components/IntroSlider'
-import Product from '../components/Product'
-import Advantages from '../components/Advantages'
-import Accordion from '../components/Accordion'
-import Footer from '../components/Footer'
-import Digest from '../components/Digest'
-import Feedback from '../components/Feedback'
+import IntroSlider from "../components/IntroSlider"
+import Product from "../components/Product"
+import Advantages from "../components/Advantages"
+import Accordion from "../components/Accordion"
+import Footer from "../components/Footer"
+import Digest from "../components/Digest"
+import Feedback from "../components/Feedback"
 
 // Actions
 import { getProducts as listProducts } from "../redux/actions/productActions"
@@ -43,9 +43,6 @@ const HomeScreen = () => {
         { subtitle: 'Часы' },
     ])
 
-    // const outfit = ['Hera should be subtitle']
-
-
     return (
         <main className="homescreen">
             <IntroSlider />
@@ -56,9 +53,9 @@ const HomeScreen = () => {
                     <div className="catalog-body">
                         <div className="catalog-categories">
                             <h3 className="title title-size-sl">Категории:</h3>
-                            <Accordion category={skate} title='Скейтборды' />
-                            <Accordion category={scooter} title='Самокаты' />
-                            <Accordion category={outfit} title='Аксессуары' />
+                            <Accordion category={skate} title="Скейтборды" />
+                            <Accordion category={scooter} title="Самокаты" />
+                            <Accordion category={outfit} title="Аксессуары" />
                         </div>
                         <section className="catalog-products">
                             {loading ? (

@@ -1,39 +1,46 @@
-import "./styles/Accordion.scss";
-import { useState, useRef } from "react";
+import "./styles/Accordion.scss"
+import { useState, useRef } from "react"
 
 function Accordion({ category, title }) {
-    const [setActive, setActiveState] = useState("");
-    const [setHeight, setHeightState] = useState("0px");
-    const [setRotate, setRotateState] = useState("fa-chevron-down");
+    const [setActive, setActiveState] = useState('')
+    const [setHeight, setHeightState] = useState('0px')
+    const [setRotate, setRotateState] = useState('arrow-icon')
 
-    const content = useRef(null);
+    const content = useRef(null)
 
     function toggleAccordion() {
-        setActiveState(setActive === "" ? "active" : "");
+        setActiveState(setActive === '' ? 'active' : '')
         setHeightState(
-            setActive === "active" ? "0px" : `${content.current.scrollHeight}px`
-        );
-        console.log(content.current.scrollHeight);
+            setActive === 'active' ? '0px' : `${content.current.scrollHeight}px`
+        )
         setRotateState(
-            setActive === "active" ? "fa-chevron-down" : "fa-chevron-down rotate"
+            setActive === 'active' ? '' : 'arrow-rotate'
         )
     }
 
     return (
         <div className="accordion">
-            <div className="item">
-                < div className={`titled ${setActive}`} onClick={toggleAccordion}>
+            <svg display="none">
+                <symbol id="chevron-down" viewBox="0 0 448 512">
+                    <path d="M207.029 381.476L12.686 187.132c-9.373-9.373-9.373-24.569 0-33.941l22.667-22.667c9.357-9.357 24.522-9.375 33.901-.04L224 284.505l154.745-154.021c9.379-9.335 24.544-9.317 33.901.04l22.667 22.667c9.373 9.373 9.373 24.569 0 33.941L240.971 381.476c-9.373 9.372-24.569 9.372-33.942 0z"></path>
+                </symbol>
+            </svg>
+
+            <div className="accordion-item">
+                <h3 className={`title accordion-title ${setActive}`} onClick={toggleAccordion}>
                     {title}
-                    < i className={`fas fa-chevron-down ${setRotate}`} />
-                </div >
+                    <svg className={`arrow-icon ${setRotate}`}>
+                        <use xlinkHref="#chevron-down" />
+                    </svg>
+                </h3 >
                 <div
                     ref={content}
-                    className="sidebar__content"
+                    className="accordion-inner"
                     style={{ maxHeight: `${setHeight}` }}
                 >
-                    <ul className="accordion__show">
+                    <ul className="accordion-list">
                         {category.map((post) =>
-                            <li className="item__subtitle" key={post.id}>
+                            <li className="title accordion-subtitle" key={post.id}>
                                 {post.subtitle}
                             </li>
                         )}
@@ -41,7 +48,7 @@ function Accordion({ category, title }) {
                 </div>
             </div>
         </div>
-    );
+    )
 }
 
-export default Accordion;
+export default Accordion
