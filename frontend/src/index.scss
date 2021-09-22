@@ -164,9 +164,7 @@ form {
     text-transform: uppercase;
     margin-bottom: 1rem;
 
-    &.title-size-sm {
-        font-size: 2rem;
-    }
+    &.title-size-sm {}
 
     &.title-size-sl {
         text-align: center;
@@ -206,7 +204,7 @@ form {
     height: 200px;
 }
 
-.product__img_size-m {
+.img {
     width: 100%;
     height: 100%;
     position: absolute;

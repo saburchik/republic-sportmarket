@@ -1,13 +1,8 @@
-.catalog-inner {
-    padding: 1rem 0;
-}
-
-.catalog-body {
+.catalog {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
     align-items: start;
-    padding-bottom: 5rem;
 }
 
 .catalog-categories {

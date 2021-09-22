@@ -1,28 +1,25 @@
-/* Feedback */
-.feedback__title {
-    font-size: clamp(1.8rem, 2vw, 4rem);
-    color: #302B42;
-    text-align: center;
-}
-
-.feedback__contains {
+.feedback-inner {
     width: Min(75%, 1700px);
     margin: 0 auto;
     padding: 3rem 0;
 }
 
-.slider__wrapper {
+.slider-list {
+    display: flex;
+}
+
+.slider-inner {
     display: flex;
     align-items: center;
     padding: 0 2rem;
 }
 
-.slider__img {
+.slider-img {
     width: clamp(150px, 13vw, 300px);
     height: auto;
 }
 
-.slider__text {
+.slider-comment {
     display: flex;
     flex-direction: column;
     align-items: baseline;
@@ -30,10 +27,11 @@
     font-size: clamp(1rem, 1vw, 1.5rem);
     font-weight: 400;
     font-style: italic;
+    text-transform: inherit;
     padding: 1rem;
 }
 
-.slider__text b {
+.slider-comment strong {
     margin-top: 1rem;
 }
 
@@ -79,7 +77,7 @@
         padding: 0 1rem;
     }
 
-    .slider__text {
+    .slider-comment {
         padding: 1rem 0.5rem;
     }
 }
