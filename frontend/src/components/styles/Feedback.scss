@@ -1,38 +1,40 @@
-.feedback-inner {
+.slide-inner {
     width: Min(75%, 1700px);
     margin: 0 auto;
     padding: 3rem 0;
 }
 
-.slider-list {
-    display: flex;
-}
-
-.slider-inner {
+.slider-item {
     display: flex;
     align-items: center;
-    padding: 0 2rem;
+    padding: 0 clamp(1rem, 3vw, 2rem);
+
+    @media (max-width:790px) {
+        flex-direction: column;
+    }
 }
 
 .slider-img {
     width: clamp(150px, 13vw, 300px);
-    height: auto;
 }
 
 .slider-comment {
     display: flex;
     flex-direction: column;
     align-items: baseline;
-
     font-size: clamp(1rem, 1vw, 1.5rem);
-    font-weight: 400;
     font-style: italic;
     text-transform: inherit;
     padding: 1rem;
-}
+    margin: 0;
 
-.slider-comment strong {
-    margin-top: 1rem;
+    strong {
+        margin-top: 1rem;
+    }
+
+    @media (max-width:790px) {
+        padding: 1rem 0;
+    }
 }
 
 /* Arrows */
@@ -53,6 +55,10 @@
     color: transparent;
     background-color: #302B42;
     transition: .3s;
+
+    &:hover {
+        background-color: #939292;
+    }
 }
 
 .slick-prev {
@@ -63,21 +69,4 @@
 .slick-next {
     right: -45px;
     mask-image: url("../../assets/chevron-right-solid.svg");
-}
-
-.slick-prev:hover,
-.slick-next:hover {
-    background-color: #939292;
-}
-
-/* Media Query */
-@media (max-width: 790px) {
-    .slider__wrapper {
-        flex-direction: column;
-        padding: 0 1rem;
-    }
-
-    .slider-comment {
-        padding: 1rem 0.5rem;
-    }
 }

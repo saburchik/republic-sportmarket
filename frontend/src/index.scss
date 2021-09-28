@@ -191,10 +191,17 @@ form {
 }
 
 /* The Size Description */
+.discription {
+    width: Min(100%, 800px);
+    max-width: 1500px;
+    font-size: clamp(1rem, 1vw, 1.5rem);
+    font-weight: 400;
+    text-transform: inherit;
+    margin-bottom: clamp(2rem, 3vw, 5rem);
 
-.description {
-    font-size: 1rem;
-    margin-bottom: 1rem;
+    @media (min-width: 1700px) {
+        width: auto;
+    }
 }
 
 
