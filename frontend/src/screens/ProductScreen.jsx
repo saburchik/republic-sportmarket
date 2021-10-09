@@ -32,16 +32,17 @@ const ProductScreen = ({ match, history }) => {
         history.push("/cart");
     }
 
-    // const iconClasses = ['icon']
-    // const setStatus = product.status
+    const iconStatusColor = ['icon-status']
 
-    // if (setStatus === "NEW") {
-    //     iconClasses.push('icon-green')
-    // } else if (setStatus === " ") {
-    //     iconClasses.push('icon')
-    // } else {
-    //     iconClasses.push('icon-red')
-    // }
+    if (product.status === "NEW") {
+        iconStatusColor.push('icon-status-green')
+    } else if (product.status === " ") {
+        iconStatusColor.push('icon-status')
+    } else {
+        iconStatusColor.push('icon-status-red')
+    }
+
+
 
     return (
         <div className="productscreen">
@@ -61,11 +62,15 @@ const ProductScreen = ({ match, history }) => {
                                 <div className="product__information">
                                     <p className="product__article">артикул: <strong>{product.article}</strong></p>
                                     <p className="title title__size_c boxies">
-                                        <span className="sss">{product.status}</span>
+                                        <span className={iconStatusColor.join(' ')}
+                                        >{product.status}</span>
                                         {product.name}</p>
                                     <p className="product__price price__size_m">
                                         {product.price} ₽
-                                        <strike className="old-price">{product.oldPrice}</strike>
+                                        <strike className={
+                                            product.oldPrice === 0 ? "old-price undefined" : "old-price"
+                                        }>{product.oldPrice}
+                                        </strike>
                                     </p>
                                     <p className="description description__product">
                                         <strong>Описание:</strong> <br />

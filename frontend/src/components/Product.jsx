@@ -3,7 +3,6 @@ import { Link } from 'react-router-dom'
 
 const Product = ({ productId, name, status, price, oldPrice, imageUrl }) => {
 
-    const isOldPrice = oldPrice === 0
     const iconStatusColor = ['icon-status']
 
     if (status === "NEW") {
@@ -28,7 +27,7 @@ const Product = ({ productId, name, status, price, oldPrice, imageUrl }) => {
             <div className="product-info">
                 <p className="title">{name}</p>
                 <p className="title product-price">{price} ₽
-                    <del className={isOldPrice ? "old-price undefined" : "old-price"}>{oldPrice} ₽</del>
+                    <del className={oldPrice === 0 ? "old-price undefined" : "old-price"}>{oldPrice} ₽</del>
                 </p>
                 <Link to={`/product/${productId}`} className="product-play">
                     <svg>
