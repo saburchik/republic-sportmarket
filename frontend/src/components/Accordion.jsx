@@ -1,7 +1,7 @@
 import "./styles/Accordion.scss"
 import { useState, useRef } from "react"
 
-function Accordion({ category, title }) {
+function Accordion(props) {
     const [setActive, setActiveState] = useState('')
     const [setHeight, setHeightState] = useState('0px')
     const [setRotate, setRotateState] = useState('arrow-icon')
@@ -18,6 +18,14 @@ function Accordion({ category, title }) {
         )
     }
 
+    // Drawing subtitles in categories
+    let Subtitles = props.subtitleList.map(s => <li
+        key={s.id}
+        className="title accordion-subtitle"
+    >
+        {s.subtitle}
+    </li>)
+
     return (
         <ul className="accordion">
             <svg display="none">
@@ -28,7 +36,7 @@ function Accordion({ category, title }) {
 
             <li className="accordion-item">
                 <h3 className={`title accordion-title ${setActive}`} onClick={toggleAccordion}>
-                    {title}
+                    {props.title}
                     <svg className={`arrow-icon ${setRotate}`}>
                         <use xlinkHref="#chevron-down" />
                     </svg>
@@ -39,11 +47,7 @@ function Accordion({ category, title }) {
                     style={{ maxHeight: `${setHeight}` }}
                 >
                     <ul className="accordion-list">
-                        {category.map((post) =>
-                            <li className="title accordion-subtitle" key={post.id}>
-                                {post.subtitle}
-                            </li>
-                        )}
+                        {Subtitles}
                     </ul>
                 </div>
             </li>

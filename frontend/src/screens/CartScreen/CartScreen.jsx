@@ -1,15 +1,15 @@
-import './styles/CartScreen.scss';
+import './CartScreen.scss';
 import { useDispatch, useSelector } from 'react-redux';
 import { Link } from 'react-router-dom';
 
 
 // Components
-import Advantages from '../components/Advantages';
-import CartItem from '../components/CartItem';
-import Footer from '../components/Footer';
+import Advantages from '../../components/Advantages';
+import CartItem from '../../components/CartItem';
+import Footer from '../../components/Footer';
 
 // Actions
-import { addToCart, removeFromCart } from '../redux/actions/cartActions';
+import { addToCart, removeFromCart } from '../../redux/actions/cartActions';
 
 const CartScreen = () => {
     const dispatch = useDispatch();

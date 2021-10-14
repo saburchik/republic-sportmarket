@@ -1,8 +1,8 @@
-import './styles/LoginScreen.scss';
+import './LoginScreen.scss';
 import { Link } from 'react-router-dom';
 
 // Components
-import Footer from '../components/Footer';
+import Footer from '../../components/Footer';
 
 const LoginScreen = () => {
     return (

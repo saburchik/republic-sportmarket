@@ -6,11 +6,12 @@ import reportWebVitals from './reportWebVitals'
 
 import { Provider } from 'react-redux'
 import store from './redux/store'
+import state from './state'
 
 ReactDOM.render(
   <Provider store={store}>
     <React.StrictMode>
-      <App />
+      <App state={state} />
     </React.StrictMode>
   </Provider>,
   document.getElementById('root')

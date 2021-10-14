@@ -1,3 +1,11 @@
+.title {
+    font-size: clamp(1.8rem, 2vw, 4rem);
+    font-weight: 700;
+    text-align: center;
+    text-transform: uppercase;
+    margin-bottom: 1rem;
+}
+
 .catalog {
     display: flex;
     flex-wrap: wrap;
@@ -5,12 +13,12 @@
     align-items: start;
 }
 
-.catalog-categories {
+.catalog__categories {
     max-width: 300px;
     padding: 1rem;
 }
 
-.catalog-products {
+.catalog__products {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(285px, 300px));
     gap: 20px;

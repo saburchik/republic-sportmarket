@@ -1,16 +1,16 @@
-import './styles/ProductScreen.scss';
+import './ProductScreen.scss';
 import { useState, useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { Link } from 'react-router-dom';
 
 // Actions
-import { getProductDetails } from "../redux/actions/productActions";
-import { addToCart } from "../redux/actions/cartActions";
+import { getProductDetails } from "../../redux/actions/productActions";
+import { addToCart } from "../../redux/actions/cartActions";
 
 // Components
-import Advantages from '../components/Advantages';
-import Digest from '../components/Digest';
-import Footer from '../components/Footer';
+import Advantages from '../../components/Advantages';
+import Digest from '../../components/Digest';
+import Footer from '../../components/Footer';
 
 const ProductScreen = ({ match, history }) => {
 
