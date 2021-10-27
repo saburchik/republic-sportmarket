@@ -12,9 +12,9 @@ app.use(express.json())
 app.use('/api/products', productRoutes);
 
 // Step deploy
-// if (process.env.NODE_ENV === 'production') {
-//     app.use(express.static('frontend/build'))
-// }
+if (process.env.NODE_ENV === 'production') {
+    app.use(express.static('frontend/build'))
+}
 
 const PORT = process.env.PORT || 5000;
 
