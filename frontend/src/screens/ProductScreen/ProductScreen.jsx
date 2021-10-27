@@ -32,15 +32,15 @@ const ProductScreen = ({ match, history }) => {
         history.push("/cart");
     }
 
-    const iconStatusColor = ['icon-status']
+    // const iconStatusColor = ['icon-status']
 
-    if (product.status === "NEW") {
-        iconStatusColor.push('icon-status-green')
-    } else if (product.status === " ") {
-        iconStatusColor.push('icon-status')
-    } else {
-        iconStatusColor.push('icon-status-red')
-    }
+    // if (product.status === "NEW") {
+    //     iconStatusColor.push('icon-status-green')
+    // } else if (product.status === " ") {
+    //     iconStatusColor.push('icon-status')
+    // } else {
+    //     iconStatusColor.push('icon-status-red')
+    // }
 
 
 
