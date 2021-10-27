@@ -62,7 +62,7 @@ const ProductScreen = ({ match, history }) => {
                                 <div className="product__information">
                                     <p className="product__article">артикул: <strong>{product.article}</strong></p>
                                     <p className="title title__size_c boxies">
-                                        <span className={iconStatusColor.join(' ')}
+                                        <span
                                         >{product.status}</span>
                                         {product.name}</p>
                                     <p className="product__price price__size_m">
