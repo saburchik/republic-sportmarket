@@ -26,7 +26,7 @@ const HomeScreen = (props) => {
     }, [dispatch])
 
     // Drawing Accordion and sent the data about title/subtitleList
-    let Accordions = props.state.Categories.map(a => <Accordion title={a.title} subtitleList={a.subtitleList} key={a.index} />)
+    let Accordions = props.state.Categories.map(a => <Accordion title={a.title} subtitleList={a.subtitleList} key={a.id} />)
 
     return (
         <main className="homescreen">
