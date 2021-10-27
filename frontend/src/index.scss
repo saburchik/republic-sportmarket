@@ -1,0 +1,244 @@
+@import-normalize;
+
+@font-face {
+    font-family: 'Montserrat';
+    src: url('fonts/Montserrat-Medium.eot');
+    src: url('fonts/Montserrat-Medium.eot?#iefix') format('embedded-opentype'),
+        url('fonts/Montserrat-Medium.woff2') format('woff2'),
+        url('fonts/Montserrat-Medium.woff') format('woff'),
+        url('fonts/Montserrat-Medium.ttf') format('truetype'),
+        url('fonts/Montserrat-Medium.svg#Montserrat-Medium') format('svg');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Montserrat';
+    src: url('fonts/Montserrat-Regular.eot');
+    src: url('fonts/Montserrat-Regular.eot?#iefix') format('embedded-opentype'),
+        url('fonts/Montserrat-Regular.woff2') format('woff2'),
+        url('fonts/Montserrat-Regular.woff') format('woff'),
+        url('fonts/Montserrat-Regular.ttf') format('truetype'),
+        url('fonts/Montserrat-Regular.svg#Montserrat-Regular') format('svg');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Montserrat';
+    src: url('fonts/Montserrat-Italic.eot');
+    src: url('fonts/Montserrat-Italic.eot?#iefix') format('embedded-opentype'),
+        url('fonts/Montserrat-Italic.woff2') format('woff2'),
+        url('fonts/Montserrat-Italic.woff') format('woff'),
+        url('fonts/Montserrat-Italic.ttf') format('truetype'),
+        url('fonts/Montserrat-Italic.svg#Montserrat-Italic') format('svg');
+    font-weight: normal;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Montserrat';
+    src: url('fonts/Montserrat-Bold.eot');
+    src: url('fonts/Montserrat-Bold.eot?#iefix') format('embedded-opentype'),
+        url('fonts/Montserrat-Bold.woff2') format('woff2'),
+        url('fonts/Montserrat-Bold.woff') format('woff'),
+        url('fonts/Montserrat-Bold.ttf') format('truetype'),
+        url('fonts/Montserrat-Bold.svg#Montserrat-Bold') format('svg');
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-size: 1rem;
+    color: #302B42;
+    font-family: 'Montserrat';
+    background: #f1f1f1;
+}
+
+a {
+    display: flex;
+    align-items: center;
+    color: #302B42;
+    text-decoration: none;
+}
+
+ul {
+    list-style-type: none;
+}
+
+li>a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.2rem;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+form {
+    display: flex;
+    position: relative;
+}
+
+.container {
+    width: 100%;
+    max-width: 2500px;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+.logo {
+    cursor: pointer;
+}
+
+/* Default size a Button */
+.btn {
+    height: 50px;
+    font-size: 1.5rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    border: none;
+    cursor: pointer;
+    width: Min(270px, 300px);
+}
+
+.btn__size_g {
+    color: #302B42;
+    background-color: #C4C4C4;
+    margin-bottom: 3rem;
+    transition: .5s;
+}
+
+.btn__size_g:hover {
+    color: #C4C4C4;
+    background-color: #302B42;
+}
+
+.btn__in-cart {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #A0E87E;
+    transition: .5s;
+}
+
+.btn__in-cart:hover {
+    color: #A0E87E;
+    background-color: #302B42;
+}
+
+.input__btn {
+    font-size: clamp(1.3rem, 1vw, 2.3rem);
+    border: none;
+    cursor: pointer;
+    padding: 0 0.8rem;
+    border-radius: 10px;
+    position: absolute;
+    right: 0;
+    height: 100%;
+}
+
+.search__btn {
+    color: #939292;
+    background-color: #CECECE;
+}
+
+.search__btn:hover {
+    color: #302B42;
+    transition: all .2s ease-in;
+
+}
+
+/* The Size Title */
+.title {
+    font-size: clamp(0.7rem, 1vw, 1.5rem);
+    font-weight: 500;
+    text-transform: uppercase;
+    margin-bottom: 1rem;
+
+    &.title-size-sm {}
+
+    &.title__size_sl {
+        text-align: center;
+        font-size: clamp(1.8rem, 2vw, 4rem);
+        font-weight: 700;
+    }
+}
+
+/* The Size Price */
+.old-price {
+    color: #939292;
+    font-size: 1rem;
+    font-weight: 500;
+    margin-left: 1rem;
+
+    &.undefined {
+        font-size: 0;
+    }
+}
+
+.price__size_m {
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+}
+
+/* The Size Description */
+.discription {
+    width: Min(100%, 800px);
+    max-width: 1500px;
+    font-size: clamp(1rem, 1vw, 1.5rem);
+    font-weight: 400;
+    text-transform: inherit;
+    margin-bottom: clamp(2rem, 3vw, 5rem);
+
+    @media (min-width: 1700px) {
+        width: auto;
+    }
+}
+
+
+/* The Size Images */
+.product__img_size-s {
+    width: 100%;
+    height: 200px;
+}
+
+.img {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    object-fit: contain;
+}
+
+.product__img_size-b {
+    // box-shadow: 0 1px 4px rgb(0 0 0 / 40%);
+    width: Min(40%, 500px);
+    height: Min(auto, 550px);
+    max-height: 570px;
+}
+
+/* Media query */
+@media (max-width: 890px) {
+    .btn__in-cart {
+        margin: 0 auto;
+    }
+}
+
+@media (max-width: 690px) {
+    .product__img_size-s {
+        width: 100%;
+        height: 350px;
+    }
+}

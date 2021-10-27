@@ -1,0 +1,31 @@
+.title {
+    font-size: clamp(1.8rem, 2vw, 4rem);
+    font-weight: 700;
+    text-align: center;
+    text-transform: uppercase;
+    margin-bottom: 1rem;
+}
+
+.catalog {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: start;
+}
+
+.catalog__categories {
+    max-width: 300px;
+    padding: 1rem;
+}
+
+.catalog__products {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(285px, 300px));
+    gap: 20px;
+    max-width: 85%;
+    padding: 1rem;
+
+    @media (max-width: 390px) {
+        max-width: 100%;
+    }
+}

@@ -1,0 +1,129 @@
+.cartscreen__title {
+    padding: 2rem 0;
+    margin: 0;
+}
+
+.order {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.order__left {
+    width: 70%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.cart__empty {
+    width: 100%;
+    background-color: #fff;
+    box-shadow: 0px 0px 5px 1px #939292;
+    padding: 1rem;
+    margin-bottom: 2rem;
+}
+
+.cart__empty p {
+    padding: 1rem 0;
+}
+
+.link__assortment {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-transform: uppercase;
+    font-weight: 700;
+    width: 100%;
+    max-width: 300px;
+    background-color: #302B42;
+    padding: .5rem 1rem;
+    color: #fff;
+    transition: .3s;
+}
+
+.link__assortment:hover {
+    background-color: #ccc;
+    color: #302B42;
+}
+
+.order__right {
+    position: relative;
+    background-color: #A0E87E;
+    display: flex;
+    flex-direction: column;
+    width: 25%;
+    max-width: 100%;
+    height: min-content;
+    box-shadow: 0px 0px 5px 1px #939292;
+    padding: 1rem;
+    margin-bottom: 2rem;
+}
+
+.title__order {
+    padding: 1rem 0;
+    font-size: 1.5rem;
+    font-weight: 700;
+    border-bottom: 3px solid #302B42;
+}
+
+.title__qty,
+.title__sales {
+    display: flex;
+    justify-content: space-between;
+    font-size: 1rem;
+    font-weight: 400;
+    padding: 1rem 0;
+}
+
+.title__total {
+    display: flex;
+    justify-content: space-between;
+    font-size: 1rem;
+    padding: 2rem 0 1rem;
+    border-bottom: 3px solid #302B42;
+}
+
+.order__btn {
+    height: 40px;
+    font-size: 1rem;
+    color: #fff;
+    width: 90%;
+    margin: 0 auto;
+    background-color: #302B42;
+    margin-top: 1rem;
+    transition: .3s;
+}
+
+.order__btn:hover {
+    color: #302B42;
+    background-color: #fff;
+}
+
+@media (max-width: 990px) {
+    .order {
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .order__left {
+        width: 100%;
+    }
+
+    .order__right {
+        width: 50%;
+    }
+}
+
+@media (max-width: 690px) {
+    .cartscreen__title {
+        padding: 1rem;
+    }
+
+    .order__right {
+        width: 100%;
+        max-width: 500px;
+    }
+}

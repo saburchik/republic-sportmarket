@@ -1,0 +1,34 @@
+.advantages-inner {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    background-color: #302B42;
+    padding: 1rem 2rem;
+}
+
+.advantage-item {
+    display: flex;
+    align-items: center;
+    color: #fff;
+    margin: 0 .5rem;
+
+    .advantages-icon {
+        width: 30px;
+        height: 30px;
+        fill: #fff;
+    }
+
+    .title {
+        margin: 0 0 0 1rem;
+
+        @media (max-width: 880px) {
+            font-size: 0;
+        }
+    }
+
+    @media (max-width: 880px) {
+        display: list-item;
+    }
+}

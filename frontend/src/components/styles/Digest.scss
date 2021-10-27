@@ -1,0 +1,60 @@
+.digest-inner {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    min-height: 400px;
+    background: url("../../assets/digest_background.jpg") center/cover no-repeat;
+    text-align: center;
+    padding: 2rem;
+}
+
+.slider-comment {
+    display: flex;
+    flex-direction: column;
+    align-items: baseline;
+    font-style: italic;
+    padding: 1rem;
+    margin: 0;
+
+    strong {
+        margin-top: 1rem;
+    }
+
+    @media (max-width:790px) {
+        padding: 1rem 0;
+    }
+}
+
+.digest-input {
+    font-family: inherit;
+    font-size: clamp(1rem, 1vw, 1.5rem);
+    width: clamp(300px, 25vw, 550px);
+    color: #302B42;
+    outline: none;
+    border: none;
+    border-radius: 10px;
+    padding: 0.5rem 3.5rem 0.5rem 1rem;
+}
+
+.digest-btn {
+    height: 100%;
+    fill: #302B42;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 0 1rem;
+    position: absolute;
+    right: 0;
+    transition: all .2s ease-in;
+
+    svg {
+        width: 25px;
+        height: 25px;
+    }
+
+    &:hover {
+        fill: #939292;
+    }
+}
