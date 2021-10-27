@@ -44,8 +44,8 @@
 .intro-title {
     display: flex;
     flex-direction: column;
-    font-size: clamp(2rem, 5vw, 9rem);
-    font-weight: 900;
+    font-size: clamp(2rem, 5vw, 9rem) !important;
+    font-weight: 900 !important;
     padding: clamp(1rem, 5vw, 3rem);
     margin: 0;
 }

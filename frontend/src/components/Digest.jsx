@@ -9,7 +9,7 @@ const Digest = () => {
                 </symbol>
             </svg>
             <article className="digest-inner">
-                <h2 className="title title-size-sl" style={{ textShadow: "#939292 1px 0 0px, #939292 0 1px 0px, #939292 -1px 0 0px, #939292 0 -1px 0px" }}>Подпишись на наш Дайджест</h2>
+                <h2 className="title title__size-sl" style={{ textShadow: "#939292 1px 0 0px, #939292 0 1px 0px, #939292 -1px 0 0px, #939292 0 -1px 0px" }}>Подпишись на наш Дайджест</h2>
                 <p className="discription" style={{ color: "#fff" }}>
                     Подпишитесь на новостную рассылку Республики и будь всегда в курсе всех новостей,
                     распродаж, акций и бонусов только для своих. Обещаем не спамить и не надоедать письмами.
