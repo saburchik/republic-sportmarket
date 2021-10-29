@@ -15,6 +15,7 @@ app.use('/api/products', productRoutes);
 if (process.env.NODE_ENV === 'production') {
     app.use(express.static('frontend/build'))
 
+    // Code below let to refresh the page and save the state of the products
     const path = require('path');
     app.get('*', (req, res) => {
         res.sendFile(path.resolve(__dirname, 'frontend', 'build', 'index.html'));

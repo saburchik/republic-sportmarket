@@ -26,6 +26,21 @@ let state = {
                 { subtitle: 'Подшипники' }
             ]
         },
+    ],
+    IntroSl: [
+        {
+            title: 'Отдыхай В Движении',
+            img: 'https://i.imgur.com/D89r9te.jpg',
+            position: '',
+            customers: ''
+        },
+        {
+            title: 'Сделай свою жизнь Ярче!',
+            img: 'https://i.imgur.com/zwb4Ql2.jpg',
+            position: 'left',
+            customers: 'second'
+
+        }
     ]
 }
 

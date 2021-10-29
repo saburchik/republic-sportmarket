@@ -51,7 +51,7 @@ const HomeScreen = (props) => {
 
     return (
         <main className="homescreen">
-            <IntroSlider />
+            <IntroSlider state={props.state} />
             <Advantages />
             <article style={{ padding: "1rem 0 5rem" }}>
                 <h2 className="homescreen__title">Ассортимент</h2>
