@@ -1,13 +1,21 @@
-.intro-slider {
+.slick-slider {
     height: 70vh;
     min-height: 300px;
+
+    &.slick-list {
+        height: 100%;
+    }
+}
+
+.slick-slider .slick-track,
+.slick-slider .slick-list {
+    height: 100%;
 }
 
 .slick-slide {
+    position: relative;
+
     div {
-        display: flex;
-        align-items: center;
-        justify-content: center;
         height: 100%;
 
         .intro-item {
@@ -21,15 +29,40 @@
     height: 100%;
 }
 
-.intro-text {
-    justify-content: flex-start !important;
+.intro-item {
+    display: flex !important;
+    justify-content: center;
+}
+
+.intro__text {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    font-size: clamp(2rem, 5vw, 5rem);
+    font-weight: 700;
+    text-transform: uppercase;
+    padding: 1rem;
+    max-width: clamp(300px, 38vw, 700px);
+    height: 100%;
+    margin: 0;
     position: absolute;
     top: 0;
     left: 0;
-    width: 100%;
+
+    &.left {
+        color: #fff;
+        max-width: clamp(300px, 50vw, 700px);
+        left: initial;
+        right: 0;
+
+        @media (max-width: 690px) {
+            right: initial;
+        }
+    }
 
     @media (max-width: 690px) {
-        justify-content: center !important;
+        left: initial;
     }
 }
 
@@ -41,14 +74,26 @@
     }
 }
 
-.intro-title {
-    display: flex;
-    flex-direction: column;
-    font-size: clamp(2rem, 5vw, 9rem);
-    font-weight: 900;
-    padding: clamp(1rem, 5vw, 3rem);
-    margin: 0;
-}
+// .intro__title {
+//     color: #302B42;
+//     display: flex;
+//     flex-direction: column;
+//     max-width: clamp(300px, 55vw, 600px);
+//     font-size: clamp(2rem, 5vw, 9rem) !important;
+//     font-weight: 900 !important;
+//     padding: clamp(1rem, 5vw, 2rem);
+//     margin: 0;
+
+//     &.second {
+//         color: #fff;
+//         max-width: clamp(300px, 55vw, 700px);
+//         text-align: end;
+//     }
+
+//     @media (max-width: 690px) {
+//         text-align: center !important;
+//     }
+// }
 
 // Bottom lines
 .intro-lines {

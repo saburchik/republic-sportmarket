@@ -1,14 +1,17 @@
 {
   "name": "republic-shop",
-  "version": "1.0.0",
+  "version": "2.0.0",
   "description": "",
   "main": "server.js",
   "scripts": {
-    "start": "node backend/server.js",
-    "server": "nodemon backend/server.js",
-    "client": "npm start --prefix frontend",
+    "start": "node server.js",
+    "build": "cd frontend && npm run build",
+    "install-client": "cd frontend && npm install",
+    "heroku-postbuild": "npm run install-client && npm run build",
+    "client": "cd frontend && npm start",
+    "server": "nodemon server.js",
     "dev": "concurrently \"npm run server\" \"npm run client\"",
-    "data:import": "node backend/seederScript.js"
+    "data:import": "node seederScript.js"
   },
   "keywords": [],
   "author": "Yury Saburov",

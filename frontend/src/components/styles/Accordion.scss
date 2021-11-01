@@ -13,7 +13,9 @@
     justify-content: space-between;
     align-items: center;
     width: 100%;
-    font-weight: 700;
+    font-size: clamp(1.1rem, 1vw, 1.5rem) !important;
+
+    font-weight: 700 !important;
     cursor: pointer;
     transition: .2s;
 
@@ -56,18 +58,16 @@
     display: flex;
     flex-direction: column;
     align-items: baseline;
-    padding: 1rem;
+    padding: 0 1rem;
 }
 
 .accordion-subtitle {
+    font-size: clamp(1rem, 1vw, 1.5rem) !important;
     list-style-type: disc;
-    text-transform: initial;
+    text-transform: initial !important;
     cursor: pointer;
     transition: 0.3s;
-
-    &:last-child {
-        margin-bottom: 0;
-    }
+    margin: 1rem 0;
 
     &:hover {
         color: #E87E7E;

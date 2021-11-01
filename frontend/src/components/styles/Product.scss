@@ -1,13 +1,14 @@
 .product-card {
     background-color: #fff;
-    box-shadow: 0px 0px 5px 1px #939292;
+    // box-shadow: 0px 0px 5px 1px #939292;   
+    border: 3px solid #302B42;
     display: grid;
     grid-template-rows: 360px 1fr;
-    transform: scale(1);
     transition: .3s;
 
     &:hover {
-        transform: scale(0.97);
+        box-shadow: 0px 0px 5px 1px #939292;
+
 
         .product-play {
             fill: #939292;

@@ -32,15 +32,15 @@ const ProductScreen = ({ match, history }) => {
         history.push("/cart");
     }
 
-    const iconStatusColor = ['icon-status']
+    // const iconStatusColor = ['icon-status']
 
-    if (product.status === "NEW") {
-        iconStatusColor.push('icon-status-green')
-    } else if (product.status === " ") {
-        iconStatusColor.push('icon-status')
-    } else {
-        iconStatusColor.push('icon-status-red')
-    }
+    // if (product.status === "NEW") {
+    //     iconStatusColor.push('icon-status-green')
+    // } else if (product.status === " ") {
+    //     iconStatusColor.push('icon-status')
+    // } else {
+    //     iconStatusColor.push('icon-status-red')
+    // }
 
 
 
@@ -62,7 +62,7 @@ const ProductScreen = ({ match, history }) => {
                                 <div className="product__information">
                                     <p className="product__article">артикул: <strong>{product.article}</strong></p>
                                     <p className="title title__size_c boxies">
-                                        <span className={iconStatusColor.join(' ')}
+                                        <span
                                         >{product.status}</span>
                                         {product.name}</p>
                                     <p className="product__price price__size_m">

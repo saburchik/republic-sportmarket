@@ -21,7 +21,7 @@ const Feedback = () => {
 
     return (
         <article style={{ padding: "1rem" }}>
-            <h2 className="title title-size-sl">Отзывы покупателей</h2>
+            <h2 className="title title__size-sl">Отзывы покупателей</h2>
             <Sliders className="slide-inner" {...settings}>
                 <div>
                     <div className="slider-item">

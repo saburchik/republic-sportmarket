@@ -25,7 +25,7 @@ function App(props) {
         {/* <Route exact path="/" component={HomeScreen} /> */}
         <Route exact path="/" render={() => <HomeScreen state={props.state} />} />
         <Route exact path="/product/:id" component={ProductScreen} />
-        <Route exact path="/cart" component={CartScreen} />
+        <Route exact path="/cart" render={() => <CartScreen />} />
         <Route exact path="/login" component={LoginScreen} />
       </Switch>
     </Router>
