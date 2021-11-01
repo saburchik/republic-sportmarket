@@ -16,9 +16,9 @@ const IntroSlider = (props) => {
     }
     let slid = props.state.IntroSl.map(i => <article key={i.key} className="intro-item">
         <img src={i.img} className="intro-img" alt="Сноубординг" />
-        <div className={`intro__text ${i.position}`}>
-            <h1 className={`title intro__title ${i.customers}`}>{i.title}</h1>
-        </div>
+        <h1 className={`intro__text ${i.position}`}>
+            {i.title}
+        </h1>
     </article >)
 
     return (

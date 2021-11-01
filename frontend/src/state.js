@@ -29,7 +29,7 @@ let state = {
     ],
     IntroSl: [
         {
-            title: 'Отдыхай В Движении',
+            title: `Отдыхай В Движении`,
             img: 'https://i.imgur.com/D89r9te.jpg',
             position: '',
             customers: ''

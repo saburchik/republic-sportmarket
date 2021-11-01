@@ -21,7 +21,7 @@ function Accordion(props) {
     // Drawing subtitles in categories
     let Subtitles = props.subtitleList.map(s => <li
         key={s.id}
-        className="title accordion-subtitle"
+        className="accordion-subtitle"
     >
         {s.subtitle}
     </li>)
