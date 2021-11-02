@@ -50,56 +50,51 @@ const ProductScreen = ({ match, history }) => {
                 <>
                     <Advantages />
                     <div className="product__about">
-                        <div className="container">
-                            <div className="description__inner">
+                        <div className="description__inner">
 
-                                <img
-                                    className="product__img_size-b"
-                                    src={product.imageUrl}
-                                    alt={product.name}
-                                />
+                            <img
+                                className="product__img_size-b"
+                                src={product.imageUrl}
+                                alt={product.name}
+                            />
 
-                                <div className="product__information">
-                                    <p className="product__article">артикул: <strong>{product.article}</strong></p>
-                                    <p className="title title__size_c boxies">
-                                        <span
-                                        >{product.status}</span>
-                                        {product.name}</p>
-                                    <p className="product__price price__size_m">
-                                        {product.price} ₽
-                                        <strike className={
-                                            product.oldPrice === 0 ? "old-price undefined" : "old-price"
-                                        }>{product.oldPrice}
-                                        </strike>
-                                    </p>
-                                    <p className="description description__product">
-                                        <strong>Описание:</strong> <br />
-                                        {product.description}
-                                    </p>
-                                    <button className="btn btn__size_g">Размераня сетка</button>
-                                    <div className="product__count">
-                                        <div>
-                                            <p className="count__qty">Количество:</p>
-                                            <select className="count__select" value={qty} onChange={(e) => setQty(e.target.value)}>
-                                                {[...Array(product.countInStock).keys()].map((x) => (
-                                                    <option key={x + 1} value={x + 1}>{x + 1}</option>
-                                                ))}
-                                            </select>
-                                        </div>
+                            <div className="product__information">
+                                <p className="product__article">артикул: <strong>{product.article}</strong></p>
+                                <p className="product__status">Статус:
+                                    <span className="title"> {product.countInStock > 0 ? "В наличии" : "Нет в наличии"}</span>
+                                </p>
+                                <p className="title title__size_c boxies">
+                                    <span>{product.status}</span>Название: {product.name}
+                                </p>
+                                <p className="productscreen__price">
+                                    {product.price} ₽
+                                    <strike className={
+                                        product.oldPrice === 0 ? "old-price undefined" : "old-price"
+                                    }>{product.oldPrice}
+                                    </strike>
+                                </p>
+                                <p className="description description__product">
+                                    <strong>Описание:</strong> <br />
+                                    {product.description}
+                                </p>
+                                <button className="btn btn__size_g">Размераня сетка</button>
+                                <div className="quantity__block">
+                                    <p className="count__qty">Количество:</p>
+                                    <select className="count__select" value={qty} onChange={(e) => setQty(e.target.value)}>
+                                        {[...Array(product.countInStock).keys()].map((x) => (
+                                            <option key={x + 1} value={x + 1}>{x + 1}</option>
+                                        ))}
+                                    </select>
+                                </div>
 
-                                        <div>
-                                            <p className="product__status">Статус:
-                                                <span className="title"> {product.countInStock > 0 ? "В наличии" : "Нет в наличии"}</span>
-                                            </p>
-                                            {/* <Link to="/"> */}
-                                            <button
-                                                className="btn btn__in-cart"
-                                                type="button"
-                                                onClick={addToCartHandler}
-                                            >В корзину</button>
-                                            {/* </Link> */}
-                                        </div>
-                                    </div>
+                                <div className="add__cart">
+                                    {/* <Link to="/"> */}
+                                    <button
+                                        className="btn btn__in-cart"
+                                        type="button"
+                                        onClick={addToCartHandler}
+                                    >В корзину</button>
+                                    {/* </Link> */}
                                 </div>
                             </div>
                         </div>

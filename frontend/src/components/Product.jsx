@@ -26,7 +26,7 @@ const Product = ({ productId, name, status, price, oldPrice, imageUrl }) => {
             </Link>
             <div className="product-info">
                 <p className="title">{name}</p>
-                <p className="title product-price">{price} ₽
+                <p className="product-price">{price} ₽
                     <del className={oldPrice === 0 ? "old-price undefined" : "old-price"}>{oldPrice} ₽</del>
                 </p>
                 <Link to={`/product/${productId}`} className="product-play">

@@ -35,7 +35,7 @@ function Accordion(props) {
             </svg>
 
             <li className="accordion-item">
-                <h3 className={`title accordion-title ${setActive}`} onClick={toggleAccordion}>
+                <h3 className={`accordion-title ${setActive}`} onClick={toggleAccordion}>
                     {props.title}
                     <svg className={`arrow-icon ${setRotate}`}>
                         <use xlinkHref="#chevron-down" />

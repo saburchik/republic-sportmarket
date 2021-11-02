@@ -38,7 +38,7 @@ const SideDrawer = ({ show, click }) => {
 
         <ul className="search--mobile">
             <li>
-                <Link className="cart__link" to="/" onClick={click}>
+                <Link className="cart__link" to="/login" onClick={click}>
                     Вход
                 </Link>
             </li>

@@ -116,7 +116,7 @@ form {
 .btn__size_g {
     color: #302B42;
     background-color: #C4C4C4;
-    margin-bottom: 3rem;
+    margin-bottom: 1rem;
     transition: .5s;
 }
 
@@ -224,7 +224,10 @@ form {
 }
 
 .product__img_size-b {
-    // box-shadow: 0 1px 4px rgb(0 0 0 / 40%);
+    box-shadow: 10px 10px 15px 1px #cecece;
+    border-top: 3px solid #cecece;
+    border-left: 3px solid #cecece;
+
     width: Min(40%, 500px);
     height: Min(auto, 550px);
     max-height: 570px;

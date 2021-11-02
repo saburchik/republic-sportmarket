@@ -3,7 +3,7 @@
 }
 
 .accordion-item {
-    margin: 1rem 0;
+    padding: 1rem 0;
     border-bottom: 3px solid #CECECE;
     width: 100%;
 }
@@ -15,6 +15,8 @@
     width: 100%;
     font-size: clamp(1.1rem, 1vw, 1.5rem) !important;
 
+    padding: 0.5rem 0;
+    text-transform: uppercase;
     font-weight: 700 !important;
     cursor: pointer;
     transition: .2s;
@@ -57,20 +59,40 @@
 .accordion-list {
     display: flex;
     flex-direction: column;
-    align-items: baseline;
-    padding: 0 1rem;
+    padding: 0.5rem 1rem 0;
+    position: relative;
+    gap: 0.5rem;
 }
 
 .accordion-subtitle {
     font-size: clamp(1rem, 1vw, 1.5rem) !important;
-    list-style-type: disc;
     text-transform: initial !important;
     cursor: pointer;
-    transition: 0.3s;
-    margin: 1rem 0;
+    transition: 0.2s;
+    padding: 0.5rem 0;
+    font-weight: 500;
+    position: relative;
+    padding-right: 2rem;
+
+    &::before {
+        content: '\2014';
+        position: absolute;
+        margin-left: -20px;
+    }
 
     &:hover {
         color: #E87E7E;
-        transform: scale(0.95);
+
+        &::after {
+            content: '-';
+            mask-image: url('../../assets/long-arrow.svg');
+            mask-repeat: no-repeat;
+            background-color: #E87E7E;
+            color: #E87E7E;
+            margin-right: 1rem;
+            font-size: 3rem;
+            position: absolute;
+            right: 0;
+        }
     }
 }
