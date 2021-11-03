@@ -51,7 +51,6 @@ const LoginScreen = () => {
                     </div>
                 </div>
             </div>
-            <Footer />
         </div>
     )
 };

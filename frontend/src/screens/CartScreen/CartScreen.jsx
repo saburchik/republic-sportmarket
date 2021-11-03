@@ -56,7 +56,7 @@ const CartScreen = () => {
         <div className="cartscreen">
             <Advantages />
             <div className="container">
-                <h3 className="title title__size_m cartscreen__title">В вашей корзине:</h3>
+                <h3 className="title title__size-sl cartscreen__title">В вашей корзине:</h3>
                 <div className="order">
                     <div className="order__left">
                         {cartItems.length === 0 ? (
@@ -87,7 +87,6 @@ const CartScreen = () => {
                     </div>
                 </div>
             </div>
-            <Footer />
         </div>
     )
 };

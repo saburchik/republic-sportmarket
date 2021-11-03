@@ -2,14 +2,13 @@
 import "./Homescreen.scss"
 import React, { useEffect } from "react"
 import { useSelector, useDispatch } from "react-redux"
+import ScrollToTop from '../ProductScreen/ProductScreen'
 
 // Components
 import IntroSlider from "../../components/IntroSlider"
 import Product from "../../components/Product"
 import Advantages from "../../components/Advantages"
 import Accordion from "../../components/Accordion"
-import Footer from "../../components/Footer"
-import Digest from "../../components/Digest"
 import Feedback from "../../components/Feedback"
 
 // Actions
@@ -29,6 +28,8 @@ const HomeScreen = (props) => {
     let Accordions = props.state.Categories.map(a => <Accordion title={a.title} subtitleList={a.subtitleList} key={a.id} />)
 
     let DrawsProducts = () => {
+
+
         return (loading ? (
             <h3 className="title title__size-sl">Loading...</h3>
         ) : error ? (
@@ -71,8 +72,6 @@ const HomeScreen = (props) => {
                 </section>
             </article>
             <Feedback />
-            <Digest />
-            <Footer />
         </main >
     )
 }

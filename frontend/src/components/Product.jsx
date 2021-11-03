@@ -3,21 +3,24 @@ import { Link } from 'react-router-dom'
 
 const Product = ({ productId, name, status, price, oldPrice, imageUrl }) => {
 
-    const iconStatusColor = ['icon-status']
+    const checkStatus = () => {
+        const iconStatusColor = ['icon-status']
 
-    if (status === "NEW") {
-        iconStatusColor.push('icon-status-green')
-    } else if (status === " ") {
-        iconStatusColor.push('icon-status')
-    } else {
-        iconStatusColor.push('icon-status-red')
+        if (status === "NEW") {
+            iconStatusColor.push('icon-status-green')
+        } else if (status === " ") {
+            iconStatusColor.push('icon-status')
+        } else {
+            iconStatusColor.push('icon-status-red')
+        }
+
+        return iconStatusColor.join(' ')
     }
-
 
     return (
         <li className="product-card">
             <Link className="product-link" to={`/product/${productId}`}>
-                <span className={iconStatusColor.join(' ')}>{status}</span>
+                <span className={checkStatus()}>{status}</span>
                 <img
                     className="img"
                     src={imageUrl}

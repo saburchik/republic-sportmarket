@@ -11,6 +11,8 @@ import LoginScreen from "./screens/LoginScreen/LoginScreen"
 import Navbar from './components/Navbar'
 import Backdrop from './components/Backdrop'
 import SideDrawer from './components/SideDrawer'
+import Digest from './components/Digest'
+import Footer from './components/Footer'
 
 function App(props) {
 
@@ -28,6 +30,8 @@ function App(props) {
         <Route exact path="/cart" render={() => <CartScreen />} />
         <Route exact path="/login" component={LoginScreen} />
       </Switch>
+      <Digest />
+      <Footer />
     </Router>
   )
 }
