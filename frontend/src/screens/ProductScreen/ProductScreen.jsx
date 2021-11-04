@@ -10,23 +10,12 @@ import { addToCart } from "../../redux/actions/cartActions";
 // Components
 import Advantages from '../../components/Advantages';
 
-// export function ScrollToTop() {
-//     const { pathname } = useLocation();
-
-//     useEffect(() => {
-//         window.scrollTo(0, 0);
-//     }, [pathname]);
-
-//     return null;
-// }
-
 const ProductScreen = ({ match, history }) => {
     function ScrollToTop() {
         const { pathname } = useLocation();
         useEffect(() => { window.scrollTo(0, 0) }, [pathname])
         return null
     }
-
     ScrollToTop()
 
 
@@ -81,40 +70,43 @@ const ProductScreen = ({ match, history }) => {
                             </div>
 
                             <div className="product__information">
-                                <p className="product__article">артикул: <strong>{product.article}</strong></p>
-                                <p className="product__status">Статус:
-                                    <span className="title"> {product.countInStock > 0 ? "В наличии" : "Нет в наличии"}</span>
-                                </p>
-                                <p className="title title__size_c">
-                                    Название: {product.name}
-                                </p>
-                                <p className="productscreen__price">
-                                    {product.price} ₽
-                                    <strike className={
-                                        product.oldPrice === 0 ? "old-price undefined" : "old-price"
-                                    }>{product.oldPrice}
-                                    </strike>
-                                </p>
-                                <p className="description description__product">
-                                    <strong>Описание:</strong> <br />
-                                    {product.description}
-                                </p>
-                                <div className="grid__quantity">
-                                    <button className="btn btn__size_g">Размераня сетка</button>
-                                    <div className="quantity__block">
-                                        <p className="count__qty">Количество:</p>
-                                        <select className="count__select" value={qty} onChange={(e) => setQty(e.target.value)}>
-                                            {[...Array(product.countInStock).keys()].map((x) => (
-                                                <option key={x + 1} value={x + 1}>{x + 1}</option>
-                                            ))}
-                                        </select>
+                                <div>
+                                    <p className="productscreen__title">{product.name}</p>
+                                </div>
+
+                                <div className="inner__contains">
+                                    <p className="product__article">артикул: <strong>{product.article}</strong></p>
+                                    <p className="productscreen__price">
+                                        {product.price} ₽
+                                        <strike className={
+                                            product.oldPrice === 0 ? "old-price undefined" : "old-price"
+                                        }>{product.oldPrice}
+                                        </strike>
+                                    </p>
+                                    <p className="description description__product">
+                                        <strong>Описание:</strong>
+                                        {product.description}
+                                    </p>
+                                    <button className="productscreen__btn">Размераня сетка</button>
+                                    <div className="grid__quantity">
+                                        <p className="product__article">статус:
+                                            <strong> {product.countInStock > 0 ? "В наличии" : "Нет в наличии"}</strong>
+                                        </p>
+                                        <div className="select__product">
+                                            <p className="count__qty">Количество:</p>
+                                            <select className="count__select" value={qty} onChange={(e) => setQty(e.target.value)}>
+                                                {[...Array(product.countInStock).keys()].map((x) => (
+                                                    <option key={x + 1} value={x + 1}>{x + 1}</option>
+                                                ))}
+                                            </select>
+                                        </div>
                                     </div>
                                 </div>
 
                                 <div className="add__cart">
                                     {/* <Link to="/"> */}
                                     <button
-                                        className="btn btn__in-cart"
+                                        className="productscreen__btn color"
                                         type="button"
                                         onClick={addToCartHandler}
                                     >В корзину</button>

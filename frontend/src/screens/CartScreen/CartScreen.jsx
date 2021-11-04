@@ -1,17 +1,23 @@
 import './CartScreen.scss';
+import { useEffect } from "react";
 import { useDispatch, useSelector } from 'react-redux';
-import { Link } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 
 
 // Components
 import Advantages from '../../components/Advantages';
 import CartItem from '../../components/CartItem';
-import Footer from '../../components/Footer';
 
 // Actions
 import { addToCart, removeFromCart } from '../../redux/actions/cartActions';
 
 const CartScreen = () => {
+    function ScrollToTop() {
+        const { pathname } = useLocation();
+        useEffect(() => { window.scrollTo(0, 0) }, [pathname])
+        return null
+    }
+    ScrollToTop()
     const dispatch = useDispatch();
 
     const cart = useSelector(state => state.cart);
