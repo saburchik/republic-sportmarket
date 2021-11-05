@@ -31,6 +31,9 @@
 }
 
 .productscreen__price {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
     font-size: 1.3rem;
     font-weight: 700;
     color: #E87E7E;
@@ -198,6 +201,8 @@
 
 .select__product {
     display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
     align-items: center;
     gap: 1rem;
 }

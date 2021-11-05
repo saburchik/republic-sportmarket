@@ -1,10 +1,11 @@
 .product__item {
     width: 100%;
     display: grid;
-    grid-template-columns: 1fr 1.5fr 1fr 1.1fr;
+    grid-template-columns: 170px 1.3fr 1fr 1fr;
     place-items: center;
-    background: #fff;
-    box-shadow: 0px 0px 5px 1px #939292;
+    background: linear-gradient(221.87deg, #cecece 1%, #f1f1f1 128%);
+    // box-shadow: 0px 0px 5px 1px #939292;
+    // border: 3px solid #cecece;    
     border-radius: 2px;
     position: relative;
     margin-bottom: 2rem;
@@ -16,19 +17,32 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: flex-start;
+    align-items: center;
     padding: 1rem;
+    border: 3px solid #939292;
+    box-shadow: 8px 8px 16px 1px #cecece;
+    position: relative;
 }
 
-.product__inner:nth-child(1) {
-    padding: 0;
+.cartitem__img {
+    width: 100%;
+    border: 3px solid #939292;
+    position: relative;
+
+    height: 200px;
+
+    @media(max-width: 690px) {
+        height: clamp(200px, 120vw, 400px);
+    }
 }
+
 
 .product__height {
     display: flex;
     flex-direction: column;
-    align-items: baseline;
+    align-items: center;
     justify-content: center;
+    gap: 1rem;
 }
 
 .product__name {
@@ -44,7 +58,16 @@
 .qty__text {
     font-size: 1rem;
     font-weight: 500;
-    margin-bottom: 0.5rem;
+}
+
+.product__price {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    gap: 1rem;
+    font-size: 1.3rem;
+    font-weight: 700;
+    color: #E87E7E;
 }
 
 .qty__select {
@@ -74,25 +97,43 @@
     position: absolute;
     top: 0;
     right: 0;
-}
+    z-index: 5;
 
-.product__remove>button {
     width: 50px;
     height: 50px;
-    display: flex;
-    justify-content: center;
+    justify-content: space-around;
     align-items: center;
     color: #fff;
     background-color: #302B42;
+    border: 3px solid #302B42;
+
     font-size: 3rem;
     border: none;
     cursor: pointer;
     transition: all 0.3s;
-}
 
-.product__remove>button:hover {
-    color: #302B42;
-    background-color: #E87E7E;
+    &.price {
+        display: flex;
+
+        @media (max-width: 690px) {
+            display: none;
+        }
+    }
+
+    &.imgr {
+        display: none;
+
+        @media (max-width: 690px) {
+            display: flex;
+        }
+    }
+
+
+    &:hover {
+        color: #302B42;
+        background-color: #E87E7E;
+
+    }
 }
 
 @media (max-width: 690px) {
@@ -100,7 +141,7 @@
         width: 100%;
         max-width: 500px;
         grid-template-columns: none;
-        grid-template-rows: 3fr 1fr 1fr 1fr;
+        grid-template-rows: 2fr 0.5fr 0.5fr 0.5fr;
     }
 
     .product__border {

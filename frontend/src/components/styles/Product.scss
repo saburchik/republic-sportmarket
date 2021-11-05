@@ -48,15 +48,18 @@
     display: grid;
     grid-template-columns: 6fr 1fr;
     grid-template-rows: 1fr;
+    gap: 1rem;
     border-top: 3px solid #cecece;
     padding: 1rem;
 }
 
 .product-price {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
     font-size: 1.3rem;
     font-weight: 700;
     color: #E87E7E;
-    margin: 0;
 }
 
 .product-play {

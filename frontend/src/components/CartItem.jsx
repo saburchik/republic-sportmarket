@@ -2,25 +2,29 @@ import "./styles/CartItem.scss";
 import { Link } from 'react-router-dom';
 
 const CartItem = ({ item, qtyChangeHandler, removeHandler }) => {
+    const isOldPrice = item.oldPrice === 0 ? "old-price undefined" : "old-price"
+
     return (
         <div className="product__item">
-            <Link className="product__inner" to={`/product/${item.product}`} >
-                <img className="product__img_size-s"
-                    src={item.imageUrl}
-                    alt={item.name}
-                />
-            </Link>
+            <div >
+                <span className="product__remove imgr" onClick={() => removeHandler(item.product)} >&times;</span>
+                <Link className="cartitem__img" to={`/product/${item.product}`}>
+                    <img className="product__img_size-s"
+                        src={item.imageUrl}
+                        alt={item.name}
+                    /></Link>
+            </div>
             <div className="product__inner">
                 <div className="product__height">
                     <p className="product__article">артикул: <strong>{item.article}</strong></p>
-                    <p className="title product__name">{item.name}</p>
+                    <p className="count__qty">{item.name}</p>
                 </div>
             </div>
-            <div className="product__inner product__border">
-                <div className="product__height">
-                    <p className="qty__text">Количество:</p>
+            <div className="product__inner">
+                <div className="select__product">
+                    <p className="count__qty">Количество:</p>
                     <select
-                        className="qty__select"
+                        className="count__select"
                         value={item.qty}
                         onChange={(e) => qtyChangeHandler(item.product, e.target.value)}
                     >
@@ -33,15 +37,13 @@ const CartItem = ({ item, qtyChangeHandler, removeHandler }) => {
                 </div>
             </div>
             <div className="product__inner">
+                <span className="product__remove price" onClick={() => removeHandler(item.product)} >&times;</span>
                 <div className="product__height">
-                    <p className="qty__text">Цена:</p>
+                    <p className="count__qty">Цена:</p>
                     <p className="product__price">{item.price}₽
-                        <strike className="old-price old-price__s">{item.oldPrice}₽</strike>
+                        <del className={isOldPrice}>{item.oldPrice}₽</del>
                     </p>
                 </div>
-            </div>
-            <div className="product__remove" onClick={() => removeHandler(item.product)}>
-                <button>&times;</button>
             </div>
         </div>
     )

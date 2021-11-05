@@ -181,7 +181,6 @@ form {
     color: #939292;
     font-size: 1rem;
     font-weight: 500;
-    margin-left: 1rem;
 
     &.undefined {
         font-size: 0;
@@ -211,7 +210,7 @@ form {
 /* The Size Images */
 .product__img_size-s {
     width: 100%;
-    height: 200px;
+    height: 100%;
 }
 
 .img {
@@ -239,8 +238,8 @@ form {
 }
 
 @media (max-width: 690px) {
-    .product__img_size-s {
-        width: 100%;
-        height: 350px;
-    }
+    // .product__img_size-s {
+    //     width: 100%;
+    //     height: 350px;
+    // }
 }
