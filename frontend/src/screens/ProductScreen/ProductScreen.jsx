@@ -62,7 +62,7 @@ const ProductScreen = ({ match, history }) => {
                     <div className="product__about">
                         <div className="description__inner">
                             <div className="block_img">
-                                <span className={checkStatus(product)}>{product.status}</span>
+                                <span className={checkStatus()}>{product.status}</span>
                                 <img
                                     src={product.imageUrl}
                                     alt={product.name}
@@ -123,8 +123,8 @@ const ProductScreen = ({ match, history }) => {
                             <strong className="client__data">02.03.2021 | 19:42</strong>
                         </div>
                         <p className="review__alert">
-                            Отзывы могут оставлять только <Link className="registration__link">зарегистрированные</Link> пользователи. <br />
-                            <Link className="registration__link" >Авторизоваться и оставить отзыв</Link>
+                            Отзывы могут оставлять только <Link className="registration__link" to="/">зарегистрированные</Link> пользователи. <br />
+                            <Link className="registration__link" to="/" >Авторизоваться и оставить отзыв</Link>
                         </p>
                     </div>
                 </>

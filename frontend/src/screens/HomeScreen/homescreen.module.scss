@@ -1,27 +1,40 @@
+.inner {
+    padding: 1rem 0 5rem;
+}
+
 .title {
     font-size: clamp(1.8rem, 2vw, 4rem);
     font-weight: 700;
     text-align: center;
     text-transform: uppercase;
     margin-bottom: 1rem;
+
+    &.size_s {
+        font-size: clamp(1.3rem, 1vw, 3rem);
+    }
 }
 
-.catalog {
+.product {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
-    align-items: start;
 }
 
-.catalog__categories {
-    max-width: 300px;
+.categories {
+    width: 100%;
+    max-width: 350px;
     padding: 1rem;
 }
 
-.catalog__products {
+.accordion {
+    display: flex;
+    flex-direction: column;
+}
+
+.cards {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(285px, 300px));
-    gap: 20px;
+    gap: 1.5rem;
     max-width: 85%;
     padding: 1rem;
 

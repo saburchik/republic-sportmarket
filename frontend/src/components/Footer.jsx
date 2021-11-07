@@ -25,7 +25,7 @@ const Footer = () => {
                             Email:
                             <i>republic-store@gmail.com</i>
                         </b>
-                        <Link href="/" className="footer__link">Обратная связь</Link>
+                        <Link to="/" className="footer__link">Обратная связь</Link>
                     </div>
                 </div>
                 <div className="footer__item">
@@ -33,11 +33,11 @@ const Footer = () => {
                         <b className="footer__title">Информация:</b>
                     </div>
                     <div className="links__wrapper">
-                        <Link href="/" className="footer__link">О компании</Link>
-                        <Link href="/" className="footer__link">Частые вопросы [FAQ]</Link>
-                        <Link href="/" className="footer__link">Работа у нас</Link>
-                        <Link href="/" className="footer__link">Правовая информация</Link>
-                        <Link href="/" className="footer__link">Сотрудничество</Link>
+                        <Link to="/" className="footer__link">О компании</Link>
+                        <Link to="/" className="footer__link">Частые вопросы [FAQ]</Link>
+                        <Link to="/" className="footer__link">Работа у нас</Link>
+                        <Link to="/" className="footer__link">Правовая информация</Link>
+                        <Link to="/" className="footer__link">Сотрудничество</Link>
                     </div>
                 </div>
                 <div className="footer__item">
@@ -45,15 +45,15 @@ const Footer = () => {
                         <b className="footer__title">Покупателем:</b>
                     </div>
                     <div className="links__wrapper">
-                        <Link className="footer__link" href="/">Условия продаж</Link>
-                        <Link className="footer__link" href="/">Оплата и доставка</Link>
-                        <Link className="footer__link" href="/">Гарантия и возврат</Link>
+                        <Link className="footer__link" to="/">Условия продаж</Link>
+                        <Link className="footer__link" to="/">Оплата и доставка</Link>
+                        <Link className="footer__link" to="/">Гарантия и возврат</Link>
 
                         <div className="links__media">
-                            <Link className="footer__icon" href="#" target="_blank"><i className="fab fa-vk" /></Link>
-                            <Link className="footer__icon" href="#" target="_blank"><i className="fab fa-youtube" /></Link>
-                            <Link className="footer__icon" href="#" target="_blank"><i className="fab fa-telegram" /></Link>
-                            <Link className="footer__icon" href="#" target="_blank"><i className="fab fa-instagram" /></Link>
+                            <Link className="footer__icon" to="/" target="_blank"><i className="fab fa-vk" /></Link>
+                            <Link className="footer__icon" to="/" target="_blank"><i className="fab fa-youtube" /></Link>
+                            <Link className="footer__icon" to="/" target="_blank"><i className="fab fa-telegram" /></Link>
+                            <Link className="footer__icon" to="/" target="_blank"><i className="fab fa-instagram" /></Link>
                         </div>
                     </div>
                 </div>

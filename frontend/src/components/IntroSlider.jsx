@@ -14,7 +14,7 @@ const IntroSlider = (props) => {
         arrows: false,
         dotsClass: 'intro-lines',
     }
-    let slid = props.state.IntroSl.map(i => <article key={i.key} className="intro-item">
+    let slid = props.state.IntroSl.map(i => <article key={i.id} className="intro-item">
         <img src={i.img} className="intro-img" alt="Сноубординг" />
         <h1 className={`intro__text ${i.position}`}>
             {i.title}

@@ -1,18 +1,13 @@
-.accordion {
-    display: flex;
-}
-
-.accordion-item {
+.item {
     padding: 1rem 0;
     border-bottom: 3px solid #CECECE;
     width: 100%;
 }
 
-.accordion-title {
+.title {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    width: 100%;
     font-size: clamp(1.1rem, 1vw, 1.5rem) !important;
 
     padding: 0.5rem 0;
@@ -21,27 +16,37 @@
     cursor: pointer;
     transition: .2s;
 
+    &.active {
+        width: 100%;
+    }
+
     &:hover {
         color: #939292;
 
-        .arrow-icon {
+        .arrow {
             fill: #939292;
         }
     }
 }
 
-.arrow-icon {
+.arrow_icon {
     width: 30px;
     height: 30px;
     transition: transform 0.5s ease;
     fill: #302B42;
 }
 
-.arrow-rotate {
+.rotate {
     transform: rotate(90deg);
 }
 
-.accordion-inner {
+.inner {
+    display: flex;
+    flex-direction: column;
+    padding: 0.5rem 1rem 0;
+    position: relative;
+    gap: 0.5rem;
+
     max-height: 0;
     overflow: hidden;
     transition: all 1s cubic-bezier(0, 1, 0, 1);
@@ -56,15 +61,7 @@
     }
 }
 
-.accordion-list {
-    display: flex;
-    flex-direction: column;
-    padding: 0.5rem 1rem 0;
-    position: relative;
-    gap: 0.5rem;
-}
-
-.accordion-subtitle {
+.subtitle_prod {
     font-size: clamp(1rem, 1vw, 1.5rem) !important;
     text-transform: initial !important;
     cursor: pointer;

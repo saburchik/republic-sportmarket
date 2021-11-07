@@ -1,9 +1,6 @@
 import './LoginScreen.scss';
 import { Link } from 'react-router-dom';
 
-// Components
-import Footer from '../../components/Footer';
-
 const LoginScreen = () => {
     return (
         <div className="loginscreen">
@@ -22,7 +19,7 @@ const LoginScreen = () => {
                                         <span>*</span></p>
                                     <input className="input input__loginscreen" placeholder="Введите пароль" />
                                     <div className="password__inner">
-                                        <Link className="reset__password">Забыли пароль?</Link>
+                                        <Link className="reset__password" to="/">Забыли пароль?</Link>
                                     </div>
                                     <button className="btn btn__login">Войти</button>
                                 </form>

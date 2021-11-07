@@ -1,5 +1,6 @@
 import { useState } from 'react'
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom'
+import './App.scss'
 
 // Screens
 import HomeScreen from "./screens/HomeScreen/HomeScreen"
@@ -24,7 +25,6 @@ function App(props) {
       <SideDrawer show={sideToggle} click={() => setSideToggle(false)} />
       <Backdrop show={sideToggle} click={() => setSideToggle(false)} />
       <Switch>
-        {/* <Route exact path="/" component={HomeScreen} /> */}
         <Route exact path="/" render={() => <HomeScreen state={props.state} />} />
         <Route exact path="/product/:id" component={ProductScreen} />
         <Route exact path="/cart" render={() => <CartScreen />} />
