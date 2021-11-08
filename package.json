@@ -11,6 +11,7 @@
     "client": "cd frontend && npm start",
     "server": "nodemon server.js",
     "dev": "concurrently \"npm run server\" \"npm run client\"",
+    "scss": "sass --whatch scss -o css",
     "data:import": "node seederScript.js"
   },
   "keywords": [],
