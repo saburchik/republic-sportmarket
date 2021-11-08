@@ -1,5 +1,5 @@
 import style from './ProductScreen.module.scss';
-import React, { useState, useEffect } from "react";
+import { React, useState, useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { Link, useLocation } from 'react-router-dom'
 
