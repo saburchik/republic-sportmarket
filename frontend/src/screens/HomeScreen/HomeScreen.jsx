@@ -1,6 +1,6 @@
 import { React, useEffect } from "react"
 import { useSelector, useDispatch } from "react-redux"
-import style from "./Homescreen.module.scss"
+import style from "./homescreen.module.scss"
 // Components
 import IntroSlider from "../../components/IntroSlider"
 import Advantages from "../../components/Advantages"
