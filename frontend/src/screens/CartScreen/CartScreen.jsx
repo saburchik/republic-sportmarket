@@ -39,23 +39,38 @@ const CartScreen = () => {
         return cartItems.reduce((price, item) => item.price * item.qty + price, 0);
     };
 
-    const getCartSales = () => {
+    const getSales = () => {
+        return cartItems.reduce((price, oldPrice, item) => getCartSubTotal(price, item) - getCartSales(oldPrice, item))
 
-        if (cartItems.status === " ") {
-            return getCartSubTotal()
-        } else {
+        // if (cartItems.oldPrice === 0) {
+        //     return cartItems.reduce((oldPrice, item) => getCartSales() - (item.oldPrice * item.qty), 0);
+        // } else {
+        //     return cartItems.reduce(() => getCartSales() - getCartSubTotal())
+        // }
+
+    };
+
+    const getCartSales = () => {
+        if (cartItems.oldPrice !== 0) {
             return cartItems.reduce((oldPrice, item) => item.oldPrice * item.qty + oldPrice, 0);
+        } else {
+            getCartSubTotal()
         }
+
+        // if (cartItems.oldPrice === 0) {
+        //     return cartItems.reduce((price, item) => item.price * item.qty + price, 0);
+        // } else {
+        //     return cartItems.reduce(() => getCartSubTotal(), 0)
+        // }
+        // else {
+        //     return cartItems.reduce((oldPrice, item) => item.oldPrice * item.qty + oldPrice, 0);
+        // }
 
         // if (cart.oldPrice === 0) {
         //     return cartItems.reduce((oldPrice, item) => item.oldPrice * item.qty + oldPrice, 0);
         // } else {
         //     return cartItems.reduce((price, item) => item.price * item.qty + price, 0);
         // }
-    };
-
-    const getSales = () => {
-        return cartItems.reduce(() => getCartSales() - getCartSubTotal(), 0);
     };
 
     return (
