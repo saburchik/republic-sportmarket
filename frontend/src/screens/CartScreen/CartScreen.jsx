@@ -37,10 +37,12 @@ const CartScreen = () => {
 
     const getCartSubTotal = () => {
         return cartItems.reduce((price, item) => item.price * item.qty + price, 0);
+
+        // return considerOldPrice() + considerPrice()
     };
 
     const getSales = () => {
-        return cartItems.reduce((price, oldPrice, item) => getCartSubTotal(price, item) - getCartSales(oldPrice, item))
+        return cartItems.reduce(() => getCartSubTotal() - getCartSales())
 
         // if (cartItems.oldPrice === 0) {
         //     return cartItems.reduce((oldPrice, item) => getCartSales() - (item.oldPrice * item.qty), 0);
@@ -51,10 +53,17 @@ const CartScreen = () => {
     };
 
     const getCartSales = () => {
-        if (cartItems.oldPrice !== 0) {
+        let considerPrice = () => {
+            return cartItems.reduce((price, item) => item.price * item.qty + price, 0);
+        }
+        let considerOldPrice = () => {
             return cartItems.reduce((oldPrice, item) => item.oldPrice * item.qty + oldPrice, 0);
+        }
+
+        if (cart.oldPrice === 0) {
+            return considerOldPrice()
         } else {
-            getCartSubTotal()
+            return considerOldPrice() + considerPrice()
         }
 
         // if (cartItems.oldPrice === 0) {
