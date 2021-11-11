@@ -2,12 +2,15 @@ import style from "./styles/CartItem.module.scss";
 import { Link } from 'react-router-dom';
 
 const CartItem = ({ item, qtyChangeHandler, removeHandler }) => {
-    const isOldPrice = item.oldPrice === 0 ? "old-price undefined" : "old-price"
+    // const isOldPrice = item.oldPrice === 0 ? "old-price undefined" : "old-price"
 
     return (
         <div className={style.product}>
+            <a className={`${style.btn}`} onClick={() => removeHandler(item.product)} href>
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 62 62"><path className={style.btn__color} d="M33.83 31l9.9 9.9-2.83 2.83-9.9-9.9-9.9 9.9-2.83-2.83 9.9-9.9-9.9-9.9 2.83-2.83 9.9 9.9 9.9-9.9 2.83 2.83-9.9 9.9z"></path></svg>
+            </a>
+
             <div className={style.photo}>
-                <span className={`${style.btn} ${style.remove}`} onClick={() => removeHandler(item.product)} >&times;</span>
                 <Link className={style.link} to={`/product/${item.product}`}>
                     <img className={style.img}
                         src={item.imageUrl}
@@ -15,10 +18,8 @@ const CartItem = ({ item, qtyChangeHandler, removeHandler }) => {
                     /></Link>
             </div>
             <div className={style.inner}>
-                <div className={style.height}>
-                    <p className={style.article}>артикул: <strong>{item.article}</strong></p>
-                    <strong >{item.name}</strong>
-                </div>
+                <p className={style.article}>артикул: <strong>{item.article}</strong></p>
+                <strong>{item.name}</strong>
             </div>
             <div className={style.inner}>
                 <div className={style.quantity}>
@@ -31,13 +32,9 @@ const CartItem = ({ item, qtyChangeHandler, removeHandler }) => {
                 </div>
             </div>
             <div className={style.inner}>
-                <span className={`${style.btn} ${style.price}`} onClick={() => removeHandler(item.product)} >&times;</span>
-                <div className={style.height}>
-                    <strong>Цена:</strong>
-                    <p className={style.price}>{item.price}₽
-                        <del className={isOldPrice}>{item.oldPrice}₽</del>
-                    </p>
-                </div>
+                {/* <span className={`${style.btn} ${style.right}`} onClick={() => removeHandler(item.product)} >&times;</span> */}
+                <strong>Цена:</strong>
+                <p className={style.price}>{item.price}₽</p>
             </div>
         </div>
     )

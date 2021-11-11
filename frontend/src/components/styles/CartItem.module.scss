@@ -1,7 +1,7 @@
 .product {
   width: 100%;
   display: grid;
-  grid-template-columns: 170px 1.3fr 1fr 1fr;
+  grid-template-columns: 175px 1.3fr 1fr 1fr;
   place-items: center;
   background: linear-gradient(149deg, rgba(170, 170, 170, 1) 0%, rgba(206, 206, 206, 1) 48%, rgba(255, 255, 255, 1) 100%);
   border-radius: 2px;
@@ -13,7 +13,7 @@
     width: 100%;
     max-width: 288px;
     grid-template-columns: none;
-    grid-template-rows: 2fr 0.5fr 0.3fr 0.6fr;
+    grid-template-rows: 3fr 1fr 0.3fr 0.6fr;
   }
 
   @media (max-width: 390px) {
@@ -23,35 +23,33 @@
 
 .photo {
   display: grid;
-  // align-self: flex-start;
   width: 100%;
+  height: 200px;
   background: #fff;
   border-right: 3px solid #939292;
 
   @media(max-width: 690px) {
     border-right: none;
     border-bottom: 3px solid #939292;
+    height: clamp(200px, 90vw, 320px);
   }
 }
 
 .link {
   width: 100%;
-  height: 200px;
+  height: 100%;
   position: relative;
-
-
-  @media(max-width: 690px) {
-    height: clamp(200px, 120vw, 400px);
-  }
 }
 
 .img {
-  width: 100%;
-  max-width: 360px;
-  height: 100%;
-  margin: 0 auto;
-}
+  position: absolute;
+  top: 0;
+  left: 0;
 
+  width: 100%;
+  height: 100%;
+  object-fit: fill;
+}
 
 .inner {
   width: 100%;
@@ -61,49 +59,34 @@
   justify-content: center;
   align-items: center;
   padding: 1rem;
-  // border: 3px solid #939292;
+  gap: 0.5em;
   position: relative;
+
+  &:nth-child(2) {
+    align-items: flex-start;
+  }
 }
 
 .btn {
+  cursor: pointer;
   position: absolute;
-  top: 0;
   right: 0;
-  z-index: 5;
-
+  top: 0;
   width: 50px;
   height: 50px;
-  justify-content: space-around;
-  align-items: center;
-  color: #fff;
-  background-color: #302B42;
-  border: 3px solid #302B42;
-
-  font-size: 3rem;
-  border: none;
-  cursor: pointer;
-  transition: all 0.3s;
-
-  &.price {
-    display: flex;
-
-    @media (max-width: 690px) {
-      display: none;
-    }
-  }
-
-  &.remove {
-    display: none;
-
-    @media (max-width: 690px) {
-      display: flex;
-    }
-  }
+  display: block;
+  z-index: 5;
 
   &:hover {
-    color: #302B42;
-    background-color: #E87E7E;
+    .btn__color {
+      transition: 0.2s;
+      fill: #E87E7E;
+    }
   }
+}
+
+.btn__color {
+  fill: #302B42;
 }
 
 .height {
@@ -116,6 +99,7 @@
 
 // there is in productscreen
 .article {
+  text-align: left;
   font-size: 0.7rem;
   color: #302B42;
 

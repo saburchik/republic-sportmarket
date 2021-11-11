@@ -36,51 +36,24 @@ const CartScreen = () => {
     };
 
     const getCartSubTotal = () => {
-        return cartItems.reduce((price, item) => item.price * item.qty + price, 0);
-
-        // return considerOldPrice() + considerPrice()
+        return cartItems.reduce((price, item) => item.price * item.qty + price, 0)
     };
 
-    const getSales = () => {
-        return cartItems.reduce(() => getCartSubTotal() - getCartSales())
+    // const getCartSales = () => {
+    //     let price = () => cartItems.reduce((price, item) => item.price * item.qty + price, 0)
+    //     let oldPrice = () => cartItems.reduce((oldPrice, item) => item.oldPrice * item.qty + oldPrice, 0)
 
-        // if (cartItems.oldPrice === 0) {
-        //     return cartItems.reduce((oldPrice, item) => getCartSales() - (item.oldPrice * item.qty), 0);
-        // } else {
-        //     return cartItems.reduce(() => getCartSales() - getCartSubTotal())
-        // }
+    //     if (cartItems.oldPrice !== 0) {
+    //         return price()
+    //     } else {
+    //         return oldPrice() + price()
+    //     }
 
-    };
+    // }
 
-    const getCartSales = () => {
-        let considerPrice = () => {
-            return cartItems.reduce((price, item) => item.price * item.qty + price, 0);
-        }
-        let considerOldPrice = () => {
-            return cartItems.reduce((oldPrice, item) => item.oldPrice * item.qty + oldPrice, 0);
-        }
-
-        if (cart.oldPrice === 0) {
-            return considerOldPrice()
-        } else {
-            return considerOldPrice() + considerPrice()
-        }
-
-        // if (cartItems.oldPrice === 0) {
-        //     return cartItems.reduce((price, item) => item.price * item.qty + price, 0);
-        // } else {
-        //     return cartItems.reduce(() => getCartSubTotal(), 0)
-        // }
-        // else {
-        //     return cartItems.reduce((oldPrice, item) => item.oldPrice * item.qty + oldPrice, 0);
-        // }
-
-        // if (cart.oldPrice === 0) {
-        //     return cartItems.reduce((oldPrice, item) => item.oldPrice * item.qty + oldPrice, 0);
-        // } else {
-        //     return cartItems.reduce((price, item) => item.price * item.qty + price, 0);
-        // }
-    };
+    // const getSales = () => {
+    //     return cartItems.reduce(() => getCartSales() - getCartSubTotal(), 0);
+    // };
 
     return (
         <div className="cartscreen">
@@ -107,8 +80,8 @@ const CartScreen = () => {
                 </div>
                 <div className="order__right">
                     <p className="title__order">Ваш заказ</p>
-                    <p className="title__qty">Цена за {getCartCount()} товар(а):<span>{getCartSales().toFixed(2)} ₽</span></p>
-                    <p className="title__sales">Скидка на товар(ы): <span>-{getSales()} ₽</span></p>
+                    <p className="title__qty">Цена за {getCartCount()} товар(а):<span>{getCartSubTotal().toFixed(2)} ₽</span></p>
+                    {/* <p className="title__sales">Скидка на товар(ы): <span>-{getSales()} ₽</span></p> */}
                     <strong className="title__total">
                         Итого: <span>{getCartSubTotal().toFixed(2)} ₽</span>
                     </strong>
