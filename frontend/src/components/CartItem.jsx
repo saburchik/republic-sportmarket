@@ -7,16 +7,15 @@ const CartItem = ({ item, qtyChangeHandler, removeHandler }) => {
     return (
         <div className={style.product}>
             <a className={`${style.btn}`} onClick={() => removeHandler(item.product)} href>
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 62 62"><path className={style.btn__color} d="M33.83 31l9.9 9.9-2.83 2.83-9.9-9.9-9.9 9.9-2.83-2.83 9.9-9.9-9.9-9.9 2.83-2.83 9.9 9.9 9.9-9.9 2.83 2.83-9.9 9.9z"></path></svg>
+                <svg className={style.btn__svg} xmlns="http://www.w3.org/2000/svg" viewBox="0 0 62 62"><path className={style.btn__color} d="M33.83 31l9.9 9.9-2.83 2.83-9.9-9.9-9.9 9.9-2.83-2.83 9.9-9.9-9.9-9.9 2.83-2.83 9.9 9.9 9.9-9.9 2.83 2.83-9.9 9.9z"></path></svg>
             </a>
 
-            <div className={style.photo}>
-                <Link className={style.link} to={`/product/${item.product}`}>
-                    <img className={style.img}
-                        src={item.imageUrl}
-                        alt={item.name}
-                    /></Link>
-            </div>
+            <Link className={style.link} to={`/product/${item.product}`}>
+                <img className={style.img}
+                    src={item.imageUrl}
+                    alt={item.name}
+                />
+            </Link>
             <div className={style.inner}>
                 <p className={style.article}>артикул: <strong>{item.article}</strong></p>
                 <strong>{item.name}</strong>
