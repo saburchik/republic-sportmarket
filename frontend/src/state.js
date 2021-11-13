@@ -1,3 +1,5 @@
+import introImg from './assets/intro_winter.jpg'
+
 let state = {
     Categories: [
         {
@@ -30,20 +32,20 @@ let state = {
             ]
         },
     ],
-    IntroSl: [
+    IntroSliders: [
         {
             id: 1,
             title: `Отдыхай В Движении`,
-            img: 'https://i.imgur.com/D89r9te.jpg',
-            position: '',
-            customers: ''
+            img: introImg,
+            alt: 'Изображение человека на сноуборде',
+            classPosition: '',
         },
         {
             id: 2,
             title: 'Сделай свою жизнь Ярче!',
             img: 'https://i.imgur.com/zwb4Ql2.jpg',
-            position: 'left',
-            customers: 'second'
+            alt: 'Изображение скейтборда',
+            classPosition: 'left',
         }
     ]
 }

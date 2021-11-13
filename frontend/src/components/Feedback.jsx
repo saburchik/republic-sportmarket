@@ -1,5 +1,5 @@
 import "./styles/Feedback.scss"
-import Sliders from 'react-slick'
+import Sliders from "react-slick"
 import "slick-carousel/slick/slick.css"
 
 // Images

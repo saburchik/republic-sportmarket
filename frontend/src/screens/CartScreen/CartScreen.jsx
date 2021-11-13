@@ -39,22 +39,6 @@ const CartScreen = () => {
         return cartItems.reduce((price, item) => item.price * item.qty + price, 0)
     };
 
-    // const getCartSales = () => {
-    //     let price = () => cartItems.reduce((price, item) => item.price * item.qty + price, 0)
-    //     let oldPrice = () => cartItems.reduce((oldPrice, item) => item.oldPrice * item.qty + oldPrice, 0)
-
-    //     if (cartItems.oldPrice !== 0) {
-    //         return price()
-    //     } else {
-    //         return oldPrice() + price()
-    //     }
-
-    // }
-
-    // const getSales = () => {
-    //     return cartItems.reduce(() => getCartSales() - getCartSubTotal(), 0);
-    // };
-
     return (
         <div className="cartscreen">
             <Advantages />

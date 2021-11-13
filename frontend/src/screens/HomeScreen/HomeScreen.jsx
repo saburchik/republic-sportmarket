@@ -2,7 +2,7 @@ import "./Homescreen.scss"
 import { React, useEffect } from "react"
 import { useSelector, useDispatch } from "react-redux"
 // Components
-import IntroSlider from "../../components/IntroSlider"
+import IntroSlider from "../../components/IntroSlider/IntroSlider"
 import Advantages from "../../components/Advantages"
 import Accordion from "../../components/Accordion"
 import Product from "../../components/Product"
