@@ -2,18 +2,13 @@
     display: flex;
     justify-content: space-around;
     align-items: center;
-    width: 100%;
     background-color: #fff;
-    padding: 0.5rem 2rem;
+    padding: 0.5rem 1rem;
     position: relative;
     z-index: 99;
 
     @media (max-width: 890px) {
         justify-content: space-between;
-    }
-
-    @media (min-width: 1700px) {
-        justify-content: space-around;
     }
 }
 
@@ -66,7 +61,6 @@
     align-items: center;
     background-color: transparent;
     height: 100%;
-    color: #302B42;
     border: none;
     cursor: pointer;
     padding: 0 0.8rem;
@@ -91,9 +85,9 @@
 
 .search__link {
     font-size: 1.2rem;
+    font-weight: 500;
     text-transform: uppercase;
     color: #939292;
-    font-weight: 500;
     padding: 0.5rem;
     transition: 0.2s;
 
@@ -102,24 +96,30 @@
     }
 }
 
-.link__item {
+.cart,
+.login {
     font-size: 1.2rem;
     font-weight: 700;
     text-transform: uppercase;
     color: #302B42;
     border-radius: 8px;
     padding: 0.5rem;
-    transition: .2s;
+    transition: 0.2s;
     position: relative;
+}
 
+.cart {
+    &:hover {
+        .cart__num {
+            background-color: #fff;
+            transition: 0.3s;
+        }
+    }
+}
+
+.login {
     &:hover {
         color: #939292;
-
-        .cart__num {
-            color: #302B42;
-            transition: 0.3s;
-            background-color: #fff;
-        }
     }
 }
 
@@ -127,34 +127,29 @@
     width: 35px;
     height: 35px;
     fill: #302B42;
-    transition: 0.2s;
 }
 
 .cart__num {
     display: flex;
     align-items: center;
     justify-content: center;
-    font-family: 'Montserrat';
-    background-color: #E87E7E;
-    border-radius: 30px;
     height: 30px;
     width: 30px;
-    border: 2px solid #302B42;
-    font-size: 1.2rem;
+    background-color: #E87E7E;
     font-weight: 500;
-    transition: 0.2;
+    border: 2px solid #302B42;
+    border-radius: 50%;
     position: absolute;
-    top: -5px;
-    left: 25px;
+    top: 0;
+    left: 30px;
 }
 
 .hamburger {
-    width: 40px;
-    height: 30px;
     display: none;
     justify-content: space-between;
-    align-items: center;
     flex-direction: column;
+    width: 40px;
+    height: 30px;
     cursor: pointer;
 
     li {

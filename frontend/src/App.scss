@@ -68,7 +68,6 @@ body {
 a {
     display: flex;
     align-items: center;
-    color: #302B42;
     text-decoration: none;
 }
 
@@ -78,13 +77,13 @@ li {
 }
 
 // li>a {
-    //     display: flex;
-    //     justify-content: center;
-    //     align-items: center;
-    //     font-size: 1.2rem;
-    //     font-weight: 700;
-    //     text-transform: uppercase;
-    // }
+//     display: flex;
+//     justify-content: center;
+//     align-items: center;
+//     font-size: 1.2rem;
+//     font-weight: 700;
+//     text-transform: uppercase;
+// }
 
 form {
     display: flex;
@@ -98,9 +97,6 @@ form {
     padding: 0 2rem;
 }
 
-.logo {
-    cursor: pointer;
-}
 
 /* Default size a Button */
 .btn {
@@ -139,26 +135,26 @@ form {
     background-color: #302B42;
 }
 
-.input__btn {
-    font-size: clamp(1.3rem, 1vw, 2.3rem);
-    border: none;
-    cursor: pointer;
-    padding: 0 0.8rem;
-    border-radius: 10px;
-    position: absolute;
-    right: 0;
-    height: 100%;
-}
+// .input__btn {
+    //     font-size: clamp(1.3rem, 1vw, 2.3rem);
+    //     border: none;
+    //     cursor: pointer;
+    //     padding: 0 0.8rem;
+    //     border-radius: 10px;
+    //     position: absolute;
+    //     right: 0;
+    //     height: 100%;
+    // }
 
-.search__btn {
-    color: #939292;
-    background-color: #CECECE;
-}
+// .search__btn {
+    //     color: #939292;
+    //     background-color: #CECECE;
+    // }
 
-.search__btn:hover {
-    color: #302B42;
-    transition: all .2s ease-in;
-}
+    // .search__btn:hover {
+    //     color: #302B42;
+    //     transition: all .2s ease-in;
+    // }
 
 /* The Size Title */
 .title {
