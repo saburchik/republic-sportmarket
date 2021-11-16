@@ -19,7 +19,7 @@ function Accordion(props) {
     }
 
     // Drawing subtitles in the catalog list
-    let subtitlesList = props.subtitles.map(s => <li key={s.id} className={style.subtitle_prod}>
+    let setSubtitles = props.subtitles.map(s => <li key={s.id} className={style.subtitle}>
         {s.subtitle}
     </li>)
 
@@ -32,7 +32,7 @@ function Accordion(props) {
                 </svg>
             </h3 >
             <ul ref={content} className={style.inner} style={{ maxHeight: `${setHeight}` }}>
-                {subtitlesList}
+                {setSubtitles}
             </ul>
         </li>
     )

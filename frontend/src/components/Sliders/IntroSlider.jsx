@@ -1,7 +1,7 @@
 import React from "react"
 import Slider from "react-slick"
-import "./IntroSliderSlick.scss"
-import style from "./IntroSlider.module.scss"
+import style from "./styles/IntroSlider.module.scss"
+import './styles/mainSlick.scss'
 
 const IntroSlider = (props) => {
     let settings = {
@@ -16,7 +16,7 @@ const IntroSlider = (props) => {
         dotsClass: style.lines,
     }
 
-    let setSliders = props.state.IntroSliders.map(s => {
+    let drawSliders = props.state.IntroSliders.map(s => {
         let text = `${style.text} ${s.classPosition !== '' ? style.left : ''}`
 
         return (
@@ -30,8 +30,8 @@ const IntroSlider = (props) => {
     })
 
     return (
-        <Slider {...settings}>
-            {setSliders}
+        <Slider className={style.inner} {...settings}>
+            {drawSliders}
         </Slider>
     )
 }

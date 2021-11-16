@@ -36,7 +36,7 @@
 .input {
     font-family: inherit;
     font-size: clamp(1rem, 1vw, 1.5rem);
-    width: clamp(256px, 25vw, 550px);
+    width: clamp(300px, 25vw, 550px);
     color: #302B42;
     outline: none;
     border: none;
@@ -47,6 +47,10 @@
         &::placeholder {
             color: #E87E7E;
         }
+    }
+
+    @media (max-width: 390px) {
+        width: 100%;
     }
 }
 

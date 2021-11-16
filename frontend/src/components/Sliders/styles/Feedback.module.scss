@@ -1,0 +1,47 @@
+.article {
+    padding: 1rem;
+}
+
+.inner {
+    width: Min(75%, 1700px);
+    height: auto;
+    margin: 0 auto;
+    padding: 3rem 0;
+    position: relative;
+}
+
+.title {
+    font-size: clamp(1.5rem, 2vw, 4rem);
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.item {
+    display: flex;
+    align-items: center;
+    padding: 0 clamp(1rem, 3vw, 2rem);
+
+    @media (max-width:790px) {
+        flex-direction: column;
+    }
+}
+
+.img {
+    width: clamp(150px, 13vw, 300px);
+}
+
+.comment {
+    display: flex;
+    flex-direction: column;
+    font-size: clamp(1rem, 1vw, 1.5rem);
+    padding: 1rem;
+    margin: 0;
+
+    strong {
+        margin-top: 1rem;
+    }
+
+    @media (max-width:790px) {
+        padding: 1rem 0;
+    }
+}

@@ -62,9 +62,9 @@
     }
 
     a {
-        text-transform: initial;
         font-weight: 400;
         font-style: italic;
+        text-transform: initial;
     }
 
     @media (max-width: 663px) {
@@ -74,11 +74,11 @@
 
 .link {
     font-size: clamp(1rem, 1vw, 1.3rem);
+    font-style: initial;
     color: #C2C2C2;
     text-transform: uppercase;
     text-decoration: none;
-    font-style: initial;
-    transition: all .2s ease-in;
+    transition: 0.2s;
 
     &:hover {
         color: #fff;
@@ -121,13 +121,13 @@
         fill: #302B42;
     }
 
-
     &:hover {
         background-color: #C2C2C2;
     }
 }
 
 .rights {
+    width: 100%;
     font-size: clamp(0.7rem, 1vw, 1.2rem);
     text-align: center;
     color: #C2C2C2;

@@ -1,8 +1,12 @@
 .product-card {
     background-color: #fff;
     border: 3px solid #cecece;
+    display: -ms-grid;
     display: grid;
+    -ms-grid-rows: 360px 1fr;
     grid-template-rows: 360px 1fr;
+    -webkit-transition: .3s;
+    -o-transition: .3s;
     transition: .3s;
 
     &:hover {
@@ -26,6 +30,7 @@
     width: 70px;
     height: 30px;
     background-color: #E87E7E;
+    color: #302B42;
     font-weight: 700;
     font-size: 1rem;
     text-transform: uppercase;

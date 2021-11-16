@@ -17,7 +17,7 @@ const SideDrawer = ({ show, click }) => {
         <nav className={sideDrawerClass.join(" ")}>
             <ul className={style.header}>
                 <li>
-                    <Link to="/"><img className={style.logo} src={logo} alt="Логотип Республики" /></Link>
+                    <Link to="/"><img className={style.logo} src={logo} alt="Логотип Республика" /></Link>
                 </li>
                 <li>
                     <Link className={style.cart} to="/cart" onClick={click}>

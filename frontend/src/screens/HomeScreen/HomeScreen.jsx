@@ -2,11 +2,11 @@ import "./Homescreen.scss"
 import { React, useEffect } from "react"
 import { useSelector, useDispatch } from "react-redux"
 // Components
-import IntroSlider from "../../components/IntroSlider/IntroSlider"
+import IntroSlider from "../../components/Sliders/IntroSlider"
 import Advantages from "../../components/Advantages"
 import Accordion from "../../components/Accordion"
 import Product from "../../components/Product"
-import Feedback from "../../components/Feedback"
+import Feedback from "../../components/Sliders/Feedback"
 // Actions
 import { getProducts as listProducts } from "../../redux/actions/productActions"
 
@@ -62,7 +62,7 @@ const HomeScreen = (props) => {
                     </ul>
                 </section>
             </article>
-            <Feedback />
+            <Feedback state={props.state} />
         </main >
     )
 }

@@ -3,13 +3,14 @@ import style from "./styles/Footer.module.scss"
 import { Link } from "react-router-dom"
 import logo from "./../assets/republic.png"
 
+
 const Footer = () => {
     return (
         <footer className={style.inner}>
             <address className={style.item}>
                 <div className={style.header}>
                     <Link to="/">
-                        <img className={style.logo} src={logo} alt="Логотип" />
+                        <img className={style.logo} src={logo} alt="Логотип Республика" />
                     </Link>
                 </div>
                 <div className={style.contacts}>
@@ -23,14 +24,14 @@ const Footer = () => {
                     </strong>
                     <strong className={style.title}>
                         Email:
-                        <a href="mailto:republic-store@gmail.com">republic.store@gmail.com</a>
+                        <a href="mailto:republic.store@gmail.com">republic.store@gmail.com</a>
                     </strong>
                     <Link to="/" className={style.link}>Обратная связь</Link>
                 </div>
             </address>
             <section className={style.item}>
                 <div className={style.header}>
-                    <h4 className={style.title}>Информация</h4>
+                    <h4 className={style.title}>Информация:</h4>
                 </div>
                 <ul className={style.wrapper}>
                     <li><Link className={style.link} to="/">О компании</Link></li>
@@ -42,7 +43,7 @@ const Footer = () => {
             </section>
             <section className={style.item}>
                 <div className={style.header}>
-                    <h4 className={style.title}>Покупателем</h4>
+                    <h4 className={style.title}>Покупателем:</h4>
                 </div>
                 <ul className={style.wrapper}>
                     <li><Link className={style.link} to="/">Условия продаж</Link></li>
@@ -98,8 +99,7 @@ const Footer = () => {
             </section>
             <p className={style.rights}>
                 2020 – 2021, © ИМ Республика.
-                Все права защищены. Информация, размещенная на данной странице,
-                не является публичной офертой.
+                Все права защищены. Информация, размещенная на данной странице, не является публичной офертой.
             </p>
         </footer>
     )

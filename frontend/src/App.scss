@@ -85,9 +85,14 @@ li {
 //     text-transform: uppercase;
 // }
 
+
 form {
     display: flex;
     position: relative;
+
+    @media (max-width: 390px) {
+        width: 100%;
+    }
 }
 
 .container {
@@ -136,25 +141,25 @@ form {
 }
 
 // .input__btn {
-    //     font-size: clamp(1.3rem, 1vw, 2.3rem);
-    //     border: none;
-    //     cursor: pointer;
-    //     padding: 0 0.8rem;
-    //     border-radius: 10px;
-    //     position: absolute;
-    //     right: 0;
-    //     height: 100%;
-    // }
+//     font-size: clamp(1.3rem, 1vw, 2.3rem);
+//     border: none;
+//     cursor: pointer;
+//     padding: 0 0.8rem;
+//     border-radius: 10px;
+//     position: absolute;
+//     right: 0;
+//     height: 100%;
+// }
 
 // .search__btn {
-    //     color: #939292;
-    //     background-color: #CECECE;
-    // }
+//     color: #939292;
+//     background-color: #CECECE;
+// }
 
-    // .search__btn:hover {
-    //     color: #302B42;
-    //     transition: all .2s ease-in;
-    // }
+// .search__btn:hover {
+//     color: #302B42;
+//     transition: all .2s ease-in;
+// }
 
 /* The Size Title */
 .title {

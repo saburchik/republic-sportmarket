@@ -10,7 +10,7 @@ const Navbar = ({ click }) => {
 
     return (
         <nav className={style.nav}>
-            <Link to="/"><img className={style.logo} src={logo} alt="Логотип Республики" /></Link>
+            <Link to="/"><img className={style.logo} src={logo} alt="Логотип Республика" /></Link>
             <ul className={style.search}>
                 <li>
                     <form>
