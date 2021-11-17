@@ -15,18 +15,18 @@
 }
 
 .homescreen__product {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -ms-flex-wrap: wrap;
-    flex-wrap: wrap;
-    -ms-flex-pack: distribute;
-    justify-content: space-around;
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    justify-items: center;
+
+    @media(max-width: 690px) {
+        grid-template-columns: 1fr;
+
+    }
 }
 
 .homescreen__categories {
-    width: 100%;
-    max-width: 350px;
+    width: 350px;
     padding: 1rem;
 }
 
@@ -36,14 +36,11 @@
 }
 
 .homescreen__cards {
+    width: 100%;
+    justify-content: center;
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(285px, 300px));
-    // == For firefox browser
-    // grid-template-columns: repeat(auto-fill, minmax(285px, 300px));
-    // ==<
-    grid-template-rows: auto;
-    gap: 1.5rem;
-    max-width: 85%;
+    gap: 1rem;
     padding: 1rem;
 
     @media (max-width: 390px) {

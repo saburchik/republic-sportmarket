@@ -1,12 +1,9 @@
-.product-card {
+.homescreen__cards>.product-card {
     background-color: #fff;
     border: 3px solid #cecece;
-    display: -ms-grid;
     display: grid;
-    -ms-grid-rows: 360px 1fr;
+    grid-template-columns: repeat(auto-fit, 288px);
     grid-template-rows: 360px 1fr;
-    -webkit-transition: .3s;
-    -o-transition: .3s;
     transition: .3s;
 
     &:hover {
