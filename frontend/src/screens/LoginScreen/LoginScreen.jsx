@@ -1,47 +1,35 @@
-import './LoginScreen.scss';
-import { Link } from 'react-router-dom';
+import style from "./LoginScreen.module.scss"
+import { Link } from "react-router-dom"
 
 const LoginScreen = () => {
     return (
-        <div className="loginscreen">
-            <div className="loginscreen__intro">
-                <div className="loginscreen__wrapper">
-                    <h2 className="title title__size_m">Личный кабинет</h2>
-                    <div className="dashboard">
-                        <div className="login">
-                            <h2 className="title title__size_m">Вход</h2>
-                            <div className="login__wrapper">
-                                <form className="login__form">
-                                    <p className="login__text">Ваша почта
-                                        <span>*</span></p>
-                                    <input className="input input__loginscreen" placeholder="Введите e-mail" />
-                                    <p className="login__text">Ваш пароль
-                                        <span>*</span></p>
-                                    <input className="input input__loginscreen" placeholder="Введите пароль" />
-                                    <div className="password__inner">
-                                        <Link className="reset__password" to="/">Забыли пароль?</Link>
+        <div>
+            <div className={style.intro}>
+                <div className={style.inner}>
+                    <h2 className={style.title}>Личный кабинет</h2>
+                    <div className={style.dashboard}>
+                        <div className={style.login}>
+                            <h2 className={style.title + ' ' + style.size_s}>Вход</h2>
+                            <div className={style.wrapper}>
+                                <form className={style.form}>
+                                    <input className={style.input} placeholder="Введите e-mail" />
+                                    <input className={style.input} placeholder="Введите пароль" />
+                                    <div className={style.password__inner}>
+                                        <Link className={style.reset__password} to="/">Забыли пароль?</Link>
                                     </div>
-                                    <button className="btn btn__login">Войти</button>
+                                    <button className={style.btn}>Войти</button>
                                 </form>
                             </div>
                         </div>
-                        <div className="registration">
-                            <h2 className="title title__size_m">Регистрация</h2>
-                            <div className="login__wrapper">
-                                <form className="login__form">
-                                    <p className="login__text">Ваше имя
-                                        <span>*</span></p>
-                                    <input className="input input__loginscreen" placeholder="Введите имя" />
-                                    <p className="login__text">Ваша почта
-                                        <span>*</span></p>
-                                    <input className="input input__loginscreen" placeholder="Введите e-mail" />
-                                    <p className="login__text">Ваш пароль
-                                        <span>*</span></p>
-                                    <input className="input input__loginscreen" placeholder="Введите пароль" />
-                                    <p className="login__text">Повторите пароль
-                                        <span>*</span></p>
-                                    <input className="input input__loginscreen" placeholder="Повторите пароль" />
-                                    <button className="btn btn__login">Регистрироваться</button>
+                        <div className={style.registration}>
+                            <h2 className={style.title + ' ' + style.size_s}>Регистрация</h2>
+                            <div className={style.wrapper}>
+                                <form className={style.form}>
+                                    <input className={style.input} placeholder="Введите имя" />
+                                    <input className={style.input} placeholder="Введите e-mail" />
+                                    <input className={style.input} placeholder="Введите пароль" />
+                                    <input className={style.input} placeholder="Повторите пароль" />
+                                    <button className={style.btn}>Регистрироваться</button>
                                 </form>
                             </div>
                         </div>
@@ -50,6 +38,6 @@ const LoginScreen = () => {
             </div>
         </div>
     )
-};
+}
 
-export default LoginScreen;
+export default LoginScreen

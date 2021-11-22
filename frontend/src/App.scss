@@ -104,15 +104,15 @@ form {
 
 
 /* Default size a Button */
-.btn {
-    height: 50px;
-    font-size: 1.5rem;
-    font-weight: 700;
-    text-transform: uppercase;
-    border: none;
-    cursor: pointer;
-    width: Min(270px, 300px);
-}
+// .btn {
+    //     height: 50px;
+    //     font-size: 1.5rem;
+    //     font-weight: 700;
+    //     text-transform: uppercase;
+    //     border: none;
+    //     cursor: pointer;
+    //     width: Min(270px, 300px);
+    // }
 
 .btn__size_g {
     color: #302B42;
@@ -177,15 +177,15 @@ form {
 // }
 
 /* The Size Price */
-.oldprice {
-    color: #939292;
-    font-size: 1rem;
-    font-weight: 500;
+// .oldprice {
+    //     color: #939292;
+    //     font-size: 1rem;
+    //     font-weight: 500;
 
-    &.none {
-        font-size: 0;
-    }
-}
+    //     &.none {
+    //         font-size: 0;
+    //     }
+    // }
 
 .price__size_m {
     font-size: 2rem;

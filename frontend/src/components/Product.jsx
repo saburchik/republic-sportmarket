@@ -24,7 +24,7 @@ const Product = ({ productId, name, status, price, oldPrice, imageUrl }) => {
                 <img className={style.img} src={imageUrl} alt={name} />
             </Link>
             <div className={style.info}>
-                <p className={style.title}>{name}</p>
+                <strong>{name}</strong>
                 <p className={style.price}>{price} ₽
                     <del className={oldPrice === 0 ? `${style.oldprice} ${style.none}` : style.oldprice}>{oldPrice} ₽</del>
                 </p>

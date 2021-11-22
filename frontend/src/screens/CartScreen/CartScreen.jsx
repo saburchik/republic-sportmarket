@@ -1,7 +1,7 @@
-import './CartScreen.scss';
-import { useEffect } from "react";
-import { useDispatch, useSelector } from 'react-redux';
-import { Link, useLocation } from 'react-router-dom';
+import style from "./CartScreen.module.scss"
+import { useEffect } from "react"
+import { useDispatch, useSelector } from "react-redux"
+import { Link, useLocation } from "react-router-dom"
 
 
 // Components
@@ -40,18 +40,18 @@ const CartScreen = () => {
     };
 
     return (
-        <div className="cartscreen">
+        <div>
             <Advantages />
-            <h3 className="title title__size-sl cartscreen__title">В вашей корзине:</h3>
-            <div className="order">
-                <div className="order__left">
+            <h3 className={style.title}>В вашей корзине:</h3>
+            <div className={style.inner}>
+                <div className={style.order}>
                     {cartItems.length === 0 ? (
-                        <div className="cart__empty">
+                        <div className={style.cart__empty}>
                             <p>Ваша корзина -
                                 <b> пуста</b>
                             </p>
                             <p>Здесь хранятся товары, которые вы добавили в корзину. Сейчас ваша корзина пуста</p>
-                            <Link className="link__assortment" to="/">Перейти к ассортименту</Link>
+                            <Link className={style.link} to="/">Перейти к ассортименту</Link>
                         </div>
                     ) : cartItems.map(item => (
                         <CartItem
@@ -62,18 +62,17 @@ const CartScreen = () => {
                         />
                     ))}
                 </div>
-                <div className="order__right">
-                    <p className="title__order">Ваш заказ</p>
-                    <p className="title__qty">Цена за {getCartCount()} товар(а):<span>{getCartSubTotal().toFixed(2)} ₽</span></p>
-                    {/* <p className="title__sales">Скидка на товар(ы): <span>-{getSales()} ₽</span></p> */}
-                    <strong className="title__total">
+                <div className={style.products}>
+                    <p className={style.title__order}>Ваш заказ</p>
+                    <p className={style.title__qty}>Цена за {getCartCount()} товар(а):<span>{getCartSubTotal().toFixed(2)} ₽</span></p>
+                    <strong className={style.title__total}>
                         Итого: <span>{getCartSubTotal().toFixed(2)} ₽</span>
                     </strong>
-                    <button className="btn order__btn">Оформить заказ</button>
+                    <button className={style.btn}>Оформить заказ</button>
                 </div>
             </div>
         </div>
     )
-};
+}
 
 export default CartScreen

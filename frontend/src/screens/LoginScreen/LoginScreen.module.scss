@@ -1,4 +1,4 @@
-.loginscreen__intro {
+.intro {
     background: url("../../assets/intro_winter.jpg") no-repeat right;
     background-size: cover;
     display: flex;
@@ -8,7 +8,7 @@
     max-height: auto;
 }
 
-.loginscreen__wrapper {
+.inner {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -20,6 +20,19 @@
     height: auto;
     padding: 1rem;
     border: 5px solid #302B42;
+}
+
+.title {
+    font-size: clamp(1.8rem, 2vw, 4rem);
+    font-weight: 700;
+    text-align: center;
+    text-transform: uppercase;
+    margin-bottom: 2.5rem;
+
+    &.size_s {
+        font-size: clamp(1.3rem, 1vw, 3rem);
+        margin-bottom: 1rem;
+    }
 }
 
 .dashboard {
@@ -38,40 +51,36 @@
     margin-bottom: 5rem;
 }
 
-.login__form {
+.form {
     display: flex;
     flex-direction: column;
     height: auto;
 }
 
-.login__text {
+.text {
     font-size: 1rem;
     font-weight: 500;
+
+    span {
+        font-size: 1.5rem;
+        color: #E87E7E;
+    }
 }
 
-.login__text span {
-    font-size: 1.5rem;
-    color: #E87E7E;
-}
-
-.input__loginscreen {
+.input {
     width: 100%;
     max-width: 350px;
     padding: 0.5rem;
     margin-bottom: 1rem;
     border: 4px solid #ccc;
+    outline: none;
+
+    &:nth-child(8) {
+        margin-bottom: 1.5rem;
+    }
 }
 
-
-.input__loginscreen:focus {
-    border: 2px solid #939292;
-}
-
-.input__loginscreen:nth-child(8) {
-    margin-bottom: 1.5rem;
-}
-
-.btn__login {
+.btn {
     height: 40px;
     background-color: #302B42;
     font-size: 1rem;
@@ -79,10 +88,14 @@
     color: #fff;
     margin: 0 auto;
     transition: 0.3s;
-}
+    text-transform: uppercase;
+    border: none;
+    cursor: pointer;
+    width: Min(270px, 300px);
 
-.btn__login:hover {
-    background-color: #E87E7E;
+    &:hover {
+        background-color: #E87E7E;
+    }
 }
 
 .password__inner {
@@ -111,7 +124,7 @@
         padding: 0;
     }
 
-    .login__wrapper {
+    .wrapper {
         width: 100%;
     }
 }
