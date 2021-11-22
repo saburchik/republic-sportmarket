@@ -1,38 +1,34 @@
-import './styles/Product.scss'
-import { Link } from 'react-router-dom'
+import style from "./styles/Product.module.scss"
+import { Link } from "react-router-dom"
 
 const Product = ({ productId, name, status, price, oldPrice, imageUrl }) => {
 
     const checkStatus = () => {
-        const iconStatusColor = ['icon-status']
+        const iconStatusColor = [style.status]
 
-        if (status === "NEW") {
-            iconStatusColor.push('icon-status-green')
-        } else if (status === " ") {
-            iconStatusColor.push('icon-status')
+        if (status === 'NEW') {
+            iconStatusColor.push(style.status_green)
+        } else if (status === ' ') {
+            iconStatusColor.push(style.status)
         } else {
-            iconStatusColor.push('icon-status-red')
+            iconStatusColor.push(style.status_red)
         }
 
         return iconStatusColor.join(' ')
     }
 
     return (
-        <li className="product-card">
-            <Link className="product-link" to={`/product/${productId}`}>
+        <li className={style.card}>
+            <Link className={style.link} to={`/product/${productId}`}>
                 <span className={checkStatus()}>{status}</span>
-                <img
-                    className="img"
-                    src={imageUrl}
-                    alt={name}
-                />
+                <img className={style.img} src={imageUrl} alt={name} />
             </Link>
-            <div className="product-info">
-                <p className="title">{name}</p>
-                <p className="product-price">{price} ₽
-                    <del className={oldPrice === 0 ? "old-price undefined" : "old-price"}>{oldPrice} ₽</del>
+            <div className={style.info}>
+                <p className={style.title}>{name}</p>
+                <p className={style.price}>{price} ₽
+                    <del className={oldPrice === 0 ? `${style.oldprice} ${style.none}` : style.oldprice}>{oldPrice} ₽</del>
                 </p>
-                <Link to={`/product/${productId}`} className="product-play">
+                <Link to={`/product/${productId}`} className={style.play}>
                     <svg>
                         <use xlinkHref="#play-solid" />
                     </svg>

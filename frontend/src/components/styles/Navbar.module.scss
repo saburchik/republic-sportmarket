@@ -13,13 +13,13 @@
 }
 
 .logo {
-    width: 150px;
-    height: 70px;
+    width: clamp(120px, 7vw, 150px);
+    height: clamp(60px, 3vw, 70px);
 
-    @media (max-width: 490px) {
-        width: 100px;
-        height: 50px;
-    }
+    // @media (max-width: 490px) {
+    //     width: 100px;
+    //     height: 50px;
+    // }
 }
 
 .search,
@@ -94,6 +94,10 @@
     &:hover {
         color: #302B42;
     }
+
+    @media (min-width: 1990px) {
+        font-size: 1.5rem;
+    }
 }
 
 .cart,
@@ -120,6 +124,10 @@
 .login {
     &:hover {
         color: #939292;
+    }
+
+    @media (min-width: 1990px) {
+        font-size: 1.5rem;
     }
 }
 

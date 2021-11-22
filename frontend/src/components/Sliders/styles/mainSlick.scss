@@ -157,7 +157,8 @@
     background-color: #302B42;
     transition: .3s;
 
-    &:hover {
+    &:hover,
+    &:focus {
         background-color: #939292;
     }
 }

@@ -17,7 +17,7 @@ const Feedback = (props) => {
 
     let drawSliders = props.state.FeedbackSliders.map(i => {
         return (
-            <div>
+            <div key={i.id}>
                 <div className={style.item}>
                     <img className={style.img} src={i.img} alt={i.alt} />
                     <em className={style.comment}>

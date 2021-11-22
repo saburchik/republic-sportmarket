@@ -162,25 +162,27 @@ form {
 // }
 
 /* The Size Title */
-.title {
-    font-size: clamp(0.7rem, 1vw, 1.5rem);
-    font-weight: 500;
-    text-transform: uppercase;
+// .title {
+//     line-height: initial;
+//     font-size: clamp(1rem, 1vw, 1.5rem);
+//     letter-spacing: 1px;
+//     font-weight: 500;
+//     text-transform: uppercase;
 
-    &.title__size-sl {
-        text-align: center;
-        font-size: clamp(1.8rem, 2vw, 4rem);
-        font-weight: 700;
-    }
-}
+//     &.title__size-sl {
+//         text-align: center;
+//         font-size: clamp(1.8rem, 2vw, 4rem);
+//         font-weight: 700;
+//     }
+// }
 
 /* The Size Price */
-.old-price {
+.oldprice {
     color: #939292;
     font-size: 1rem;
     font-weight: 500;
 
-    &.undefined {
+    &.none {
         font-size: 0;
     }
 }
@@ -214,11 +216,11 @@ form {
 
 
 
-.img {
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    top: 0;
-    left: 0;
-    object-fit: contain;
-}
+// .img {
+//     width: 100%;
+//     height: 100%;
+//     position: absolute;
+//     top: 0;
+//     left: 0;
+//     object-fit: contain;
+// }

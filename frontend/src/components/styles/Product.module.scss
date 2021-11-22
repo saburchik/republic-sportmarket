@@ -1,26 +1,26 @@
-.homescreen__cards>.product-card {
-    background-color: #fff;
-    border: 3px solid #cecece;
+.card {
     display: grid;
-    grid-template-columns: repeat(auto-fit, 288px);
-    grid-template-rows: 360px 1fr;
-    transition: .3s;
+    grid-template-rows: minmax(360px, 2.5fr) 1fr;
+    background-color: #fff;
+    border-radius: 4px;
+    border: 3px solid #302B42;
+    transition: 0.3s;
 
     &:hover {
         box-shadow: 10px 10px 15px 1px #cecece;
 
-
-        .product-play {
+        .play {
             fill: #939292;
+            transition: 0.3s;
         }
     }
 }
 
-.product-link {
+.link {
     position: relative;
 }
 
-.icon-status {
+.status {
     display: none;
     justify-content: center;
     align-items: center;
@@ -31,31 +31,53 @@
     font-weight: 700;
     font-size: 1rem;
     text-transform: uppercase;
+    border-top-left-radius: 2px;
     position: absolute;
     top: 0;
     left: 0;
     z-index: 3;
 
-    &.icon-status-red {
+    &.status_red {
         display: flex;
     }
 
-    &.icon-status-green {
+    &.status_green {
         display: flex;
         background-color: #A0E87E;
     }
 }
 
-.product-info {
+.img {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    object-fit: contain;
+}
+
+.info {
     display: grid;
     grid-template-columns: 6fr 1fr;
     grid-template-rows: 1fr;
     gap: 1rem;
-    border-top: 3px solid #cecece;
+    border-top: 3px solid #302B42;
     padding: 1rem;
 }
 
-.product-price {
+.title {
+    line-height: initial;
+    font-size: 1rem;
+    letter-spacing: 1px;
+    font-weight: 500;
+    text-transform: uppercase;
+
+    @media (min-width: 1990px) {
+        font-size: 1.2rem;
+    }
+}
+
+.price {
     display: flex;
     align-items: center;
     gap: 1rem;
@@ -64,7 +86,17 @@
     color: #E87E7E;
 }
 
-.product-play {
+.oldprice {
+    color: #939292;
+    font-size: 1rem;
+    font-weight: 500;
+
+    &.none {
+        font-size: 0;
+    }
+}
+
+.play {
     grid-column-start: 2;
     grid-row-start: 1;
     grid-row-end: 3;
@@ -72,7 +104,6 @@
     padding: 1rem;
     margin: -1rem;
     margin-left: 0;
-    transition: .3s;
 
     svg {
         width: 30px;

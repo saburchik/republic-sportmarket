@@ -19,13 +19,13 @@ function Accordion(props) {
     }
 
     // Drawing subtitles in the catalog list
-    let setSubtitles = props.subtitles.map(s => <li key={s.id} className={style.subtitle}>
+    let setSubtitles = props.subtitles.map(s => <li key={s.id} className={style.subtitle} tabIndex="2">
         {s.subtitle}
     </li>)
 
     return (
         <li className={style.item}>
-            <h3 className={`${style.title} ${setActive}`} onClick={toggleAccordion}>
+            <h3 className={`${style.title} ${setActive}`} onClick={toggleAccordion} tabIndex="1">
                 {props.title}
                 <svg className={`${style.arrow_icon} ${setRotate}`}>
                     <use xlinkHref="#chevron-down" />

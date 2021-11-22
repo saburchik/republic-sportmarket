@@ -1,7 +1,6 @@
 .item {
     padding: 1rem 0;
     border-bottom: 3px solid #CECECE;
-    width: 100%;
 }
 
 .title {
@@ -10,7 +9,7 @@
     align-items: center;
     font-size: clamp(1.1rem, 1vw, 1.5rem);
 
-    padding: 0.5rem 0;
+    padding: 0.5rem;
     text-transform: uppercase;
     font-weight: 700;
     cursor: pointer;
@@ -20,7 +19,8 @@
         width: 100%;
     }
 
-    &:hover {
+    &:hover,
+    &:focus-visible {
         color: #939292;
 
         .arrow_icon {
@@ -44,9 +44,11 @@
 .inner {
     display: flex;
     flex-direction: column;
-    padding: 0.5rem 1rem 0;
+    margin-top: 0.5rem;
+    padding-left: 2rem;
     position: relative;
     gap: 0.5rem;
+
 
     max-height: 0;
     overflow: hidden;
@@ -63,7 +65,7 @@
 }
 
 .subtitle {
-    font-size: clamp(1rem, 1vw, 1.5rem);
+    font-size: 1rem;
     text-transform: initial;
     cursor: pointer;
     transition: 0.2s;
@@ -75,7 +77,11 @@
     &::before {
         content: '\2014';
         position: absolute;
-        margin-left: -20px;
+        margin-left: -1.5rem;
+
+        @media(min-width: 1990px) {
+            margin-left: -1.8rem;
+        }
     }
 
     &:hover {
@@ -92,5 +98,9 @@
             position: absolute;
             right: 0;
         }
+    }
+
+    @media(min-width: 1990px) {
+        font-size: 1.2rem;
     }
 }

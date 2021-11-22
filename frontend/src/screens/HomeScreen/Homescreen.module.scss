@@ -1,5 +1,5 @@
 .homescreen__inner {
-    padding: 1rem 0 5rem;
+    padding: 1rem 1rem 5rem;
 }
 
 .homescreen__title {
@@ -7,10 +7,11 @@
     font-weight: 700;
     text-align: center;
     text-transform: uppercase;
-    margin-bottom: 1rem;
+    margin-bottom: 2.5rem;
 
     &.size_s {
         font-size: clamp(1.3rem, 1vw, 3rem);
+        margin-bottom: 1rem;
     }
 }
 
@@ -18,16 +19,23 @@
     display: grid;
     grid-template-columns: 1fr 2fr;
     justify-items: center;
+    gap: 2rem;
+
+    @media(max-width: 990px) {
+        grid-template-columns: 1fr 1fr;
+    }
 
     @media(max-width: 690px) {
         grid-template-columns: 1fr;
-
     }
 }
 
 .homescreen__categories {
-    width: 350px;
-    padding: 1rem;
+    width: Min(100%, 350px);
+
+    @media(min-width: 1990px) {
+        width: 500px;
+    }
 }
 
 .homescreen__accordion {
@@ -41,9 +49,13 @@
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(285px, 300px));
     gap: 1rem;
-    padding: 1rem;
 
     @media (max-width: 390px) {
         max-width: 100%;
+    }
+
+    @media (min-width: 1990px) {
+        grid-template-columns: repeat(auto-fit, minmax(350px, 370));
+        gap: 1.5rem;
     }
 }

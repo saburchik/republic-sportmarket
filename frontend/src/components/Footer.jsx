@@ -8,7 +8,7 @@ const Footer = () => {
     return (
         <footer className={style.inner}>
             <address className={style.item}>
-                <div className={style.header}>
+                <div className={style.header__logo}>
                     <Link to="/">
                         <img className={style.logo} src={logo} alt="Логотип Республика" />
                     </Link>
