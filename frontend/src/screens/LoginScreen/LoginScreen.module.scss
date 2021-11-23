@@ -3,9 +3,11 @@
     background-size: cover;
     display: flex;
     justify-content: center;
+    flex-direction: column;
     align-items: center;
     width: 100%;
     max-height: auto;
+    border-bottom: 3px solid #fff;
 }
 
 .inner {
@@ -19,7 +21,8 @@
     margin: 0 auto;
     height: auto;
     padding: 1rem;
-    border: 5px solid #302B42;
+    border: 3px solid #302B42;
+    border-bottom: none;
 }
 
 .title {
@@ -54,6 +57,8 @@
 .form {
     display: flex;
     flex-direction: column;
+    align-items: baseline;
+    gap: 1rem;
     height: auto;
 }
 
@@ -67,54 +72,157 @@
     }
 }
 
-.input {
+.inner__hide {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
     width: 100%;
-    max-width: 350px;
-    padding: 0.5rem;
-    margin-bottom: 1rem;
-    border: 4px solid #ccc;
-    outline: none;
+    position: relative;
+}
 
-    &:nth-child(8) {
-        margin-bottom: 1.5rem;
+.input {
+    font-family: inherit;
+    font-size: 1rem;
+    width: 100%;
+    background: transparent;
+    border: 3px solid #c2c2c2;
+    outline: none;
+    padding: 1.2rem 0.5rem 0.5rem 0.5rem;
+    transition: border-color 0.2s;
+    position: relative;
+    z-index: 9;
+
+    &[type=password] {
+        font-weight: 900;
+        letter-spacing: 2px;
+        padding-right: 2rem;
+    }
+
+    &::placeholder {
+        font-weight: 500;
+        color: transparent;
+    }
+
+    &:focus {
+        border-color: #939292;
     }
 }
+
+.label {
+    display: block;
+    width: 100%;
+    font-size: 0.8rem;
+    font-weight: 500;
+    color: #c2c2c2;
+    padding: 0.2rem 3.5rem 0 0.5rem;
+    padding-left: 10px;
+    position: absolute;
+    top: 0;
+    transition: 0.2s;
+}
+
+.input:placeholder-shown~.label {
+    font-size: 1rem;
+    color: #c2c2c2;
+    cursor: text;
+    padding-left: 10px;
+    top: 20px;
+}
+
+.input:focus~.label {
+    display: block;
+    font-size: 0.8rem;
+    color: #939292;
+    transition: 0.2s;
+    position: absolute;
+    top: 0;
+}
+
+.btn__input {
+    display: flex;
+    align-items: center;
+    background-color: transparent;
+    height: 100%;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 0 0.5rem;
+    position: absolute;
+    right: 0;
+    z-index: 99;
+
+    svg {
+        width: 20px;
+        height: 20px;
+        fill: #c2c2c2;
+        transition: 0.2s;
+    }
+
+    &:hover,
+    &:focus {
+        svg {
+            fill: #939393;
+        }
+    }
+}
+
+// .btn {
+//     height: 40px;
+//     background-color: #302B42;
+//     font-size: 1rem;
+//     font-weight: 700;
+//     color: #fff;
+//     margin: 0 auto;
+//     transition: 0.3s;
+//     text-transform: uppercase;
+//     border: none;
+//     cursor: pointer;
+//     width: Min(270px, 300px);
+
+//     &:hover {
+//         background-color: #E87E7E;
+//     }
+// }
 
 .btn {
-    height: 40px;
-    background-color: #302B42;
-    font-size: 1rem;
+    width: Min(288px, 320px);
+    background-color: #C4C4C4;
+    color: #302B42;
+
+    font-size: 1.3rem;
     font-weight: 700;
-    color: #fff;
-    margin: 0 auto;
-    transition: 0.3s;
     text-transform: uppercase;
-    border: none;
+    border: 1px solid #302B42;
     cursor: pointer;
-    width: Min(270px, 300px);
+    transition: .3s;
+    padding: 0.5rem 0;
+
+    &.color {
+        background-color: #A0E87E;
+    }
 
     &:hover {
-        background-color: #E87E7E;
+        color: #C4C4C4;
+        background-color: #302B42
     }
 }
 
-.password__inner {
-    display: flex;
-    align-items: baseline;
-    margin-bottom: 1.5rem;
-}
 
-.reset__password {
-    font-size: 0.5rem;
-    font-weight: 400;
-    text-decoration: underline;
+.password {
+    font-size: 0.8rem;
+    font-weight: 500;
+    color: #939292;
+    font-style: italic;
     text-transform: uppercase;
-    transition: 0.3s;
+    margin: 0 auto;
+    transition: 0.2s;
+
+    &:hover {
+        color: #c2c2c2;
+    }
+
 }
 
-.reset__password:hover {
-    color: #E87E7E;
-}
 
 @media (max-width: 490px) {
 
@@ -122,9 +230,5 @@
     .registration {
         width: 100%;
         padding: 0;
-    }
-
-    .wrapper {
-        width: 100%;
     }
 }
