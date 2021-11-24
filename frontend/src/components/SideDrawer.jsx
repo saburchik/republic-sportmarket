@@ -1,7 +1,8 @@
 import style from "./styles/SideDrawer.module.scss"
 import { Link } from "react-router-dom"
 import { useSelector } from "react-redux"
-import logo from "./../assets/republic.png"
+
+import Logo from "./Logo"
 
 const SideDrawer = ({ show, click }) => {
     const sideDrawerClass = [style.sidedrawer]
@@ -17,7 +18,7 @@ const SideDrawer = ({ show, click }) => {
         <nav className={sideDrawerClass.join(" ")}>
             <ul className={style.header}>
                 <li>
-                    <Link to="/"><img className={style.logo} src={logo} alt="Логотип Республика" /></Link>
+                    <Logo />
                 </li>
                 <li>
                     <Link className={style.cart} to="/cart" onClick={click}>

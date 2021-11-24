@@ -1,7 +1,10 @@
 import React from "react"
+// == Styles
+import styleCom from "./styles/common/common.module.scss"
 import style from "./styles/Footer.module.scss"
 import { Link } from "react-router-dom"
-import logo from "./../assets/republic.png"
+
+import Logo from "./Logo"
 
 
 const Footer = () => {
@@ -9,9 +12,7 @@ const Footer = () => {
         <footer className={style.inner}>
             <address className={style.item}>
                 <div className={style.header__logo}>
-                    <Link to="/">
-                        <img className={style.logo} src={logo} alt="Логотип Республика" />
-                    </Link>
+                    <Logo />
                 </div>
                 <div className={style.contacts}>
                     <strong className={style.title}>

@@ -167,14 +167,15 @@
 }
 
 .select {
+    // -webkit-appearance: none;
     box-shadow: 8px 8px 16px 1px #cecece;
     cursor: pointer;
     outline: none;
     background: #C4C4C4;
-    padding: 0.3rem;
+    padding: 0.5rem;
     font-size: 0.8rem;
     font-weight: 700;
-    border-radius: 1rem 0;
+    border-radius: 11px 0;
 }
 
 .icon {

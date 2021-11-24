@@ -1,4 +1,5 @@
 import introImg from './assets/intro_winter.jpg'
+import logo from './assets/republic.png'
 
 // Feedback
 import user_1 from "./assets/feedback/user_1.png"
