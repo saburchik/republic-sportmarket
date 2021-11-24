@@ -72,7 +72,11 @@
         text-transform: lowercase;
 
         @media(min-width: 1990px) {
-            font-size: 1rem;
+            font-size: 0.9rem;
+        }
+
+        @media(max-width: 390px) {
+            font-size: 0.9rem;
         }
     }
 
@@ -89,12 +93,20 @@
         }
 
         @media(min-width: 1990px) {
-            font-size: 1rem;
+            font-size: 0.9rem;
+        }
+
+        @media(max-width: 390px) {
+            font-size: 0.9rem;
         }
     }
 
     @media (max-width: 523px) {
         align-items: center;
+    }
+
+    @media(max-width: 390px) {
+        font-size: 1.1rem;
     }
 
     @media(min-width: 1990px) {
@@ -116,6 +128,10 @@
     }
 
     @media(min-width: 1990px) {
+        font-size: 1rem;
+    }
+
+    @media(max-width: 390px) {
         font-size: 1rem;
     }
 }
