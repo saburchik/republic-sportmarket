@@ -1,0 +1,80 @@
+// == Used in:
+// == Navbar | SideDrawer | Footer;
+.logo {
+    width: clamp(120px, 7vw, 155px);
+    height: clamp(60px, 3vw, 75px);
+}
+
+// == Used in:
+// == Navbar |
+.input {
+    font-family: inherit;
+    font-size: clamp(1rem, 1vw, 1.5rem);
+    width: clamp(256px, 25vw, 500px);
+    color: #302B42;
+    background-color: #d0d0d0;
+    outline: none;
+    border: none;
+    border-radius: 10px;
+    padding: 0.5rem 2.5rem 0.5rem 1rem;
+
+    &:focus {
+        &::placeholder {
+            color: #939292;
+        }
+    }
+}
+
+// == Used in:
+// == HomeScreen 
+.title {
+    font-size: clamp(1.8rem, 2vw, 4rem);
+    font-weight: 700;
+    text-align: center;
+    text-transform: uppercase;
+    margin-bottom: 2.5rem;
+
+    &.size_s {
+        font-size: clamp(1.3rem, 1vw, 3rem);
+        margin-bottom: 1rem;
+    }
+
+    // == Product
+    &.product {
+        font-size: clamp(1rem, 1vw, 1.2rem);
+        text-align: left;
+        margin-bottom: 0;
+    }
+
+    // == Advantages
+    &.advantages {
+        font-size: clamp(0.7rem, 1vw, 1.5rem);
+        font-weight: 500;
+        margin-bottom: 0;
+
+        @media (max-width: 880px) {
+            font-size: 0;
+        }
+    }
+}
+
+// == Used in:
+// ==  Product
+.price {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    font-size: 1.3rem;
+    font-weight: 700;
+    color: #E87E7E;
+}
+
+.oldprice {
+    font-size: 1rem;
+    font-weight: 500;
+    color: #939292;
+
+    &.none {
+        font-size: 0;
+    }
+}

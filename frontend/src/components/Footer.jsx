@@ -1,6 +1,6 @@
 import React from "react"
 // == Styles
-import styleCom from "./styles/common/common.module.scss"
+// import styleCom from "./styles/common/common.module.scss"
 import style from "./styles/Footer.module.scss"
 import { Link } from "react-router-dom"
 

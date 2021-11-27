@@ -2,20 +2,7 @@
     padding: 1rem 2rem 5rem;
 }
 
-.title {
-    font-size: clamp(1.8rem, 2vw, 4rem);
-    font-weight: 700;
-    text-align: center;
-    text-transform: uppercase;
-    margin-bottom: 2.5rem;
-
-    &.size_s {
-        font-size: clamp(1.3rem, 1vw, 3rem);
-        margin-bottom: 1rem;
-    }
-}
-
-.product {
+.wrapper {
     display: grid;
     grid-template-columns: 1fr 2fr;
     justify-items: center;
@@ -32,11 +19,7 @@
 }
 
 .categories {
-    width: Min(100%, 350px);
-
-    @media(min-width: 1990px) {
-        width: 500px;
-    }
+    width: clamp(256px, 22vw, 450px);
 }
 
 .accordion {
@@ -45,23 +28,22 @@
 }
 
 .cards {
-    width: 100%;
-    justify-content: center;
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(17rem, 1fr));
+    justify-content: center;
     gap: 1rem;
-
-    @media (max-width: 390px) {
-        max-width: 100%;
-    }
+    width: 100%;
 
     @media (min-width: 1990px) {
-        grid-template-columns: repeat(auto-fit, minmax(350px, 370));
+        grid-template-columns: repeat(auto-fit, minmax(350px, 370px));
         gap: 1.5rem;
     }
 
     @media(max-width:624px) {
-        grid-template-columns: repeat(1, 1fr);
         max-width: 370px;
+    }
+
+    @media (max-width: 390px) {
+        max-width: 100%;
     }
 }

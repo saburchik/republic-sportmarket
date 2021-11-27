@@ -1,7 +1,8 @@
-import introImg from './assets/intro_winter.jpg'
-import logo from './assets/republic.png'
+//-- IntroSliders:
+import winterImg from './assets/winter.jpg'
+import skateImg from './assets/skate.jpg'
 
-// Feedback
+//-- Feedback:
 import user_1 from "./assets/feedback/user_1.png"
 import user_2 from "./assets/feedback/user_2.png"
 import user_3 from "./assets/feedback/user_3.png"
@@ -10,17 +11,17 @@ let state = {
     IntroSliders: [
         {
             id: 1,
-            title: `Отдыхай В Движении`,
-            img: introImg,
+            title: 'Отдыхай В Движении',
+            img: winterImg,
             alt: 'Изображение человека на сноуборде',
-            classPosition: '',
+            styleClass: '',
         },
         {
             id: 2,
             title: 'Сделай свою жизнь Ярче!',
-            img: 'https://i.imgur.com/zwb4Ql2.jpg',
+            img: skateImg,
             alt: 'Изображение скейтборда',
-            classPosition: 'left',
+            styleClass: 'left',
         }
     ],
     Categories: [

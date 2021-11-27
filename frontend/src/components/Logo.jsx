@@ -1,9 +1,9 @@
-// == Base
+// == Base:
 import { Link } from "react-router-dom"
-// == Img
+// == Img:
 import logo from "./../assets/republic.png"
-// == Style
-import styleCom from "./styles/common/common.module.scss"
+// == Styles:
+import styleCom from "../common.module.scss"
 
 const Logo = () => {
     return (

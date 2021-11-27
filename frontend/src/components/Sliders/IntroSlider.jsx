@@ -1,9 +1,12 @@
+// == Base:
 import React from "react"
 import Slider from "react-slick"
-import style from "./styles/IntroSlider.module.scss"
-import './styles/mainSlick.scss'
+// == Styles:
+import styleLoc from "./styles/IntroSlider.module.scss"
+import "./styles/mainSlick.scss"
 
 const IntroSlider = (props) => {
+    //-- Settings slider --<
     let settings = {
         dots: true,
         infinite: true,
@@ -13,24 +16,24 @@ const IntroSlider = (props) => {
         slidesToShow: 1,
         slidesToScroll: 1,
         arrows: false,
-        dotsClass: style.lines,
+        dotsClass: styleLoc.lines,
     }
 
+    //-- Drawing sliders from Business Logic State --<
     let drawSliders = props.state.IntroSliders.map(s => {
-        let text = `${style.text} ${s.classPosition !== '' ? style.left : ''}`
+        //-- Each slider has its additional style class, for individual customization --<
+        const setTitle = `${styleLoc.title} ${s.styleClass !== '' ? styleLoc.left : ''}`
 
         return (
-            <article className={style.item} key={s.id}>
-                <img className={style.img} src={s.img} alt={s.alt} />
-                <h1 className={text}>
-                    {s.title}
-                </h1>
+            <article key={s.id}>
+                <h1 className={setTitle}>{s.title}</h1>
+                <img className={styleLoc.img} src={s.img} alt={s.alt} />
             </article >
         )
     })
 
     return (
-        <Slider className={style.inner} {...settings}>
+        <Slider className={styleLoc.inner} {...settings}>
             {drawSliders}
         </Slider>
     )

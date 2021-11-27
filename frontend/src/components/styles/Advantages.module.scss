@@ -1,35 +1,24 @@
 .advantages {
     width: 100%;
+    background: #302B42;
 }
 
 .inner {
     display: flex;
     justify-content: space-around;
-    background-color: #302B42;
     padding: 1rem;
 }
 
 .item {
     display: flex;
     align-items: center;
-    gap: 0.5rem;
+    gap: clamp(0.5rem, 1vw, 1rem);
     color: #fff;
 
-    .icon {
-        width: 30px;
-        height: 30px;
+    svg {
+        width: clamp(30px, 2vw, 40px);
+        height: clamp(30px, 2vw, 40px);
         fill: #fff;
-    }
-
-    // duplicate title
-    .title {
-        font-size: clamp(0.7rem, 1vw, 1.5rem);
-        font-weight: 500;
-        text-transform: uppercase;
-
-        @media (max-width: 880px) {
-            font-size: 0;
-        }
     }
 
     @media (max-width: 880px) {

@@ -1,3 +1,4 @@
+//-- Setting styles for Navbar
 .nav {
     display: flex;
     justify-content: space-around;
@@ -23,29 +24,12 @@
     }
 }
 
+//-- Distance between cart icon & login --< 
 .links {
     gap: 3rem;
 }
 
-// Duplicate
-.input {
-    font-family: inherit;
-    font-size: clamp(1rem, 1vw, 1.5rem);
-    width: clamp(256px, 25vw, 500px);
-    color: #302B42;
-    background-color: #d0d0d0;
-    outline: none;
-    border: none;
-    border-radius: 10px;
-    padding: 0.5rem 3.5rem 0.5rem 1rem;
-
-    &:focus {
-        &::placeholder {
-            color: #939292;
-        }
-    }
-}
-
+//-- Svg search btn from the input form --<
 .btn {
     display: flex;
     align-items: center;
@@ -53,8 +37,8 @@
     height: 100%;
     border: none;
     cursor: pointer;
-    padding: 0 0.8rem;
     border-radius: 10px;
+    padding: 0 0.5rem;
     position: absolute;
     right: 0;
 
@@ -73,6 +57,8 @@
     }
 }
 
+//-- Common class link that additionally it's two classes (help & cart)
+// for customizing styles & code reduction --<
 .link {
     font-size: clamp(1.2rem, 1vw, 1.5rem);
     font-weight: 700;
@@ -81,7 +67,8 @@
     padding: 0.5rem;
     transition: 0.2s;
 
-    &:hover {
+    &:hover,
+    &:focus {
         color: #939292;
     }
 
@@ -89,7 +76,8 @@
         font-weight: 500;
         color: #939292;
 
-        &:hover {
+        &:hover,
+        &:focus {
             color: #302B42;
         }
     }
@@ -98,7 +86,8 @@
         color: #302B42;
         position: relative;
 
-        &:hover {
+        &:hover,
+        &:focus {
             .qty {
                 background-color: #fff;
                 transition: 0.3s;
@@ -107,12 +96,14 @@
     }
 }
 
+//-- Cart icon in svg format --<
 .icon {
     width: clamp(35px, 2vw, 40px);
     height: clamp(35px, 2vw, 55px);
     fill: #302B42;
 }
 
+//-- A circle in which the num of products in the cart --<
 .qty {
     display: flex;
     align-items: center;
@@ -120,7 +111,6 @@
     height: clamp(35px, 2vw, 45px);
     width: clamp(35px, 2vw, 45px);
     background: #E87E7E;
-    font-weight: 600;
     border: 2px solid #302B42;
     border-radius: 50%;
     position: absolute;
@@ -130,6 +120,7 @@
     left: 30px;
 }
 
+//-- Menu burger. Appears at width is less 890px --<
 .burger {
     display: none;
     flex-direction: column;

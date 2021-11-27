@@ -1,11 +1,14 @@
 .card {
     display: grid;
-    // grid-template-rows: minmax(360px, 2.5fr) 0.5fr;
     grid-template-rows: minmax(360px, 400px) 1fr;
     background-color: #fff;
     border-radius: 4px;
-    border: 3px solid #302B42;
+    border: 3px solid #cecece;
     transition: 0.3s;
+
+    a {
+        position: relative;
+    }
 
     &:hover {
         box-shadow: 10px 10px 15px 1px #cecece;
@@ -15,10 +18,6 @@
             transition: 0.3s;
         }
     }
-}
-
-.link {
-    position: relative;
 }
 
 .status {
@@ -32,17 +31,17 @@
     font-weight: 700;
     font-size: 1rem;
     text-transform: uppercase;
-    border-top-left-radius: 2px;
+    border-top-left-radius: 1px;
     position: absolute;
     top: 0;
     left: 0;
     z-index: 3;
 
-    &.status_red {
+    &.color_red {
         display: flex;
     }
 
-    &.status_green {
+    &.color_green {
         display: flex;
         background-color: #A0E87E;
     }
@@ -62,39 +61,8 @@
     grid-template-columns: 6fr 1fr;
     grid-template-rows: 1fr 0.5fr;
     gap: 0.5rem;
-    border-top: 3px solid #302B42;
+    border-top: 3px solid #cecece;
     padding: 1rem;
-}
-
-.title {
-    line-height: initial;
-    font-size: 1rem;
-    letter-spacing: 1px;
-    font-weight: 500;
-    text-transform: uppercase;
-
-    @media (min-width: 1990px) {
-        font-size: 1.2rem;
-    }
-}
-
-.price {
-    display: flex;
-    align-items: center;
-    gap: 1rem;
-    font-size: 1.3rem;
-    font-weight: 700;
-    color: #E87E7E;
-}
-
-.oldprice {
-    color: #939292;
-    font-size: 1rem;
-    font-weight: 500;
-
-    &.none {
-        font-size: 0;
-    }
 }
 
 .play {

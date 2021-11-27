@@ -1,14 +1,17 @@
-import style from "./Homescreen.module.scss"
+// == Base:
 import { React, useEffect } from "react"
 import { useSelector, useDispatch } from "react-redux"
-// Components
+// == Actions:
+import { getProducts as listProducts } from "../../redux/actions/productActions"
+// == Styles:
+import styleCom from "../../common.module.scss"
+import styleLoc from "./Homescreen.module.scss"
+// == Components:
 import IntroSlider from "../../components/Sliders/IntroSlider"
 import Advantages from "../../components/Advantages"
 import Accordion from "../../components/Accordion"
 import Product from "../../components/Product"
 import Feedback from "../../components/Sliders/Feedback"
-// Actions
-import { getProducts as listProducts } from "../../redux/actions/productActions"
 
 const HomeScreen = (props) => {
     const dispatch = useDispatch()
@@ -16,13 +19,16 @@ const HomeScreen = (props) => {
     const { products, loading, error } = getProducts
     useEffect(() => dispatch(listProducts()), [dispatch])
 
-    // == Drawing accordion titles ==<
-    const accordions = props.state.Categories.map(a => <Accordion key={a.id} title={a.title} subtitles={a.subtitles} />)
+    //-- Drawing accordion titles --<
+    const setAccordions = props.state.Categories.map(a => <Accordion key={a.id} title={a.title} subtitles={a.subtitles} />)
 
-    // == Loading, then checking for errors and finally drawing product cards ==<
-    const drawsProducts = () => loading ? <h3 className={style.title}>Loading...</h3>
+    const setTitle = `${styleCom.title} ${styleCom.size_s}`
+
+    //-- Loading, then checking for errors and finally drawing product cards --<
+    const drawsProducts = () => loading
+        ? <h3 className={setTitle}>Loading...</h3>
         : error
-            ? <h3 className={style.title}>{error}</h3>
+            ? <h3 className={setTitle}>{error}</h3>
             : products.map(product => <Product
                 key={product._id}
                 productId={product._id}
@@ -38,26 +44,16 @@ const HomeScreen = (props) => {
         <main>
             <IntroSlider state={props.state} />
             <Advantages />
-            <article className={style.inner}>
-                <h2 className={style.title}>Ассортимент</h2>
-                <section className={style.product}>
-                    <div className={style.categories}>
-                        <h3 className={style.title + ' ' + style.size_s}>Категории:</h3>
-                        <svg display="none">
-                            <symbol id="chevron-down" viewBox="0 0 448 512">
-                                <path d="M207.029 381.476L12.686 187.132c-9.373-9.373-9.373-24.569 0-33.941l22.667-22.667c9.357-9.357 24.522-9.375 33.901-.04L224 284.505l154.745-154.021c9.379-9.335 24.544-9.317 33.901.04l22.667 22.667c9.373 9.373 9.373 24.569 0 33.941L240.971 381.476c-9.373 9.372-24.569 9.372-33.942 0z"></path>
-                            </symbol>
-                        </svg>
-                        <ul className={style.accordion}>
-                            {accordions}
+            <article className={styleLoc.inner}>
+                <h2 className={styleCom.title}>Ассортимент</h2>
+                <section className={styleLoc.wrapper}>
+                    <section className={styleLoc.categories}>
+                        <h3 className={setTitle}>Категории:</h3>
+                        <ul className={styleLoc.accordion}>
+                            {setAccordions}
                         </ul>
-                    </div>
-                    <ul className={style.cards}>
-                        <svg display="none">
-                            <symbol id="play-solid" viewBox="0 0 448 512">
-                                <path d="M424.4 214.7L72.4 6.6C43.8-10.3 0 6.1 0 47.9V464c0 37.5 40.7 60.1 72.4 41.3l352-208c31.4-18.5 31.5-64.1 0-82.6z"></path>
-                            </symbol>
-                        </svg>
+                    </section>
+                    <ul className={styleLoc.cards}>
                         {drawsProducts()}
                     </ul>
                 </section>
