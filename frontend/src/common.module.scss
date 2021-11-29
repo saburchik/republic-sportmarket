@@ -26,27 +26,13 @@
 }
 
 // == Used in:
-// == HomeScreen 
 .title {
     font-size: clamp(1.8rem, 2vw, 4rem);
     font-weight: 700;
     text-align: center;
     text-transform: uppercase;
-    margin-bottom: 2.5rem;
 
-    &.size_s {
-        font-size: clamp(1.3rem, 1vw, 3rem);
-        margin-bottom: 1rem;
-    }
-
-    // == Product
-    &.product {
-        font-size: clamp(1rem, 1vw, 1.2rem);
-        text-align: left;
-        margin-bottom: 0;
-    }
-
-    // == Advantages
+    // == Advantages:
     &.advantages {
         font-size: clamp(0.7rem, 1vw, 1.5rem);
         font-weight: 500;
@@ -55,6 +41,21 @@
         @media (max-width: 880px) {
             font-size: 0;
         }
+    }
+
+    // == HomeScreen:
+    &.home {
+        font-weight: 700;
+        margin-bottom: 2.5rem;
+    }
+
+    &.size_s {
+        font-size: clamp(1.3rem, 1vw, 3rem);
+    }
+
+    // == Product:
+    &.product {
+        font-size: clamp(1rem, 1vw, 1.2rem);
     }
 }
 

@@ -1,9 +1,13 @@
+// == Base:
 import React from "react"
-import style from "./styles/Feedback.module.scss"
-import Sliders from "react-slick"
+import SlidersFeedback from "react-slick"
+// == Styles:
+import styleCom from "../../common.module.scss"
+import styleLoc from "./styles/Feedback.module.scss"
 import './styles/mainSlick.scss'
 
 const Feedback = (props) => {
+    //== Settings slider:
     let settings = {
         dot: true,
         infinite: true,
@@ -15,12 +19,13 @@ const Feedback = (props) => {
         cssEase: "linear",
     }
 
-    let drawSliders = props.state.FeedbackSliders.map(i => {
+    //== Drawing sliders from Business Logic State(state.js):
+    let drawSliders = props.state.feedback.map(i => {
         return (
             <div key={i.id}>
-                <div className={style.item}>
-                    <img className={style.img} src={i.img} alt={i.alt} />
-                    <em className={style.comment}>
+                <div className={styleLoc.item}>
+                    <img className={styleLoc.img} src={i.img} alt={i.alt} />
+                    <em className={styleLoc.comment}>
                         {i.comment}
                         <strong>– {i.author}</strong>
                     </em>
@@ -30,11 +35,11 @@ const Feedback = (props) => {
     })
 
     return (
-        <article className={style.article}>
-            <h2 className={style.title}>Отзывы покупателей</h2>
-            <Sliders className={style.inner} {...settings}>
+        <article className={styleLoc.article}>
+            <h2 className={styleCom.title}>Отзывы покупателей</h2>
+            <SlidersFeedback className={styleLoc.inner} {...settings}>
                 {drawSliders}
-            </Sliders>
+            </SlidersFeedback>
         </article>
     )
 }

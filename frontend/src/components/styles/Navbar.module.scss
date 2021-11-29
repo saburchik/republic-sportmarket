@@ -1,4 +1,4 @@
-//-- Setting styles for Navbar
+//== Setting styles for Navbar:
 .nav {
     display: flex;
     justify-content: space-around;
@@ -24,12 +24,12 @@
     }
 }
 
-//-- Distance between cart icon & login --< 
+//== Distance between cart icon & login:
 .links {
     gap: 3rem;
 }
 
-//-- Svg search btn from the input form --<
+//== Svg search btn from the input form:
 .btn {
     display: flex;
     align-items: center;
@@ -57,8 +57,8 @@
     }
 }
 
-//-- Common class link that additionally it's two classes (help & cart)
-// for customizing styles & code reduction --<
+//== Common class link that additionally it's two classes (help & cart)..
+// for customizing styles & code reduction:
 .link {
     font-size: clamp(1.2rem, 1vw, 1.5rem);
     font-weight: 700;
@@ -96,14 +96,14 @@
     }
 }
 
-//-- Cart icon in svg format --<
+//== Cart icon in svg format:
 .icon {
     width: clamp(35px, 2vw, 40px);
     height: clamp(35px, 2vw, 55px);
     fill: #302B42;
 }
 
-//-- A circle in which the num of products in the cart --<
+//== A circle in which the num of products in the cart:
 .qty {
     display: flex;
     align-items: center;
@@ -120,7 +120,7 @@
     left: 30px;
 }
 
-//-- Menu burger. Appears at width is less 890px --<
+//== Menu burger. Appears at width is less 890px:
 .burger {
     display: none;
     flex-direction: column;

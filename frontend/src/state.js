@@ -8,7 +8,7 @@ import user_2 from "./assets/feedback/user_2.png"
 import user_3 from "./assets/feedback/user_3.png"
 
 let state = {
-    IntroSliders: [
+    intro: [
         {
             id: 1,
             title: 'Отдыхай В Движении',
@@ -55,7 +55,7 @@ let state = {
             ]
         },
     ],
-    FeedbackSliders: [
+    feedback: [
         {
             id: 1,
             img: user_1,

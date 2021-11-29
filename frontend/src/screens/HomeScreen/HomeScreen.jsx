@@ -19,12 +19,13 @@ const HomeScreen = (props) => {
     const { products, loading, error } = getProducts
     useEffect(() => dispatch(listProducts()), [dispatch])
 
-    //-- Drawing accordion titles --<
+    // == Drawing accordion titles:
     const setAccordions = props.state.Categories.map(a => <Accordion key={a.id} title={a.title} subtitles={a.subtitles} />)
 
+    // == Settings styles for title:
     const setTitle = `${styleCom.title} ${styleCom.size_s}`
 
-    //-- Loading, then checking for errors and finally drawing product cards --<
+    // == Loading, then checking for errors and finally drawing product cards:
     const drawsProducts = () => loading
         ? <h3 className={setTitle}>Loading...</h3>
         : error
@@ -45,7 +46,7 @@ const HomeScreen = (props) => {
             <IntroSlider state={props.state} />
             <Advantages />
             <article className={styleLoc.inner}>
-                <h2 className={styleCom.title}>Ассортимент</h2>
+                <h2 className={`${styleCom.title} ${styleCom.home}`}>Ассортимент</h2>
                 <section className={styleLoc.wrapper}>
                     <section className={styleLoc.categories}>
                         <h3 className={setTitle}>Категории:</h3>

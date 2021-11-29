@@ -1,57 +1,59 @@
+// == Base:
 import React from "react"
-// == Styles
-// import styleCom from "./styles/common/common.module.scss"
-import style from "./styles/Footer.module.scss"
 import { Link } from "react-router-dom"
-
+// == Styles:
+// import styleCom from "./styles/common/common.module.scss"
+import styleLoc from "./styles/Footer.module.scss"
+// == Component:
 import Logo from "./Logo"
 
 
 const Footer = () => {
+
     return (
-        <footer className={style.inner}>
-            <address className={style.item}>
-                <div className={style.header__logo}>
+        <footer className={styleLoc.inner}>
+            <address className={styleLoc.item}>
+                <div className={`${styleLoc.header} ${styleLoc.logo}`}>
                     <Logo />
                 </div>
-                <div className={style.contacts}>
-                    <strong className={style.title}>
+                <div className={styleLoc.contacts}>
+                    <strong className={styleLoc.title}>
                         Время работы службы поддержки:
-                        <em>ПН-ПТ с 09:00 до 21:00</em>
+                        <em className={styleLoc.subtitle}>ПН-ПТ с 09:00 до 21:00</em>
                     </strong>
-                    <strong className={style.title}>
+                    <strong className={styleLoc.title}>
                         Горячая линия:
                         <a href="tel:88005555585">+7 800 5555 585</a>
                     </strong>
-                    <strong className={style.title}>
+                    <strong className={styleLoc.title}>
                         Email:
-                        <a href="mailto:republic.store@gmail.com">republic.store@gmail.com</a>
+                        <a href="mailto:the.saburchik@gmail.com">republic.store@gmail.com</a>
                     </strong>
-                    <Link to="/" className={style.link}>Обратная связь</Link>
+                    <Link to="/" className={styleLoc.link}>Обратная связь</Link>
                 </div>
             </address>
-            <section className={style.item}>
-                <div className={style.header}>
-                    <h4 className={style.title}>Информация:</h4>
+            <section className={styleLoc.item}>
+                <div className={styleLoc.header}>
+                    <h4 className={styleLoc.title}>Информация:</h4>
                 </div>
-                <ul className={style.wrapper}>
-                    <li><Link className={style.link} to="/">О компании</Link></li>
-                    <li><Link className={style.link} to="/">Частые вопросы [FAQ]</Link></li>
-                    <li><Link className={style.link} to="/">Работа у нас</Link></li>
-                    <li><Link className={style.link} to="/">Правовая информация</Link></li>
-                    <li><Link className={style.link} to="/">Сотрудничество</Link></li>
+                <ul className={styleLoc.wrapper}>
+                    <li><Link className={styleLoc.link} to="/">О компании</Link></li>
+                    <li><Link className={styleLoc.link} to="/">Частые вопросы [FAQ]</Link></li>
+                    <li><Link className={styleLoc.link} to="/">Работа у нас</Link></li>
+                    <li><Link className={styleLoc.link} to="/">Правовая информация</Link></li>
+                    <li><Link className={styleLoc.link} to="/">Сотрудничество</Link></li>
                 </ul>
             </section>
-            <section className={style.item}>
-                <div className={style.header}>
-                    <h4 className={style.title}>Покупателем:</h4>
+            <section className={styleLoc.item}>
+                <div className={styleLoc.header}>
+                    <h4 className={styleLoc.title}>Покупателем:</h4>
                 </div>
-                <ul className={style.wrapper}>
-                    <li><Link className={style.link} to="/">Условия продаж</Link></li>
-                    <li><Link className={style.link} to="/">Оплата и доставка</Link></li>
-                    <li><Link className={style.link} to="/">Гарантия и возврат</Link></li>
+                <ul className={styleLoc.wrapper}>
+                    <li><Link className={styleLoc.link} to="/">Условия продаж</Link></li>
+                    <li><Link className={styleLoc.link} to="/">Оплата и доставка</Link></li>
+                    <li><Link className={styleLoc.link} to="/">Гарантия и возврат</Link></li>
                     <li>
-                        <ul className={style.media}>
+                        <ul className={styleLoc.media}>
                             <svg display="none">
                                 <symbol id="vk-brands" viewBox="0 0 576 512">
                                     <path d="M545 117.7c3.7-12.5 0-21.7-17.8-21.7h-58.9c-15 0-21.9 7.9-25.6 16.7 0 0-30 73.1-72.4 120.5-13.7 13.7-20 18.1-27.5 18.1-3.7 0-9.4-4.4-9.4-16.9V117.7c0-15-4.2-21.7-16.6-21.7h-92.6c-9.4 0-15 7-15 13.5 0 14.2 21.2 17.5 23.4 57.5v86.8c0 19-3.4 22.5-10.9 22.5-20 0-68.6-73.4-97.4-157.4-5.8-16.3-11.5-22.9-26.6-22.9H38.8c-16.8 0-20.2 7.9-20.2 16.7 0 15.6 20 93.1 93.1 195.5C160.4 378.1 229 416 291.4 416c37.5 0 42.1-8.4 42.1-22.9 0-66.8-3.4-73.1 15.4-73.1 8.7 0 23.7 4.4 58.7 38.1 40 40 46.6 57.9 69 57.9h58.9c16.8 0 25.3-8.4 20.4-25-11.2-34.9-86.9-106.7-90.3-111.5-8.7-11.2-6.2-16.2 0-26.2.1-.1 72-101.3 79.4-135.6z" />
@@ -67,28 +69,28 @@ const Footer = () => {
                                 </symbol>
                             </svg>
                             <li>
-                                <Link className={style.icon} to="/">
+                                <Link className={styleLoc.icon} to="/">
                                     <svg>
                                         <use xlinkHref="#vk-brands" />
                                     </svg>
                                 </Link>
                             </li>
                             <li>
-                                <Link className={style.icon} to="/">
+                                <Link className={styleLoc.icon} to="/">
                                     <svg>
                                         <use xlinkHref="#youtube-brands" />
                                     </svg>
                                 </Link>
                             </li>
                             <li>
-                                <Link className={style.icon} to="/">
+                                <Link className={styleLoc.icon} to="/">
                                     <svg>
                                         <use xlinkHref="#telegram-brands" />
                                     </svg>
                                 </Link>
                             </li>
                             <li>
-                                <Link className={style.icon} to="/">
+                                <Link className={styleLoc.icon} to="/">
                                     <svg>
                                         <use xlinkHref="#instagram-brands" />
                                     </svg>
@@ -98,7 +100,7 @@ const Footer = () => {
                     </li>
                 </ul>
             </section>
-            <p className={style.rights}>
+            <p className={styleLoc.rights}>
                 2020 – 2021, © ИМ Республика.
                 Все права защищены. Информация, размещенная на данной странице, не является публичной офертой.
             </p>

@@ -6,7 +6,10 @@ import styleCom from "../common.module.scss"
 import styleLoc from "./styles/Product.module.scss"
 
 const Product = ({ productId, name, status, price, oldPrice, imageUrl }) => {
+    // == Settings path to product by id:
+    const pathToProduct = `/product/${productId}`
 
+    // == Settings display: NEW || Sale || Empty;
     const setStatus = () => {
         const iconStatusColor = [styleLoc.status]
 
@@ -20,8 +23,8 @@ const Product = ({ productId, name, status, price, oldPrice, imageUrl }) => {
         return iconStatusColor.join(' ')
     }
 
+    // == Settings display: oldPrice || Empty;
     const styleOldPrice = oldPrice === 0 ? `${styleCom.oldprice} ${styleCom.none}` : styleCom.oldprice
-    const pathToProduct = `/product/${productId}`
 
     return (
         <li className={styleLoc.card}>

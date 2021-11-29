@@ -8,16 +8,8 @@
 
 .inner {
     width: Min(75%, 1700px);
-    height: auto;
     margin: 0 auto;
     padding: 3rem 0;
-    position: relative;
-}
-
-.title {
-    font-size: clamp(1.5rem, 2vw, 4rem);
-    text-align: center;
-    text-transform: uppercase;
 }
 
 .item {
@@ -37,13 +29,10 @@
 .comment {
     display: flex;
     flex-direction: column;
+    gap: 1rem;
     font-size: clamp(1rem, 1vw, 1.5rem);
     padding: 1rem;
     margin: 0;
-
-    strong {
-        margin-top: 1rem;
-    }
 
     @media (max-width:790px) {
         padding: 1rem 0;
