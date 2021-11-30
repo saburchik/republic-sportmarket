@@ -4,7 +4,7 @@ import SlidersFeedback from "react-slick"
 // == Styles:
 import styleCom from "../../common.module.scss"
 import styleLoc from "./styles/Feedback.module.scss"
-import './styles/mainSlick.scss'
+import './styles/slick.scss'
 
 const Feedback = (props) => {
     //== Settings slider:

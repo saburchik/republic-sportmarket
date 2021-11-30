@@ -7,7 +7,7 @@ import { getProducts as listProducts } from "../../redux/actions/productActions"
 import styleCom from "../../common.module.scss"
 import styleLoc from "./Homescreen.module.scss"
 // == Components:
-import IntroSlider from "../../components/Sliders/IntroSlider"
+import Intro from "../../components/Sliders/Intro"
 import Advantages from "../../components/Advantages"
 import Accordion from "../../components/Accordion"
 import Product from "../../components/Product"
@@ -43,7 +43,7 @@ const HomeScreen = (props) => {
 
     return (
         <main>
-            <IntroSlider state={props.state} />
+            <Intro state={props.state} />
             <Advantages />
             <article className={styleLoc.inner}>
                 <h2 className={`${styleCom.title} ${styleCom.home}`}>Ассортимент</h2>

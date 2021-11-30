@@ -1,13 +1,14 @@
-import style from './ProductScreen.module.scss';
+// == Base:
 import { React, useState, useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { Link, useLocation } from 'react-router-dom'
-
-// Actions
+// == Actions:
 import { getProductDetails } from "../../redux/actions/productActions";
 import { addToCart } from "../../redux/actions/cartActions";
-
-// Components
+// == Styles:
+import styleCom from "../../common.module.scss"
+import styleLoc from './ProductScreen.module.scss';
+// == Component:
 import Advantages from '../../components/Advantages';
 
 const ProductScreen = ({ match, history }) => {
@@ -57,9 +58,9 @@ const ProductScreen = ({ match, history }) => {
         if (product.countInStock === 0) {
             isTrue = true
         } else {
-            return <div className={style.quantity}>
+            return <div className={styleLoc.quantity}>
                 <p>Количество:</p>
-                <select className={style.select} value={qty} onChange={(e) => setQty(e.target.value)}>
+                <select className={styleLoc.select} value={qty} onChange={(e) => setQty(e.target.value)}>
                     {[...Array(product.countInStock).keys()].map((x) => (
                         <option key={x + 1} value={x + 1}>{x + 1}</option>
                     ))}
@@ -74,14 +75,13 @@ const ProductScreen = ({ match, history }) => {
         }
     }
 
-
     return (
         <div>
             {loading ? <h2>Loading...</h2> : error ? <h2>{error}</h2> : (
                 <>
                     <Advantages />
-                    <div className={style.inner}>
-                        <div className={style.images}>
+                    <div className={styleLoc.inner}>
+                        <div className={styleLoc.images}>
                             <span className={checkStatus()}>{product.status}</span>
                             <img
                                 src={product.imageUrl}
@@ -89,27 +89,27 @@ const ProductScreen = ({ match, history }) => {
                             />
                         </div>
 
-                        <div className={style.information}>
+                        <div className={styleLoc.information}>
                             <header>
-                                <p className={style.name}>{product.name}</p>
-                                <p className={style.price}>
+                                <p className={styleLoc.name}>{product.name}</p>
+                                <p className={styleLoc.price}>
                                     {product.price} ₽
-                                    <strike className={
-                                        product.oldPrice === 0 ? "old-price undefined" : "old-price"
-                                    }>{product.oldPrice}
-                                    </strike>
+                                    <del className={product.oldPrice === 0
+                                        ? `${styleCom.oldprice} ${styleCom.none}`
+                                        : styleCom.oldprice
+                                    }>{product.oldPrice} ₽</del>
                                 </p>
                             </header>
 
-                            <div className={style.contains}>
-                                <p className={style.article}>артикул: <strong>{product.article}</strong></p>
-                                <p className={style.description}>
+                            <div className={styleLoc.contains}>
+                                <p className={styleLoc.article}>артикул: <strong>{product.article}</strong></p>
+                                <p className={styleLoc.description}>
                                     <strong>Описание:</strong>
                                     {product.description}
                                 </p>
-                                <button className={style.btn}>Размераня сетка</button>
-                                <div className={style.status}>
-                                    <p className={style.article}>статус:
+                                <button className={styleLoc.btn}>Размераня сетка</button>
+                                <div className={styleLoc.status}>
+                                    <p className={styleLoc.article}>статус:
                                         <strong> {product.countInStock > 0 ? "В наличии" : "Нет в наличии"}</strong>
                                     </p>
                                     {disableBtn()}
@@ -117,7 +117,7 @@ const ProductScreen = ({ match, history }) => {
                             </div>
 
                             <button
-                                className={`${style.btn} ${style.color}`}
+                                className={`${styleLoc.btn} ${styleLoc.color}`}
                                 type="button"
                                 onClick={addToCartHandler}
                                 disabled={isTrue}
@@ -125,16 +125,16 @@ const ProductScreen = ({ match, history }) => {
                             >В корзину</button>
                         </div>
                     </div>
-                    <div className={style.reviews}>
-                        <h3 className={style.title}>Отзывы</h3>
-                        <div className={style.client}>
-                            <strong className={`${style.title} ${style.client__name}`}>Saburchik:</strong>
-                            <p className={`${style.description} ${style.description__text}`}>Отличный магазин, доставка до Красноярска как и заявлена 4 дня, постоянно есть обратная связь. Доска без косяков, что хотел, то и получил, приятно когда работают профессионалы.</p>
-                            <strong className={style.date}>02.03.2021 | 19:42</strong>
+                    <div className={styleLoc.reviews}>
+                        <h3 className={styleLoc.title}>Отзывы</h3>
+                        <div className={styleLoc.client}>
+                            <strong className={`${styleLoc.title} ${styleLoc.client__name}`}>Saburchik:</strong>
+                            <p className={`${styleLoc.description} ${styleLoc.description__text}`}>Отличный магазин, доставка до Красноярска как и заявлена 4 дня, постоянно есть обратная связь. Доска без косяков, что хотел, то и получил, приятно когда работают профессионалы.</p>
+                            <strong className={styleLoc.date}>02.03.2021 | 19:42</strong>
                         </div>
-                        <p className={style.alert}>
-                            Отзывы могут оставлять только <Link className={style.link} to="/">зарегистрированные</Link> пользователи. <br />
-                            <Link className={style.link} to="/" >Авторизоваться и оставить отзыв</Link>
+                        <p className={styleLoc.alert}>
+                            Отзывы могут оставлять только <Link className={styleLoc.link} to="/">зарегистрированные</Link> пользователи. <br />
+                            <Link className={styleLoc.link} to="/" >Авторизоваться и оставить отзыв</Link>
                         </p>
                     </div>
                 </>

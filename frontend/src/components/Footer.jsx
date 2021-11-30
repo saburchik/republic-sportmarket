@@ -2,7 +2,6 @@
 import React from "react"
 import { Link } from "react-router-dom"
 // == Styles:
-// import styleCom from "./styles/common/common.module.scss"
 import styleLoc from "./styles/Footer.module.scss"
 // == Component:
 import Logo from "./Logo"

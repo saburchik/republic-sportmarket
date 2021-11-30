@@ -2,10 +2,10 @@
 import React from "react"
 import SlidersIntro from "react-slick"
 // == Styles:
-import styleLoc from "./styles/IntroSlider.module.scss"
-import "./styles/mainSlick.scss"
+import styleLoc from "./styles/Intro.module.scss"
+import "./styles/slick.scss"
 
-const IntroSlider = (props) => {
+const Intro = (props) => {
     //== Settings slider:
     let settings = {
         dots: true,
@@ -39,4 +39,4 @@ const IntroSlider = (props) => {
     )
 }
 
-export default IntroSlider
+export default Intro

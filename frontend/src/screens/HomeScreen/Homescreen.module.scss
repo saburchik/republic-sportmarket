@@ -1,5 +1,5 @@
 .inner {
-    padding: 1rem 2rem 5rem;
+    padding: 1rem clamp(1rem, 1vw, 2rem) 5rem;
 }
 
 .wrapper {
@@ -19,7 +19,7 @@
 }
 
 .categories {
-    width: clamp(256px, 22vw, 450px);
+    width: clamp(288px, 22vw, 450px);
 }
 
 .accordion {

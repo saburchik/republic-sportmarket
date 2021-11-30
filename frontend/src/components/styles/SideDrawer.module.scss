@@ -3,7 +3,7 @@
     flex-direction: column;
     width: 75%;
     height: 100vh;
-    background-color: #fff;
+    background: #fff;
     transform: translateY(-100%);
     transition: all 0.3s ease-out;
     position: fixed;
@@ -27,111 +27,13 @@
     padding: 0.5rem 1rem;
 }
 
-// .logo {
-    //     width: 150px;
-    //     height: 70px;
-    // }
-
-.cart,
-.links {
-    font-size: 1.2rem;
-    font-weight: 700;
-    text-transform: uppercase;
-    color: #302B42;
-    border-radius: 8px;
-    padding: 0.5rem;
-    transition: 0.2s;
-    position: relative;
-}
-
-.cart {
-    &:hover {
-        .cart__num {
-            background-color: #fff;
-            transition: 0.3s;
-        }
-    }
-}
-
-.links {
-    &:hover {
-        color: #939292;
-    }
-}
-
-.cart__logo {
-    width: 35px;
-    height: 35px;
-    fill: #302B42;
-}
-
-.cart__num {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 30px;
-    width: 30px;
-    background-color: #E87E7E;
-    font-weight: 500;
-    border: 2px solid #302B42;
-    border-radius: 50%;
-    position: absolute;
-    top: 0;
-    left: 30px;
-}
-
 .items {
     display: flex;
     flex-direction: column;
     justify-content: space-around;
-    gap: 2rem;
     align-items: baseline;
-    padding: 1rem;
+    gap: 2rem;
     border-top: 3px solid #302B42;
     border-bottom: 3px solid #302B42;
-}
-
-.input {
-    font-family: inherit;
-    font-size: clamp(1rem, 1vw, 1.5rem);
-    width: clamp(100%, 25vw, 500px);
-    color: #302B42;
-    background-color: #d0d0d0;
-    outline: none;
-    border: none;
-    border-radius: 10px;
-    padding: 0.5rem 3.5rem 0.5rem 1rem;
-
-    &:focus {
-        &::placeholder {
-            color: #939292;
-        }
-    }
-}
-
-.btn {
-    display: flex;
-    align-items: center;
-    background-color: transparent;
-    height: 100%;
-    border: none;
-    cursor: pointer;
-    padding: 0 0.8rem;
-    border-radius: 10px;
-    position: absolute;
-    right: 0;
-
-    svg {
-        width: 20px;
-        height: 20px;
-        fill: #302B42;
-        transition: 0.2s;
-    }
-
-    &:hover,
-    &:focus {
-        svg {
-            fill: #939292;
-        }
-    }
+    padding: 1rem;
 }

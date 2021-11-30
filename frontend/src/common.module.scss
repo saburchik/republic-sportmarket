@@ -6,13 +6,107 @@
 }
 
 // == Used in:
-// == Navbar |
+// == Navbar | SideDrawer;
+.btn {
+    display: flex;
+    align-items: center;
+    background-color: transparent;
+    height: 100%;
+    border: none;
+    cursor: pointer;
+    border-radius: 10px;
+    padding: 0 0.5rem;
+    position: absolute;
+    right: 0;
+
+    svg {
+        width: clamp(20px, 1vw, 30px);
+        height: clamp(20px, 1vw, 30px);
+        fill: #302B42;
+        transition: 0.2s;
+    }
+
+    &:hover,
+    &:focus-visible {
+        svg {
+            fill: #939292;
+        }
+    }
+}
+
+// == Used in:
+// == Navbar | SideDrawer;
+.link {
+    font-size: clamp(1.2rem, 1vw, 1.5rem);
+    font-weight: 700;
+    text-transform: uppercase;
+    color: #302B42;
+    padding: 0.5rem;
+    transition: 0.2s;
+
+    &:hover,
+    &:focus {
+        color: #939292;
+    }
+
+    &.help {
+        font-weight: 500;
+        color: #939292;
+
+        &:hover,
+        &:focus-visible {
+            color: #302B42;
+        }
+    }
+
+    &.cart {
+        color: #302B42;
+        position: relative;
+
+        &:hover,
+        &:focus-visible {
+            .qty {
+                background-color: #fff;
+                transition: 0.3s;
+            }
+        }
+    }
+}
+
+// == Used in:
+// == Navbar | SideDrawer;
+.icon {
+    width: clamp(35px, 2vw, 40px);
+    height: clamp(35px, 2vw, 55px);
+    fill: #302B42;
+}
+
+// == Used in:
+// == Navbar | SideDrawer;
+.qty {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: clamp(35px, 2vw, 45px);
+    width: clamp(35px, 2vw, 45px);
+    background: #E87E7E;
+    border: 2px solid #302B42;
+    border-radius: 50%;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 30px;
+}
+
+// == Used in:
+// == Navbar | SideDrawe | Digest;
 .input {
     font-family: inherit;
     font-size: clamp(1rem, 1vw, 1.5rem);
     width: clamp(256px, 25vw, 500px);
     color: #302B42;
-    background-color: #d0d0d0;
+    background: #d0d0d0;
     outline: none;
     border: none;
     border-radius: 10px;
@@ -23,9 +117,27 @@
             color: #939292;
         }
     }
+
+    // == Digest: 
+    &.digest {
+        background: #fff;
+        padding: 0.5rem 3.5rem 0.5rem 1rem;
+
+        &:focus {
+            &::placeholder {
+                color: #E87E7E;
+            }
+        }
+    }
+
+    // == Need for everything classes; 
+    @media (max-width: 390px) {
+        width: 100%;
+    }
 }
 
 // == Used in:
+// == Advantages | HomeScreen | Product;
 .title {
     font-size: clamp(1.8rem, 2vw, 4rem);
     font-weight: 700;
@@ -56,6 +168,20 @@
     // == Product:
     &.product {
         font-size: clamp(1rem, 1vw, 1.2rem);
+        text-align: left;
+    }
+}
+
+// == Used in:
+// == Digest
+.discription {
+    font-size: clamp(1rem, 1vw, 1.5rem);
+    color: #fff;
+    width: Min(100%, 800px);
+    max-width: 1500px;
+
+    @media (min-width: 1700px) {
+        width: 100%;
     }
 }
 
@@ -70,6 +196,8 @@
     color: #E87E7E;
 }
 
+// == Used in:
+// ==  Product
 .oldprice {
     font-size: 1rem;
     font-weight: 500;
