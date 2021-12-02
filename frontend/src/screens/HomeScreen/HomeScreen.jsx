@@ -27,7 +27,7 @@ const HomeScreen = (props) => {
 
     // == Loading, then checking for errors and finally drawing product cards:
     const drawsProducts = () => loading
-        ? <h3 className={setTitle}>Loading...</h3>
+        ? <div className={styleCom.loading}><h3>Загрузка...</h3></div>
         : error
             ? <h3 className={setTitle}>{error}</h3>
             : products.map(product => <Product

@@ -26,7 +26,7 @@ const Intro = (props) => {
 
         return (
             <article key={s.id}>
-                <h1 className={setTitle}>{s.title}</h1>
+                <h1 className={setTitle}>{s.title} <br /> {s.titleSplit}</h1>
                 <img className={styleLoc.img} src={s.img} alt={s.alt} />
             </article >
         )

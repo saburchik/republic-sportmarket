@@ -1,3 +1,92 @@
+@import-normalize;
+
+// == Font style:
+@font-face {
+    font-family: 'Montserrat';
+    src: url('fonts/Montserrat-Medium.eot');
+    src: url('fonts/Montserrat-Medium.eot?#iefix') format('embedded-opentype'),
+        url('fonts/Montserrat-Medium.woff2') format('woff2'),
+        url('fonts/Montserrat-Medium.woff') format('woff'),
+        url('fonts/Montserrat-Medium.ttf') format('truetype'),
+        url('fonts/Montserrat-Medium.svg#Montserrat-Medium') format('svg');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Montserrat';
+    src: url('fonts/Montserrat-Regular.eot');
+    src: url('fonts/Montserrat-Regular.eot?#iefix') format('embedded-opentype'),
+        url('fonts/Montserrat-Regular.woff2') format('woff2'),
+        url('fonts/Montserrat-Regular.woff') format('woff'),
+        url('fonts/Montserrat-Regular.ttf') format('truetype'),
+        url('fonts/Montserrat-Regular.svg#Montserrat-Regular') format('svg');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Montserrat';
+    src: url('fonts/Montserrat-Italic.eot');
+    src: url('fonts/Montserrat-Italic.eot?#iefix') format('embedded-opentype'),
+        url('fonts/Montserrat-Italic.woff2') format('woff2'),
+        url('fonts/Montserrat-Italic.woff') format('woff'),
+        url('fonts/Montserrat-Italic.ttf') format('truetype'),
+        url('fonts/Montserrat-Italic.svg#Montserrat-Italic') format('svg');
+    font-weight: normal;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Montserrat';
+    src: url('fonts/Montserrat-Bold.eot');
+    src: url('fonts/Montserrat-Bold.eot?#iefix') format('embedded-opentype'),
+        url('fonts/Montserrat-Bold.woff2') format('woff2'),
+        url('fonts/Montserrat-Bold.woff') format('woff'),
+        url('fonts/Montserrat-Bold.ttf') format('truetype'),
+        url('fonts/Montserrat-Bold.svg#Montserrat-Bold') format('svg');
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+}
+
+// == Main styles:
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-size: 1rem;
+    color: #302B42;
+    font-family: 'Montserrat';
+    background: #f1f1f1;
+}
+
+a {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+}
+
+ul,
+li {
+    list-style-type: none;
+}
+
+form {
+    display: flex;
+    position: relative;
+
+    @media (max-width: 390px) {
+        width: 100%;
+    }
+}
+
 // == Used in:
 // == Navbar | SideDrawer | Footer;
 .logo {
@@ -137,7 +226,70 @@
 }
 
 // == Used in:
-// == Advantages | HomeScreen | Product;
+// == Product | ProductScreen;
+.status {
+    display: none;
+    justify-content: center;
+    align-items: center;
+    width: 70px;
+    height: 30px;
+    background-color: #E87E7E;
+    color: #302B42;
+    font-weight: 700;
+    font-size: 1rem;
+    text-transform: uppercase;
+    border-top-left-radius: 1px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 3;
+
+    &.color_red {
+        display: flex;
+    }
+
+    &.color_green {
+        display: flex;
+        background-color: #A0E87E;
+    }
+}
+
+// == Used in:
+// == ProductScreen |
+.loading {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 90vh;
+
+    h2 {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 200px;
+        height: 200px;
+        font-size: 1.5rem;
+        border-radius: 100%;
+        border: 3px dashed #302B42;
+        animation-name: rotate;
+        animation-duration: 2.5s;
+        animation-iteration-count: infinite;
+        animation-direction: alternate;
+    }
+
+    @keyframes rotate {
+        0% {
+            transform: rotate(-15deg);
+        }
+
+        100% {
+            transform: rotate(365deg) scale(1.2);
+        }
+    }
+}
+
+// == Used in:
+// == Advantages | HomeScreen | Product | ProductScreen;
 .title {
     font-size: clamp(1.8rem, 2vw, 4rem);
     font-weight: 700;
@@ -165,15 +317,27 @@
         font-size: clamp(1.3rem, 1vw, 3rem);
     }
 
-    // == Product:
+    // == Product :
     &.product {
         font-size: clamp(1rem, 1vw, 1.2rem);
         text-align: left;
     }
+
+    // == ProductScreen :
+    &.productScreenssss {
+        margin-bottom: 1rem;
+
+        &.client__name {
+            font-size: clamp(.7rem, 1vw, 1.5rem);
+            font-weight: 500;
+            display: inline-block;
+            margin-bottom: 1rem;
+        }
+    }
 }
 
 // == Used in:
-// == Digest
+// == Digest | ProductScreen;
 .discription {
     font-size: clamp(1rem, 1vw, 1.5rem);
     color: #fff;
@@ -182,6 +346,15 @@
 
     @media (min-width: 1700px) {
         width: 100%;
+    }
+
+    // == ProductScreen:
+    &.productScreen {
+        width: Min(100%, 800px);
+        max-width: 1500px;
+        font-size: clamp(1rem, 1vw, 1.5rem);
+        font-weight: 400;
+        margin-bottom: clamp(1.5rem, 3vw, 4rem);
     }
 }
 

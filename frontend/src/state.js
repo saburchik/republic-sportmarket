@@ -11,14 +11,16 @@ let state = {
     intro: [
         {
             id: 1,
-            title: 'Отдыхай В Движении',
+            title: 'Отдыхай в',
+            titleSplit: 'движении',
             img: winterImg,
             alt: 'Изображение человека на сноуборде',
             styleClass: '',
         },
         {
             id: 2,
-            title: 'Сделай свою жизнь Ярче!',
+            title: 'Сделай свою',
+            titleSplit: 'жизнь ярче!',
             img: skateImg,
             alt: 'Изображение скейтборда',
             styleClass: 'left',

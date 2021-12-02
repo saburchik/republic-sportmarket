@@ -10,15 +10,15 @@ const Product = ({ productId, name, status, price, oldPrice, imageUrl }) => {
     const pathToProduct = `/product/${productId}`
 
     // == Settings display: NEW || Sale || Empty;
-    const setStatus = () => {
-        const iconStatusColor = [styleLoc.status]
+    const displayStatus = () => {
+        const iconStatusColor = [styleCom.status]
 
         if (status === 'NEW') {
-            iconStatusColor.push(styleLoc.color_green)
+            iconStatusColor.push(styleCom.color_green)
         } else if (status === ' ') {
-            iconStatusColor.push(styleLoc.status)
+            iconStatusColor.push(styleCom.status)
         } else {
-            iconStatusColor.push(styleLoc.color_red)
+            iconStatusColor.push(styleCom.color_red)
         }
         return iconStatusColor.join(' ')
     }
@@ -29,7 +29,7 @@ const Product = ({ productId, name, status, price, oldPrice, imageUrl }) => {
     return (
         <li className={styleLoc.card}>
             <Link to={pathToProduct}>
-                <span className={setStatus()}>{status}</span>
+                <span className={displayStatus()}>{status}</span>
                 <img className={styleLoc.img} src={imageUrl} alt={name} />
             </Link>
             <div className={styleLoc.info}>

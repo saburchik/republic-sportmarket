@@ -1,13 +1,21 @@
+// == Base:
+import { useState, useEffect } from "react"
+import { Link, useLocation } from "react-router-dom"
+// == Styles:
 import style from "./LoginScreen.module.scss"
-import { Link } from "react-router-dom"
-
-import Advantages from '../../components/Advantages'
-import { useState } from "react"
+// == Component:
+import Advantages from "../../components/Advantages"
 
 const LoginScreen = () => {
-    const [visible, setVisible] = useState(false)
+    function ScrollToTop() {
+        const { pathname } = useLocation()
+        useEffect(() => { window.scrollTo(0, 0) }, [pathname])
+        return null
+    }
+    ScrollToTop()
 
-    let checkVis = visible ? "text" : "password"
+    const [visible, setVisible] = useState(false)
+    let checkVis = visible ? 'text' : 'password'
 
     let toggleBtn = () => {
         setVisible(prevState => !prevState)

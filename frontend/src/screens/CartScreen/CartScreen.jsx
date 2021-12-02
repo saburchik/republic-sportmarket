@@ -1,15 +1,14 @@
-import style from "./CartScreen.module.scss"
+// == Base:
 import { useEffect } from "react"
 import { useDispatch, useSelector } from "react-redux"
 import { Link, useLocation } from "react-router-dom"
-
-
-// Components
-import Advantages from '../../components/Advantages';
-import CartItem from '../../components/CartItem';
-
-// Actions
-import { addToCart, removeFromCart } from '../../redux/actions/cartActions';
+// == Actions:
+import { addToCart, removeFromCart } from "../../redux/actions/cartActions"
+// == Styles:
+import style from "./CartScreen.module.scss"
+// == Components:
+import Advantages from "../../components/Advantages"
+import CartItem from "../../components/CartItem"
 
 const CartScreen = () => {
     function ScrollToTop() {
@@ -18,29 +17,29 @@ const CartScreen = () => {
         return null
     }
     ScrollToTop()
-    const dispatch = useDispatch();
 
-    const cart = useSelector(state => state.cart);
-    const { cartItems } = cart;
+    const dispatch = useDispatch()
+    const cart = useSelector(state => state.cart)
+    const { cartItems } = cart
 
     const qtyChangeHandler = (id, qty) => {
-        dispatch(addToCart(id, qty));
+        dispatch(addToCart(id, qty))
     };
 
     const removeHandler = (id) => {
-        dispatch(removeFromCart(id));
+        dispatch(removeFromCart(id))
     };
 
     const getCartCount = () => {
-        return cartItems.reduce((qty, item) => Number(item.qty) + qty, 0);
-    };
+        return cartItems.reduce((qty, item) => Number(item.qty) + qty, 0)
+    }
 
     const getCartSubTotal = () => {
         return cartItems.reduce((price, item) => item.price * item.qty + price, 0)
-    };
+    }
 
     return (
-        <div>
+        <section>
             <Advantages />
             <h3 className={style.title}>В вашей корзине:</h3>
             <div className={style.inner}>
@@ -62,16 +61,16 @@ const CartScreen = () => {
                         />
                     ))}
                 </div>
-                <div className={style.products}>
+                <aside className={style.products}>
                     <p className={style.title__order}>Ваш заказ</p>
                     <p className={style.title__qty}>Цена за {getCartCount()} товар(а):<span>{getCartSubTotal().toFixed(2)} ₽</span></p>
                     <strong className={style.title__total}>
                         Итого: <span>{getCartSubTotal().toFixed(2)} ₽</span>
                     </strong>
                     <button className={style.btn}>Оформить заказ</button>
-                </div>
+                </aside>
             </div>
-        </div>
+        </section>
     )
 }
 
