@@ -23,7 +23,9 @@
     z-index: 5;
 
     &.left {
-        background: linear-gradient(221.87deg, #cecece 1%, #f1f1f1 128%);
+        // background: linear-gradient(221.87deg, #cecece 1%, #f1f1f1 128%);
+        background: rgb(241, 241, 241);
+        background: linear-gradient(34deg, rgba(241, 241, 241, 1) 0%, rgba(206, 206, 206, 1) 100%);
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
         color: #fff;

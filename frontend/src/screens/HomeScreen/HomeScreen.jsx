@@ -23,7 +23,7 @@ const HomeScreen = (props) => {
     const setAccordions = props.state.Categories.map(a => <Accordion key={a.id} title={a.title} subtitles={a.subtitles} />)
 
     // == Settings styles for title:
-    const setTitle = `${styleCom.title} ${styleCom.size_s}`
+    const setTitle = `${styleCom.title} ${styleCom.size_m}`
 
     // == Loading, then checking for errors and finally drawing product cards:
     const drawsProducts = () => loading
@@ -34,7 +34,7 @@ const HomeScreen = (props) => {
                 key={product._id}
                 productId={product._id}
                 name={product.name}
-                status={product.status}
+                isBadge={product.isBadge}
                 price={product.price}
                 oldPrice={product.oldPrice}
                 description={product.description}

@@ -13,30 +13,3 @@
 // .webp .inner {
 //     background: url("../../assets/digest.webp") center/cover no-repeat;
 // }
-
-.btn {
-    display: flex;
-    align-items: center;
-    background-color: transparent;
-    height: 100%;
-    border: none;
-    cursor: pointer;
-    padding: 0 1rem;
-    border-radius: 10px;
-    position: absolute;
-    right: 0;
-
-    svg {
-        width: 25px;
-        height: 25px;
-        fill: #302B42;
-        transition: 0.2s;
-    }
-
-    &:hover,
-    &:focus {
-        svg {
-            fill: #939292;
-        }
-    }
-}

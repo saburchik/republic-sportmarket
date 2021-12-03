@@ -95,8 +95,34 @@ form {
 }
 
 // == Used in:
-// == Navbar | SideDrawer;
+// == ProductScreen;
 .btn {
+    width: 100%;
+    max-width: 300px;
+    background-color: #C4C4C4;
+    color: #302B42;
+
+    font-size: 1.3rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    border: 1px solid #302B42;
+    cursor: pointer;
+    transition: 0.3s;
+    padding: 0.5rem;
+
+    &.green {
+        background-color: #A0E87E;
+    }
+
+    &:hover {
+        color: #C4C4C4;
+        background-color: #302B42
+    }
+}
+
+// == Used in:
+// == Navbar | SideDrawer | Digest;
+.btn__badge {
     display: flex;
     align-items: center;
     background-color: transparent;
@@ -107,12 +133,18 @@ form {
     padding: 0 0.5rem;
     position: absolute;
     right: 0;
+    z-index: 9;
 
     svg {
         width: clamp(20px, 1vw, 30px);
         height: clamp(20px, 1vw, 30px);
         fill: #302B42;
         transition: 0.2s;
+    }
+
+    // == Digest:
+    &.digest {
+        padding: 0 1rem;
     }
 
     &:hover,
@@ -227,7 +259,7 @@ form {
 
 // == Used in:
 // == Product | ProductScreen;
-.status {
+.badge {
     display: none;
     justify-content: center;
     align-items: center;
@@ -255,14 +287,14 @@ form {
 }
 
 // == Used in:
-// == ProductScreen |
+// == HomeScreen | ProductScreen;
 .loading {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 90vh;
+    height: 80vh;
 
-    h2 {
+    h3 {
         display: flex;
         justify-content: center;
         align-items: center;
@@ -296,6 +328,27 @@ form {
     text-align: center;
     text-transform: uppercase;
 
+    // == Used in:
+    // == HomeScreen | LoginScreen:
+    &.size_m {
+        font-size: clamp(1.3rem, 1vw, 3rem);
+        margin-bottom: 2rem;
+    }
+
+    // == Used in:
+    // == ProductScreen | CartScreen:
+    &.size_s {
+        font-size: 0.7rem;
+        font-weight: 500;
+        text-align: left;
+        color: #302B42;
+        text-transform: inherit;
+
+        strong {
+            text-transform: uppercase;
+        }
+    }
+
     // == Advantages:
     &.advantages {
         font-size: clamp(0.7rem, 1vw, 1.5rem);
@@ -313,32 +366,22 @@ form {
         margin-bottom: 2.5rem;
     }
 
-    &.size_s {
-        font-size: clamp(1.3rem, 1vw, 3rem);
-    }
-
     // == Product :
     &.product {
         font-size: clamp(1rem, 1vw, 1.2rem);
         text-align: left;
     }
 
-    // == ProductScreen :
-    &.productScreenssss {
-        margin-bottom: 1rem;
-
-        &.client__name {
-            font-size: clamp(.7rem, 1vw, 1.5rem);
-            font-weight: 500;
-            display: inline-block;
-            margin-bottom: 1rem;
-        }
+    // == Comment :
+    &.comment {
+        font-size: clamp(0.7rem, 1vw, 1.5rem);
+        text-align: left;
     }
 }
 
 // == Used in:
-// == Digest | ProductScreen;
-.discription {
+// == Digest | ProductScreen | Comment;
+.description {
     font-size: clamp(1rem, 1vw, 1.5rem);
     color: #fff;
     width: Min(100%, 800px);
@@ -350,29 +393,39 @@ form {
 
     // == ProductScreen:
     &.productScreen {
-        width: Min(100%, 800px);
-        max-width: 1500px;
-        font-size: clamp(1rem, 1vw, 1.5rem);
-        font-weight: 400;
+        color: #302B42;
+        letter-spacing: 0.1rem;
         margin-bottom: clamp(1.5rem, 3vw, 4rem);
+
+        strong {
+            display: block;
+            letter-spacing: normal;
+            margin-bottom: 0.25rem;
+        }
+    }
+
+    // == Comment:
+    &.comment {
+        color: #302B42;
+        width: 100%;
     }
 }
 
 // == Used in:
-// ==  Product
+// ==  Product;
 .price {
     display: flex;
     align-items: center;
     gap: 1rem;
-    font-size: 1.3rem;
+    font-size: clamp(1.3rem, 1vw, 2rem);
     font-weight: 700;
     color: #E87E7E;
 }
 
 // == Used in:
-// ==  Product
+// ==  Product;
 .oldprice {
-    font-size: 1rem;
+    font-size: clamp(1rem, 1vw, 1.3rem);
     font-weight: 500;
     color: #939292;
 

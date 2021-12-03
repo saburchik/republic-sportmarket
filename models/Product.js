@@ -13,7 +13,7 @@ const productSchema = new mongoose.Schema({
         type: String,
         required: true,
     },
-    status: {
+    isBadge: {
         type: String,
         required: true,
     },

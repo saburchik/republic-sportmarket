@@ -5,22 +5,22 @@ import { Link } from "react-router-dom"
 import styleCom from "../common.module.scss"
 import styleLoc from "./styles/Product.module.scss"
 
-const Product = ({ productId, name, status, price, oldPrice, imageUrl }) => {
+const Product = ({ productId, name, isBadge, price, oldPrice, imageUrl }) => {
     // == Settings path to product by id:
     const pathToProduct = `/product/${productId}`
 
     // == Settings display: NEW || Sale || Empty;
-    const displayStatus = () => {
-        const iconStatusColor = [styleCom.status]
+    const displayBadge = () => {
+        const setBadge = [styleCom.badge]
 
-        if (status === 'NEW') {
-            iconStatusColor.push(styleCom.color_green)
-        } else if (status === ' ') {
-            iconStatusColor.push(styleCom.status)
+        if (isBadge === 'NEW') {
+            setBadge.push(styleCom.color_green)
+        } else if (isBadge === ' ') {
+            setBadge.push(styleCom.badge)
         } else {
-            iconStatusColor.push(styleCom.color_red)
+            setBadge.push(styleCom.color_red)
         }
-        return iconStatusColor.join(' ')
+        return setBadge.join(' ')
     }
 
     // == Settings display: oldPrice || Empty;
@@ -29,7 +29,7 @@ const Product = ({ productId, name, status, price, oldPrice, imageUrl }) => {
     return (
         <li className={styleLoc.card}>
             <Link to={pathToProduct}>
-                <span className={displayStatus()}>{status}</span>
+                <span className={displayBadge()}>{isBadge}</span>
                 <img className={styleLoc.img} src={imageUrl} alt={name} />
             </Link>
             <div className={styleLoc.info}>
