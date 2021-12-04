@@ -25,7 +25,7 @@
     &.left {
         background: linear-gradient(to top, #f1f1f1, #cecece);
         -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
+        -webkit-text-fill-color: rgba(255, 255, 255, 0);
 
         left: auto;
         right: -20%;
