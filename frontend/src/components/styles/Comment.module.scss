@@ -5,6 +5,13 @@
     padding: 1rem;
 }
 
+.title {
+    font-size: clamp(1.8rem, 2vw, 4rem);
+    font-weight: 700;
+    text-align: center;
+    text-transform: uppercase;
+}
+
 .comment {
     display: flex;
     flex-direction: column;
@@ -16,6 +23,21 @@
     @media (max-width:550px) {
         padding: 2rem 1rem;
     }
+}
+
+.title__user,
+.title__date {
+    font-size: clamp(0.7rem, 1vw, 1.5rem);
+    font-weight: 700;
+    text-align: left;
+    text-transform: uppercase;
+}
+
+.description {
+    font-size: clamp(1rem, 1vw, 1.5rem);
+    color: #302B42;
+    width: 100%;
+    max-width: 1500px;
 }
 
 .link {

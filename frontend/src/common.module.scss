@@ -88,13 +88,6 @@ form {
 }
 
 // == Used in:
-// == Navbar | SideDrawer | Footer;
-.logo {
-    width: clamp(120px, 7vw, 155px);
-    height: clamp(60px, 3vw, 75px);
-}
-
-// == Used in:
 // == ProductScreen;
 .btn {
     width: 100%;
@@ -121,144 +114,7 @@ form {
 }
 
 // == Used in:
-// == Navbar | SideDrawer | Digest;
-.btn__badge {
-    display: flex;
-    align-items: center;
-    background-color: transparent;
-    height: 100%;
-    border: none;
-    cursor: pointer;
-    border-radius: 10px;
-    padding: 0 0.5rem;
-    position: absolute;
-    right: 0;
-    z-index: 9;
-
-    svg {
-        width: clamp(20px, 1vw, 30px);
-        height: clamp(20px, 1vw, 30px);
-        fill: #302B42;
-        transition: 0.2s;
-    }
-
-    // == Digest:
-    &.digest {
-        padding: 0 1rem;
-    }
-
-    &:hover,
-    &:focus-visible {
-        svg {
-            fill: #939292;
-        }
-    }
-}
-
-// == Used in:
-// == Navbar | SideDrawer;
-.link {
-    font-size: clamp(1.2rem, 1vw, 1.5rem);
-    font-weight: 700;
-    text-transform: uppercase;
-    color: #302B42;
-    padding: 0.5rem;
-    transition: 0.2s;
-
-    &:hover,
-    &:focus {
-        color: #939292;
-    }
-
-    &.help {
-        font-weight: 500;
-        color: #939292;
-
-        &:hover,
-        &:focus-visible {
-            color: #302B42;
-        }
-    }
-
-    &.cart {
-        color: #302B42;
-        position: relative;
-
-        &:hover,
-        &:focus-visible {
-            .qty {
-                background-color: #fff;
-                transition: 0.3s;
-            }
-        }
-    }
-}
-
-// == Used in:
-// == Navbar | SideDrawer;
-.icon {
-    width: clamp(35px, 2vw, 40px);
-    height: clamp(35px, 2vw, 55px);
-    fill: #302B42;
-}
-
-// == Used in:
-// == Navbar | SideDrawer;
-.qty {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: clamp(35px, 2vw, 45px);
-    width: clamp(35px, 2vw, 45px);
-    background: #E87E7E;
-    border: 2px solid #302B42;
-    border-radius: 50%;
-    position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 30px;
-}
-
-// == Used in:
-// == Navbar | SideDrawe | Digest;
-.input {
-    font-family: inherit;
-    font-size: clamp(1rem, 1vw, 1.5rem);
-    width: clamp(256px, 25vw, 500px);
-    color: #302B42;
-    background: #d0d0d0;
-    outline: none;
-    border: none;
-    border-radius: 10px;
-    padding: 0.5rem 2.5rem 0.5rem 1rem;
-
-    &:focus {
-        &::placeholder {
-            color: #939292;
-        }
-    }
-
-    // == Digest: 
-    &.digest {
-        background: #fff;
-        padding: 0.5rem 3.5rem 0.5rem 1rem;
-
-        &:focus {
-            &::placeholder {
-                color: #E87E7E;
-            }
-        }
-    }
-
-    // == Need for everything classes; 
-    @media (max-width: 390px) {
-        width: 100%;
-    }
-}
-
-// == Used in:
-// == Product | ProductScreen;
+// ==  ProductScreen;
 .badge {
     display: none;
     justify-content: center;
@@ -320,7 +176,7 @@ form {
 }
 
 // == Used in:
-// == Advantages | HomeScreen | Product | ProductScreen;
+// == Advantages | HomeScreen | ProductScreen;
 .title {
     font-size: clamp(1.8rem, 2vw, 4rem);
     font-weight: 700;
@@ -348,38 +204,15 @@ form {
         }
     }
 
-    // == Advantages:
-    &.advantages {
-        font-size: clamp(0.7rem, 1vw, 1.5rem);
-        font-weight: 500;
-        margin-bottom: 0;
-
-        @media (max-width: 880px) {
-            font-size: 0;
-        }
-    }
-
     // == HomeScreen:
     &.home {
         font-weight: 700;
         margin-bottom: 2.5rem;
     }
-
-    // == Product :
-    &.product {
-        font-size: clamp(1rem, 1vw, 1.2rem);
-        text-align: left;
-    }
-
-    // == Comment :
-    &.comment {
-        font-size: clamp(0.7rem, 1vw, 1.5rem);
-        text-align: left;
-    }
 }
 
 // == Used in:
-// == Digest | ProductScreen | Comment;
+// ==  ProductScreen ;
 .description {
     font-size: clamp(1rem, 1vw, 1.5rem);
     color: #fff;
@@ -411,7 +244,7 @@ form {
 }
 
 // == Used in:
-// ==  Product;
+// ==  ProductScreen ;
 .price {
     display: flex;
     align-items: center;
@@ -422,7 +255,7 @@ form {
 }
 
 // == Used in:
-// ==  Product;
+// == 
 .oldprice {
     font-size: clamp(1rem, 1vw, 1.3rem);
     font-weight: 500;

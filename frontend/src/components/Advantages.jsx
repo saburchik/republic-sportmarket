@@ -1,14 +1,12 @@
 // == Base:
 import React from "react"
 // == Styles:
-import styleCom from "../common.module.scss"
-import styleLoc from "./styles/Advantages.module.scss"
+import s from "./styles/Advantages.module.scss"
 
 const Advantages = () => {
-    const setTitle = `${styleCom.title} ${styleCom.advantages}`
-
     return (
-        <section className={styleLoc.advantages}>
+        <section className={s.advantages}>
+            {/* == All svg paths and their id */}
             <svg display="none">
                 <symbol id="tags-solid" viewBox="0 0 640 512">
                     <path d="M497.941 225.941L286.059 14.059A48 48 0 0 0 252.118 0H48C21.49 0 0 21.49 0 48v204.118a48 48 0 0 0 14.059 33.941l211.882 211.882c18.744 18.745 49.136 18.746 67.882 0l204.118-204.118c18.745-18.745 18.745-49.137 0-67.882zM112 160c-26.51 0-48-21.49-48-48s21.49-48 48-48 48 21.49 48 48-21.49 48-48 48zm513.941 133.823L421.823 497.941c-18.745 18.745-49.137 18.745-67.882 0l-.36-.36L527.64 323.522c16.999-16.999 26.36-39.6 26.36-63.64s-9.362-46.641-26.36-63.64L331.397 0h48.721a48 48 0 0 1 33.941 14.059l211.882 211.882c18.745 18.745 18.745 49.137 0 67.882z"></path>
@@ -23,30 +21,30 @@ const Advantages = () => {
                     <path d="M256 336h-.02c0-16.18 1.34-8.73-85.05-181.51-17.65-35.29-68.19-35.36-85.87 0C-2.06 328.75.02 320.33.02 336H0c0 44.18 57.31 80 128 80s128-35.82 128-80zM128 176l72 144H56l72-144zm511.98 160c0-16.18 1.34-8.73-85.05-181.51-17.65-35.29-68.19-35.36-85.87 0-87.12 174.26-85.04 165.84-85.04 181.51H384c0 44.18 57.31 80 128 80s128-35.82 128-80h-.02zM440 320l72-144 72 144H440zm88 128H352V153.25c23.51-10.29 41.16-31.48 46.39-57.25H528c8.84 0 16-7.16 16-16V48c0-8.84-7.16-16-16-16H383.64C369.04 12.68 346.09 0 320 0s-49.04 12.68-63.64 32H112c-8.84 0-16 7.16-16 16v32c0 8.84 7.16 16 16 16h129.61c5.23 25.76 22.87 46.96 46.39 57.25V448H112c-8.84 0-16 7.16-16 16v32c0 8.84 7.16 16 16 16h416c8.84 0 16-7.16 16-16v-32c0-8.84-7.16-16-16-16z"></path>
                 </symbol>
             </svg>
-            <ul className={styleLoc.inner}>
-                <li className={styleLoc.item}>
+            <ul className={s.inner}>
+                <li className={s.item}>
                     <svg>
                         <use xlinkHref="#tags-solid" />
                     </svg>
-                    <h2 className={setTitle}>Скидки при онлайн оплате</h2>
+                    <h2 className={s.title}>Скидки при онлайн оплате</h2>
                 </li>
-                <li className={styleLoc.item}>
+                <li className={s.item}>
                     <svg>
                         <use xlinkHref="#truck-solid" />
                     </svg>
-                    <h2 className={setTitle}>Быстрая Доставка</h2>
+                    <h2 className={s.title}>Быстрая Доставка</h2>
                 </li>
-                <li className={styleLoc.item}>
+                <li className={s.item}>
                     <svg>
                         <use xlinkHref="#box-open-solid" />
                     </svg>
-                    <h2 className={setTitle}>Удобный возврат</h2>
+                    <h2 className={s.title}>Удобный возврат</h2>
                 </li>
-                <li className={styleLoc.item}>
+                <li className={s.item}>
                     <svg>
                         <use xlinkHref="#balance-scale-solid" />
                     </svg>
-                    <h2 className={setTitle}>Гарантия полгода</h2>
+                    <h2 className={s.title}>Гарантия полгода</h2>
                 </li>
             </ul>
         </section>

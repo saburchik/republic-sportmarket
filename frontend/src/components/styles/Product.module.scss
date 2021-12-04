@@ -1,6 +1,6 @@
 .card {
     display: grid;
-    grid-template-rows: minmax(360px, 400px) 1fr;
+    grid-template-rows: 400px 1fr;
     background-color: #fff;
     border-radius: 4px;
     border: 3px solid #cecece;
@@ -20,6 +20,32 @@
     }
 }
 
+.badge {
+    display: none;
+    justify-content: center;
+    align-items: center;
+    width: 70px;
+    height: 30px;
+    background-color: #E87E7E;
+    color: #302B42;
+    font-weight: 700;
+    font-size: 1rem;
+    text-transform: uppercase;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 3;
+
+    &.color_red {
+        display: flex;
+    }
+
+    &.color_green {
+        display: flex;
+        background-color: #A0E87E;
+    }
+}
+
 .img {
     width: 100%;
     height: 100%;
@@ -36,6 +62,31 @@
     gap: 0.5rem;
     border-top: 3px solid #cecece;
     padding: 1rem;
+}
+
+.title {
+    font-size: clamp(1rem, 1vw, 1.2rem);
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.price {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    font-size: clamp(1.3rem, 1vw, 2rem);
+    font-weight: 700;
+    color: #E87E7E;
+}
+
+.oldprice {
+    font-size: clamp(1rem, 1vw, 1.3rem);
+    font-weight: 500;
+    color: #939292;
+
+    &.none {
+        font-size: 0;
+    }
 }
 
 .play {

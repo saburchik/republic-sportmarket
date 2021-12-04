@@ -1,42 +1,41 @@
-import style from "./styles/CartItem.module.scss";
-import { Link } from 'react-router-dom';
+// == Base:
+import React from "react"
+import { Link } from "react-router-dom"
+// == Styles:
+import s from "./styles/CartItem.module.scss"
 
 const CartItem = ({ item, qtyChangeHandler, removeHandler }) => {
-    // const isOldPrice = item.oldPrice === 0 ? "old-price undefined" : "old-price"
-
     return (
-        <div className={style.product}>
-            <a className={`${style.btn}`} onClick={() => removeHandler(item.product)} href>
-                <svg className={style.btn__svg} xmlns="http://www.w3.org/2000/svg" viewBox="0 0 62 62"><path className={style.btn__color} d="M33.83 31l9.9 9.9-2.83 2.83-9.9-9.9-9.9 9.9-2.83-2.83 9.9-9.9-9.9-9.9 2.83-2.83 9.9 9.9 9.9-9.9 2.83 2.83-9.9 9.9z"></path></svg>
-            </a>
+        <section className={s.inner}>
+            <button className={s.btn__rm} onClick={() => removeHandler(item.product)} href>
+                <svg viewBox="0 0 62 62">
+                    <path d="M33.83 31l9.9 9.9-2.83 2.83-9.9-9.9-9.9 9.9-2.83-2.83 9.9-9.9-9.9-9.9 2.83-2.83 9.9 9.9 9.9-9.9 2.83 2.83-9.9 9.9z" />
+                </svg>
+            </button>
 
-            <Link className={style.link} to={`/product/${item.product}`}>
-                <img className={style.img}
-                    src={item.imageUrl}
-                    alt={item.name}
-                />
+            <Link className={s.link} to={`/product/${item.product}`}>
+                <img className={s.img} src={item.imageUrl} alt={item.name} />
             </Link>
-            <div className={style.inner}>
-                <p className={style.article}>артикул: <strong>{item.article}</strong></p>
-                <strong>{item.name}</strong>
+            <div className={s.wrapper}>
+                <h6 className={s.title}>Артикул: <strong>{item.article}</strong></h6>
+                <h4 className={s.title}><span>{item.name}</span></h4>
             </div>
-            <div className={style.inner}>
-                <div className={style.quantity}>
-                    <p>Количество:</p>
-                    <select className={style.select} value={item.qty} onChange={(e) => qtyChangeHandler(item.product, e.target.value)}>
+            <div className={s.wrapper}>
+                <div className={s.quantity}>
+                    <h4 className={s.title}>Количество:</h4>
+                    <select className={s.select} value={item.qty} onChange={(e) => qtyChangeHandler(item.product, e.target.value)}>
                         {[...Array(item.countInStock).keys()].map((x) => (
                             <option key={x + 1} value={x + 1}>{x + 1}</option>
                         ))}
                     </select>
                 </div>
             </div>
-            <div className={style.inner}>
-                {/* <span className={`${style.btn} ${style.right}`} onClick={() => removeHandler(item.product)} >&times;</span> */}
-                <strong>Цена:</strong>
-                <p className={style.price}>{item.price}₽</p>
+            <div className={s.wrapper}>
+                <h4 className={s.title}>Цена:</h4>
+                <p className={s.price}>{item.price}₽</p>
             </div>
-        </div>
+        </section>
     )
-};
+}
 
-export default CartItem;
+export default CartItem

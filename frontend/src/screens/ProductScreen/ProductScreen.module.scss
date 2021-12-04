@@ -81,11 +81,12 @@
 }
 
 .select {
+    width: clamp(50px, 3vw, 70px);
     cursor: pointer;
     outline: none;
     background: #C4C4C4;
-    padding: 0.20rem 0.5rem;
-    font-size: clamp(0.8rem, 1vw, 1rem);
+    padding: 0.25rem;
+    font-size: clamp(0.8rem, 1vw, 1.3rem);
     font-weight: 700;
     border-radius: 3px;
     color: #302B42;
