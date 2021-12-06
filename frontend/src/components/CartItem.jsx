@@ -5,22 +5,25 @@ import { Link } from "react-router-dom"
 import s from "./styles/CartItem.module.scss"
 
 const CartItem = ({ item, qtyChangeHandler, removeHandler }) => {
+    let backPath = `/product/${item.product}`
+
     return (
-        <section className={s.inner}>
-            <button className={s.btn__rm} onClick={() => removeHandler(item.product)} href>
+        <li className={s.inner}>
+            {/* == Btn have position: absolute; */}
+            <button className={s.btn__rm} onClick={() => removeHandler(item.product)}>
                 <svg viewBox="0 0 62 62">
                     <path d="M33.83 31l9.9 9.9-2.83 2.83-9.9-9.9-9.9 9.9-2.83-2.83 9.9-9.9-9.9-9.9 2.83-2.83 9.9 9.9 9.9-9.9 2.83 2.83-9.9 9.9z" />
                 </svg>
             </button>
 
-            <Link className={s.link} to={`/product/${item.product}`}>
+            <Link className={s.photo} to={backPath}>
                 <img className={s.img} src={item.imageUrl} alt={item.name} />
             </Link>
-            <div className={s.wrapper}>
-                <h6 className={s.title}>Артикул: <strong>{item.article}</strong></h6>
-                <h4 className={s.title}><span>{item.name}</span></h4>
+            <div className={s.item}>
+                <h6 className={s.subtitle}>Артикул: <strong>{item.article}</strong></h6>
+                <strong className={s.title}><span>{item.name}</span></strong>
             </div>
-            <div className={s.wrapper}>
+            <div className={s.item}>
                 <div className={s.quantity}>
                     <h4 className={s.title}>Количество:</h4>
                     <select className={s.select} value={item.qty} onChange={(e) => qtyChangeHandler(item.product, e.target.value)}>
@@ -30,11 +33,11 @@ const CartItem = ({ item, qtyChangeHandler, removeHandler }) => {
                     </select>
                 </div>
             </div>
-            <div className={s.wrapper}>
+            <div className={s.item}>
                 <h4 className={s.title}>Цена:</h4>
                 <p className={s.price}>{item.price}₽</p>
             </div>
-        </section>
+        </li>
     )
 }
 

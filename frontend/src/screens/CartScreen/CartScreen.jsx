@@ -5,12 +5,13 @@ import { Link, useLocation } from "react-router-dom"
 // == Actions:
 import { addToCart, removeFromCart } from "../../redux/actions/cartActions"
 // == Styles:
-import styleCom from "../../common.module.scss"
-import styleLoc from "./CartScreen.module.scss"
+import s from "./CartScreen.module.scss"
 // == Components:
 import Advantages from "../../components/Advantages"
 import CartItem from "../../components/CartItem"
 import Title from "../../UI/Title"
+import Order from "./Order/Order"
+
 
 const CartScreen = () => {
     function ScrollToTop() {
@@ -26,36 +27,25 @@ const CartScreen = () => {
 
     const qtyChangeHandler = (id, qty) => {
         dispatch(addToCart(id, qty))
-    };
+    }
 
     const removeHandler = (id) => {
         dispatch(removeFromCart(id))
-    };
-
-    const getCartCount = () => {
-        return cartItems.reduce((qty, item) => Number(item.qty) + qty, 0)
-    }
-
-    const getCartSubTotal = () => {
-        return cartItems.reduce((price, item) => item.price * item.qty + price, 0)
     }
 
     return (
         <section>
             <Advantages />
-            <div className={styleLoc.inner}>
-                {/* <h3 className={styleCom.title}>В вашей корзине:</h3> */}
+            <article className={s.inner}>
                 <Title title="В вашей корзине:" />
-                <div className={styleLoc.wrapper}>
-                    <div className={styleLoc.order}>
+                <div className={s.wrapper}>
+                    <ul className={s.products}>
                         {cartItems.length === 0 ? (
-                            <div className={styleLoc.cart__empty}>
-                                <p>Ваша корзина -
-                                    <b> пуста</b>
-                                </p>
+                            <li className={s.empty}>
+                                <h4>Ваша корзина -<b> пуста</b></h4>
                                 <p>Здесь хранятся товары, которые вы добавили в корзину. Сейчас ваша корзина пуста</p>
-                                <Link className={styleLoc.link} to="/">Перейти к ассортименту</Link>
-                            </div>
+                                <Link className={s.link} to="/">Перейти к ассортименту</Link>
+                            </li>
                         ) : cartItems.map(item => (
                             <CartItem
                                 key={item.product}
@@ -64,17 +54,10 @@ const CartScreen = () => {
                                 removeHandler={removeHandler}
                             />
                         ))}
-                    </div>
-                    <aside className={styleLoc.products}>
-                        <p className={`${styleCom.title} ${styleCom.size_m}`}>Ваш заказ</p>
-                        <p className={styleLoc.title__qty}>Цена за {getCartCount()} товар(а):<span>{getCartSubTotal().toFixed(2)} ₽</span></p>
-                        <strong className={styleLoc.title__total}>
-                            Итого: <span>{getCartSubTotal().toFixed(2)} ₽</span>
-                        </strong>
-                        <button className={styleLoc.btn}>Оформить заказ</button>
-                    </aside>
+                    </ul>
+                    <Order />
                 </div>
-            </div>
+            </article>
         </section>
     )
 }

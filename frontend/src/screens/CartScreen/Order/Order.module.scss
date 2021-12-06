@@ -1,0 +1,54 @@
+.order {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    width: clamp(325px, 25vw, 500px);
+    height: min-content;
+    background: #A0E87E;
+    box-shadow: 0px 0px 5px 1px #939292;
+    padding: 1rem;
+
+    @media (max-width: 590px) {
+        width: 100%;
+    }
+}
+
+.title {
+    font-size: clamp(1.3rem, 1vw, 1.5rem);
+    border-bottom: 3px solid #302B42;
+    padding: 1rem;
+}
+
+.subtitle {
+    display: flex;
+    justify-content: space-between;
+    gap: 1rem;
+    font-size: clamp(0.9rem, 1.1vw, 1.3rem);
+}
+
+.wrapper {
+    text-align: center;
+    border-top: 3px solid #302B42;
+    padding: 1rem;
+}
+
+.btn {
+    font-family: 'Montserrat';
+    font-size: clamp(1.3rem, 1vw, 1.5rem);
+    font-weight: 700;
+    text-transform: uppercase;
+    width: 100%;
+    background: #302B42;
+    color: #fff;
+    border: 1px solid #302B42;
+    border-radius: 3px;
+    cursor: pointer;
+    padding: 0.5rem;
+    transition: 0.3s;
+
+    &:hover,
+    &:focus-visible {
+        color: #302B42;
+        background: #fff;
+    }
+}

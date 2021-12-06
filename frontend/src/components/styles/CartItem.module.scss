@@ -1,6 +1,6 @@
 .inner {
   display: grid;
-  grid-template-columns: clamp(150px, 12vw, 250px) 3fr 2fr 3fr;
+  grid-template-columns: clamp(150px, 12vw, 250px) 2fr 1fr 1fr;
   grid-template-rows: clamp(200px, 15vw, 300px);
   width: 100%;
   background: linear-gradient(149deg, rgba(170, 170, 170, 1) 0%, rgba(206, 206, 206, 1) 48%, rgba(255, 255, 255, 1) 100%);
@@ -8,7 +8,7 @@
   border-radius: 2px;
   position: relative;
 
-  @media (max-width: 690px) {
+  @media (max-width: 590px) {
     grid-template-columns: 1fr;
     grid-template-rows: 400px 1fr 0.5fr 0.5fr;
   }
@@ -34,9 +34,13 @@
       fill: #E87E7E;
     }
   }
+
+  @media (max-width: 590px) {
+    background: #fff;
+  }
 }
 
-.link {
+.photo {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -46,16 +50,16 @@
   border-right: 3px solid #939292;
   position: relative;
 
-  @media(max-width: 690px) {
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: scale-down;
+  }
+
+  @media(max-width: 590px) {
     border-right: none;
     border-bottom: 3px solid #939292;
   }
-}
-
-.img {
-  width: 100%;
-  height: 100%;
-  object-fit: fill;
 }
 
 // .photo {
@@ -73,66 +77,42 @@
 //   }
 // }
 
-.wrapper {
-  width: 100%;
-  height: 100%;
+.item {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding: 1rem;
-  gap: 0.5em;
+  gap: 0.5rem;
+  width: 100%;
+  height: 100%;
+  padding: clamp(0.5rem, 1vw, 1rem);
   position: relative;
 
   &:nth-child(3) {
     align-items: flex-start;
 
-    @media(max-width: 690px) {
-      justify-content: flex-start;
+    @media(max-width: 590px) {
+      align-items: center;
     }
   }
 }
 
-.title {
-  font-size: clamp(0.7rem, 1vw, 1.5rem);
+.subtitle {
+  font-size: clamp(0.7rem, 0.7vw, 1rem);
   font-weight: 500;
-  text-transform: uppercase;
+}
 
-  strong {
-    font-size: 0.7rem;
-    text-transform: inherit;
-  }
+.title {
+  font-size: clamp(1rem, 1vw, 1.5rem);
+  font-weight: 400;
 
   span {
     font-weight: 700;
+    text-transform: uppercase;
   }
 
-  // &.size_s {
-  //   font-size: 0.7rem;
-  //   text-transform: inherit;
-
-  //   strong {
-  //     text-transform: uppercase;
-  //   }
-  // }
-}
-
-.height {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  gap: 0.5rem;
-}
-
-// there is in productscreen
-.article {
-  text-align: left;
-  font-size: 0.7rem;
-  color: #302B42;
-
-  strong {
-    text-transform: uppercase;
+  @media(max-width: 590px) {
+    text-align: center;
   }
 }
 

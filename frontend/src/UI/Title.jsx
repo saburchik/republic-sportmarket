@@ -1,10 +1,10 @@
 // == Base:
 import React from "react"
 // == Styles:
-import styleLoc from './Title.module.scss'
+import s from './Title.module.scss'
 
 const Title = (props) => {
-    return <h4 className={`${props.classStyle} ${styleLoc.title}`}>{props.title}</h4>
+    return <h2 className={s.title}>{props.title}</h2>
 }
 
 export default Title
