@@ -1,8 +1,8 @@
-.inner {
+.cartscreen {
     padding: clamp(1rem, 2vw, 2rem);
 }
 
-.wrapper {
+.inner {
     display: grid;
     grid-template-columns: 2fr 1fr;
     justify-items: center;
@@ -13,75 +13,57 @@
     @media (max-width: 990px) {
         grid-template-columns: 1fr;
     }
-
-    // width: 100%;
-    // display: flex;
-    // flex-wrap: wrap;
-    // justify-content: space-around;
-    // gap: 1rem;
-    // padding: 1rem;
-
-    // @media (max-width: 990px) {
-    //     justify-content: center;
-    //     flex-direction: column;
-    //     align-items: center;
-    // }
 }
 
-.products {
-    width: 100%;
-    height: fit-content;
+.commodity {
     display: grid;
-    justify-content: space-around;
-    gap: 1rem;
-
-    // @media(max-width:690px) {
-    //     // grid-template-columns: repeat(auto-fit, minmax(250px, 250px));
-    //     // justify-content: center;
-
-    //     grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
-    //     justify-content: center;
-    //     grid-gap: 1rem;
-    //     gap: 1rem;
-    //     width: 100%;
-    // }
-
-    // @media(max-width:390px) {
-    //     grid-template-columns: 100%;
-    // }
+    gap: clamp(1rem, 1vw, 2rem);
+    height: fit-content;
 
     @media (max-width: 590px) {
-        max-width: clamp(288px, 60vw, 350px);
+        max-width: 350px;
+    }
+
+    @media (max-width: 390px) {
+        max-width: 100%;
     }
 }
 
-.empty {
+.ifEmpty {
     width: 100%;
-    background: #fff;
+    background: linear-gradient(221.87deg, #cecece 1%, #f1f1f1 128%);
     box-shadow: 0px 0px 5px 1px #939292;
     padding: 1rem;
-    margin-bottom: 2rem;
 
     p {
+        font-size: clamp(1rem, 1vw, 1.5rem);
         padding: 1rem 0;
+    }
+
+    @media (max-width: 590px) {
+        text-align: center;
     }
 }
 
 .link {
     display: flex;
-    align-items: center;
     justify-content: center;
-    text-transform: uppercase;
+    font-size: clamp(1rem, 1vw, 1.5rem);
     font-weight: 700;
-    width: 100%;
-    max-width: 300px;
-    background-color: #302B42;
-    padding: .5rem 1rem;
+    text-transform: uppercase;
+    max-width: clamp(288px, 20vw, 500px);
+    background: #302B42;
     color: #fff;
+    border: 2px solid #302B42;
+    border-radius: 3px;
+    cursor: pointer;
+    padding: 0.5rem;
+    margin: 0 auto;
     transition: 0.3s;
 
-    &:hover {
-        background-color: #ccc;
+    &:hover,
+    &:focus-visible {
+        background: #fff;
         color: #302B42;
     }
 }

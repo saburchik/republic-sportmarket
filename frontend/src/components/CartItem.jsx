@@ -17,14 +17,14 @@ const CartItem = ({ item, qtyChangeHandler, removeHandler }) => {
             </button>
 
             <Link className={s.photo} to={backPath}>
-                <img className={s.img} src={item.imageUrl} alt={item.name} />
+                <img src={item.imageUrl} alt={item.name} />
             </Link>
             <div className={s.item}>
                 <h6 className={s.subtitle}>Артикул: <strong>{item.article}</strong></h6>
                 <strong className={s.title}><span>{item.name}</span></strong>
             </div>
             <div className={s.item}>
-                <div className={s.quantity}>
+                <div className={s.wrapper}>
                     <h4 className={s.title}>Количество:</h4>
                     <select className={s.select} value={item.qty} onChange={(e) => qtyChangeHandler(item.product, e.target.value)}>
                         {[...Array(item.countInStock).keys()].map((x) => (
@@ -35,7 +35,7 @@ const CartItem = ({ item, qtyChangeHandler, removeHandler }) => {
             </div>
             <div className={s.item}>
                 <h4 className={s.title}>Цена:</h4>
-                <p className={s.price}>{item.price}₽</p>
+                <p className={s.price}>{item.price} ₽</p>
             </div>
         </li>
     )

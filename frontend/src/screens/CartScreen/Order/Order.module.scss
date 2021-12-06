@@ -5,6 +5,7 @@
     width: clamp(325px, 25vw, 500px);
     height: min-content;
     background: #A0E87E;
+    border-radius: 4px;
     box-shadow: 0px 0px 5px 1px #939292;
     padding: 1rem;
 
@@ -40,7 +41,7 @@
     width: 100%;
     background: #302B42;
     color: #fff;
-    border: 1px solid #302B42;
+    border: 2px solid #302B42;
     border-radius: 3px;
     cursor: pointer;
     padding: 0.5rem;

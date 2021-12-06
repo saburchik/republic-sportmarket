@@ -13,8 +13,9 @@ import Advantages from "../../components/Advantages"
 import Comment from "../../components/Comment"
 
 const ProductScreen = ({ match, history }) => {
+    // == Scroll to up when switching to CartScreen:
     function ScrollToTop() {
-        const { pathname } = useLocation()
+        const { pathname } = useLocation();
         useEffect(() => { window.scrollTo(0, 0) }, [pathname])
         return null
     }
@@ -126,9 +127,8 @@ const ProductScreen = ({ match, history }) => {
                     </article>
                 </div>
                 <Comment />
-            </section>
+            </section >
         )
 }
-
 
 export default ProductScreen
