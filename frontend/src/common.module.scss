@@ -87,62 +87,9 @@ form {
     }
 }
 
-// == Used in:
-// == ProductScreen;
-.btn {
-    width: 100%;
-    max-width: 300px;
-    background: #C4C4C4;
-    color: #302B42;
-    font-family: 'Montserrat';
-    font-size: 1.3rem;
-    font-weight: 700;
-    text-transform: uppercase;
-    border: 1px solid #302B42;
-    cursor: pointer;
-    transition: 0.3s;
-    padding: 0.5rem;
-
-    &.green {
-        background-color: #A0E87E;
-    }
-
-    &:hover {
-        color: #C4C4C4;
-        background-color: #302B42
-    }
-}
 
 // == Used in:
-// ==  ProductScreen;
-.badge {
-    display: none;
-    justify-content: center;
-    align-items: center;
-    width: 70px;
-    height: 30px;
-    background-color: #E87E7E;
-    color: #302B42;
-    font-weight: 700;
-    font-size: 1rem;
-    text-transform: uppercase;
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: 3;
-
-    &.color_red {
-        display: flex;
-    }
-
-    &.color_green {
-        display: flex;
-        background-color: #A0E87E;
-    }
-}
-
-// == Used in:
-// == HomeScreen | ProductScreen;
+// == HomeScreen ;
 .loading {
     display: flex;
     justify-content: center;
@@ -176,7 +123,7 @@ form {
 }
 
 // == Used in:
-// == Advantages | HomeScreen | ProductScreen;
+// == Advantages | HomeScreen ;
 .title {
     font-size: clamp(1.8rem, 2vw, 4rem);
     font-weight: 700;
@@ -191,7 +138,7 @@ form {
     }
 
     // == Used in:
-    // == ProductScreen | CartScreen:
+    // ==  | CartScreen:
     &.size_s {
         font-size: 0.7rem;
         font-weight: 500;
@@ -212,7 +159,6 @@ form {
 }
 
 // == Used in:
-// ==  ProductScreen ;
 .description {
     font-size: clamp(1rem, 1vw, 1.5rem);
     color: #fff;
@@ -223,45 +169,10 @@ form {
         width: 100%;
     }
 
-    // == ProductScreen:
-    &.productScreen {
-        color: #302B42;
-        letter-spacing: 0.1rem;
-        margin-bottom: clamp(1.5rem, 3vw, 4rem);
-
-        strong {
-            display: block;
-            letter-spacing: normal;
-            margin-bottom: 0.25rem;
-        }
-    }
 
     // == Comment:
     &.comment {
         color: #302B42;
         width: 100%;
-    }
-}
-
-// == Used in:
-// ==  ProductScreen ;
-.price {
-    display: flex;
-    align-items: center;
-    gap: 1rem;
-    font-size: clamp(1.3rem, 1vw, 2rem);
-    font-weight: 700;
-    color: #E87E7E;
-}
-
-// == Used in:
-// == 
-.oldprice {
-    font-size: clamp(1rem, 1vw, 1.3rem);
-    font-weight: 500;
-    color: #939292;
-
-    &.none {
-        font-size: 0;
     }
 }

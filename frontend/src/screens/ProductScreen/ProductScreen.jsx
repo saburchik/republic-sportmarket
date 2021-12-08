@@ -6,8 +6,7 @@ import { useLocation } from "react-router-dom"
 import { getProductDetails } from "../../redux/actions/productActions"
 import { addToCart } from "../../redux/actions/cartActions"
 // == Styles:
-import styleCom from "../../common.module.scss"
-import styleLoc from "./ProductScreen.module.scss"
+import s from "./ProductScreen.module.scss"
 // == Component:
 import Advantages from "../../components/Advantages"
 import Comment from "../../components/Comment"
@@ -41,14 +40,14 @@ const ProductScreen = ({ match, history }) => {
 
     // == Settings display icon: NEW || Sale || Empty;
     const displayBadge = () => {
-        const setBadge = [styleCom.badge]
+        const setBadge = [s.badge]
 
         if (product.isBadge === 'NEW') {
-            setBadge.push(styleCom.color_green)
+            setBadge.push(s.color_green)
         } else if (product.isBadge === ' ') {
-            setBadge.push(styleCom.badge)
+            setBadge.push(s.badge)
         } else {
-            setBadge.push(styleCom.color_red)
+            setBadge.push(s.color_red)
         }
         return setBadge.join(' ')
     }
@@ -59,9 +58,9 @@ const ProductScreen = ({ match, history }) => {
             isDisabled = true
         } else {
             return (
-                <div className={styleLoc.quantity}>
-                    <h6 className={`${styleCom.title} ${styleCom.size_s}`}>Количество:</h6>
-                    <select className={styleLoc.select} value={qty} onChange={(e) => setQty(e.target.value)}>
+                <div className={s.quantity}>
+                    <h6 className={s.subtitle}>Количество:</h6>
+                    <select className={s.select} value={qty} onChange={(e) => setQty(e.target.value)}>
                         {[...Array(product.countInStock).keys()].map((x) => (
                             <option key={x + 1} value={x + 1}>{x + 1}</option>
                         ))}
@@ -81,44 +80,44 @@ const ProductScreen = ({ match, history }) => {
         alert('В разработке')
     }
 
-    return loading ? <div className={styleCom.loading}><h3>Загрузка...</h3></div> : error
+    return loading ? <div className={s.loading}><h3>Загрузка...</h3></div> : error
         ? <h3>{error}</h3> : (
             <section>
                 <Advantages />
-                <div className={styleLoc.content}>
-                    <div className={styleLoc.photo}>
-                        <span className={displayBadge()}>{product.isBadge}</span>
+                <div className={s.inner}>
+                    <div className={s.photo}>
                         <img src={product.imageUrl} alt={product.name} />
+                        <span className={displayBadge()}>{product.isBadge}</span>
                     </div>
 
-                    <article className={styleLoc.information}>
+                    <article className={s.content}>
                         <header>
-                            <h3 className={styleCom.title} style={{ textAlign: 'left' }}>{product.name}</h3>
-                            <p className={styleCom.price}>
+                            <h3 className={s.title}>{product.name}</h3>
+                            <p className={s.price}>
                                 {product.price} ₽
                                 <del className={product.oldPrice === 0
-                                    ? `${styleCom.oldprice} ${styleCom.none}`
-                                    : styleCom.oldprice
+                                    ? `${s.oldprice} ${s.none}`
+                                    : s.oldprice
                                 }>{product.oldPrice} ₽</del>
                             </p>
                         </header>
 
-                        <div className={styleLoc.contains}>
-                            <h6 className={`${styleCom.title} ${styleCom.size_s}`}>Артикул: <strong>{product.article}</strong></h6>
-                            <p className={`${styleCom.description} ${styleCom.productScreen}`}>
+                        <div className={s.contains}>
+                            <h6 className={s.subtitle}>Артикул: <strong>{product.article}</strong></h6>
+                            <p className={s.description}>
                                 <strong>Описание:</strong>
                                 {product.description}
                             </p>
-                            <button className={styleCom.btn} onClick={alertUser}>Размераня сетка</button>
-                            <div className={styleLoc.status}>
-                                <h6 className={`${styleCom.title} ${styleCom.size_s}`}>Cтатус:
+                            <button className={s.btn} onClick={alertUser}>Размераня сетка</button>
+                            <div className={s.status}>
+                                <h6 className={s.subtitle}>Cтатус:
                                     <strong> {product.countInStock > 0 ? "В наличии" : "Нет в наличии"}</strong>
                                 </h6>
                                 {displayBtn()}
                             </div>
                         </div>
 
-                        <button className={`${styleCom.btn} ${styleCom.green}`}
+                        <button className={`${s.btn} ${s.green}`}
                             type="button"
                             onClick={addToCartHandler}
                             disabled={isDisabled}
