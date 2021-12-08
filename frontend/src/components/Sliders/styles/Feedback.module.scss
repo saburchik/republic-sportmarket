@@ -12,6 +12,12 @@
     padding: 3rem 0;
 }
 
+.title {
+    font-size: clamp(1.8rem, 2vw, 4rem);
+    text-align: center;
+    text-transform: uppercase;
+}
+
 .item {
     display: flex;
     align-items: center;

@@ -2,6 +2,13 @@
     padding: 1rem clamp(1rem, 1vw, 2rem) 5rem;
 }
 
+.title {
+    font-size: clamp(1.8rem, 2vw, 4rem);
+    text-align: center;
+    text-transform: uppercase;
+    margin-bottom: 2.5rem;
+}
+
 .wrapper {
     display: grid;
     grid-template-columns: 1fr 2fr;
@@ -15,11 +22,17 @@
     @media(max-width: 690px) {
         grid-template-columns: 1fr;
     }
-
 }
 
 .categories {
     width: clamp(288px, 22vw, 450px);
+}
+
+.subtitle {
+    font-size: clamp(1.3rem, 1vw, 3rem);
+    text-align: center;
+    text-transform: uppercase;
+    margin-bottom: 2rem;
 }
 
 .accordion {
@@ -45,5 +58,37 @@
 
     @media (max-width: 390px) {
         max-width: 100%;
+    }
+}
+
+.loading {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 80vh;
+
+    h3 {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 200px;
+        height: 200px;
+        font-size: 1.5rem;
+        border-radius: 100%;
+        border: 3px dashed #302B42;
+        animation-name: rotate;
+        animation-duration: 2.5s;
+        animation-iteration-count: infinite;
+        animation-direction: alternate;
+    }
+
+    @keyframes rotate {
+        0% {
+            transform: rotate(-15deg);
+        }
+
+        100% {
+            transform: rotate(365deg) scale(1.2);
+        }
     }
 }

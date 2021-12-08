@@ -21,7 +21,7 @@ function Accordion(props) {
     }
 
     //-- Drawing subtitles in the catalog list --<
-    let setSubtitles = props.subtitles.map(s => <li key={s.id} className={s.subtitle}>{s.subtitle}</li>)
+    let setSubtitles = props.subtitles.map(t => <li key={t.id} className={s.subtitle}>{t.subtitle}</li>)
 
     return (
         <li className={s.item}>

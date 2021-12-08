@@ -4,8 +4,7 @@ import { useSelector, useDispatch } from "react-redux"
 // == Actions:
 import { getProducts as listProducts } from "../../redux/actions/productActions"
 // == Styles:
-import styleCom from "../../common.module.scss"
-import styleLoc from "./Homescreen.module.scss"
+import s from "./Homescreen.module.scss"
 // == Components:
 import Intro from "../../components/Sliders/Intro"
 import Advantages from "../../components/Advantages"
@@ -23,11 +22,11 @@ const HomeScreen = (props) => {
     const setAccordions = props.state.Categories.map(a => <Accordion key={a.id} title={a.title} subtitles={a.subtitles} />)
 
     // == Settings styles for title:
-    const setTitle = `${styleCom.title} ${styleCom.size_m}`
+    const setTitle = s.subtitle
 
     // == Loading, then checking for errors and finally drawing product cards:
     const drawsProducts = () => loading
-        ? <div className={styleCom.loading}><h3>Загрузка...</h3></div>
+        ? <div className={s.loading}><h3>Загрузка...</h3></div>
         : error
             ? <h3 className={setTitle}>{error}</h3>
             : products.map(product => <Product
@@ -45,16 +44,16 @@ const HomeScreen = (props) => {
         <main>
             <Intro state={props.state} />
             <Advantages />
-            <article className={styleLoc.inner}>
-                <h2 className={`${styleCom.title} ${styleCom.home}`}>Ассортимент</h2>
-                <section className={styleLoc.wrapper}>
-                    <section className={styleLoc.categories}>
+            <article className={s.inner}>
+                <h2 className={s.title}>Ассортимент</h2>
+                <section className={s.wrapper}>
+                    <section className={s.categories}>
                         <h3 className={setTitle}>Категории:</h3>
-                        <ul className={styleLoc.accordion}>
+                        <ul className={s.accordion}>
                             {setAccordions}
                         </ul>
                     </section>
-                    <ul className={styleLoc.cards}>
+                    <ul className={s.cards}>
                         {drawsProducts()}
                     </ul>
                 </section>

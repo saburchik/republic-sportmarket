@@ -3,7 +3,7 @@ import React, { useEffect, useState } from "react"
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom'
 import { useLocation } from "react-router-dom"
 // == Styles:
-import './common.module.scss'
+import './App.module.scss'
 // == Screens:
 import HomeScreen from "./screens/HomeScreen/HomeScreen"
 import ProductScreen from "./screens/ProductScreen/ProductScreen"

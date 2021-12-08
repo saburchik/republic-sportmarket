@@ -1,8 +1,8 @@
 .intro {
-    background: url("../../assets/winter.jpg") right/cover no-repeat;
     display: flex;
     flex-direction: column;
     align-items: center;
+    background: url("../../assets/winter.jpg") right/cover no-repeat;
     border-bottom: 3px solid #fff;
 }
 
@@ -17,6 +17,13 @@
     padding: 1rem;
 }
 
+.title {
+    font-size: clamp(1.8rem, 2vw, 4rem);
+    text-align: center;
+    text-transform: uppercase;
+    margin-bottom: 2rem;
+}
+
 .dashboard {
     display: flex;
     flex-wrap: wrap;
@@ -28,12 +35,20 @@
 
 .login,
 .signin {
-    width: 100%;
-    max-width: 370px;
     display: flex;
     align-items: center;
     flex-direction: column;
+    width: 100%;
+    max-width: 370px;
     margin-bottom: 5rem;
+}
+
+.subtitle {
+    font-size: clamp(1.3rem, 1vw, 3rem);
+    font-weight: 700;
+    text-align: center;
+    text-transform: uppercase;
+    margin-bottom: 2rem;
 }
 
 .form {
@@ -54,17 +69,15 @@
 
 .input {
     font-family: inherit;
-    font-size: 1rem;
+    font-size: clamp(1rem, 1vw, 1.3rem);
     font-weight: 500;
     width: 100%;
     background: transparent;
     border: 3px solid #939292;
-    border-radius: 3px;
+    border-radius: 4px;
     color: #302B42;
     outline: none;
-    padding: 1rem 0.5rem 0.5rem 0.5rem;
-    transition: border-color 0.2s;
-    position: relative;
+    padding: 1rem 0.5rem 0.5rem;
     z-index: 9;
 
     &[type=password] {
@@ -91,17 +104,16 @@
     color: #939292;
     padding: 0 0.5rem;
     margin-top: 0.3rem;
-    padding-left: 10px;
+    transition: 0.2s;
     position: absolute;
     top: 0;
-    transition: 0.2s;
 }
 
 .input:placeholder-shown~.label {
     font-size: 1rem;
     color: #939292;
     cursor: text;
-    padding-left: 10px;
+    padding-left: 0.5rem;
     top: 15px;
 }
 
@@ -114,26 +126,54 @@
     top: 0;
 }
 
+.btn__badge {
+    display: flex;
+    align-items: center;
+    background-color: transparent;
+    height: 100%;
+    border: none;
+    cursor: pointer;
+    border-radius: 10px;
+    padding: 0 1rem;
+    position: absolute;
+    right: 0;
+    z-index: 9;
+
+    svg {
+        width: clamp(20px, 1vw, 30px);
+        height: clamp(20px, 1vw, 30px);
+        fill: #302B42;
+        transition: 0.2s;
+    }
+
+    &:hover,
+    &:focus-visible {
+        svg {
+            fill: #939292;
+        }
+    }
+}
+
 .btn {
     width: Min(100%, 320px);
-    background-color: #302B42;
+    background: #302B42;
     color: #fff;
 
-    font-size: 1.3rem;
+    font-size: clamp(1rem, 1.3vw, 1.5rem);
     font-weight: 700;
     text-transform: uppercase;
     border: 3px solid #302B42;
+    border-radius: 4px;
     cursor: pointer;
     transition: .3s;
     padding: 0.5rem 0;
     margin: 0 auto;
 
-    &:hover {
+    &:hover,
+    &:focus-visible {
         color: #302B42;
         background-color: #fff
     }
-
-    @media (max-width: 390px) {}
 }
 
 
@@ -148,16 +188,5 @@
 
     &:hover {
         color: #cecece;
-    }
-
-}
-
-
-@media (max-width: 490px) {
-
-    .login,
-    .registration {
-        width: 100%;
-        padding: 0;
     }
 }

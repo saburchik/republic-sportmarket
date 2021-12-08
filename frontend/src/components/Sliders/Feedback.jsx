@@ -2,7 +2,6 @@
 import React from "react"
 import SlidersFeedback from "react-slick"
 // == Styles:
-import styleCom from "../../common.module.scss"
 import styleLoc from "./styles/Feedback.module.scss"
 import './styles/slick.scss'
 
@@ -36,7 +35,7 @@ const Feedback = (props) => {
 
     return (
         <article className={styleLoc.article}>
-            <h2 className={styleCom.title}>Отзывы покупателей</h2>
+            <h2 className={styleLoc.title}>Отзывы покупателей</h2>
             <SlidersFeedback className={styleLoc.inner} {...settings}>
                 {drawSliders}
             </SlidersFeedback>

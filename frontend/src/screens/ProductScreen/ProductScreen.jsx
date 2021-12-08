@@ -7,7 +7,7 @@ import { getProductDetails } from "../../redux/actions/productActions"
 import { addToCart } from "../../redux/actions/cartActions"
 // == Styles:
 import s from "./ProductScreen.module.scss"
-// == Component:
+// == Components:
 import Advantages from "../../components/Advantages"
 import Comment from "../../components/Comment"
 
@@ -19,7 +19,6 @@ const ProductScreen = ({ match, history }) => {
         return null
     }
     ScrollToTop()
-
 
     const [qty, setQty] = useState(1)
     const dispatch = useDispatch()
@@ -35,7 +34,7 @@ const ProductScreen = ({ match, history }) => {
 
     const addToCartHandler = () => {
         dispatch(addToCart(product._id, qty))
-        history.push("/cart")
+        history.push('/cart')
     }
 
     // == Settings display icon: NEW || Sale || Empty;
@@ -59,7 +58,7 @@ const ProductScreen = ({ match, history }) => {
         } else {
             return (
                 <div className={s.quantity}>
-                    <h6 className={s.subtitle}>Количество:</h6>
+                    <p className={s.subtitle}>Количество:</p>
                     <select className={s.select} value={qty} onChange={(e) => setQty(e.target.value)}>
                         {[...Array(product.countInStock).keys()].map((x) => (
                             <option key={x + 1} value={x + 1}>{x + 1}</option>
@@ -72,7 +71,7 @@ const ProductScreen = ({ match, history }) => {
 
     let disabledBackdrop = () => {
         if (product.countInStock === 0) {
-            return { background: '#d0d0d0', color: '#9a9a9a', border: '1px solid #9a9a9a' }
+            return { background: '#d0d0d0', color: '#9a9a9a', border: '2px solid #9a9a9a' }
         }
     }
 
@@ -84,23 +83,20 @@ const ProductScreen = ({ match, history }) => {
         ? <h3>{error}</h3> : (
             <section>
                 <Advantages />
-                <div className={s.inner}>
+                <main className={s.inner}>
                     <div className={s.photo}>
                         <img src={product.imageUrl} alt={product.name} />
                         <span className={displayBadge()}>{product.isBadge}</span>
                     </div>
 
                     <article className={s.content}>
-                        <header>
-                            <h3 className={s.title}>{product.name}</h3>
-                            <p className={s.price}>
-                                {product.price} ₽
-                                <del className={product.oldPrice === 0
-                                    ? `${s.oldprice} ${s.none}`
-                                    : s.oldprice
-                                }>{product.oldPrice} ₽</del>
-                            </p>
-                        </header>
+                        <h3 className={s.title}>{product.name}</h3>
+                        <p className={s.price}>{product.price} ₽
+                            <del className={product.oldPrice === 0
+                                ? `${s.oldprice} ${s.none}`
+                                : s.oldprice
+                            }>{product.oldPrice} ₽</del>
+                        </p>
 
                         <div className={s.contains}>
                             <h6 className={s.subtitle}>Артикул: <strong>{product.article}</strong></h6>
@@ -124,7 +120,7 @@ const ProductScreen = ({ match, history }) => {
                             style={disabledBackdrop()}
                         >В корзину</button>
                     </article>
-                </div>
+                </main>
                 <Comment />
             </section >
         )
