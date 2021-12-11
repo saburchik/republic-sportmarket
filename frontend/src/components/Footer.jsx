@@ -8,7 +8,6 @@ import Logo from "./Logo"
 
 
 const Footer = () => {
-
     return (
         <footer className={s.inner}>
             <address className={s.item}>
@@ -68,32 +67,32 @@ const Footer = () => {
                                 </symbol>
                             </svg>
                             <li>
-                                <Link className={s.icon} to="/">
+                                <a className={s.icon} href="https://vk.com/saburchik_chsv" rel="noreferrer" target="_blank">
                                     <svg>
                                         <use xlinkHref="#vk-brands" />
                                     </svg>
-                                </Link>
+                                </a>
                             </li>
                             <li>
-                                <Link className={s.icon} to="/">
+                                <a className={s.icon} href="https://www.youtube.com/" rel="noreferrer" target="_blank">
                                     <svg>
                                         <use xlinkHref="#youtube-brands" />
                                     </svg>
-                                </Link>
+                                </a>
                             </li>
                             <li>
-                                <Link className={s.icon} to="/">
+                                <a className={s.icon} href="https://t.me/saburchik_chsv" rel="noreferrer" target="_blank">
                                     <svg>
                                         <use xlinkHref="#telegram-brands" />
                                     </svg>
-                                </Link>
+                                </a>
                             </li>
                             <li>
-                                <Link className={s.icon} to="/">
+                                <a className={s.icon} href="https://www.instagram.com/saburchik_chsv/" rel="noreferrer" target="_blank">
                                     <svg>
                                         <use xlinkHref="#instagram-brands" />
                                     </svg>
-                                </Link>
+                                </a>
                             </li>
                         </ul>
                     </li>

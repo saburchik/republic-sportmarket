@@ -1,6 +1,6 @@
 //-- IntroSliders:
-import winterImg from './assets/winter.jpg'
-import skateImg from './assets/skate.jpg'
+// import winterImg from './assets/winter.jpg'
+// import skateImg from './assets/skate.jpg'
 
 //-- Feedback:
 import user_1 from "./assets/feedback/user_1.png"
@@ -13,7 +13,7 @@ let state = {
             id: 1,
             title: 'Отдыхай в',
             titleSplit: 'движении',
-            img: winterImg,
+            img: 'https://i.imgur.com/trCDHEq.jpeg',
             alt: 'Изображение человека на сноуборде',
             styleClass: '',
         },
@@ -21,7 +21,7 @@ let state = {
             id: 2,
             title: 'Сделай свою',
             titleSplit: 'жизнь ярче!',
-            img: skateImg,
+            img: 'https://i.imgur.com/FHluX1M.jpeg',
             alt: 'Изображение скейтборда',
             styleClass: 'left',
         }
