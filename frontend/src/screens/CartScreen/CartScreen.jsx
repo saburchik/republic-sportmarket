@@ -1,7 +1,7 @@
 // == Base:
-import React from "react"
+import React, { useEffect } from "react"
 import { useDispatch, useSelector } from "react-redux"
-import { Link } from "react-router-dom"
+import { Link, useLocation } from "react-router-dom"
 // == Actions:
 import { addToCart, removeFromCart } from "../../redux/actions/cartActions"
 // == Styles:
@@ -13,9 +13,14 @@ import CartItem from "../../components/CartItem"
 import Order from "./Order/Order"
 
 
-const CartScreen = (props) => {
+const CartScreen = () => {
     // == Scroll to up when switching to CartScreen:
-    props.ScrollToTop()
+    function ScrollToTop() {
+        const { pathname } = useLocation();
+        useEffect(() => { window.scrollTo(0, 0) }, [pathname])
+        return null
+    }
+    ScrollToTop()
 
     const dispatch = useDispatch()
     const cart = useSelector(state => state.cart)

@@ -2,7 +2,7 @@
 import React from "react"
 import { useSelector } from "react-redux"
 // == Styles:
-import s from './Order.module.scss'
+import s from "./Order.module.scss"
 
 const Order = () => {
     const cart = useSelector(state => state.cart)
@@ -16,9 +16,7 @@ const Order = () => {
         return cartItems.reduce((price, item) => item.price * item.qty + price, 0)
     }
 
-    const alertUser = () => {
-        alert('В разработке')
-    }
+    const alertUser = () => alert('В разработке')
 
     return (
         <aside className={s.order}>

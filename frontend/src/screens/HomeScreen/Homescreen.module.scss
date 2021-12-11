@@ -2,18 +2,12 @@
     padding: 1rem clamp(1rem, 1vw, 2rem) 5rem;
 }
 
-.title {
-    font-size: clamp(1.8rem, 2vw, 4rem);
-    text-align: center;
-    text-transform: uppercase;
-    margin-bottom: 2.5rem;
-}
-
 .wrapper {
     display: grid;
     grid-template-columns: 1fr 2fr;
     justify-items: center;
     gap: 2rem;
+    margin-top: 2.5rem;
 
     @media(max-width: 937px) {
         grid-template-columns: 1fr 1fr;

@@ -2,6 +2,8 @@
 import React from "react"
 // == Styles:
 import s from "./styles/Digest.module.scss"
+// == Components:
+import Title from "../UI/Title"
 
 const Digest = () => {
     function alertUser(e) {
@@ -11,7 +13,7 @@ const Digest = () => {
 
     return (
         <article className={s.inner}>
-            <h3 className={s.title}>Подпишись на наш Дайджест</h3>
+            <Title title="Подпишись на наш Дайджест" />
             <p className={s.description}>
                 Подпишитесь на новостную рассылку Республики и будь всегда в курсе всех новостей,
                 распродаж, акций и бонусов только для своих. Обещаем не спамить и не надоедать письмами.

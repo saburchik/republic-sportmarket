@@ -3,11 +3,13 @@ import React from "react"
 import { Link } from "react-router-dom"
 // == Styles:
 import s from "./styles/Comment.module.scss"
+// == Components:
+import Title from "../UI/Title"
 
 const Comment = () => {
     return (
         <article className={s.inner}>
-            <h3 className={s.title}>Отзывы</h3>
+            <Title title="Отзывы" />
             <div className={s.comment}>
                 <strong className={s.title__user}>Saburchik:</strong>
                 <p className={s.description}>Отличный магазин, доставка до Красноярска как и заявлена 4 дня, постоянно есть обратная связь. Доска без косяков, что хотел, то и получил, приятно когда работают профессионалы.</p>

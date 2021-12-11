@@ -11,6 +11,7 @@ import Advantages from "../../components/Advantages"
 import Accordion from "../../components/Accordion"
 import Product from "../../components/Product"
 import Feedback from "../../components/Sliders/Feedback"
+import Title from "../../UI/Title"
 
 const HomeScreen = (props) => {
     const dispatch = useDispatch()
@@ -45,7 +46,7 @@ const HomeScreen = (props) => {
             <Intro state={props.state} />
             <Advantages />
             <article className={s.inner}>
-                <h2 className={s.title}>Ассортимент</h2>
+                <Title title="Ассортимент" />
                 <section className={s.wrapper}>
                     <section className={s.categories}>
                         <h3 className={setTitle}>Категории:</h3>

@@ -5,6 +5,7 @@ import { Link, useLocation } from "react-router-dom"
 import s from "./LoginScreen.module.scss"
 // == Component:
 import Advantages from "../../components/Advantages"
+import Title from "../../UI/Title"
 
 const LoginScreen = () => {
     function ScrollToTop() {
@@ -26,7 +27,7 @@ const LoginScreen = () => {
     return (
         <section className={s.intro}>
             <article className={s.inner}>
-                <h2 className={s.title}>Личный кабинет</h2>
+                <Title title="Личный кабинет" />
                 <div className={s.dashboard}>
                     <article className={s.login}>
                         <h3 className={s.subtitle}>Вход</h3>

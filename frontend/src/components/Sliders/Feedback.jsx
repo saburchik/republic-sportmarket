@@ -4,6 +4,8 @@ import SlidersFeedback from "react-slick"
 // == Styles:
 import styleLoc from "./styles/Feedback.module.scss"
 import './styles/slick.scss'
+// == Components:
+import Title from "../../UI/Title"
 
 const Feedback = (props) => {
     //== Settings slider:
@@ -35,7 +37,7 @@ const Feedback = (props) => {
 
     return (
         <article className={styleLoc.article}>
-            <h2 className={styleLoc.title}>Отзывы покупателей</h2>
+            <Title title="Отзывы покупателей" />
             <SlidersFeedback className={styleLoc.inner} {...settings}>
                 {drawSliders}
             </SlidersFeedback>
