@@ -17,6 +17,11 @@ import Footer from "./components/Footer"
 
 function App(props) {
   const [sideToggle, setSideToggle] = useState(false)
+
+  // let scrollToElement = React.createRef()
+
+  // let scrollToMyRef = () => { window.scrollTo(0, scrollToElement.current.scrollHeight) }
+
   return (
     <Router>
       <Navbar click={() => setSideToggle(true)} />

@@ -1,6 +1,7 @@
 // == Base:
 import { React, useEffect } from "react"
 import { useSelector, useDispatch } from "react-redux"
+import { useLocation } from "react-router-dom"
 // == Actions:
 import { getProducts as listProducts } from "../../redux/actions/productActions"
 // == Styles:
@@ -14,6 +15,26 @@ import Feedback from "../../components/Sliders/Feedback"
 import Title from "../../UI/Title"
 
 const HomeScreen = (props) => {
+    let location = useLocation()
+
+    location = {
+        pathname: "/",
+        hash: "#goal"
+    }
+
+    useEffect(() => {
+        if (location.hash) {
+            let elem = document.getElementById(location.hash.slice(1))
+            if (elem) {
+                elem.scrollIntoView({ behavior: "smooth" })
+            } else {
+                window.scrollTo({ top: 0, left: 0, behavior: "smooth" })
+            }
+        } else {
+            window.scrollTo({ top: 0, left: 0, behavior: "smooth" })
+        }
+    }, [location])
+
     const dispatch = useDispatch()
     const getProducts = useSelector(state => state.getProducts)
     const { products, loading, error } = getProducts
@@ -45,7 +66,7 @@ const HomeScreen = (props) => {
         <main>
             <Intro state={props.state} />
             <Advantages />
-            <article className={s.inner}>
+            <article className={s.inner} id="goal">
                 <Title title="Ассортимент" />
                 <section className={s.wrapper}>
                     <section className={s.categories}>

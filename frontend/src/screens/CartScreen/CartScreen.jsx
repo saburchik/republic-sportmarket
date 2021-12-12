@@ -14,6 +14,7 @@ import Order from "./Order/Order"
 
 
 const CartScreen = () => {
+
     // == Scroll to up when switching to CartScreen:
     function ScrollToTop() {
         const { pathname } = useLocation();
@@ -36,6 +37,7 @@ const CartScreen = () => {
         dispatch(removeFromCart(id))
     }
 
+
     return (
         <section>
             <Advantages />
@@ -51,7 +53,9 @@ const CartScreen = () => {
                                     <br />
                                     Здесь хранятся товары, которые вы добавили в корзину. Сейчас ваша корзина пуста.
                                 </p>
-                                <Link className={s.link} to="/">Перейти к ассортименту</Link>
+                                <Link className={s.link} to="/#goal">
+                                    Перейти к ассортименту
+                                </Link>
                             </li>
                         ) : cartItems.map(item => (
                             <CartItem
@@ -65,7 +69,7 @@ const CartScreen = () => {
                     <Order />
                 </div>
             </article>
-        </section>
+        </section >
     )
 }
 
