@@ -3,7 +3,7 @@ import React from "react"
 // == Styles:
 import s from "./styles/Digest.module.scss"
 // == Components:
-import Title from "../UI/Title"
+import Title from "../UI/Title/Title"
 
 const Digest = () => {
     function alertUser(e) {

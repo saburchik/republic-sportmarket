@@ -1,7 +1,7 @@
 require("dotenv").config();
-const express = require('express');
+const express = require("express");
 const connectDB = require("./config/db");
-const productRoutes = require('./routes/productRoutes');
+const productRoutes = require("./routes/productRoutes");
 
 connectDB();
 
@@ -11,11 +11,11 @@ app.use(express.json())
 
 app.use('/api/products', productRoutes);
 
-// Step deploy
+// == Step deploy:
 if (process.env.NODE_ENV === 'production') {
     app.use(express.static('frontend/build'))
 
-    // Code below let to refresh the page and save the state of the products
+    // == Code below let to refresh the page and save the state of the products:
     const path = require('path');
     app.get('*', (req, res) => {
         res.sendFile(path.resolve(__dirname, 'frontend', 'build', 'index.html'));

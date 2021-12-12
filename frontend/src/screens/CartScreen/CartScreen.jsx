@@ -8,13 +8,11 @@ import { addToCart, removeFromCart } from "../../redux/actions/cartActions"
 import s from "./CartScreen.module.scss"
 // == Components:
 import Advantages from "../../components/Advantages"
-import Title from "../../UI/Title"
+import Title from "../../UI/Title/Title"
 import CartItem from "../../components/CartItem"
 import Order from "./Order/Order"
 
-
 const CartScreen = () => {
-
     // == Scroll to up when switching to CartScreen:
     function ScrollToTop() {
         const { pathname } = useLocation();
@@ -37,7 +35,6 @@ const CartScreen = () => {
         dispatch(removeFromCart(id))
     }
 
-
     return (
         <section>
             <Advantages />
@@ -53,18 +50,16 @@ const CartScreen = () => {
                                     <br />
                                     Здесь хранятся товары, которые вы добавили в корзину. Сейчас ваша корзина пуста.
                                 </p>
-                                <Link className={s.link} to="/#goal">
+                                <Link className={s.link} to="/">
                                     Перейти к ассортименту
                                 </Link>
                             </li>
-                        ) : cartItems.map(item => (
-                            <CartItem
-                                key={item.product}
-                                item={item}
-                                qtyChangeHandler={qtyChangeHandler}
-                                removeHandler={removeHandler}
-                            />
-                        ))}
+                        ) : cartItems.map(item => <CartItem
+                            key={item.product}
+                            item={item}
+                            qtyChangeHandler={qtyChangeHandler}
+                            removeHandler={removeHandler} />
+                        )}
                     </ul>
                     <Order />
                 </div>

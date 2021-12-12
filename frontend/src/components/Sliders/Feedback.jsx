@@ -5,7 +5,7 @@ import SlidersFeedback from "react-slick"
 import styleLoc from "./styles/Feedback.module.scss"
 import './styles/slick.scss'
 // == Components:
-import Title from "../../UI/Title"
+import Title from "../../UI/Title/Title"
 
 const Feedback = (props) => {
     //== Settings slider:
@@ -21,7 +21,7 @@ const Feedback = (props) => {
     }
 
     //== Drawing sliders from Business Logic State(state.js):
-    let drawSliders = props.state.feedback.map(i => {
+    let drawSliders = props.state.Feedback.map(i => {
         return (
             <div key={i.id}>
                 <div className={styleLoc.item}>

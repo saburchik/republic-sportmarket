@@ -1,7 +1,6 @@
 // == Base:
 import { React, useEffect } from "react"
 import { useSelector, useDispatch } from "react-redux"
-import { useLocation } from "react-router-dom"
 // == Actions:
 import { getProducts as listProducts } from "../../redux/actions/productActions"
 // == Styles:
@@ -9,31 +8,12 @@ import s from "./Homescreen.module.scss"
 // == Components:
 import Intro from "../../components/Sliders/Intro"
 import Advantages from "../../components/Advantages"
+import Title from "../../UI/Title/Title"
 import Accordion from "../../components/Accordion"
 import Product from "../../components/Product"
 import Feedback from "../../components/Sliders/Feedback"
-import Title from "../../UI/Title"
 
 const HomeScreen = (props) => {
-    let location = useLocation()
-
-    location = {
-        pathname: "/",
-        hash: "#goal"
-    }
-
-    useEffect(() => {
-        if (location.hash) {
-            let elem = document.getElementById(location.hash.slice(1))
-            if (elem) {
-                elem.scrollIntoView({ behavior: "smooth" })
-            } else {
-                window.scrollTo({ top: 0, left: 0, behavior: "smooth" })
-            }
-        } else {
-            window.scrollTo({ top: 0, left: 0, behavior: "smooth" })
-        }
-    }, [location])
 
     const dispatch = useDispatch()
     const getProducts = useSelector(state => state.getProducts)
@@ -43,14 +23,11 @@ const HomeScreen = (props) => {
     // == Drawing accordion titles:
     const setAccordions = props.state.Categories.map(a => <Accordion key={a.id} title={a.title} subtitles={a.subtitles} />)
 
-    // == Settings styles for title:
-    const setTitle = s.subtitle
-
     // == Loading, then checking for errors and finally drawing product cards:
     const drawsProducts = () => loading
         ? <div className={s.loading}><h3>Загрузка...</h3></div>
         : error
-            ? <h3 className={setTitle}>{error}</h3>
+            ? <h3 className={s.subtitle}>{error}</h3>
             : products.map(product => <Product
                 key={product._id}
                 productId={product._id}
@@ -66,15 +43,15 @@ const HomeScreen = (props) => {
         <main>
             <Intro state={props.state} />
             <Advantages />
-            <article className={s.inner} id="goal">
+            <article className={s.inner}>
                 <Title title="Ассортимент" />
                 <section className={s.wrapper}>
-                    <section className={s.categories}>
-                        <h3 className={setTitle}>Категории:</h3>
+                    <aside className={s.categories}>
+                        <h3 className={s.subtitle}>Категории:</h3>
                         <ul className={s.accordion}>
                             {setAccordions}
                         </ul>
-                    </section>
+                    </aside>
                     <ul className={s.cards}>
                         {drawsProducts()}
                     </ul>

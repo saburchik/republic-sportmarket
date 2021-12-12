@@ -38,13 +38,8 @@
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(17rem, 1fr));
     justify-content: center;
-    gap: 1rem;
+    gap: clamp(1rem, 1vw, 1.5rem);
     width: 100%;
-
-    @media (min-width: 1990px) {
-        grid-template-columns: repeat(auto-fit, minmax(350px, 370px));
-        gap: 1.5rem;
-    }
 
     @media(max-width:624px) {
         max-width: 370px;
@@ -52,6 +47,10 @@
 
     @media (max-width: 390px) {
         max-width: 100%;
+    }
+
+    @media (min-width: 1990px) {
+        grid-template-columns: repeat(auto-fit, minmax(350px, 370px));
     }
 }
 

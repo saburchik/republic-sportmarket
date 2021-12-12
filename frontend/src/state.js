@@ -1,10 +1,10 @@
 //== Feedback:
-import user_1 from "./assets/feedback/user_1.png"
-import user_2 from "./assets/feedback/user_2.png"
-import user_3 from "./assets/feedback/user_3.png"
+import user_1 from "./assets/avatar/user_1.png"
+import user_2 from "./assets/avatar/user_2.png"
+import user_3 from "./assets/avatar/user_3.png"
 
 let state = {
-    intro: [
+    Intro: [
         {
             id: 1,
             title: 'Отдыхай в',
@@ -53,7 +53,7 @@ let state = {
             ]
         },
     ],
-    feedback: [
+    Feedback: [
         {
             id: 1,
             img: user_1,

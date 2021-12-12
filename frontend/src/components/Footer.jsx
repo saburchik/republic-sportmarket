@@ -4,10 +4,11 @@ import { Link } from "react-router-dom"
 // == Styles:
 import s from "./styles/Footer.module.scss"
 // == Component:
-import Logo from "./Logo"
+import Logo from "../UI/Logo/Logo"
 
 
 const Footer = () => {
+
     return (
         <footer className={s.inner}>
             <address className={s.item}>

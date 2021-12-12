@@ -1,7 +1,7 @@
 {
   "name": "republic-shop",
+  "author": "Yury Saburov <the.saburchik@gmail.com>",
   "version": "2.0.0",
-  "description": "",
   "main": "server.js",
   "scripts": {
     "start": "node server.js",
@@ -13,8 +13,6 @@
     "dev": "concurrently \"npm run server\" \"npm run client\"",
     "data:import": "node seederScript.js"
   },
-  "keywords": [],
-  "author": "Yury Saburov",
   "license": "ISC",
   "dependencies": {
     "dotenv": "^8.6.0",

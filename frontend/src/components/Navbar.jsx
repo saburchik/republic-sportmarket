@@ -5,13 +5,12 @@ import { useSelector } from "react-redux"
 // == Styles:
 import s from "./styles/Navbar.module.scss"
 // == Component:
-import Logo from "./Logo"
+import Logo from "../UI/Logo/Logo"
 
 
 const Navbar = ({ click }) => {
     const cart = useSelector(state => state.cart)
     const { cartItems } = cart
-
     const getCartCount = () => cartItems.reduce((qty, item) => qty + Number(item.qty), 0)
 
     function alertUser(e) {

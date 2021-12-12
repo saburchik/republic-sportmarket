@@ -16,11 +16,8 @@ import Digest from "./components/Digest"
 import Footer from "./components/Footer"
 
 function App(props) {
+  // == Adaptive with a width of 890 or less:
   const [sideToggle, setSideToggle] = useState(false)
-
-  // let scrollToElement = React.createRef()
-
-  // let scrollToMyRef = () => { window.scrollTo(0, scrollToElement.current.scrollHeight) }
 
   return (
     <Router>

@@ -1,9 +1,9 @@
 // == Base:
 import { Link } from "react-router-dom"
 // == Img:
-import logo from "./../assets/republic.png"
+import logo from "../../assets/republic.png"
 // == Styles:
-import s from "./styles/Logo.module.scss"
+import s from "./Logo.module.scss"
 
 const Logo = () => {
     return (

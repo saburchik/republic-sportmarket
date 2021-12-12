@@ -84,7 +84,8 @@
         color: transparent;
     }
 
-    &:focus {
+    &:focus,
+    &:focus-visible {
         border-color: #E87E7E;
     }
 }
@@ -122,7 +123,7 @@
 .btn__badge {
     display: flex;
     align-items: center;
-    background-color: transparent;
+    background: transparent;
     height: 100%;
     border: none;
     cursor: pointer;
@@ -151,7 +152,6 @@
     width: Min(100%, 320px);
     background: #302B42;
     color: #fff;
-
     font-size: clamp(1rem, 1.3vw, 1.5rem);
     font-weight: 700;
     text-transform: uppercase;
@@ -165,16 +165,15 @@
     &:hover,
     &:focus-visible {
         color: #302B42;
-        background-color: #fff
+        background: #fff
     }
 }
-
 
 .password {
     font-size: 0.7rem;
     font-weight: 500;
-    color: #939292;
     font-style: italic;
+    color: #939292;
     text-transform: uppercase;
     margin: 0 auto;
     transition: 0.2s;

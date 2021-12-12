@@ -1,3 +1,0 @@
-- The folder frontend must be deleted the string "proxy";
-- In the server.js file uncomment the condition below "Step deploy"
-  "proxy": "http://127.0.0.1:5000/",

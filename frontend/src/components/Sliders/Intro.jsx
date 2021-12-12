@@ -20,7 +20,7 @@ const Intro = (props) => {
     }
 
     //== Drawing sliders from Business Logic State(state.js):
-    let drawSliders = props.state.intro.map(s => {
+    let drawSliders = props.state.Intro.map(s => {
         //== Each slider has its additional style class or an empty string, for individual customization:
         const setTitle = `${styleLoc.title} ${s.styleClass !== '' ? styleLoc.left : ''}`
 

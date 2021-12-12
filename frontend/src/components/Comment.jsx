@@ -4,7 +4,7 @@ import { Link } from "react-router-dom"
 // == Styles:
 import s from "./styles/Comment.module.scss"
 // == Components:
-import Title from "../UI/Title"
+import Title from "../UI/Title/Title"
 
 const Comment = () => {
     return (
