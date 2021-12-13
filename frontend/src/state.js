@@ -10,6 +10,7 @@ let state = {
             title: 'Отдыхай в',
             titleSplit: 'движении',
             img: 'https://i.imgur.com/trCDHEq.jpeg',
+            minimg: 'https://i.imgur.com/o37bk4J.jpeg',
             alt: 'Изображение человека на сноуборде',
             styleClass: '',
         },

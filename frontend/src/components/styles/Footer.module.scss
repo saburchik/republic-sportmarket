@@ -1,12 +1,10 @@
-// == Five media-quaries in Footer;
-
 .inner {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
     gap: 1rem;
     width: 100%;
-    background-color: #171717;
+    background: #171717;
     background: url("../../assets/footer.jpg") center/cover no-repeat;
     padding: 2rem 2rem 1rem;
 }
@@ -63,6 +61,10 @@
         font-weight: 400;
         color: #C2C2C2;
         text-transform: lowercase;
+
+        @media (max-width:390px) {
+            font-size: 0.9rem;
+        }
     }
 
     a {
@@ -75,6 +77,10 @@
 
         &:hover {
             color: #939292;
+        }
+
+        @media (max-width:390px) {
+            font-size: 0.9rem;
         }
     }
 
@@ -93,6 +99,10 @@
     &:hover {
         color: #fff;
         text-decoration: underline;
+    }
+
+    @media (max-width:390px) {
+        font-size: 0.9rem;
     }
 }
 

@@ -27,7 +27,11 @@ const Intro = (props) => {
         return (
             <article key={s.id}>
                 <h1 className={setTitle}>{s.title} <br /> {s.titleSplit}</h1>
-                <img className={styleLoc.img} src={s.img} alt={s.alt} />
+                {/* <img className={styleLoc.img} src={s.img} alt={s.alt} /> */}
+                <picture>
+                    <source srcSet={s.minimg} media="(max-width: 390px)" type="image/jpeg" />
+                    <img className={styleLoc.img} src={s.img} alt={s.alt} />
+                </picture>
             </article >
         )
     })

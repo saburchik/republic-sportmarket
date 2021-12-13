@@ -20,6 +20,10 @@
 
 .categories {
     width: clamp(288px, 22vw, 450px);
+
+    @media (max-width: 390px) {
+        width: 100%;
+    }
 }
 
 .subtitle {

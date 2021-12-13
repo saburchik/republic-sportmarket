@@ -5,7 +5,7 @@ import { Link } from "react-router-dom"
 import s from "./styles/CartItem.module.scss"
 
 const CartItem = ({ item, qtyChangeHandler, removeHandler }) => {
-    let backPath = `/product/${item.product}`
+    let pathToBack = `/product/${item.product}`
 
     return (
         <li className={s.inner}>
@@ -16,7 +16,7 @@ const CartItem = ({ item, qtyChangeHandler, removeHandler }) => {
                 </svg>
             </button>
 
-            <Link className={s.photo} to={backPath}>
+            <Link className={s.photo} to={pathToBack}>
                 <img src={item.imageUrl} alt={item.name} />
             </Link>
             <div className={s.item}>
