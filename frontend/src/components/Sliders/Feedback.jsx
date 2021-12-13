@@ -25,7 +25,10 @@ const Feedback = (props) => {
         return (
             <div key={i.id}>
                 <div className={styleLoc.item}>
-                    <img className={styleLoc.img} src={i.img} alt={i.alt} />
+                    <picture>
+                        <source srcset={i.imgWebp} type="image/webp" />
+                        <img className={styleLoc.img} src={i.img} alt={i.alt} />
+                    </picture>
                     <em className={styleLoc.comment}>
                         {i.comment}
                         <strong>– {i.author}</strong>

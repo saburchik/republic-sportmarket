@@ -1,7 +1,21 @@
 //== Feedback:
 import user_1 from "./assets/avatar/user_1.png"
+import user_1_webp from "./assets/avatar/user_1.webp"
 import user_2 from "./assets/avatar/user_2.png"
+import user_2_webp from "./assets/avatar/user_2.webp"
 import user_3 from "./assets/avatar/user_3.png"
+import user_3_webp from "./assets/avatar/user_3.webp"
+
+// == Intro img:
+import intro_1 from './assets/winter.jpg'
+import intro_1_webp from './assets/winter.webp'
+import intro_s from './assets/winter_s.jpg'
+import intro_s_webp from './assets/winter_s.webp'
+
+import intro_2 from './assets/skate.jpg'
+import intro_2_webp from './assets/skate.webp'
+
+
 
 let state = {
     Intro: [
@@ -9,8 +23,10 @@ let state = {
             id: 1,
             title: 'Отдыхай в',
             titleSplit: 'движении',
-            img: 'https://i.imgur.com/trCDHEq.jpeg',
-            minimg: 'https://i.imgur.com/o37bk4J.jpeg',
+            img: intro_1,
+            imgWebp: intro_1_webp,
+            img_s: intro_s,
+            img_s_webp: intro_s_webp,
             alt: 'Изображение человека на сноуборде',
             styleClass: '',
         },
@@ -18,7 +34,8 @@ let state = {
             id: 2,
             title: 'Сделай свою',
             titleSplit: 'жизнь ярче!',
-            img: 'https://i.imgur.com/FHluX1M.jpeg',
+            img: intro_2,
+            imgWebp: intro_2_webp,
             alt: 'Изображение скейтборда',
             styleClass: 'left',
         }
@@ -58,18 +75,21 @@ let state = {
         {
             id: 1,
             img: user_1,
+            imgWebp: user_1_webp,
             comment: 'Отличный интернет магазин, с продукцией высокого качества. Имеется вся подробная информация о товаре. И даже, если возникут дополнительные вопросы, специалисты поддержки в кротчайшее время отвечают, и подсказывают.',
             author: 'Сын Тони Хоука',
         },
         {
             id: 2,
             img: user_2,
+            imgWebp: user_2_webp,
             comment: 'Максимально индивидуальный подход к выбору товаров. В Республике. Дружелюбный коллектив, приятная атмосфера. Очень доволен. Заказали лонгборд в четверг, привезли в пятницу. Молодцы ребята.',
             author: 'Андрей Андреевич Замай',
         },
         {
             id: 3,
             img: user_3,
+            imgWebp: user_3_webp,
             comment: 'Не большой ИМ. Выставочных мест не много. Конечно, до Сквота далеко, но заказать скейтборд или получить заказ то, что нужно и не нужно ехать на другой конец города. И очень приветливый персонал, молодцы ребятки.',
             author: 'Овсянкин',
         }

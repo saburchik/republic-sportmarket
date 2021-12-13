@@ -5,8 +5,12 @@
     gap: 1rem;
     width: 100%;
     background: #171717;
-    background: url("../../assets/footer.jpg") center/cover no-repeat;
+    background: url('../../assets/footer.jpg') center/cover no-repeat;
     padding: 2rem 2rem 1rem;
+
+    @supports (background: url('../../assets/footer.webp')) {
+        background: url('../../assets/footer.webp') no-repeat center/cover;
+    }
 }
 
 .item {

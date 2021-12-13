@@ -1,0 +1,22 @@
+=== Basic taska:
+1) Take out functions that relate to BL in Redux;
+
+2) Make the components cleaner;
+
+3) Settings a state in the OOP format;
+
+
+
+=== Global tasks:
+1) Make the display/hiring of the password by the icon local in LoginScreen(Because now, when you click the icon, 
+the password for each input with the password type on the page is displaed/hidden);
+
+2) Make a product filter;
+
+3) Make a smooth scroll, when from CartScreen go to the assortment by the button;
+
+4) Build a field comment in ProductScreen under the product;
+
+5) Create registration/Login in LoginScreen, with validation and with the ability to leave comment;
+
+6) Make the search field live;

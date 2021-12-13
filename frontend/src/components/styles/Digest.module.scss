@@ -4,10 +4,14 @@
     align-items: center;
     justify-content: center;
     gap: 2rem;
-    background: url("../../assets/digest.jpg") center/cover no-repeat;
+    background: url('../../assets/digest.jpg') center/cover no-repeat;
     min-height: 400px;
     text-align: center;
     padding: 2rem;
+
+    @supports (background: url('../../assets/digest.webp')) {
+        background: url('../../assets/digest.webp') no-repeat center/cover;
+    }
 }
 
 .description {

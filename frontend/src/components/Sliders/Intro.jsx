@@ -29,7 +29,9 @@ const Intro = (props) => {
                 <h1 className={setTitle}>{s.title} <br /> {s.titleSplit}</h1>
                 {/* <img className={styleLoc.img} src={s.img} alt={s.alt} /> */}
                 <picture>
-                    <source srcSet={s.minimg} media="(max-width: 390px)" type="image/jpeg" />
+                    <source srcSet={s.img_s_webp} media="(max-width: 390px)" type="image/webp" />
+                    <source srcSet={s.img_s} media="(max-width: 390px)" type="image/jpeg" />
+                    <source srcSet={s.imgWebp} type="image/webp" />
                     <img className={styleLoc.img} src={s.img} alt={s.alt} />
                 </picture>
             </article >
