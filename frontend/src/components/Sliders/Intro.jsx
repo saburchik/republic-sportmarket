@@ -2,7 +2,7 @@
 import React from "react"
 import SlidersIntro from "react-slick"
 // == Styles:
-import styleLoc from "./styles/Intro.module.scss"
+import s from "./styles/Intro.module.scss"
 import "./styles/slick.scss"
 
 const Intro = (props) => {
@@ -16,30 +16,27 @@ const Intro = (props) => {
         slidesToShow: 1,
         slidesToScroll: 1,
         arrows: false,
-        dotsClass: styleLoc.lines,
+        dotsClass: s.lines,
     }
 
     //== Drawing sliders from Business Logic State(state.js):
-    let drawSliders = props.state.Intro.map(s => {
+    let drawSliders = props.state.Intro.map(item => {
         //== Each slider has its additional style class or an empty string, for individual customization:
-        const setTitle = `${styleLoc.title} ${s.styleClass !== '' ? styleLoc.left : ''}`
+        const setTitle = `${s.title} ${item.styleClass !== '' ? s.left : ''}`
 
         return (
-            <article key={s.id}>
-                <h1 className={setTitle}>{s.title} <br /> {s.titleSplit}</h1>
-                {/* <img className={styleLoc.img} src={s.img} alt={s.alt} /> */}
+            <article key={item.id}>
+                <h1 className={setTitle}>{item.title} <br /> {item.titleSplit}</h1>
                 <picture>
-                    <source srcSet={s.img_s_webp} media="(max-width: 390px)" type="image/webp" />
-                    <source srcSet={s.img_s} media="(max-width: 390px)" type="image/jpeg" />
-                    <source srcSet={s.imgWebp} type="image/webp" />
-                    <img className={styleLoc.img} src={s.img} alt={s.alt} />
+                    <source srcSet={item.imgWebp} type="image/webp" />
+                    <img className={s.img} src={item.img} alt={item.alt} />
                 </picture>
             </article >
         )
     })
 
     return (
-        <SlidersIntro className={styleLoc.inner} {...settings}>
+        <SlidersIntro className={s.inner} {...settings}>
             {drawSliders}
         </SlidersIntro>
     )

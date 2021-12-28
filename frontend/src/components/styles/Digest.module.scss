@@ -7,7 +7,7 @@
     background: url('../../assets/digest.jpg') center/cover no-repeat;
     min-height: 400px;
     text-align: center;
-    padding: 2rem;
+    padding: clamp(1rem, 5vw, 2rem);
 
     @supports (background: url('../../assets/digest.webp')) {
         background: url('../../assets/digest.webp') no-repeat center/cover;
@@ -28,7 +28,7 @@
 .input {
     font-family: inherit;
     font-size: clamp(1rem, 1vw, 1.5rem);
-    width: clamp(256px, 25vw, 500px);
+    width: clamp(300px, 25vw, 500px);
     color: #302B42;
     background: #fff;
     outline: none;

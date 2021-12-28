@@ -9,13 +9,9 @@ import user_3_webp from "./assets/avatar/user_3.webp"
 // == Intro img:
 import intro_1 from './assets/winter.jpg'
 import intro_1_webp from './assets/winter.webp'
-import intro_s from './assets/winter_s.jpg'
-import intro_s_webp from './assets/winter_s.webp'
 
 import intro_2 from './assets/skate.jpg'
 import intro_2_webp from './assets/skate.webp'
-
-
 
 let state = {
     Intro: [
@@ -25,8 +21,6 @@ let state = {
             titleSplit: 'движении',
             img: intro_1,
             imgWebp: intro_1_webp,
-            img_s: intro_s,
-            img_s_webp: intro_s_webp,
             alt: 'Изображение человека на сноуборде',
             styleClass: '',
         },

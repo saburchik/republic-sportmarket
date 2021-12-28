@@ -18,7 +18,8 @@ const LoginScreen = () => {
     const [visible, setVisible] = useState(false)
     let isVisible = visible ? 'text' : 'password'
 
-    let toggleVisible = () => {
+    let toggleVisible = (e) => {
+        e.preventDefault()
         setVisible(prevState => !prevState)
     }
 

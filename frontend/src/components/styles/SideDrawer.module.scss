@@ -36,6 +36,12 @@
     border-top: 3px solid #302B42;
     border-bottom: 3px solid #302B42;
     padding: 1rem;
+
+    li {
+        &:last-child {
+            width: 100%;
+        }
+    }
 }
 
 .link {
@@ -114,7 +120,7 @@
         }
     }
 
-    @media (max-width: 390px) {
+    @media (max-width: 490px) {
         width: 100%;
     }
 }
